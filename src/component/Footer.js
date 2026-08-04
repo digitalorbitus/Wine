@@ -19,7 +19,7 @@ export default function NewsletterSection() {
       {/* Background Image with Dark Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30 z-0" 
-        style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}
+        style={{ backgroundImage: "url('https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/13-2.jpg')" }}
       />
 
       {/* Main Content Container */}

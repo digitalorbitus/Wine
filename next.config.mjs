@@ -7,6 +7,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "dtwine.wpenginepowered.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.dtwine.wpenginepowered.com",
+        pathname: "/**",
       },
     ],
   },
