@@ -99,7 +99,7 @@ export default function ContactInfoSection() {
       title: 'BECOME A SPONSOR',
       normalBg: 'bg-[#e77e4e]  group-hover:bg-white',            // Orange Hexagon
       hoverBoxBg: 'hover:bg-[#e77e4e]', // Hover Full Box Orange
-      hoverIconColor: 'group-hover:bg-[#e77e4e]',
+      hovericon: 'group-hover:bg-[#e77e4e]',
       icon: (
         <svg className="w-10 h-10 transition-colors duration-300 text-white" viewBox="0 0 48 48" fill="none" stroke="currentColor">
           <rect x="12" y="10" width="26" height="18" rx="2" strokeWidth="2.5" />
