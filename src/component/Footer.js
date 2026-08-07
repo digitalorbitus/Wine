@@ -14,52 +14,7 @@ export default function NewsletterSection() {
   ];
   return (
     <div>
-    <section className="relative w-full min-h-[400px] md:min-h-[500px] flex items-center justify-center bg-black/80 text-white overflow-hidden py-16 px-4">
-      
-      {/* Background Image with Dark Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30 z-0" 
-        style={{ backgroundImage: "url('https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/13-2.jpg')" }}
-      />
-
-      {/* Main Content Container */}
-      <div className="relative z-10 max-w-3xl w-full mx-auto text-center flex flex-col items-center justify-center">
-        
-        {/* Cursive / Serif Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic tracking-wide text-stone-100 mb-4">
-          Subscribe to Stay Informed
-        </h2>
-
-        {/* Subtitle / Description Text */}
-        <p className="text-sm sm:text-base md:text-lg text-stone-300 font-serif max-w-lg mb-8 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br className="hidden sm:inline" />
-          Morbi torquent per conubia nostra.
-        </p>
-
-        {/* Newsletter Form */}
-        <form 
-          onSubmit={(e) => e.preventDefault()}
-          className="w-full max-w-xl flex flex-col sm:flex-row items-center justify-between border border-white/70 rounded-full p-1.5 sm:p-2 bg-black/20 backdrop-blur-sm gap-2 sm:gap-0"
-        >
-          {/* Input Field */}
-          <input 
-            type="email" 
-            placeholder="Your Email Address" 
-            className="w-full bg-transparent px-6 py-2.5 sm:py-3 text-stone-200 placeholder-stone-400 font-serif focus:outline-none text-center sm:text-left text-sm md:text-base"
-            required
-          />
-
-          {/* Subscribe Button */}
-          <button 
-            type="submit" 
-            className="w-full sm:w-auto bg-white hover:bg-stone-200 text-stone-800 font-serif text-sm sm:text-base px-8 py-2.5 sm:py-3 rounded-full transition-colors duration-300 font-medium whitespace-nowrap cursor-pointer"
-          >
-            Subscribe!
-          </button>
-        </form>
-
-      </div>
-    </section>
+  
     <footer className="w-full bg-[#1b1b1b] text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Upper Section */}

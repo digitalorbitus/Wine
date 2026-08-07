@@ -15,8 +15,8 @@ export default function Navbar() {
     { label: "Wine Making", href: "#" },
     { label: "Pages", href: "#" },
     { label: "Elements", href: "#" },
-    { label: "Shop", href: "#" },
-    { label: "Visit Us", href: "#" },
+    { label: "Shop", href: "/shop" },
+    { label: "Visit Us", href: "/contact" },
     { label: "Our Events", href: "#" },
   ];
 

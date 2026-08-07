@@ -931,70 +931,65 @@ export default function HeroSlider() {
 </div>
 
         {/* ==================== 3. PRODUCTS GRID ==================== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="group flex flex-col items-center text-center p-4 rounded-lg hover:shadow-lg transition-shadow duration-300 relative bg-white"
-            >
-              {/* SALE Badge */}
-              {product.sale && (
-                <span className="absolute top-4 right-4 sm:right-6 bg-[#689F38] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm z-10">
-                  SALE
-                </span>
-              )}
+   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+  {products.map((product) => (
+    <div
+      key={product.id}
+      className="group flex flex-col items-center text-center p-4 rounded-lg hover:shadow-lg transition-shadow duration-300 relative bg-white"
+    >
+      {/* SALE Badge */}
+      {product.sale && (
+        <span className="absolute top-4 right-4 sm:right-6 bg-[#689F38] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm z-10">
+          SALE
+        </span>
+      )}
 
-              {/* Product Image */}
- <div className="relative w-full h-64 sm:h-72 mb-4 overflow-hidden group">
+      {/* Product Image Wrapper */}
+      <div className="relative w-full h-64 sm:h-72 mb-4 overflow-hidden group">
+        {/* Product Image */}
+        <Image
+          src={product.image}
+          alt={product.title}
+          fill
+          className="object-contain transition-transform duration-500 group-hover:scale-110"
+        />
 
-  {/* Product Image */}
-  <Image
-    src={product.image}
-    alt={product.title}
-    fill
-    className="object-contain transition-transform duration-500 group-hover:scale-110"
-  />
+        {/* Bottom Hover Icons */}
+        <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          {/* Shopping Cart */}
+          <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
+            <FiShoppingCart size={20} />
+          </button>
 
-  {/* Hover Icons */}
-  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-
-    {/* Shopping Cart */}
-    <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300">
-      <FiShoppingCart size={20} />
-    </button>
-
-    {/* Favorite */}
-    <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300">
-      <FiHeart size={20} />
-    </button>
-
-  </div>
-
-</div>
-
-              {/* Product Info */}
-              <h3 className="text-sm sm:text-base font-serif text-gray-800 mb-2 border-b border-gray-200 pb-2 w-full">
-                {product.title}
-              </h3>
-
-              {/* Price */}
-              <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
-                {product.oldPrice && (
-                  <span className="text-gray-400 line-through">{product.oldPrice}</span>
-                )}
-                <span className="text-gray-900 font-semibold">{product.price}</span>
-              </div>
-
-              {/* Rating Stars */}
-              <div className="flex text-amber-400 text-xs">
-                {Array.from({ length: product.rating }).map((_, i) => (
-                  <span key={i}>★</span>
-                ))}
-              </div>
-            </div>
-          ))}
+          {/* Favorite */}
+          <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
+            <FiHeart size={20} />
+          </button>
         </div>
+      </div>
 
+      {/* Product Info */}
+      <h3 className="text-sm sm:text-base font-serif text-gray-800 mb-2 border-b border-gray-200 pb-2 w-full">
+        {product.title}
+      </h3>
+
+      {/* Price */}
+      <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
+        {product.oldPrice && (
+          <span className="text-gray-400 line-through">{product.oldPrice}</span>
+        )}
+        <span className="text-gray-900 font-semibold">{product.price}</span>
+      </div>
+
+      {/* Rating Stars */}
+      <div className="flex text-amber-400 text-xs">
+        {Array.from({ length: product.rating }).map((_, i) => (
+          <span key={i}>★</span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
         {/* ==================== 4. BOTTOM DISCOVERY SECTION ==================== */}
         <div className="text-center max-w-xl mx-auto pt-8 border-t border-gray-100">
           <span className="font-serif italic text-2xl sm:text-3xl text-[#C86D77] block mb-1">
@@ -1217,6 +1212,54 @@ export default function HeroSlider() {
       `}</style>
     </section>
 
+    {/* HOME EMAIL SEND START */}
+  <section className="relative w-full min-h-[400px] md:min-h-[500px] flex items-center justify-center bg-black/80 text-white overflow-hidden py-16 px-4">
+      
+      {/* Background Image with Dark Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-30 z-0" 
+        style={{ backgroundImage: "url('https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/13-2.jpg')" }}
+      />
+
+      {/* Main Content Container */}
+      <div className="relative z-10 max-w-3xl w-full mx-auto text-center flex flex-col items-center justify-center">
+        
+        {/* Cursive / Serif Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic tracking-wide text-stone-100 mb-4">
+          Subscribe to Stay Informed
+        </h2>
+
+        {/* Subtitle / Description Text */}
+        <p className="text-sm sm:text-base md:text-lg text-stone-300 font-serif max-w-lg mb-8 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br className="hidden sm:inline" />
+          Morbi torquent per conubia nostra.
+        </p>
+
+        {/* Newsletter Form */}
+        <form 
+          onSubmit={(e) => e.preventDefault()}
+          className="w-full max-w-xl flex flex-col sm:flex-row items-center justify-between border border-white/70 rounded-full p-1.5 sm:p-2 bg-black/20 backdrop-blur-sm gap-2 sm:gap-0"
+        >
+          {/* Input Field */}
+          <input 
+            type="email" 
+            placeholder="Your Email Address" 
+            className="w-full bg-transparent px-6 py-2.5 sm:py-3 text-stone-200 placeholder-stone-400 font-serif focus:outline-none text-center sm:text-left text-sm md:text-base"
+            required
+          />
+
+          {/* Subscribe Button */}
+          <button 
+            type="submit" 
+            className="w-full sm:w-auto bg-white hover:bg-stone-200 text-stone-800 font-serif text-sm sm:text-base px-8 py-2.5 sm:py-3 rounded-full transition-colors duration-300 font-medium whitespace-nowrap cursor-pointer"
+          >
+            Subscribe!
+          </button>
+        </form>
+
+      </div>
+    </section>
+     {/* HOME EMAIL SEND START */}
     </div>
   );
 }
