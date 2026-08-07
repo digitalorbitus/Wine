@@ -566,8 +566,8 @@ export default function ShopPage() {
     </section>
       {/* Hero / Banner Header */}
 
-      <div className="relative flex flex-col items-center justify-center bg-gradient-to-b from-stone-100 to-white py-12 md:py-16 text-center">
-        <h1 className="text-2xl font-light tracking-widest text-black md:text-3xl uppercase">
+      <div className="relative  flex flex-col items-center justify-center bg-gradient-to-b from-stone-100 to-white py-12 md:py-16 text-center">
+        <h1 className="text-2xl font-light  font-philosopher tracking-widest text-black md:text-3xl uppercase">
           Shop
         </h1>
         <p className="mt-1 text-xs text-gray-500 tracking-wide">
