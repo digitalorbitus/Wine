@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation Links (lg breakpoint & up) */}
-            <nav className="hidden lg:flex items-center justify-center w-full space-x-8 xl:space-x-12 z-20">
+            <nav className="hidden font-philosopher lg:flex items-center  justify-center w-full space-x-8 xl:space-x-12 z-20">
               {navItems.map((item) => {
                 const isActive = activeItem === item.label;
                 return (

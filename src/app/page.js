@@ -1,84 +1,3 @@
-// "use client";
-// import Image from "next/image";
-
-// import { useState } from "react";
-
-// import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-// const images = [
-//   { id: 1, src: "/images/slide1.jpg", alt: "Delightfull Wine Banner" },
-//   { id: 2, src: "/images/slide2.jpg", alt: "Slider Image 2" },
-//   { id: 3, src: "/images/slide3.jpg", alt: "Slider Image 3" },
-//   { id: 4, src: "/images/slide4.jpg", alt: "Slider Image 4" },
-// ];
-
-// export default function Home() {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const prevSlide = () => {
-//     const isFirstSlide = currentIndex === 0;
-//     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-//     setCurrentIndex(newIndex);
-//   };
-
-//   const nextSlide = () => {
-//     const isLastSlide = currentIndex === images.length - 1;
-//     const newIndex = isLastSlide ? 0 : currentIndex + 1;
-//     setCurrentIndex(newIndex);
-//   };
-
-//   const goToSlide = (slideIndex) => {
-//     setCurrentIndex(slideIndex);
-//   };
-//   return (
-//     <div className="relative w-full max-w-[1200px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] mx-auto my-6 px-4 group">
-//       {/* Main Image Container */}
-//       <div className="w-full h-full rounded-2xl bg-center bg-cover duration-500 relative overflow-hidden shadow-lg border border-gray-100">
-//         <Image
-//           src={images[currentIndex].src}
-//           alt={images[currentIndex].alt}
-//           fill
-//           priority
-//           className="object-cover duration-500 ease-in-out"
-//         />
-//       </div>
-
-//       {/* Left Arrow */}
-//       <button
-//         onClick={prevSlide}
-//         aria-label="Previous Slide"
-//         className="absolute top-[50%] -translate-y-[50%] left-6 text-xl sm:text-2xl md:text-3xl rounded-full p-2 bg-black/40 hover:bg-black/70 text-white cursor-pointer transition duration-300 opacity-80 sm:opacity-0 group-hover:opacity-100"
-//       >
-//         <FiChevronLeft />
-//       </button>
-
-//       {/* Right Arrow */}
-//       <button
-//         onClick={nextSlide}
-//         aria-label="Next Slide"
-//         className="absolute top-[50%] -translate-y-[50%] right-6 text-xl sm:text-2xl md:text-3xl rounded-full p-2 bg-black/40 hover:bg-black/70 text-white cursor-pointer transition duration-300 opacity-80 sm:opacity-0 group-hover:opacity-100"
-//       >
-//         <FiChevronRight />
-//       </button>
-
-//       {/* Bottom Navigation Dots */}
-//       <div className="flex justify-center py-3 gap-2">
-//         {images.map((_, index) => (
-//           <button
-//             key={index}
-//             onClick={() => goToSlide(index)}
-//             aria-label={`Go to slide ${index + 1}`}
-//             className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 cursor-pointer ${
-//               currentIndex === index
-//                 ? "bg-red-800 w-6 sm:w-8"
-//                 : "bg-gray-300 w-2.5 sm:w-3 hover:bg-gray-400"
-//             }`}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
 
 "use client";
 
@@ -103,25 +22,25 @@ const processSteps = [
   {
     id: 1,
     title: 'Harvesting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at.',
+    description: 'Carefully selected grapes are hand-harvested at their peak, preserving the natural flavors and quality that define our wines.',
     icon: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon1.png', // Apni icon path change karein
   },
   {
     id: 2,
     title: 'Crushing & Pressing',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at.',
+    description: 'Freshly harvested grapes are gently crushed and pressed to extract their finest flavors while preserving their natural character.',
     icon: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon2.png',
   },
   {
     id: 3,
     title: 'Fermentation',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at.',
+    description: 'Through a careful fermentation process, grape juices transform into refined wines with rich aromas and balanced taste.',
     icon: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon3.png',
   },
   {
     id: 4,
     title: 'Ageing & Bottling',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at.',
+    description: 'Our wines are carefully aged to develop depth and elegance before being perfectly bottled for a memorable experience.',
     icon: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon4.png',
   },
 ];
@@ -416,25 +335,82 @@ export default function HeroSlider() {
     <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
       <div className="relative w-full max-w-5xl h-full flex flex-col md:flex-row items-center justify-center text-center">
 
-        {/* Top Text */}
-        <h3 className="static md:absolute md:top-[22%] md:left-[25%] heading-animation text-[#a3485e] text-xs sm:text-lg md:text-4xl uppercase tracking-[3px] sm:tracking-[6px] font-medium mb-2 md:mb-0">
-          DELIGHTFULL
-        </h3>
+  {/* Top Text */}
+<motion.h3
+  initial={{ opacity: 0, y: -40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 1,
+    duration: 0.8,
+  }}
+  className="
+    georgia-font
+    static md:absolute
+    md:top-[22%]
+    md:left-[25%]
+    text-[#B20A2F]
+    text-[18px] sm:text-[24px] md:text-[30px]
+    leading-[30px] md:leading-[60px]
+    font-normal
+    uppercase
+    tracking-[3px] sm:tracking-[6px]
+  "
+>
+  DELIGHTFULL
+</motion.h3>
 
         {/* Big Text */}
-        <TypeAnimation
-          sequence={["Wine", 1000]}
-          wrapper="h1"
-          speed={50}
-          repeat={Infinity}
-          cursor={false}
-          className="text-black text-5xl sm:text-7xl md:text-[11rem] font-bold leading-none"
-        />
+<TypeAnimation
+  sequence={["Wine", 5000]}
+  wrapper="h1"
+  speed={50}
+  cursor={false}
+  className="
+    philosopher
+    text-black
+    text-5xl
+    sm:text-7xl
+    md:text-[11rem]
+    lg:text-[250px]
+    font-bold
+    leading-none
+  "
+/>
 
         {/* Bottom Text */}
-        <p className="static md:absolute md:bottom-[28%] md:right-[24%] text-[#a3485e] text-xs sm:text-base md:text-4xl uppercase tracking-[2px] sm:tracking-[4px] mt-2 md:mt-0">
-          EST - 1942
-        </p>
+<motion.p
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    delay: 2,
+    duration: 0.8,
+  }}
+  className="
+    static
+    md:absolute
+    md:bottom-[28%]
+    md:right-[24%]
+
+    font-[Georgia,serif]
+    font-normal
+
+    text-[#B20A2F]
+
+    text-[18px]
+    sm:text-[24px]
+    md:text-[30px]
+
+    leading-[30px]
+    sm:leading-[40px]
+    md:leading-[50px]
+
+    uppercase
+    tracking-[4px]
+    text-center
+  "
+>
+  EST - 1942
+</motion.p>
 
       </div>
     </div>
@@ -442,160 +418,290 @@ export default function HeroSlider() {
 
   {/* Content for Slide 2 */}
   {currentIndex === 1 && (
-    <div
-      key={currentIndex}
-      className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-6 md:px-0"
-    >
-      <div className="max-w-xl md:mr-16 text-center">
+  <div
+    key={currentIndex}
+    className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-6 sm:px-10 md:pr-16 lg:pr-28"
+  >
+    <div className="max-w-xl text-center flex flex-col items-center justify-center">
 
-        {/* Top Text */}
-        <h3 className="heading-animation text-[#a3485e] text-sm sm:text-xl md:text-3xl uppercase tracking-[3px] sm:tracking-[6px]">
-          A Perfect Blend
-        </h3>
+      {/* Top Text - Second */}
+      <motion.h3
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="
+          mt-4
+          text-[#b20a2f]
+          text-[18px]
+          sm:text-[24px]
+          md:text-[30px]
+          leading-[40px]
+          md:leading-[60px]
+          font-[100]
+          uppercase
+          tracking-[3px]
+          sm:tracking-[6px]
+          font-serif
+        "
+        style={{
+          fontFamily: "Georgia, serif",
+        }}
+      >
+        A Perfect Blend
+      </motion.h3>
 
-        {/* Center Big Text */}
+      {/* Center Big Text - First */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full flex justify-center"
+      >
         <TypeAnimation
-          sequence={["in a Bottle", 1000]}
+          sequence={["in a Bottle", 5000]}
           wrapper="h1"
           speed={50}
           cursor={false}
-          className="mt-2 text-black text-4xl sm:text-6xl md:text-8xl italic font-semibold"
+          className="
+            font-['Philosopher']
+            font-bold
+            text-[#111111]
+            text-[40px]
+            sm:text-[60px]
+            md:text-[90px]
+            lg:text-[120px]
+            leading-[50px]
+            sm:leading-[80px]
+            md:leading-[110px]
+            lg:leading-[150px]
+            text-center
+          "
         />
+      </motion.div>
 
-        {/* Bottom Small Text */}
-        <p className="desc-animation mt-4 sm:mt-6 text-gray-700 text-xs sm:text-sm md:text-lg leading-relaxed sm:leading-7 px-2 sm:px-0">
-          Wine improves with age, and so do we. Discover our exquisite
-          collection of wines, each telling a story of passion,
-          tradition, and craftsmanship.
-        </p>
+      {/* Bottom Description - Third */}
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 0.8 }}
+        className="
+          mt-6
+          text-[#111111]
+          text-[16px]
+          sm:text-[17px]
+          md:text-[18px]
+          leading-[28px]
+          md:leading-[30px]
+          font-[100]
+          max-w-xl
+          mx-auto
+          text-center
+        "
+        style={{
+          fontFamily: "Georgia, serif",
+        }}
+      >
+        Wine improves with age, The older it gets, the better you like it....
+      </motion.p>
 
-      </div>
     </div>
-  )}
+  </div>
+)}
 
   {/* Content for Slide 3 */}
-  {currentIndex === 2 && (
-    <div className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-4 sm:px-6 md:px-16">
+{/* ================= Slide 3 (Mobile Optimized) ================= */}
+{/* ================= Slide 3 (Narrow & Compact - Full Right) ================= */}
+{currentIndex === 2 && (
+  <div className="absolute inset-0 z-10 flex items-center justify-end pl-4 pr-2 sm:pr-6 md:pr-10 lg:pr-16 py-6 sm:py-10">
+    
+    {/* Main Responsive Container - Decreased max-widths */}
+    <div className="relative w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[560px] ml-auto mr-0 flex items-center justify-center transition-all duration-300">
 
-      <div className="relative w-full max-w-[340px] sm:max-w-[450px] md:max-w-[650px] h-[520px] sm:h-[580px] md:h-[650px]">
+      {/* Polygon Background Container */}
+      <div className="absolute inset-0 overflow-hidden rounded-xl">
 
-        {/* Premium Polygon Background */}
-        <div className="absolute inset-2 sm:inset-4 md:inset-8 overflow-hidden">
+        {/* Main Polygon Base */}
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(6% 0%, 100% 8%, 100% 92%, 6% 100%, 0% 50%)",
+            background: "#97B97A",
+          }}
+        />
 
-          {/* Main Polygon */}
+        {/* Overlapping Polygon Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute inset-0"
             style={{
-              clipPath: "polygon(8% 0%,100% 10%,100% 90%,8% 100%,0% 50%)",
-              background: "#97B97A",
+              clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%)",
+              background: "#8FB077",
             }}
           />
-
-          {/* Left Dark Shape */}
           <div
             className="absolute inset-0"
             style={{
-              clipPath: "polygon(8% 0%,55% 12%,55% 88%,8% 100%,0% 50%)",
-              background: "#7E9E62",
-            }}
-          />
-
-          {/* Right Light Shape */}
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(55% 12%,100% 0%,100% 100%,55% 88%)",
+              clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 28%, 50% 16%, 0% 28%)",
               background: "#A8C58C",
             }}
           />
-
-          {/* Center Shadow */}
           <div
             className="absolute inset-0"
             style={{
-              clipPath: "polygon(8% 25%,50% 12%,100% 25%,100% 75%,50% 88%,8% 75%)",
-              background: "#89AA6E",
+              clipPath: "polygon(0% 72%, 50% 84%, 100% 72%, 100% 88%, 50% 100%, 0% 88%)",
+              background: "#A8C58C",
             }}
           />
-
-          {/* Top Light */}
           <div
-            className="absolute top-0 left-0 w-full h-32"
+            className="absolute inset-0"
             style={{
-              clipPath: "polygon(0 0,100% 0,50% 100%)",
-              background: "rgba(255,255,255,.12)",
+              clipPath: "polygon(0% 28%, 50% 16%, 100% 28%, 100% 72%, 50% 84%, 0% 72%)",
+              background: "#84A868",
             }}
           />
-
-          {/* Bottom Light */}
           <div
-            className="absolute bottom-0 left-0 w-full h-32"
+            className="absolute left-0 top-0 w-1/2 h-full"
             style={{
-              clipPath: "polygon(0 100%,50% 0,100% 100%)",
-              background: "rgba(255,255,255,.08)",
+              clipPath: "polygon(0% 12%, 100% 22%, 100% 78%, 0% 88%)",
+              background: "rgba(255,255,255,0.08)",
             }}
           />
-
-          {/* Left Glow */}
-          <div className="absolute -left-16 top-20 w-72 h-72 rounded-full bg-white/15 blur-3xl"></div>
-
-          {/* Right Glow */}
-          <div className="absolute -right-16 bottom-20 w-72 h-72 rounded-full bg-black/10 blur-3xl"></div>
-
+          <div
+            className="absolute right-0 top-0 w-1/2 h-full"
+            style={{
+              clipPath: "polygon(0% 22%, 100% 12%, 100% 88%, 0% 78%)",
+              background: "rgba(0,0,0,0.05)",
+            }}
+          />
         </div>
 
-        {/* Content */}
-        <div className="relative z-20 flex h-full flex-col items-center justify-center text-center px-4 sm:px-8 md:px-12 py-4">
+        {/* Right Light Accent */}
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(55% 12%, 100% 0%, 100% 100%, 55% 88%)",
+            background: "#A8C58C",
+          }}
+        />
 
-          {/* Small Heading */}
-          <h3 className="uppercase tracking-[4px] sm:tracking-[8px] text-[#9D2030] text-sm sm:text-xl md:text-2xl font-light mb-4 sm:mb-8">
-            BOTTLED POETRY
-          </h3>
+        {/* Center Shadow Overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(8% 25%, 50% 12%, 100% 25%, 100% 75%, 50% 88%, 8% 75%)",
+            background: "#89AA6E",
+          }}
+        />
 
-          {/* Premium Icon */}
-          <div className="mb-4 sm:mb-8 flex h-16 w-16 sm:h-20 sm:w-20 md:h-28 md:w-28 items-center justify-center rounded-full bg-gradient-to-br from-[#B72E3B] to-[#7D1420] border-2 sm:border-4 border-white/20 shadow-2xl">
-            <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14">
-              <Image
-                src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
-                alt="Wine Icon"
-                fill
-                className="object-contain"
-              />
-            </div>
+        {/* Top Light Accent */}
+        <div
+          className="absolute top-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+            background: "rgba(255,255,255,.12)",
+          }}
+        />
+
+        {/* Bottom Light Accent */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
+          style={{
+            clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
+            background: "rgba(255,255,255,.08)",
+          }}
+        />
+
+        {/* Ambient Glows */}
+        <div className="absolute -left-10 top-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-white/20 blur-2xl pointer-events-none" />
+        <div className="absolute -right-10 bottom-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-black/15 blur-2xl pointer-events-none" />
+      </div>
+
+      {/* Foreground Content */}
+      <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-8 py-6 sm:py-10 md:py-12">
+
+ <motion.h3
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1.2, duration: 0.8 }}
+  className="
+    uppercase
+    tracking-[2px] sm:tracking-[4px] md:tracking-[6px]
+    text-[11px] sm:text-[16px] md:text-[20px]
+    leading-[16px] sm:leading-[20px] md:leading-[20px]
+    text-[#B20A2F]
+    font-normal
+    [font-family:Georgia,serif]
+  "
+>
+  BOTTLED POETRY
+</motion.h3>
+
+        {/* Premium Icon Circle */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 2.2,
+            duration: 0.8,
+            type: "spring",
+          }}
+          className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#B72E3B] to-[#7D1420] shadow-md shrink-0"
+        >
+          <div className="relative w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8">
+            <Image
+              src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
+              alt="Wine Icon"
+              fill
+              className="object-contain"
+            />
           </div>
+        </motion.div>
 
-          {/* Animated Title */}
-          <TypeAnimation
-            sequence={[
-              "Vineyard",
-              1000,
-              "Vineyard & Winery",
-              2000,
-            ]}
-            wrapper="h1"
-            speed={40}
-            repeat={Infinity}
-            cursor={false}
-            className="font-serif text-white text-3xl sm:text-5xl md:text-8xl leading-[1.1] drop-shadow-2xl"
-          />
-
-          {/* Description */}
-          <p className="mt-3 sm:mt-6 max-w-xs sm:max-w-md text-white/90 leading-snug sm:leading-relaxed text-xs sm:text-base md:text-lg">
-            Experience handcrafted wines created with passion,
-            tradition and generations of excellence.
-          </p>
-
-          {/* Premium Button */}
-          <button className="mt-5 sm:mt-8 rounded-full bg-white px-6 sm:px-8 md:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base text-[#567242] font-semibold shadow-xl transition-all duration-300 hover:bg-[#A82028] hover:text-white hover:scale-105">
-            Explore Collection
-          </button>
-
-        </div>
+        {/* Animated Title */}
+   {/* Animated Title */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  className="w-full"
+>
+  <TypeAnimation
+    sequence={["Vineyard & Winery", 5000]}
+    wrapper="h1"
+    speed={40}
+    cursor={false}
+    className="
+      font-['Philosopher']
+      font-bold
+      text-white
+      text-[32px]
+      sm:text-[40px]
+      md:text-[60px]
+      lg:text-[90px]
+      leading-[40px]
+      sm:leading-[65px]
+      md:leading-[100px]
+      lg:leading-[150px]
+      text-center
+    "
+  />
+</motion.div>
+        {/* Description Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 3.2, duration: 0.8 }}
+          className="mt-2 sm:mt-3 text-white/90 text-[10px] sm:text-xs md:text-sm leading-relaxed"
+        >
+          Experience handcrafted wines created with passion,
+          tradition and generations of excellence.
+        </motion.p>
 
       </div>
 
     </div>
-  )}
+  </div>
+)}
 
   <div className="absolute inset-0"></div>
 
@@ -626,23 +732,40 @@ export default function HeroSlider() {
     <section className="w-full py-12 px-4 sm:px-6  text-center bg-white">
       <div className="max-w-3xl mx-auto flex flex-col items-center">
         {/* Script / Cursive Top Heading */}
-        <span
-          className={`${scriptFont.className} text-3xl sm:text-4xl md:text-5xl text-[#a3485e] tracking-wide mb-1`}
-        >
-          Discover the
-        </span>
+      <span
+  className={`
+    ${scriptFont.className}
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-[#a3485e]
+    tracking-wide
+    mb-1
+  `}
+>
+  Discover the
+</span>
 
         {/* Main Serif Heading */}
-        <h2
-          className={`${serifFont.className} text-3xl sm:text-2xl md:text-4xl font-normal text-[#1a202c] tracking-wider uppercase mb-4`}
-        >
-          Wine Collection
-        </h2>
-
+    <h2
+  className={`
+   font-philosopher
+    text-[38px]
+    leading-normal
+    font-normal
+    text-[#111111]
+    tracking-wider
+    uppercase
+    mb-4
+  `}
+>
+  Wine Collection
+</h2>
         {/* Description Paragraph */}
-        <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl font-serif">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-          luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        <p className="text-gray-500 text-18px sm:text-base md:text-lg leading-relaxed max-w-2xl font-serif">
+        Experience the art of winemaking through our carefully selected collection. 
+Every bottle carries a story of heritage, craftsmanship, and unforgettable taste.
         </p>
       </div>
     </section>
@@ -706,28 +829,56 @@ export default function HeroSlider() {
   {/* Content */}
   <div className="relative z-20 flex items-center min-h-[500px] md:min-h-[650px] px-5 sm:px-8 md:px-16">
 
-    <div className="w-full md:max-w-xl md:ml-auto text-center md:text-left text-white">
+    <div className="w-full md:max-w-xl md:ml-auto text-center md:text-left text-black">
 
       {/* Small Heading */}
-      <span className="italic text-lg sm:text-xl md:text-3xl text-[#C86D77]">
-        Message from Wine Maker
-      </span>
+     <span
+  className={`
+    ${scriptFont.className}
+    italic
+    text-[14px]
+    sm:text-[16px]
+    md:text-[40px]
+    leading-[34px]
+    md:leading-[28px]
+    font-normal
+    text-[#a3485e]
+  `}
+>
+  Message from Wine Maker
+</span>
 
       {/* Main Heading */}
-      <h2 className="mt-2 mb-4 md:mb-6 font-serif font-semibold leading-tight text-3xl sm:text-4xl md:text-5xl">
-        Upgrade to the latest!
-      </h2>
+  <h2
+  className="
+    mt-2
+    mb-4
+    md:mb-6
+    text-[30px]
+    sm:text-[36px]
+    md:text-[38px]
+    leading-normal
+    font-normal
+    text-[#111111]
+  "
+  style={{
+    fontFamily: '"Old Standard TT", serif',
+  }}
+>
+  Upgrade to the latest!
+</h2>
 
       {/* Paragraph */}
       <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8 mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur vitae elit vel ligula facilisis gravida.
+      Discover the elegance of our handcrafted wines, created with passion and dedication. 
+Every bottle reflects a story of tradition, quality, and timeless craftsmanship.
+
+
       </p>
 
       <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse potenti. Donec vitae justo nec ipsum viverra
-        tincidunt.
+      From carefully selected grapes to the finest aging process, we bring you a collection 
+that celebrates exceptional taste and unforgettable moments.
       </p>
 
       {/* Signature */}
@@ -755,17 +906,28 @@ export default function HeroSlider() {
         
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <span 
-            className="block text-xl sm:text-2xl md:text-3xl text-[#B3525A] italic font-serif mb-2"
-            style={{ fontFamily: "'Dancing Script', 'Playfair Display', cursive, serif" }}
-          >
-            Discover
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 font-serif tracking-wide mb-4">
+       <span
+  className={`
+    ${scriptFont.className}
+    block
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-[#a3485e]
+    tracking-wide
+    mb-2
+  `}
+>
+  Discover
+</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 font-philosopher tracking-wide mb-4">
             The Process of WineMaking
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-serif px-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Discover our traditional winemaking process,
+           where passion and craftsmanship 
+           come together to create exceptional wines.
           </p>
         </div>
 
@@ -805,9 +967,9 @@ export default function HeroSlider() {
 
                 {/* Text Content */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-serif font-medium text-gray-900 mb-1">
-                    {step.title}
-                  </h3>
+               <h3 className="font-philosopher text-[28px] font-normal text-[#111111] mb-1">
+  {step.title}
+</h3>
                   <p className="text-xs sm:text-sm text-gray-500 font-serif leading-relaxed max-w-md">
                     {step.description}
                   </p>
@@ -847,12 +1009,25 @@ export default function HeroSlider() {
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto flex flex-col items-center">
         
         {/* Cursive Subtitle */}
-        <span className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-white mb-2 drop-shadow-md">
-          Our Manor
-        </span>
+      <span
+  className={`
+    ${scriptFont.className}
+    block
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-white
+    tracking-wide
+    mb-2
+    drop-shadow-md
+  `}
+>
+  Our Manor
+</span>
 
         {/* Main Heading */}
-        <h2 className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-[0.25em] uppercase mb-8 drop-shadow-sm">
+        <h2 className="text-white text-sm sm:text-base font-philosopher md:text-lg lg:text-xl font-light tracking-[0.25em] uppercase mb-8 drop-shadow-sm">
           In the heart of napa valley
         </h2>
 
@@ -887,14 +1062,27 @@ export default function HeroSlider() {
         
         {/* ==================== 1. HEADER SECTION ==================== */}
         <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="font-serif italic text-2xl sm:text-3xl text-[#C86D77] block mb-1">
-            Our Delightful offerings
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#2D2B2A] tracking-wide mb-3">
+        <span
+  className={`
+    ${scriptFont.className}
+    block
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-[#a3485e]
+    tracking-wide
+    mb-1
+  `}
+>
+  Our Delightful offerings
+</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-philosopher text-[#2D2B2A] tracking-wide mb-3">
             Tastefully Yours
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans px-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+           Savor the finest selection of wines crafted with passion, tradition, and elegance. 
+Every bottle delivers a unique taste experience made to be remembered.
           </p>
         </div>
 
@@ -992,14 +1180,27 @@ export default function HeroSlider() {
 </div>
         {/* ==================== 4. BOTTOM DISCOVERY SECTION ==================== */}
         <div className="text-center max-w-xl mx-auto pt-8 border-t border-gray-100">
-          <span className="font-serif italic text-2xl sm:text-3xl text-[#C86D77] block mb-1">
-            Discovery
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-serif text-[#2D2B2A] tracking-wide mb-3">
+       <span
+  className={`
+    ${scriptFont.className}
+    block
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-[#a3485e]
+    tracking-wide
+    mb-1
+  `}
+>
+  Discovery
+</span>
+          <h2 className="text-2xl sm:text-3xl font-philosopher text-[#2D2B2A] tracking-wide mb-3">
             That Gets Better with Ageing
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans px-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+           Like a fine wine, every moment becomes more refined with time. 
+Our carefully aged collection captures depth, character, and exceptional flavor in every bottle.
           </p>
         </div>
 
@@ -1009,7 +1210,7 @@ export default function HeroSlider() {
 {/* That Gets Better with Ageing  start */}
 <section className="w-full bg-white">
       {/* Header Section */}
-      <div className="text-center  px-4 max-w-2xl mx-auto">
+      {/* <div className="text-center  px-4 max-w-2xl mx-auto">
         <span 
           className="block text-3xl text-[#d75c6d] mb-1 font-serif italic"
           style={{ fontFamily: "'Dancing Script', 'Great Vibes', cursive" }}
@@ -1023,7 +1224,7 @@ export default function HeroSlider() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, 
           luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
-      </div>
+      </div> */}
 
       {/* Grid Section */}
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
@@ -1103,7 +1304,7 @@ export default function HeroSlider() {
     {/* That Gets Better with Ageing  end */}
 
 <section 
-      className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full py-16 sm:py-20 md:py-24  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         // Dark Wooden Texture Background
         backgroundImage: "url('https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/bg.jpg')", // Dark wooden background image path
@@ -1116,17 +1317,25 @@ export default function HeroSlider() {
         
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 md:mb-16">
-          <span 
-            className="block text-2xl sm:text-3xl text-[#E8B87D] italic font-serif mb-1"
-            style={{ fontFamily: "'Dancing Script', 'Playfair Display', cursive, serif" }}
-          >
-            Discover
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white uppercase tracking-widest mb-3">
+       <span
+  className={`
+    ${scriptFont.className}
+    block
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    text-[#E8B87D]
+    mb-1
+  `}
+>
+  Discover
+</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-philosopher text-white uppercase tracking-widest mb-3">
             Our Vintage Wines
           </h2>
           <p className="text-xs sm:text-sm text-gray-300 font-serif leading-relaxed px-4 opacity-80">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Explore our vintage collection, where time, tradition, and craftsmanship blend together to create wines of exceptional quality and unforgettable taste.
           </p>
         </div>
 
@@ -1225,14 +1434,25 @@ export default function HeroSlider() {
       <div className="relative z-10 max-w-3xl w-full mx-auto text-center flex flex-col items-center justify-center">
         
         {/* Cursive / Serif Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic tracking-wide text-stone-100 mb-4">
-          Subscribe to Stay Informed
-        </h2>
+     <h2
+  className={`
+    ${scriptFont.className}
+    text-[28px]
+    sm:text-[36px]
+    md:text-[48px]
+    leading-[48px]
+    tracking-wide
+    text-stone-100
+    mb-4
+  `}
+>
+  Subscribe to Stay Informed
+</h2>
 
         {/* Subtitle / Description Text */}
         <p className="text-sm sm:text-base md:text-lg text-stone-300 font-serif max-w-lg mb-8 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br className="hidden sm:inline" />
-          Morbi torquent per conubia nostra.
+         Stay updated with our latest wines, exclusive releases, and stories from our vineyard. 
+Join our community and discover the world of fine winemaking.
         </p>
 
         {/* Newsletter Form */}

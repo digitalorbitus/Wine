@@ -284,7 +284,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         transition={{ duration: 0.5 }}
       >
         {/* Bada Heading Font */}
-        <h2 className="text-xl sm:text-2xl mt-3 font-serif text-zinc-900 tracking-wider font-bold">
+        <h2 className=" mt-3 text-[28px] font-old-standard  text-zinc-900 tracking-wider font-bold">
           ABOUT US
         </h2>
 
@@ -296,10 +296,10 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
       </motion.div>
 
       {/* Main Content */}
-   <div className=" mx-auto bg-white overflow-hidden grid grid-cols-1 lg:grid-cols-14 items-center gap-8 relative">
+   <div className=" mx-auto bg-white  overflow-hidden grid grid-cols-1 lg:grid-cols-14 items-center gap-8 relative">
   {/* Left Image */}
   <motion.div
-    className="lg:col-span-6 relative w-full h-[320px] sm:h-[420px] lg:h-[600px]"
+    className="lg:col-span-5 relative w-full h-[320px] sm:h-[420px] lg:h-[600px]"
 
   >
     <Image
@@ -320,7 +320,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
 
   {/* Right Features */}
   <motion.div
-    className="lg:col-span-8 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 gap-8"
+    className="lg:col-span-9 p-4 sm:p-6  grid grid-cols-1 sm:grid-cols-2 gap-8"
     variants={staggerContainer}
     initial="hidden"
     whileInView="visible"
@@ -347,7 +347,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
 
         {/* Text */}
         <div>
-          <h3 className="text-base sm:text-lg font-serif font-bold tracking-wide text-zinc-900 uppercase mb-2">
+          <h3 className="text-[28px] font-philosopher font-bold tracking-wide text-zinc-900 uppercase mb-2">
             {feature.title}
           </h3>
 
@@ -402,16 +402,17 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
           </div>
 
           {/* Text Content Right */}
-          <div className="text-center md:text-left space-y-3 sm:space-y-4 px-2 sm:px-0">
+          <div className="text-center md:text-left text-[34px]  font-philosopher space-y-3 sm:space-y-4 px-2 sm:px-0">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif text-amber-50 tracking-wide font-medium">
               Only the finest bottles for the wine!
             </h3>
 
-            <div className="space-y-3 text-xs sm:text-sm text-gray-300 font-serif leading-relaxed font-light">
+            <div className="space-y-3 text-xs sm:text-sm text-gray-300  leading-relaxed font-light">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-                nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
+               Discover a world of exceptional wines crafted with passion, tradition,
+                and the finest grapes. Every bottle is carefully produced to deliver rich flavors,
+                elegant aromas, 
+                and a memorable tasting experience that celebrates the true art of winemaking.
               </p>
               <p>
                 Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
@@ -433,15 +434,16 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         >
           {/* Text Content Left (Mobile par pehle dikhega, Desktop par left dikhega) */}
           <div className="order-2 md:order-1 text-center md:text-left space-y-3 sm:space-y-4 px-2 sm:px-0">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif text-amber-50 tracking-wide font-medium">
+            <h3 className="text-xl sm:text-2xl text-[34px]  font-philosopher lg:text-3xl font-serif text-amber-50 tracking-wide font-medium">
               The best wine is always with friends!
             </h3>
 
             <div className="space-y-3 text-xs sm:text-sm text-gray-300 font-serif leading-relaxed font-light">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-                nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
+                Discover a world of exceptional wines crafted with passion, tradition,
+                and the finest grapes. Every bottle is carefully produced to deliver rich flavors,
+                elegant aromas, 
+                and a memorable tasting experience that celebrates the true art of winemaking.
               </p>
               <p>
                 Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
@@ -552,16 +554,17 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
             </span>
 
             {/* Main Section Heading */}
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 tracking-wide font-normal">
+            <h3 className="text-3xl sm:text-4xl text-[34px] font-philosopher lg:text-5xl font-serif text-zinc-900 tracking-wide font-normal">
               Invited by Wine Maker!
             </h3>
 
             {/* Description Body */}
             <div className="space-y-3 text-xs sm:text-sm text-gray-500 font-serif leading-relaxed font-light pt-2">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-                nec ullamcorper mattis, pulvinar dapibus leo. luctus nec ullamcorper mattis,
-                pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Join us for an unforgettable journey through the vineyards,
+                where every bottle is crafted with dedication, expertise,
+                 and a commitment to excellence. Experience authentic flavors,
+                rich aromas, and the timeless traditions that make every sip truly memorable.
               </p>
               <p>
                 luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit
@@ -757,14 +760,16 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
     <div className="w-full sm:max-w-md lg:max-w-[420px] bg-[#9c3545]/80 text-white p-6 sm:p-8 lg:p-10 shadow-2xl backdrop-blur-md border border-white/10 lg:mr-16 rounded-xs">
       
       {/* Main Title */}
-      <h2 className="text-2xl sm:text-3xl font-serif tracking-wide mb-5 font-normal">
+      <h2 className="text-2xl font-philosopher sm:text-3xl font-serif tracking-wide mb-5 font-normal">
         The older The better!
       </h2>
 
       {/* Paragraph 1 */}
       <p className="text-xs sm:text-sm font-serif leading-relaxed text-white/95">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-        tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      Join us for an unforgettable journey through the vineyards,
+       where every bottle is crafted with dedication, expertise,
+        and a commitment to excellence. Experience authentic flavors.
+       
       </p>
 
       {/* Divider Line 1 */}
@@ -790,8 +795,11 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
 
       {/* Paragraph 4 */}
       <p className="text-xs sm:text-sm font-serif leading-relaxed text-white/95 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-        tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      Discover the passion behind every bottle as our expert wine
+       makers combine generations of tradition with modern craftsmanship to create exceptional wines.
+       From carefully selected vineyards to the final pour,
+       every step reflects our dedication to quality,rich flavor,
+        and an unforgettable tasting experience that celebrates the true art of winemaking.
       </p>
 
       {/* Authentic Cursive Signature SVG */}
@@ -828,7 +836,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
             Winery
           </span>
           {/* Main Title */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif tracking-wider text-zinc-800 uppercase font-medium">
+          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-4xl  tracking-wider text-zinc-800 uppercase font-medium">
             News from the World of Winery
           </h2>
         </div>
@@ -902,7 +910,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
           <span className="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#801b2c] block font-bold tracking-wide">
             Wine Maker
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif tracking-[0.15em] text-zinc-900 uppercase font-extrabold">
+          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-4xl tracking-[0.15em] text-zinc-900 uppercase font-extrabold">
             Our Brands & Co Brands
           </h2>
         </div>

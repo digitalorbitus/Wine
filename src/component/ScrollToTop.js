@@ -127,8 +127,8 @@ transition={{
           <Image
             src="https://dtwine.wpenginepowered.com/wp-content/themes/winemaker/images/totop.png"
             alt="Scroll To Top"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             priority
             className="select-none"
           />

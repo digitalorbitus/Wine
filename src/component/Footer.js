@@ -58,7 +58,7 @@ export default function NewsletterSection() {
 
             {/* Email Subscription Form */}
             <form onSubmit={(e) => e.preventDefault()} className="w-full pt-4">
-              <div className="relative flex items-center border-b border-stone-600 focus-within:border-stone-200 transition-colors pb-2">
+              <div className="relative font-old-standard  flex items-center border-b border-stone-600 focus-within:border-stone-200 transition-colors pb-2">
                 <input
                   type="email"
                   placeholder="Enter Email"

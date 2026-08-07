@@ -420,6 +420,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ShoppingBag, Heart, Pin } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -482,7 +483,22 @@ const products = [
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2013/06/product2-500x500.png",
   },
 ];
+//==================== Navber start ======================
+const countries = [
+  { id: "01", name: "ITALY", link: "/italy" },
+  { id: "02", name: "FRANCE", link: "/france" },
+  { id: "03", name: "ARGENTINA", link: "/argentina" },
+  { id: "04", name: "CALIFORNIA", link: "/california" },
+  { id: "05", name: "URUGUAY", link: "/uruguay" },
+  { id: "06", name: "SPAIN", link: "/spain" },
+  { id: "07", name: "PORTUGAL", link: "/portugal" },
+];
 
+// Duplicate for seamless scrolling
+const loopCountries = [...countries, ...countries];
+
+
+// =============== Navber end  ==========================
 export default function ShopPage() {
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
@@ -510,10 +526,46 @@ export default function ShopPage() {
       handlePageChange(currentPage + 1);
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-white font-serif text-gray-800">
+
+  <section className="w-full bg-white py-8 overflow-hidden">
+      <div className="overflow-hidden">
+        <motion.div
+          className="flex items-center gap-10 whitespace-nowrap"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 20,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          {loopCountries.map((country, index) => (
+            <Link
+              key={index}
+              href={country.link}
+              className="flex items-center gap-3 shrink-0 group"
+            >
+              {/* Number */}
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#8b263e] flex items-center justify-center transition-all duration-300 group-hover:bg-[#8b263e]">
+                <span className="text-[10px] md:text-xs font-semibold text-[#8b263e] group-hover:text-white">
+                  {country.id}
+                </span>
+              </div>
+
+              {/* Country Name */}
+              <h2 className="text-sm sm:text-base font-philosopher  md:text-lg font-bold uppercase tracking-[0.15em] text-black transition-all duration-300 group-hover:text-[#8b263e]">
+                {country.name}
+              </h2>
+            </Link>
+          ))}
+        </motion.div>
+      </div>
+    </section>
       {/* Hero / Banner Header */}
+
       <div className="relative flex flex-col items-center justify-center bg-gradient-to-b from-stone-100 to-white py-12 md:py-16 text-center">
         <h1 className="text-2xl font-light tracking-widest text-black md:text-3xl uppercase">
           Shop

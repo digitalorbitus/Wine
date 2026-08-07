@@ -19,10 +19,37 @@
   }
 }
 
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.philosopher {
+  font-family: "Philosopher", serif;
+}
+.georgia-font {
+  font-family: Georgia, serif;
+}
+.font-philosopher {
+  font-family: "Philosopher", sans-serif;
+
+  font-weight: 400;
+  line-height: normal;
+ 
+}
+.font-great-vibes {
+  font-family: var(--font-great-vibes);
+  font-weight: 400;
+  font-style: normal;
+}
+.font-old-standard {
+  font-family: var(--font-old-standard);
+  font-style: normal;
+ 
+  font-weight: 400;
+  line-height: 28px;
+ 
 }
 @keyframes lineMove {
   0% {
@@ -143,4 +170,13 @@ body {
         opacity:1;
         transform:translateX(0);
     }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
