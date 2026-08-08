@@ -625,7 +625,7 @@ export default function ContactInfoSection() {
                 </h3>
 
                 {/* Lines */}
-                <div className="space-y-1 text-xs sm:text-sm font-serif leading-relaxed text-zinc-100">
+                <div className="space-y-1 text-xs sm:text-sm font-philosopher leading-relaxed text-zinc-100">
                   {item.lines.map((line, idx) => (
                     <p key={idx} className={item.isLink ? 'hover:underline cursor-pointer' : ''}>
                       {line}

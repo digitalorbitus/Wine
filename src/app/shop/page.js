@@ -485,18 +485,16 @@ const products = [
 ];
 //==================== Navber start ======================
 const countries = [
-  { id: "01", name: "ITALY", link: "/italy" },
-  { id: "02", name: "FRANCE", link: "/france" },
-  { id: "03", name: "ARGENTINA", link: "/argentina" },
-  { id: "04", name: "CALIFORNIA", link: "/california" },
-  { id: "05", name: "URUGUAY", link: "/uruguay" },
-  { id: "06", name: "SPAIN", link: "/spain" },
-  { id: "07", name: "PORTUGAL", link: "/portugal" },
-];
+    { id: "01", name: "ITALY", link: "/italy", flag: "https://flagcdn.com/w40/it.png" },
+    { id: "02", name: "FRANCE", link: "/france", flag: "https://flagcdn.com/w40/fr.png" },
+    { id: "03", name: "ARGENTINA", link: "/argentina", flag: "https://flagcdn.com/w40/ar.png" },
+    { id: "04", name: "CALIFORNIA", link: "/california", flag: "https://flagcdn.com/w40/us.png" },
+    { id: "05", name: "URUGUAY", link: "/uruguay", flag: "https://flagcdn.com/w40/uy.png" },
+    { id: "06", name: "SPAIN", link: "/spain", flag: "https://flagcdn.com/w40/es.png" },
+    { id: "07", name: "PORTUGAL", link: "/portugal", flag: "https://flagcdn.com/w40/pt.png" },
+  ];
 
-// Duplicate for seamless scrolling
-const loopCountries = [...countries, ...countries];
-
+  const loopCountries = [...countries, ...countries];
 
 // =============== Navber end  ==========================
 export default function ShopPage() {
@@ -537,7 +535,7 @@ export default function ShopPage() {
           className="flex items-center gap-10 whitespace-nowrap"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 25,
             ease: "linear",
             repeat: Infinity,
           }}
@@ -548,15 +546,25 @@ export default function ShopPage() {
               href={country.link}
               className="flex items-center gap-3 shrink-0 group"
             >
-              {/* Number */}
+              {/* Number Circle */}
               <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-[#8b263e] flex items-center justify-center transition-all duration-300 group-hover:bg-[#8b263e]">
                 <span className="text-[10px] md:text-xs font-semibold text-[#8b263e] group-hover:text-white">
                   {country.id}
                 </span>
               </div>
 
+              {/* Country Flag */}
+              <div className="relative w-6 h-4 sm:w-7 sm:h-5 overflow-hidden rounded-sm shadow-sm flex-shrink-0 border border-gray-100">
+                <Image
+                  src={country.flag}
+                  alt={`${country.name} flag`}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+
               {/* Country Name */}
-              <h2 className="text-sm sm:text-base font-philosopher  md:text-lg font-bold uppercase tracking-[0.15em] text-black transition-all duration-300 group-hover:text-[#8b263e]">
+              <h2 className="text-sm sm:text-base font-philosopher md:text-lg font-bold uppercase tracking-[0.15em] text-black transition-all duration-300 group-hover:text-[#8b263e]">
                 {country.name}
               </h2>
             </Link>

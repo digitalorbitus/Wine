@@ -205,22 +205,23 @@ const categories = [
 const images = [
   {
     id: 1,
-    src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider1-1.jpg",
+    src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider1-1.jpg", // Desktop
+    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider1-1.jpg", // Mobile (ya mobile portrait image ka link)
     alt: "Slide 1",
   },
   {
     id: 2,
     src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
+    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
     alt: "Slide 2",
   },
   {
     id: 3,
     src: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
+    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
     alt: "Slide 3",
   },
-
 ];
-
 // Tastefully Yours  start
 const categorie = [
   {
@@ -320,14 +321,15 @@ export default function HeroSlider() {
   return (
    <div className="w-full">
 
-<section className="relative w-full h-screen overflow-hidden group bg-white">
-  {/* Background Image */}
+<section className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden group bg-white m-0 p-0">
+  {/* Background Image - Optimized for Mobile & Desktop */}
   <Image
     src={images[currentIndex].src}
     alt={images[currentIndex].alt}
     fill
     priority
-    className="object-contain bg-white transition-all duration-700"
+    sizes="100vw"
+    className="object-cover object-[center_top] sm:object-center transition-all duration-700"
   />
 
   {/* Content for Slide 1 */}
@@ -335,82 +337,57 @@ export default function HeroSlider() {
     <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
       <div className="relative w-full max-w-5xl h-full flex flex-col md:flex-row items-center justify-center text-center">
 
-  {/* Top Text */}
-<motion.h3
-  initial={{ opacity: 0, y: -40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 1,
-    duration: 0.8,
-  }}
-  className="
-    georgia-font
-    static md:absolute
-    md:top-[22%]
-    md:left-[25%]
-    text-[#B20A2F]
-    text-[18px] sm:text-[24px] md:text-[30px]
-    leading-[30px] md:leading-[60px]
-    font-normal
-    uppercase
-    tracking-[3px] sm:tracking-[6px]
-  "
->
-  DELIGHTFULL
-</motion.h3>
+        {/* Top Text */}
+        <motion.h3
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="
+            georgia-font
+            static md:absolute
+            md:top-[22%] md:left-[25%]
+            text-[#B20A2F]
+            text-[18px] sm:text-[24px] md:text-[30px]
+            leading-snug
+            font-normal uppercase
+            tracking-[3px] sm:tracking-[6px]
+          "
+        >
+          DELIGHTFULL
+        </motion.h3>
 
         {/* Big Text */}
-<TypeAnimation
-  sequence={["Wine", 5000]}
-  wrapper="h1"
-  speed={50}
-  cursor={false}
-  className="
-    philosopher
-    text-black
-    text-5xl
-    sm:text-7xl
-    md:text-[11rem]
-    lg:text-[250px]
-    font-bold
-    leading-none
-  "
-/>
+        <TypeAnimation
+          sequence={["Wine", 5000]}
+          wrapper="h1"
+          speed={50}
+          cursor={false}
+          className="
+            philosopher
+            text-black
+            text-5xl sm:text-7xl md:text-[11rem] lg:text-[250px]
+            font-bold
+            leading-none
+          "
+        />
 
         {/* Bottom Text */}
-<motion.p
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 2,
-    duration: 0.8,
-  }}
-  className="
-    static
-    md:absolute
-    md:bottom-[28%]
-    md:right-[24%]
-
-    font-[Georgia,serif]
-    font-normal
-
-    text-[#B20A2F]
-
-    text-[18px]
-    sm:text-[24px]
-    md:text-[30px]
-
-    leading-[30px]
-    sm:leading-[40px]
-    md:leading-[50px]
-
-    uppercase
-    tracking-[4px]
-    text-center
-  "
->
-  EST - 1942
-</motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2, duration: 0.8 }}
+          className="
+            static md:absolute
+            md:bottom-[28%] md:right-[24%]
+            font-[Georgia,serif] font-normal
+            text-[#B20A2F]
+            text-[18px] sm:text-[24px] md:text-[30px]
+            leading-snug
+            uppercase tracking-[4px] text-center
+          "
+        >
+          EST - 1942
+        </motion.p>
 
       </div>
     </div>
@@ -418,294 +395,251 @@ export default function HeroSlider() {
 
   {/* Content for Slide 2 */}
   {currentIndex === 1 && (
-  <div
-    key={currentIndex}
-    className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-6 sm:px-10 md:pr-16 lg:pr-28"
-  >
-    <div className="max-w-xl text-center flex flex-col items-center justify-center">
+    <div
+      key={currentIndex}
+      className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-6 sm:px-10 md:pr-16 lg:pr-28"
+    >
+      <div className="max-w-xl text-center flex flex-col items-center justify-center">
 
-      {/* Top Text - Second */}
-      <motion.h3
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="
-          mt-4
-          text-[#b20a2f]
-          text-[18px]
-          sm:text-[24px]
-          md:text-[30px]
-          leading-[40px]
-          md:leading-[60px]
-          font-[100]
-          uppercase
-          tracking-[3px]
-          sm:tracking-[6px]
-          font-serif
-        "
-        style={{
-          fontFamily: "Georgia, serif",
-        }}
-      >
-        A Perfect Blend
-      </motion.h3>
-
-      {/* Center Big Text - First */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        className="w-full flex justify-center"
-      >
-        <TypeAnimation
-          sequence={["in a Bottle", 5000]}
-          wrapper="h1"
-          speed={50}
-          cursor={false}
+        {/* Top Text */}
+        <motion.h3
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
           className="
-            font-['Philosopher']
-            font-bold
-            text-[#111111]
-            text-[40px]
-            sm:text-[60px]
-            md:text-[90px]
-            lg:text-[120px]
-            leading-[50px]
-            sm:leading-[80px]
-            md:leading-[110px]
-            lg:leading-[150px]
-            text-center
+            text-[#b20a2f]
+            text-[18px] sm:text-[24px] md:text-[30px]
+            leading-snug
+            font-[100] uppercase
+            tracking-[3px] sm:tracking-[6px]
+            font-serif
           "
-        />
-      </motion.div>
-
-      {/* Bottom Description - Third */}
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        className="
-          mt-6
-          text-[#111111]
-          text-[16px]
-          sm:text-[17px]
-          md:text-[18px]
-          leading-[28px]
-          md:leading-[30px]
-          font-[100]
-          max-w-xl
-          mx-auto
-          text-center
-        "
-        style={{
-          fontFamily: "Georgia, serif",
-        }}
-      >
-        Wine improves with age, The older it gets, the better you like it....
-      </motion.p>
-
-    </div>
-  </div>
-)}
-
-  {/* Content for Slide 3 */}
-{/* ================= Slide 3 (Mobile Optimized) ================= */}
-{/* ================= Slide 3 (Narrow & Compact - Full Right) ================= */}
-{currentIndex === 2 && (
-  <div className="absolute inset-0 z-10 flex items-center justify-end pl-4 pr-2 sm:pr-6 md:pr-10 lg:pr-16 py-6 sm:py-10">
-    
-    {/* Main Responsive Container - Decreased max-widths */}
-    <div className="relative w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[560px] ml-auto mr-0 flex items-center justify-center transition-all duration-300">
-
-      {/* Polygon Background Container */}
-      <div className="absolute inset-0 overflow-hidden rounded-xl">
-
-        {/* Main Polygon Base */}
-        <div
-          className="absolute inset-0"
-          style={{
-            clipPath: "polygon(6% 0%, 100% 8%, 100% 92%, 6% 100%, 0% 50%)",
-            background: "#97B97A",
-          }}
-        />
-
-        {/* Overlapping Polygon Shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%)",
-              background: "#8FB077",
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 28%, 50% 16%, 0% 28%)",
-              background: "#A8C58C",
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(0% 72%, 50% 84%, 100% 72%, 100% 88%, 50% 100%, 0% 88%)",
-              background: "#A8C58C",
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(0% 28%, 50% 16%, 100% 28%, 100% 72%, 50% 84%, 0% 72%)",
-              background: "#84A868",
-            }}
-          />
-          <div
-            className="absolute left-0 top-0 w-1/2 h-full"
-            style={{
-              clipPath: "polygon(0% 12%, 100% 22%, 100% 78%, 0% 88%)",
-              background: "rgba(255,255,255,0.08)",
-            }}
-          />
-          <div
-            className="absolute right-0 top-0 w-1/2 h-full"
-            style={{
-              clipPath: "polygon(0% 22%, 100% 12%, 100% 88%, 0% 78%)",
-              background: "rgba(0,0,0,0.05)",
-            }}
-          />
-        </div>
-
-        {/* Right Light Accent */}
-        <div
-          className="absolute inset-0"
-          style={{
-            clipPath: "polygon(55% 12%, 100% 0%, 100% 100%, 55% 88%)",
-            background: "#A8C58C",
-          }}
-        />
-
-        {/* Center Shadow Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            clipPath: "polygon(8% 25%, 50% 12%, 100% 25%, 100% 75%, 50% 88%, 8% 75%)",
-            background: "#89AA6E",
-          }}
-        />
-
-        {/* Top Light Accent */}
-        <div
-          className="absolute top-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
-          style={{
-            clipPath: "polygon(0 0, 100% 0, 50% 100%)",
-            background: "rgba(255,255,255,.12)",
-          }}
-        />
-
-        {/* Bottom Light Accent */}
-        <div
-          className="absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
-          style={{
-            clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
-            background: "rgba(255,255,255,.08)",
-          }}
-        />
-
-        {/* Ambient Glows */}
-        <div className="absolute -left-10 top-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-white/20 blur-2xl pointer-events-none" />
-        <div className="absolute -right-10 bottom-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-black/15 blur-2xl pointer-events-none" />
-      </div>
-
-      {/* Foreground Content */}
-      <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-8 py-6 sm:py-10 md:py-12">
-
- <motion.h3
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 1.2, duration: 0.8 }}
-  className="
-    uppercase
-    tracking-[2px] sm:tracking-[4px] md:tracking-[6px]
-    text-[11px] sm:text-[16px] md:text-[20px]
-    leading-[16px] sm:leading-[20px] md:leading-[20px]
-    text-[#B20A2F]
-    font-normal
-    [font-family:Georgia,serif]
-  "
->
-  BOTTLED POETRY
-</motion.h3>
-
-        {/* Premium Icon Circle */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            delay: 2.2,
-            duration: 0.8,
-            type: "spring",
-          }}
-          className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#B72E3B] to-[#7D1420] shadow-md shrink-0"
+          style={{ fontFamily: "Georgia, serif" }}
         >
-          <div className="relative w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8">
-            <Image
-              src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
-              alt="Wine Icon"
-              fill
-              className="object-contain"
-            />
-          </div>
+          A Perfect Blend
+        </motion.h3>
+
+        {/* Center Big Text */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full flex justify-center my-2"
+        >
+          <TypeAnimation
+            sequence={["in a Bottle", 5000]}
+            wrapper="h1"
+            speed={50}
+            cursor={false}
+            className="
+              font-['Philosopher'] font-bold
+              text-[#111111]
+              text-[40px] sm:text-[60px] md:text-[90px] lg:text-[120px]
+              leading-none
+              text-center
+            "
+          />
         </motion.div>
 
-        {/* Animated Title */}
-   {/* Animated Title */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8 }}
-  className="w-full"
->
-  <TypeAnimation
-    sequence={["Vineyard & Winery", 5000]}
-    wrapper="h1"
-    speed={40}
-    cursor={false}
-    className="
-      font-['Philosopher']
-      font-bold
-      text-white
-      text-[32px]
-      sm:text-[40px]
-      md:text-[60px]
-      lg:text-[90px]
-      leading-[40px]
-      sm:leading-[65px]
-      md:leading-[100px]
-      lg:leading-[150px]
-      text-center
-    "
-  />
-</motion.div>
-        {/* Description Paragraph */}
+        {/* Bottom Description */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.2, duration: 0.8 }}
-          className="mt-2 sm:mt-3 text-white/90 text-[10px] sm:text-xs md:text-sm leading-relaxed"
+          transition={{ delay: 2, duration: 0.8 }}
+          className="
+            text-[#111111]
+            text-[16px] sm:text-[17px] md:text-[18px]
+            leading-relaxed
+            font-[100] max-w-xl mx-auto text-center
+          "
+          style={{ fontFamily: "Georgia, serif" }}
         >
-          Experience handcrafted wines created with passion,
-          tradition and generations of excellence.
+          Wine improves with age, The older it gets, the better you like it....
         </motion.p>
 
       </div>
-
     </div>
-  </div>
-)}
+  )}
 
-  <div className="absolute inset-0"></div>
+  {/* Content for Slide 3 */}
+  {currentIndex === 2 && (
+    <div className="absolute inset-0 z-10 flex items-center justify-end pl-4 pr-2 sm:pr-6 md:pr-10 lg:pr-16">
+      
+      {/* Container */}
+      <div className="relative w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[560px] ml-auto mr-0 flex items-center justify-center">
 
-  {/* Navigation Arrows (Mobile me opacity hamesha visible ki hai context ke liye) */}
+        {/* Polygon Background Container */}
+        <div className="absolute inset-0 overflow-hidden rounded-xl">
+          <div
+            className="absolute inset-0"
+            style={{
+              clipPath: "polygon(6% 0%, 100% 8%, 100% 92%, 6% 100%, 0% 50%)",
+              background: "#97B97A",
+            }}
+          />
+          <div className="absolute inset-0 overflow-hidden">
+            <div
+              className="absolute inset-0"
+              style={{
+                clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%)",
+                background: "#8FB077",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 28%, 50% 16%, 0% 28%)",
+                background: "#A8C58C",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                clipPath: "polygon(0% 72%, 50% 84%, 100% 72%, 100% 88%, 50% 100%, 0% 88%)",
+                background: "#A8C58C",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                clipPath: "polygon(0% 28%, 50% 16%, 100% 28%, 100% 72%, 50% 84%, 0% 72%)",
+                background: "#84A868",
+              }}
+            />
+            <div
+              className="absolute left-0 top-0 w-1/2 h-full"
+              style={{
+                clipPath: "polygon(0% 12%, 100% 22%, 100% 78%, 0% 88%)",
+                background: "rgba(255,255,255,0.08)",
+              }}
+            />
+            <div
+              className="absolute right-0 top-0 w-1/2 h-full"
+              style={{
+                clipPath: "polygon(0% 22%, 100% 12%, 100% 88%, 0% 78%)",
+                background: "rgba(0,0,0,0.05)",
+              }}
+            />
+          </div>
+
+          <div
+            className="absolute inset-0"
+            style={{
+              clipPath: "polygon(55% 12%, 100% 0%, 100% 100%, 55% 88%)",
+              background: "#A8C58C",
+            }}
+          />
+
+          <div
+            className="absolute inset-0"
+            style={{
+              clipPath: "polygon(8% 25%, 50% 12%, 100% 25%, 100% 75%, 50% 88%, 8% 75%)",
+              background: "#89AA6E",
+            }}
+          />
+
+          <div
+            className="absolute top-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
+            style={{
+              clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+              background: "rgba(255,255,255,.12)",
+            }}
+          />
+
+          <div
+            className="absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
+            style={{
+              clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
+              background: "rgba(255,255,255,.08)",
+            }}
+          />
+
+          <div className="absolute -left-10 top-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-white/20 blur-2xl pointer-events-none" />
+          <div className="absolute -right-10 bottom-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-black/15 blur-2xl pointer-events-none" />
+        </div>
+
+        {/* Foreground Content */}
+        <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-8 py-6">
+
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="
+              uppercase
+              tracking-[2px] sm:tracking-[4px] md:tracking-[6px]
+              text-[11px] sm:text-[16px] md:text-[20px]
+              leading-normal
+              text-[#B20A2F]
+              font-normal
+              [font-family:Georgia,serif]
+            "
+          >
+            BOTTLED POETRY
+          </motion.h3>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 2.2,
+              duration: 0.8,
+              type: "spring",
+            }}
+            className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#B72E3B] to-[#7D1420] shadow-md shrink-0"
+          >
+            <div className="relative w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8">
+              <Image
+                src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
+                alt="Wine Icon"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-full"
+          >
+            <TypeAnimation
+              sequence={["Vineyard & Winery", 5000]}
+              wrapper="h1"
+              speed={40}
+              cursor={false}
+              className="
+                font-['Philosopher']
+                font-bold
+                text-white
+                text-[28px]
+                sm:text-[40px]
+                md:text-[50px]
+                lg:text-[70px]
+                leading-tight
+                text-center
+              "
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 3.2, duration: 0.8 }}
+            className="mt-2 text-white/90 text-[10px] sm:text-xs md:text-sm leading-relaxed"
+          >
+            Experience handcrafted wines created with passion,
+            tradition and generations of excellence.
+          </motion.p>
+
+        </div>
+
+      </div>
+    </div>
+  )}
+
+  {/* Navigation Arrows */}
   <button
     onClick={prevSlide}
     className="absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 z-20

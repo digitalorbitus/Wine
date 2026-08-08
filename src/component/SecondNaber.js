@@ -10,14 +10,14 @@ export default function Navbar() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Club", href: "#" },
+    // { label: "Club", href: "#" },
     { label: "About Us", href: "/about" },
-    { label: "Wine Making", href: "#" },
-    { label: "Pages", href: "#" },
-    { label: "Elements", href: "#" },
+    // { label: "Wine Making", href: "#" },
+    // { label: "Pages", href: "#" },
+    // { label: "Elements", href: "#" },
     { label: "Shop", href: "/shop" },
     { label: "Visit Us", href: "/contact" },
-    { label: "Our Events", href: "#" },
+    { label: "why Choose Us", href: "/why-us" },
   ];
 
   return (
