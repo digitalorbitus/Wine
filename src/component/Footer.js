@@ -37,7 +37,7 @@ export default function NewsletterSection() {
           <div className="lg:col-span-7 flex flex-col justify-between space-y-8 text-center lg:text-left">
             
             {/* Navigation Links */}
-            <nav className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm sm:text-base tracking-widest font-light text-stone-200">
+            <nav className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm  sm:text-base   ">
               {navLinks.map((link) => (
                 <a
                   key={link}
@@ -50,7 +50,7 @@ export default function NewsletterSection() {
             </nav>
 
             {/* Address & Contact Info */}
-            <div className="text-xs sm:text-sm text-stone-400 space-y-1.5 leading-relaxed font-sans">
+            <div className="text-xs sm:text-sm text-stone-400 space-y-1.5 leading-relaxed font-old-standard">
               <p>Designed and developed in New York City.</p>
               <p>Call us 1-888-814-5411. 10:00am - 5.00px ET M-F.</p>
               <p>Copyright © 2017, DesignThemes. All right reserved Privacy Terms.</p>
@@ -67,7 +67,7 @@ export default function NewsletterSection() {
                 />
                 <button
                   type="submit"
-                  className="absolute right-0 text-xs sm:text-sm tracking-widest text-stone-400 hover:text-white uppercase transition-colors font-sans cursor-pointer"
+                  className="absolute right-0 text-xs sm:text-sm  hover:text-white uppercase transition-colors font-old-standard cursor-pointer"
                 >
                   SUBMIT
                 </button>

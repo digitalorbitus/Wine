@@ -226,12 +226,12 @@ const images = [
 const categorie = [
   {
     id: 1,
-    name: "RED\nWINE",
+    name: "BURGUNDY",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon1.png",
   },
   {
     id: 2,
-    name: "WHITE\nWINE",
+    name: "WHITEWINE",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon2.png",
   },
   {
@@ -241,12 +241,12 @@ const categorie = [
   },
   {
     id: 4,
-    name: "ROSE\nWINE",
+    name: "CHAMPAGNE",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon3.png",
   },
   {
     id: 5,
-    name: "SPARKLING",
+    name: "VINTAGE WINES",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon5.png",
   },
 ];
@@ -727,11 +727,11 @@ Every bottle carries a story of heritage, craftsmanship, and unforgettable taste
 
         {/* Default Text - Hover par Hide */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center transition-opacity duration-500 group-hover:opacity-0">
-          <h3 className="text-black text-2xl font-serif uppercase">
+          <h3 className="text-black text-2xl font-philosopher  uppercase">
             {item.title}
           </h3>
 
-          <span className="mt-3 text-white font-semibold border-b border-white pb-1">
+          <span className="mt-3 text-white font-old-standard border-b border-white pb-1">
             SHOP NOW
           </span>
         </div>
@@ -748,71 +748,72 @@ Every bottle carries a story of heritage, craftsmanship, and unforgettable taste
 
 <section className="relative w-full min-h-[500px] md:min-h-[650px] overflow-hidden">
 
-  {/* Background Image */}
+  {/* Background Image - Mobile Alignment Fixed */}
   <Image
     src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/men-img-2.jpg"
     alt="Background"
     fill
     priority
-    className="absolute inset-0 object-cover object-left md:object-left z-0"
+    quality={90}
+    sizes="100vw"
+    className="absolute inset-0 object-cover object-[25%_center] sm:object-[20%_center] md:object-left z-0"
   />
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/30 z-10"></div>
+  {/* Overlay - Mobile par light kar diya taake image nazar aaye */}
+  <div className="absolute inset-0 bg-black/10 "></div>
 
   {/* Content */}
-  <div className="relative z-20 flex items-center min-h-[500px] md:min-h-[650px] px-5 sm:px-8 md:px-16">
+  <div className="relative z-20 flex items-center min-h-[500px] md:min-h-[650px] px-5 sm:px-8 md:px-16 py-10 md:py-0">
 
     <div className="w-full md:max-w-xl md:ml-auto text-center md:text-left text-black">
 
       {/* Small Heading */}
-     <span
-  className={`
-    ${scriptFont.className}
-    italic
-    text-[14px]
-    sm:text-[16px]
-    md:text-[40px]
-    leading-[34px]
-    md:leading-[28px]
-    font-normal
-    text-[#a3485e]
-  `}
->
-  Message from Wine Maker
-</span>
+      <span
+        className={`
+          ${scriptFont.className}
+          italic
+          text-[30px]
+          sm:text-[16px]
+          md:text-[40px]
+          leading-[34px]
+          md:leading-[28px]
+          font-normal
+          text-[#a3485e]
+          block
+        `}
+      >
+        Message from Wine Maker
+      </span>
 
       {/* Main Heading */}
-  <h2
-  className="
-    mt-2
-    mb-4
-    md:mb-6
-    text-[30px]
-    sm:text-[36px]
-    md:text-[38px]
-    leading-normal
-    font-normal
-    text-[#111111]
-  "
-  style={{
-    fontFamily: '"Old Standard TT", serif',
-  }}
->
-  Upgrade to the latest!
-</h2>
+      <h2
+        className="
+          mt-2
+          mb-4
+          md:mb-6
+          text-[30px]
+          sm:text-[36px]
+          md:text-[38px]
+          leading-normal
+          font-normal
+          text-[#111111]
+        "
+        style={{
+          fontFamily: '"Old Standard TT", serif',
+        }}
+      >
+        Upgrade to the latest!
+      </h2>
 
-      {/* Paragraph */}
+      {/* Paragraphs */}
       <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8 mb-4">
-      Discover the elegance of our handcrafted wines, created with passion and dedication. 
-Every bottle reflects a story of tradition, quality, and timeless craftsmanship.
-
-
+        Discover the elegance of our handcrafted wines, created with passion and dedication. 
+        Every bottle reflects a story of tradition, quality, and timeless craftsmanship.
       </p>
 
       <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8">
-      From carefully selected grapes to the finest aging process, we bring you a collection 
-that celebrates exceptional taste and unforgettable moments.
+        From carefully selected grapes to the finest aging process, we bring you a collection 
+        that celebrates exceptional taste and unforgettable moments.
       </p>
 
       {/* Signature */}
@@ -821,6 +822,7 @@ that celebrates exceptional taste and unforgettable moments.
           src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/signature-1.png"
           alt="Signature"
           fill
+          sizes="(max-width: 768px) 112px, 176px"
           className="object-contain"
         />
       </div>
@@ -1037,7 +1039,7 @@ Every bottle delivers a unique taste experience made to be remembered.
 
         {/* Text Inside Image */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[10px] sm:text-xs font-bold text-center text-black whitespace-pre-line leading-4">
+          <span className="text-[10px] sm:text-xs font-old-standard text-center text-black whitespace-pre-line leading-4">
             {cat.name}
           </span>
         </div>
@@ -1268,7 +1270,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-philosopher text-white uppercase tracking-widest mb-3">
             Our Vintage Wines
           </h2>
-          <p className="text-xs sm:text-sm text-gray-300 font-serif leading-relaxed px-4 opacity-80">
+          <p className="text-xs sm:text-sm text-gray-300 font-old-standard leading-relaxed px-4 opacity-80">
           Explore our vintage collection, where time, tradition, and craftsmanship blend together to create wines of exceptional quality and unforgettable taste.
           </p>
         </div>
@@ -1323,12 +1325,12 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
                 </div>
 
                 {/* Wine Title */}
-                <h3 className="text-xs sm:text-sm md:text-base font-serif text-white tracking-widest uppercase mb-1 font-semibold group-hover:text-[#E8B87D] transition-colors">
+                <h3 className="text-xs sm:text-sm md:text-base font-philosopher  text-white tracking-widest uppercase mb-1  group-hover:text-[#E8B87D] transition-colors">
                   {wine.name}
                 </h3>
 
                 {/* Wine Price */}
-                <span className="text-xs sm:text-sm font-serif text-[#E8B87D] font-bold">
+                <span className="text-xs sm:text-sm  font-philosopher text-[#E8B87D] ">
                   {wine.price}
                 </span>
 
@@ -1384,7 +1386,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
 </h2>
 
         {/* Subtitle / Description Text */}
-        <p className="text-sm sm:text-base md:text-lg text-stone-300 font-serif max-w-lg mb-8 leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-stone-300 font-old-standard  max-w-lg mb-8 leading-relaxed">
          Stay updated with our latest wines, exclusive releases, and stories from our vineyard. 
 Join our community and discover the world of fine winemaking.
         </p>
@@ -1403,12 +1405,35 @@ Join our community and discover the world of fine winemaking.
           />
 
           {/* Subscribe Button */}
-          <button 
-            type="submit" 
-            className="w-full sm:w-auto bg-white hover:bg-stone-200 text-stone-800 font-serif text-sm sm:text-base px-8 py-2.5 sm:py-3 rounded-full transition-colors duration-300 font-medium whitespace-nowrap cursor-pointer"
-          >
-            Subscribe!
-          </button>
+  <button
+  type="submit"
+  className="
+    w-auto
+    bg-white
+    hover:bg-stone-200
+    text-stone-800
+    font-serif
+    text-xs
+    sm:text-sm
+    md:text-base
+    px-5
+    sm:px-7
+    md:px-8
+    py-2
+    sm:py-2.5
+    md:py-3
+    rounded-full
+    transition-colors
+    duration-300
+    font-medium
+    whitespace-nowrap
+    cursor-pointer
+    mx-auto
+    sm:mx-0
+  "
+>
+  Subscribe!
+</button>
         </form>
 
       </div>

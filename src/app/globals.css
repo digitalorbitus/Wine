@@ -51,6 +51,15 @@ body {
   line-height: 28px;
  
 }
+/* Great Vibes Font */
+.great-vibes {
+  font-family: var(--font-great-vibes);
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(165, 62, 76);
+
+  line-height: 30px;
+}
 @keyframes lineMove {
   0% {
     height: 0;

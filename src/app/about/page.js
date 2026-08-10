@@ -184,7 +184,7 @@ const newsPosts = [
     author: "ram",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2015/06/blog7-1024x696.jpg",
     excerpt:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nunc lorem, nec faucibus mi facilisis eget. Mauris laoreet,...",
+      "Rooted in tradition and inspired by nature, our journey is dedicated to creating wines that bring people together. From carefully chosen grapes to thoughtful craftsmanship, every bottle reflects our passion and commitment to quality.",
   },
   {
     id: 2,
@@ -194,7 +194,7 @@ const newsPosts = [
     author: "ram",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2015/06/blog6-1024x696.jpg",
     excerpt:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nunc lorem, nec faucibus mi facilisis eget. Mauris laoreet,...",
+      "We believe great wine is more than a drink—it is an experience meant to be shared. With respect for tradition and an eye for modern excellence, we create wines designed to turn everyday moments into lasting memories.",
   },
   {
     id: 3,
@@ -204,7 +204,7 @@ const newsPosts = [
     author: "ram",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2015/06/blog1-1024x696.jpg",
     excerpt:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nunc lorem, nec faucibus mi facilisis eget. Mauris laoreet,...",
+      "Explore a collection of distinctive wines crafted with character, balance, and elegance. Each selection captures the unique essence of its grapes, offering a memorable experience with every glass.",
   },
 ];  
 // seven section end
@@ -284,7 +284,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         transition={{ duration: 0.5 }}
       >
         {/* Bada Heading Font */}
-        <h2 className=" mt-3 text-[28px] font-old-standard  text-zinc-900 tracking-wider font-bold">
+        <h2 className=" mt-3 text-[28px] font-old-standard   tracking-wider ">
           ABOUT US
         </h2>
 
@@ -302,16 +302,16 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
     className="lg:col-span-5 relative w-full h-[320px] sm:h-[420px] lg:h-[600px]"
 
   >
-    <Image
-      src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/bg-1.jpg"
-      alt="Wine Barrel and Grapes"
-      fill
-      quality={100}
-      unoptimized // External host se original sharp image load karne ke liye
-      priority
-      className="object-cover object-left"
-      sizes="(max-width: 2000px) 100vw, 50vw"
-    />
+   <Image
+  src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/bg-1.jpg"
+  alt="Wine Barrel and Grapes"
+  fill
+  quality={100}
+  unoptimized
+  priority
+  className="object-cover object-left"
+  sizes="(max-width: 1024px) 100vw, 50vw"
+/>
 
     {/* Fade Effect Overlay */}
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white hidden lg:block pointer-events-none" />
@@ -549,12 +549,12 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
             transition={{ duration: 0.6 }}
           >
             {/* Red Cursive Script Heading */}
-            <span className="text-2xl sm:text-3xl font-serif italic text-[#a03848] block">
+            <span className="text-2xl sm:text-4xl great-vibes text-[#a03848] block">
               2017 Wine Festivities
             </span>
 
             {/* Main Section Heading */}
-            <h3 className="text-3xl sm:text-4xl text-[34px] font-philosopher lg:text-5xl font-serif text-zinc-900 tracking-wide font-normal">
+            <h3 className="text-3xl sm:text-3xl text-[30px] font-philosopher lg:text-4xl tracking-wide">
               Invited by Wine Maker!
             </h3>
 
@@ -706,7 +706,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
             {/* Title + Dotted Leader Line + Price */}
             <div className="flex items-baseline w-full">
               {/* Wine Title */}
-              <h3 className="text-sm sm:text-base font-serif font-semibold tracking-wider text-zinc-800 uppercase flex-shrink-0">
+              <h3 className="text-sm sm:text-base font-philosopher  tracking-wider text-zinc-800 uppercase flex-shrink-0">
                 {item.title}
               </h3>
 
@@ -715,7 +715,7 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
 
               {/* Price Box with Dotted Border */}
               <div className="flex-shrink-0 px-2 py-0.5 border border-dotted border-[#a03848] rounded-[2px]">
-                <span className="text-xs sm:text-sm font-serif font-bold text-[#a03848]">
+                <span className="text-xs sm:text-sm font-old-standard text-[#a03848]">
                   {item.price}
                 </span>
               </div>
@@ -832,11 +832,11 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         {/* --- SECTION HEADER --- */}
         <div className="text-center space-y-2 mb-12 sm:mb-16">
           {/* Top Cursive Subtitle */}
-          <span className="text-3xl sm:text-4xl font-serif italic text-[#9c3545] block">
+          <span className="text-3xl sm:text-4xl great-vibes  text-[#9c3545] block">
             Winery
           </span>
           {/* Main Title */}
-          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-4xl  tracking-wider text-zinc-800 uppercase font-medium">
+          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-3xl  tracking-wider uppercase ">
             News from the World of Winery
           </h2>
         </div>
@@ -907,10 +907,10 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         
         {/* --- SECTION HEADER --- */}
         <div className="text-center space-y-2 mb-12 sm:mb-16">
-          <span className="text-3xl sm:text-4xl lg:text-5xl font-serif italic text-[#801b2c] block font-bold tracking-wide">
+          <span className="text-3xl sm:text-4xl lg:text-5xl great-vibes text-[#801b2c] block  tracking-wide">
             Wine Maker
           </span>
-          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-4xl tracking-[0.15em] text-zinc-900 uppercase font-extrabold">
+          <h2 className="text-2xl font-philosopher sm:text-3xl lg:text-3xl tracking-[0.15em]  uppercase ">
             Our Brands & Co Brands
           </h2>
         </div>

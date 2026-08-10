@@ -335,23 +335,23 @@ export default function ContactInfoSection() {
             </div>
 
 
-            <div className="divide-y divide-dashed divide-zinc-300 text-zinc-600 font-serif">
+            <div className="divide-y divide-dashed divide-zinc-300 text-zinc-600 font-old-standard">
 
               <div className="py-4">
-                <p>Toll Free: 1224 2234 LAW</p>
-                <p>Fax: 1224 2235 225</p>
+                <p>Toll Free: 440.812.3776</p>
+            
               </div>
 
 
               <div className="py-4 text-[#9c3545]">
-                <p>support@livecon.com</p>
-                <p>admin@livecon.com</p>
+                <p>ciaodaniel@gmail.com</p>
+             
               </div>
 
 
               <div className="py-4">
-                <p>625 @ David Blake Road,</p>
-                <p>Adventureland, LA 14536, USA</p>
+                <p>7607 Detour Ave Cleveland OH 44103 US</p>
+              
               </div>
 
 
@@ -394,8 +394,8 @@ export default function ContactInfoSection() {
                 </svg>
               </div>
               <div className="p-4 flex flex-col justify-center text-xs sm:text-sm">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-widest block mb-1">TALK TO US</span>
-                <p className="text-zinc-700"><span className="font-semibold text-zinc-900">Toll Free:</span> 440.812.3776</p>
+                <span className="text-[11px] font-philosopher  uppercase tracking-widest block mb-1">TALK TO US</span>
+                <p className="text-zinc-700"><span className="font-old-standard ">Toll Free:</span> 440.812.3776</p>
                 {/* <p className="text-zinc-700"><span className="font-semibold text-zinc-900">Fax:</span> 1224 2235 225</p> */}
               </div>
             </div>
@@ -408,8 +408,8 @@ export default function ContactInfoSection() {
                 </svg>
               </div>
               <div className="p-4 flex flex-col justify-center text-xs sm:text-sm">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-widest block mb-1">MAIL US @</span>
-                <p className="text-[#9c3545] cursor-pointer hover:underline">ciaodaniel@gmail.com</p>
+                <span className="text-[11px] font-philosopher uppercase tracking-widest block mb-1">MAIL US @</span>
+                <p className="text-[#9c3545] font-old-standard cursor-pointer hover:underline">ciaodaniel@gmail.com</p>
                 {/* <p className="text-[#9c3545] cursor-pointer hover:underline">admin@livecon.com</p> */}
               </div>
             </div>
@@ -423,8 +423,8 @@ export default function ContactInfoSection() {
                 </svg>
               </div>
               <div className="p-4 flex flex-col justify-center text-xs sm:text-sm">
-                <span className="text-[11px] text-zinc-400 uppercase tracking-widest block mb-1">OUR LOCATION</span>
-                <p className="text-zinc-600 leading-snug">7607 Detour Ave Cleveland OH 44103 US</p>
+                <span className="text-[11px] font-philosopher uppercase tracking-widest block mb-1">OUR LOCATION</span>
+                <p className="font-old-standard leading-snug">7607 Detour Ave Cleveland OH 44103 US</p>
                 {/* <p className="text-zinc-600 leading-snug">Adventureland, LA 14536, USA</p> */}
               </div>
             </div>
@@ -453,11 +453,11 @@ export default function ContactInfoSection() {
                   {/* Inner White Frame Line */}
                   <div className="absolute inset-3 border border-white/25 pointer-events-none"></div>
 
-                  <h3 className="text-xs sm:text-sm uppercase tracking-[0.2em] font-sans font-medium mb-4 text-white/90">
+                  <h3 className="text-xs sm:text-sm uppercase font-philosopher tracking-[0.2em]  mb-4 text-white/90">
                     {card.title}
                   </h3>
 
-                  <div className="space-y-1 font-serif text-xs sm:text-sm text-white/95 leading-relaxed">
+                  <div className="space-y-1 font-old-standard text-xs sm:text-sm text-white/95 leading-relaxed">
                     {card.lines.map((line, idx) => (
                       <p
                         key={idx}
@@ -575,7 +575,7 @@ export default function ContactInfoSection() {
   className="
     mt-4 
     text-white 
-    font-bold 
+  font-philosopher
     text-sm
     transition-colors 
     duration-300
@@ -620,12 +620,12 @@ export default function ContactInfoSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xs uppercase tracking-[0.2em] font-sans font-semibold mb-4 text-white">
+                <h3 className="text-xs uppercase font-philosopher tracking-[0.2em] mb-4 text-white">
                   {item.title}
                 </h3>
 
                 {/* Lines */}
-                <div className="space-y-1 text-xs sm:text-sm font-philosopher leading-relaxed text-zinc-100">
+                <div className="space-y-1 text-xs sm:text-sm font-old-standard leading-relaxed text-zinc-100">
                   {item.lines.map((line, idx) => (
                     <p key={idx} className={item.isLink ? 'hover:underline cursor-pointer' : ''}>
                       {line}
@@ -659,10 +659,10 @@ export default function ContactInfoSection() {
 
               {/* Content Box */}
               <div className="space-y-1">
-                <h3 className="text-[11px] uppercase tracking-[0.2em] font-sans font-bold text-zinc-900">
+                <h3 className="text-[11px] uppercase tracking-[0.2em] font-philosopher font-bold text-zinc-900">
                   {item.title}
                 </h3>
-                <div className="space-y-0.5 text-xs sm:text-sm text-zinc-500 font-serif leading-relaxed">
+                <div className="space-y-0.5 text-xs sm:text-sm text-zinc-500 font-old-standard leading-relaxed">
                   {item.lines.map((line, idx) => (
                     <p key={idx} className={item.isLink ? 'text-[#9c3545] cursor-pointer hover:underline' : ''}>
                       {line}
@@ -704,12 +704,12 @@ export default function ContactInfoSection() {
               <div className="w-full border border-black p-6 sm:p-8 flex flex-col items-center justify-center text-center flex-grow bg-white">
                 
                 {/* Title */}
-                <h3 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-sans font-bold text-zinc-900 mb-3">
+                <h3 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-philosopher font-bold text-zinc-900 mb-3">
                   {item.title}
                 </h3>
 
                 {/* Sub lines */}
-                <div className="space-y-1 text-xs sm:text-sm text-zinc-500 font-serif leading-relaxed">
+                <div className="space-y-1 text-xs sm:text-sm text-zinc-500 font-old-standard leading-relaxed">
                   {item.lines.map((line, idx) => (
                     <p key={idx} className={item.isLink ? 'text-[#9c3545] cursor-pointer hover:underline' : ''}>
                       {line}

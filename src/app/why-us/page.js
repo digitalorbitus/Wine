@@ -136,17 +136,17 @@ export default function WhyUs() {
 
               {/* Floating Badge */}
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-lg">
-                <span className="text-xs font-bold text-[#e77e4e] tracking-wider uppercase">
+                <span className="text-xs font-great-vibes text-[#e77e4e] tracking-wider uppercase">
                   #1 Industry Leader
                 </span>
               </div>
 
               {/* Bottom Card Content */}
-              <div className="absolute bottom-8 left-8 right-8 text-white">
-                <p className="text-2xl font-bold font-serif leading-tight">
+              <div className="absolute bottom-8 philosopher left-8 right-8 text-white">
+                <p className="text-2xl leading-tight">
                   Driving success with innovation & clarity.
                 </p>
-                <div className="mt-3 flex items-center gap-2 text-sm text-zinc-300">
+                <div className="mt-3 flex items-center font-old-standard gap-2 text-sm text-zinc-300">
                   <span className="inline-block w-2 h-2 rounded-full bg-[#e77e4e]" />
                   <span>10+ Years of Business Excellence</span>
                 </div>
@@ -161,17 +161,17 @@ export default function WhyUs() {
           <div className="lg:col-span-7">
             {/* Header Section */}
             <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e77e4e]/10 text-[#e77e4e] text-xs font-bold tracking-widest uppercase">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 font-philosopher  rounded-full bg-[#e77e4e]/10 text-[#e77e4e] text-xs font-bold tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#e77e4e]" />
                 Why Choose Us
               </div>
 
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 leading-[1.15] tracking-tight">
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-great-vibes text-zinc-900 leading-[1.15] tracking-tight">
                 Why We Are The <br className="hidden sm:inline" />
                 <span className="text-[#e77e4e]">Best Choice</span> For You
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
+              <p className="mt-4 text-base sm:text-lg  font-philosopher leading-relaxed">
                 We provide tailored professional solutions with a relentless focus on high-end innovation, structural accuracy, and long-term client commitment.
               </p>
             </div>
@@ -189,11 +189,11 @@ export default function WhyUs() {
                       {item.icon}
                     </div>
 
-                    <h3 className="mt-5 text-lg font-bold text-zinc-900 group-hover:text-[#e77e4e] transition-colors duration-200">
+                    <h3 className="mt-5 text-lg font-philosopher group-hover:text-[#e77e4e] transition-colors duration-200">
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+                    <p className="mt-2 text-sm leading-relaxed font-old-standard">
                       {item.desc}
                     </p>
                   </div>
@@ -233,12 +233,12 @@ export default function WhyUs() {
               </div>
 
               {/* Card Title */}
-              <h3 className="text-xs sm:text-[13px] font-bold font-sans tracking-[0.2em] uppercase mb-5 text-white/90">
+              <h3 className="text-xs sm:text-[13px] font-philosopher tracking-[0.2em] uppercase mb-5 text-white/90">
                 {card.title}
               </h3>
 
               {/* Card Description Lines */}
-              <div className="space-y-1 font-serif text-sm sm:text-[15px] leading-relaxed text-white/95">
+              <div className="space-y-1 font-old-standard text-sm sm:text-[15px] leading-relaxed text-white/95">
                 {card.lines.map((line, index) => (
                   <p key={index}>{line}</p>
                 ))}
