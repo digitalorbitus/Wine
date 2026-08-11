@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function ContactInfoSection() {
  // Type 3 Data
@@ -301,11 +302,21 @@ export default function ContactInfoSection() {
             CONTACT INFO
           </h1>
 
-          <p className="text-xs sm:text-sm text-zinc-400 font-serif tracking-wide">
-            Home <span className="mx-1">/</span> Shortcodes 
-            <span className="mx-1">/</span>
-            <span className="text-zinc-500"> Contact Info</span>
-          </p>
+      <p className="text-xs sm:text-sm text-zinc-400 font-serif tracking-wide">
+  <Link href="/" className="hover:underline cursor-pointer">
+    Home
+  </Link>
+
+  <span className="mx-1">/</span>
+
+  <Link href="/shortcodes" className="hover:underline cursor-pointer">
+    Shortcodes
+  </Link>
+
+  <span className="mx-1">/</span>
+
+  <span className="text-zinc-500">Contact Info</span>
+</p>
         </div>
 
 

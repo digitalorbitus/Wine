@@ -586,9 +586,9 @@ export default function HeroSlider() {
               duration: 0.8,
               type: "spring",
             }}
-            className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#B72E3B] to-[#7D1420] shadow-md shrink-0"
+            className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center "
           >
-            <div className="relative w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8">
+            <div className="relative w-15 h-15 sm:w-20 sm:h-20 md:w-24 md:h-24">
               <Image
                 src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
                 alt="Wine Icon"
@@ -756,7 +756,7 @@ Every bottle carries a story of heritage, craftsmanship, and unforgettable taste
     priority
     quality={90}
     sizes="100vw"
-    className="absolute inset-0 object-cover object-[25%_center] sm:object-[20%_center] md:object-left z-0"
+    className="absolute inset-0 object-cover  object-[25%_center] sm:object-[20%_center] md:object-left z-0"
   />
 
   {/* Overlay - Mobile par light kar diya taake image nazar aaye */}
@@ -1079,17 +1079,17 @@ Every bottle delivers a unique taste experience made to be remembered.
         />
 
         {/* Bottom Hover Icons */}
-        <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+        {/* <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"> */}
           {/* Shopping Cart */}
-          <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
+          {/* <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
             <FiShoppingCart size={20} />
-          </button>
+          </button> */}
 
           {/* Favorite */}
-          <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
+          {/* <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
             <FiHeart size={20} />
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
       </div>
 
       {/* Product Info */}
@@ -1098,19 +1098,19 @@ Every bottle delivers a unique taste experience made to be remembered.
       </h3>
 
       {/* Price */}
-      <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
+      {/* <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
         {product.oldPrice && (
           <span className="text-gray-400 line-through">{product.oldPrice}</span>
         )}
         <span className="text-gray-900 font-semibold">{product.price}</span>
-      </div>
+      </div> */}
 
       {/* Rating Stars */}
-      <div className="flex text-amber-400 text-xs">
+      {/* <div className="flex text-amber-400 text-xs">
         {Array.from({ length: product.rating }).map((_, i) => (
           <span key={i}>★</span>
         ))}
-      </div>
+      </div> */}
     </div>
   ))}
 </div>
@@ -1330,9 +1330,9 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
                 </h3>
 
                 {/* Wine Price */}
-                <span className="text-xs sm:text-sm  font-philosopher text-[#E8B87D] ">
+                {/* <span className="text-xs sm:text-sm  font-philosopher text-[#E8B87D] ">
                   {wine.price}
-                </span>
+                </span> */}
 
               </div>
             </SwiperSlide>

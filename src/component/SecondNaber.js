@@ -147,10 +147,12 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     {
-      label: "Shop",
+      label: "OURS WINES",
       href: "/shop",
+       heading: "OUR COUNTRY WINES",
       countries: [
-        { label: "Italy", href: "/shop/italy" },
+
+        { label: "Italy", href: "/italy" },
         { label: "France", href: "/shop/france" },
         { label: "Spain", href: "/shop/spain" },
         { label: "Portugal", href: "/shop/portugal" },
@@ -160,7 +162,7 @@ export default function Navbar() {
       ],
     },
     { label: "contact", href: "/contact" },
-    // { label: "Why Choose Us", href: "/why-us" },
+    { label: "Why Choose Us", href: "/why-us" },
   ];
 
   const toggleMobileSubmenu = (label) => {
@@ -189,7 +191,7 @@ export default function Navbar() {
                       className={`text-lg transition-colors duration-200 font-philosopher  tracking-wide flex items-center gap-1.5 ${
                         isActive
                           ? "text-[#8b263e]"
-                          : "text-[#1a1a1a] hover:text-[#8b263e]"
+                          : "text-[#1a1a1a] hover:text-rgb(165, 62, 76)"
                       }`}
                     >
                       {item.label}
@@ -212,8 +214,13 @@ export default function Navbar() {
 
                     {/* Simple Dropdown for 7 Countries (Centered under Shop) */}
                     {hasCountries && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-56 bg-[#363543] text-white shadow-xl z-50 rounded-b-md overflow-hidden transition-all duration-300">
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-60 bg-[#363543] text-white shadow-xl z-50 rounded-b-md overflow-hidden transition-all duration-300">
                         <ul className="py-3">
+     <li>
+  <div className="px-5 py-2.5 text-xs tracking-[0.25em] text-white border-b border-white/20">
+    {item.heading}
+  </div>
+</li>
                           {item.countries.map((country, idx) => (
                             <li key={idx}>
                               <Link

@@ -4,6 +4,7 @@ import Image from "next/image";
 // import { motion } from "framer-motion";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -289,10 +290,13 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
         </h2>
 
         {/* Bada Breadcrumb Font */}
-        <p className="text-sm sm:text-base text-gray-400 font-serif mt-2">
-          <span className="cursor-pointer hover:underline">Home</span> /{" "}
-          <span className="text-gray-600">About Us</span>
-        </p>
+    <p className="text-sm sm:text-base text-gray-400 font-serif mt-2">
+  <Link href="/" className="cursor-pointer hover:underline">
+    Home
+  </Link>{" "}
+  /{" "}
+  <span className="text-gray-600">About Us</span>
+</p>
       </motion.div>
 
       {/* Main Content */}
