@@ -553,14 +553,14 @@ export default function ShopPage() {
     count: 2,
     image:
       "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=85",
-    route: "/places/california",
+    route: "/california",
   },
   {
-    name: "Oregon",
+    name: "Ohio",
     count: 1,
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85",
-    route: "/places/oregon",
+    route: "/Ohio",
   },
   {
     name: "Spain",
@@ -575,6 +575,13 @@ export default function ShopPage() {
     image:
       "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=85",
     route: "/places/portugal",
+  },
+    {
+    name: "Oregon",
+    count: 1,
+    image:
+      "https://cdn.bfldr.com/UTM69Z3S/at/4ng7jq2wc332t4r4hjjrk8w/dan-meyers-EYnLjmjCViM-unsplash-LOWRES.jpg?auto=webp&enable=upscale&fit=cover&format=pjpg&height=640&quality=60&width=960",
+    route: "/Oregon",
   },
 ];
 

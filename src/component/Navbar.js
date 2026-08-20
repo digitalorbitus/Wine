@@ -46,7 +46,7 @@ export default function Header() {
 
           {/* Right */}
 
-          <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/3">
+          {/* <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/3">
 
             <div className="relative flex items-center gap-2 cursor-pointer">
 
@@ -66,7 +66,7 @@ export default function Header() {
 
             </div>
 
-          </div>
+          </div> */}
 
         </div>
 
