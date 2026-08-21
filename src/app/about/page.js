@@ -112,7 +112,6 @@ const wineMenu = [
   {
     id: 1,
     title: "IRISH ALE",
-    price: "$12.00",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product13.png",
@@ -120,7 +119,6 @@ const wineMenu = [
   {
     id: 2,
     title: "MOURVEDRE",
-    price: "$32.00",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product17.png",
@@ -128,7 +126,6 @@ const wineMenu = [
   {
     id: 3,
     title: "BARBERA",
-    price: "$62.50",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product15.png",
@@ -136,7 +133,6 @@ const wineMenu = [
   {
     id: 4,
     title: "SYRAH",
-    price: "$12.99",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product18.png",
@@ -144,7 +140,6 @@ const wineMenu = [
   {
     id: 5,
     title: "MERLOT",
-    price: "$78.99",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product14.png",
@@ -152,7 +147,6 @@ const wineMenu = [
   {
     id: 6,
     title: "CHARDONNAY",
-    price: "$41.50",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product19.png",
@@ -160,7 +154,6 @@ const wineMenu = [
   {
     id: 7,
     title: "ZINFANDEL",
-    price: "$212.59",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product16.png",
@@ -168,7 +161,6 @@ const wineMenu = [
   {
     id: 8,
     title: "UGNI BLANC",
-    price: "$52.95",
     tags: "Organic raw/vegan/vegetarian",
     desc: "chocolate smoothie, you'll enjoy it.",
     image: "https://dtwine.wpengine.com/wp-content/uploads/2013/06/product20.png",
@@ -718,11 +710,11 @@ const [[currentIndex, direction], setPage] = useState([0, 0]);
               <div className="flex-1 mx-2 sm:mx-3 border-b-2 border-dotted border-gray-300" />
 
               {/* Price Box with Dotted Border */}
-              <div className="flex-shrink-0 px-2 py-0.5 border border-dotted border-[#a03848] rounded-[2px]">
+              {/* <div className="flex-shrink-0 px-2 py-0.5 border border-dotted border-[#a03848] rounded-[2px]">
                 <span className="text-xs sm:text-sm font-old-standard text-[#a03848]">
                   {item.price}
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Tagline / Subtitle */}

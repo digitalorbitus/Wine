@@ -149,7 +149,12 @@ export default function Navbar() {
     {
       label: "OURS WINES",
       href: "/shop",
-       heading: "OUR COUNTRY WINES",
+      //  heading: "OUR COUNTRY WINES",
+      
+  heading: "OUR COUNTRY WINES",
+  link: "/shop",
+
+      
       countries: [
 
         { label: "Italy", href: "/italy" },
@@ -218,9 +223,11 @@ export default function Navbar() {
                       <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-60 bg-[#363543] text-white shadow-xl z-50 rounded-b-md overflow-hidden transition-all duration-300">
                         <ul className="py-3">
      <li>
-  <div className="px-5 py-2.5 text-xs tracking-[0.25em] text-white border-b border-white/20">
+<div className="px-5 py-2.5 text-xs tracking-[0.25em] text-white border-b border-white/20">
+  <Link href="/shop">
     {item.heading}
-  </div>
+  </Link>
+</div>
 </li>
                           {item.countries.map((country, idx) => (
                             <li key={idx}>
