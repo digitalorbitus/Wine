@@ -156,15 +156,18 @@ export default function Navbar() {
 
       
       countries: [
-
+   { label: "Ohio", href: "/Ohio" },
+        { label: "California", href: "/california" },
+         { label: "Oregon", href: "/Oregon" },
         { label: "Italy", href: "/italy" },
-        { label: "France", href: "/shop/france" },
-        { label: "Spain", href: "/shop/spain" },
-        { label: "Portugal", href: "/shop/portugal" },
-         { label: "California", href: "/california" },
-        { label: "Argentina", href: "/shop/argentina" },
-        { label: "Ohio", href: "/Ohio" },
-        { label: "Oregon", href: "/Oregon" },
+           { label: "Argentina", href: "/Argentina" },
+     
+        { label: "France", href: "/france" },
+        { label: "Spain", href: "/Spain" },
+          { label: "New Zealand", href: "/New-Zealand" },
+        { label: "Portugal", href: "/Portugal" },
+    
+          { label: "Germany", href: "/Germany" },
       ],
     },
     { label: "contact", href: "/contact" },
