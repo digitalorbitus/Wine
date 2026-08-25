@@ -353,13 +353,13 @@ to expressive Riesling and Vidal Blanc Ice Wine.
 
                   <div className="mb-4 rounded-xl border border-[#f3ece9] bg-[#fcfaf9]/90 p-3">
 
-                    <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
+                    {/* <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
 
                       <Wine className="h-3 w-3 text-[#65002d]" />
 
                       Signature Grapes
 
-                    </p>
+                    </p> */}
 
                     <div className="flex flex-wrap gap-1">
 

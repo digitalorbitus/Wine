@@ -7,49 +7,311 @@ import { ArrowUpRight, Sparkles, MapPin, Wine, Search, RefreshCw } from "lucide-
 
 
 const wineRegions = [
-  {
-    id: 1,
-    name: "EOLA-Amity Hills",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Zenith Vineyard, EOLA-Amity Hills.webp",
-    description:
-      "Pinot Noir, Zenith Vineyard 2021 — 13.5% ABV.",
-    grapes: ["Pinot Noir"],
-  },
+// Spain
 
-  {
-    id: 2,
-    name: "EOLA-Amity Hills",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Estate, EOLA-Amity Hills.webp",
-    description:
-      "Pinot Noir, Estate 2021 — 13.6% ABV. ",
-    grapes: ["Pinot Noir"],
-  },
+// Bodega As Laxas - Rias Baixas
+{
+  id: 1,
+  name: "Laxas Albariño",
+  country: "Rias Baixas, Spain",
+  image: "/Laxas Albarino.webp",
+  description:
+    "Laxas Albariño 2023 — 12.5% ABV.",
+  grapes: ["Albariño"],
+  style: "Bodega As Laxas",
+  wholesaleCase: "$183.96",
+  wholesaleBottle: "$15.33",
+  retailBottle: "$22.99",
+},
 
-  {
-    id: 3,
-    name: "Willamette Valley",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Willamette Valley.webp",
-    description:
-      "Pinot Noir 2023 — 14.8% ABV. ",
-    grapes: ["Pinot Noir"],
-  },
+{
+  id: 2,
+  name: "Laxas Sensum Brut Albariño",
+  country: "Rias Baixas, Spain",
+  image: "/Laxas Sensum Brut Albarino.webp",
+  description:
+    "Laxas Sensum Brut Albariño N/V — 12.5% ABV. Traditional Method Brut.",
+  grapes: ["Albariño"],
+  style: "Bodega As Laxas",
+  wholesaleCase: "$263.88",
+  wholesaleBottle: "$21.99",
+  retailBottle: "$32.99",
+},
 
-  {
-    id: 4,
-    name: "Willamette Valley",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Redhawk Red.webp",
-    description:
-      "Redhawk Red 2019 — 14% ABV.",
-    grapes: ["Merlot", "Cabernet Sauvignon", "Barbera"],
-  },
+// Bodega la Milagrosa - Ribera del Duero
+{
+  id: 3,
+  name: "Milcampos",
+  country: "Ribera del Duero, Spain",
+  image: "/Milcampos.webp",
+  description:
+    "Milcampos Ribera del Duero 2018 — 13.5% ABV. Tempranillo.",
+  grapes: ["Tempranillo"],
+  style: "Bodega la Milagrosa",
+  wholesaleCase: "$151.92",
+  wholesaleBottle: "$12.66",
+  retailBottle: "$18.99",
+},
+
+// Bodegas Delgado Zuleta - Jerez, Xeres, Sherry
+{
+  id: 4,
+  name: "Pedro Ximénez Sherry",
+  country: "Jerez, Spain",
+  image: "/Pedro Ximenez Sherry.webp",
+  description:
+    "Pedro Ximénez Sherry N/V — 15% ABV.",
+  grapes: ["Pedro Ximénez"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$183.96",
+  wholesaleBottle: "$15.33",
+  retailBottle: "$22.99",
+},
+
+{
+  id: 5,
+  name: "Amontillado Dry Sherry",
+  country: "Jerez, Spain",
+  image: "/Amontillado Dry Sherry.webp",
+  description:
+    "Amontillado Dry Sherry N/V — 17.5% ABV.",
+  grapes: ["Palomino"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+{
+  id: 6,
+  name: "Oloroso Dry Sherry",
+  country: "Jerez, Spain",
+  image: "/Oloroso Dry Sherry.webp",
+  description:
+    "Oloroso Dry Sherry N/V — 17.5% ABV.",
+  grapes: ["Palomino"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+{
+  id: 7,
+  name: "Fino Sherry",
+  country: "Jerez, Spain",
+  image: "/Fino Sherry.webp",
+  description:
+    "Fino Sherry N/V — 15% ABV.",
+  grapes: ["Palomino"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$119.88",
+  wholesaleBottle: "$9.99",
+  retailBottle: "$14.99",
+},
+
+{
+  id: 8,
+  name: "Manzanilla Sherry",
+  country: "Jerez, Spain",
+  image: "/Manzanilla Sherry.webp",
+  description:
+    "Manzanilla Sherry N/V — 15% ABV.",
+  grapes: ["Palomino"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$119.88",
+  wholesaleBottle: "$9.99",
+  retailBottle: "$14.99",
+},
+
+{
+  id: 9,
+  name: "Cream Sherry",
+  country: "Jerez, Spain",
+  image: "/Cream Sherry.webp",
+  description:
+    "Cream Sherry N/V — 17.5% ABV.",
+  grapes: ["Palomino", "Pedro Ximénez"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+{
+  id: 10,
+  name: "Vermut Goyesco Manzanilla",
+  country: "Jerez, Spain",
+  image: "/Vermut Goyesco Manzanilla.webp",
+  description:
+    "Vermut Goyesco Manzanilla N/V — 15% ABV.",
+  grapes: ["Palomino"],
+  style: "Bodegas Delgado Zuleta",
+  wholesaleCase: "$215.88",
+  wholesaleBottle: "$17.99",
+  retailBottle: "$26.99",
+},
+
+// Bodegas Familia Bastida - La Mancha
+{
+  id: 11,
+  name: "Aleco",
+  country: "La Mancha, Spain",
+  image: "/Aleco.webp",
+  description:
+    "Aleco 2020 — 14.1% ABV. 100% Tempranillo, aged 4–5 months in American oak.",
+  grapes: ["Tempranillo"],
+  style: "Bodegas Familia Bastida",
+  wholesaleCase: "$119.88",
+  wholesaleBottle: "$9.99",
+  retailBottle: "$14.99",
+},
+
+{
+  id: 12,
+  name: "Titos",
+  country: "La Mancha, Spain",
+  image: "/Titos.webp",
+  description:
+    "Titos 2018 — 14.1% ABV. 100% Garnacha, aged 11 months in oak.",
+  grapes: ["Garnacha"],
+  style: "Bodegas Familia Bastida",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+// Bodegas Ochoa - Navarra
+{
+  id: 13,
+  name: "Moscatel Vendimia Tardia",
+  country: "Navarra, Spain",
+  image: "/Moscatel Vendimia Tardia.webp",
+  description:
+    "Moscatel Vendimia Tardia 2022 — 15% ABV. 500ml.",
+  grapes: ["Moscatel"],
+  style: "Bodegas Ochoa",
+  wholesaleCase: "$215.88",
+  wholesaleBottle: "$17.99",
+  retailBottle: "$26.99",
+},
+
+{
+  id: 14,
+  name: "Calendas",
+  country: "Navarra, Spain",
+  image: "/Calendas.webp",
+  description:
+    "Calendas 2023 — 13% ABV. 100% Tempranillo.",
+  grapes: ["Tempranillo"],
+  style: "Bodegas Ochoa",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+// Bodegas Pedro Luis Martinez - Jumilla
+{
+  id: 15,
+  name: "Hilanda",
+  country: "Jumilla, Spain",
+  image: "/Hilanda.webp",
+  description:
+    "Hilanda 2016 — 14% ABV. Monastrell.",
+  grapes: ["Monastrell"],
+  style: "Bodegas Pedro Luis Martinez",
+  wholesaleCase: "$95.88",
+  wholesaleBottle: "$7.99",
+  retailBottle: "$11.99",
+},
+
+// Bodegas Rafael Cambra - Valencia
+{
+  id: 16,
+  name: "Soplo",
+  country: "Valencia, Spain",
+  image: "/Soplo.webp",
+  description:
+    "Soplo 2014 — 14% ABV. Garnacha Tintorera.",
+  grapes: ["Garnacha Tintorera"],
+  style: "Bodegas Rafael Cambra",
+  wholesaleCase: "$103.92",
+  wholesaleBottle: "$8.66",
+  retailBottle: "$12.99",
+},
+
+{
+  id: 17,
+  name: "El Bon Homme",
+  country: "Valencia, Spain",
+  image: "/El Bon Homme.webp",
+  description:
+    "El Bon Homme 2016 — 13.5% ABV. 50% Cabernet Sauvignon and 50% Monastrell.",
+  grapes: ["Cabernet Sauvignon", "Monastrell"],
+  style: "Bodegas Rafael Cambra",
+  wholesaleCase: "$127.92",
+  wholesaleBottle: "$10.66",
+  retailBottle: "$15.99",
+},
+
+// Bodegas Vinedos de Nieva - Rueda
+{
+  id: 18,
+  name: "Blanco Nieva",
+  country: "Rueda, Spain",
+  image: "/Blanco Nieva.webp",
+  description:
+    "Blanco Nieva 2020 — 14% ABV. Verdejo.",
+  grapes: ["Verdejo"],
+  style: "Bodegas Vinedos de Nieva",
+  wholesaleCase: "$143.88",
+  wholesaleBottle: "$11.99",
+  retailBottle: "$17.99",
+},
+
+// Celler Malondro - Montsant
+{
+  id: 19,
+  name: "Besllum",
+  country: "Montsant, Spain",
+  image: "/Besllum.webp",
+  description:
+    "Besllum Montsant 2011 — 14% ABV. 45% Carinena, 45% Garnacha, 10% Syrah.",
+  grapes: ["Carinena", "Garnacha", "Syrah"],
+  style: "Celler Malondro",
+  wholesaleCase: "$151.92",
+  wholesaleBottle: "$12.66",
+  retailBottle: "$18.99",
+},
+
+// Pepe Rodriguez de Vera - Almansa & Jumilla
+{
+  id: 20,
+  name: "Jumenta",
+  country: "Almansa, Spain",
+  image: "/Jumenta.webp",
+  description:
+    "Jumenta Almansa 2022 — 14% ABV. 60% Syrah, 20% Merlot, 20% Garnacha Tintorera. Aged 6 months in used French oak.",
+  grapes: ["Syrah", "Merlot", "Garnacha Tintorera"],
+  style: "Pepe Rodriguez de Vera",
+  wholesaleCase: "$143.88",
+  wholesaleBottle: "$11.99",
+  retailBottle: "$17.99",
+},
+
+{
+  id: 21,
+  name: "Pituco",
+  country: "Jumilla, Spain",
+  image: "/Pituco.webp",
+  description:
+    "Pituco Jumilla 2022 — 14% ABV. 70% Monastrell, 15% Garnacha Tintorera, 15% Syrah. Aged 5 months in French oak.",
+  grapes: ["Monastrell", "Garnacha Tintorera", "Syrah"],
+  style: "Pepe Rodriguez de Vera",
+  wholesaleCase: "$143.88",
+  wholesaleBottle: "$11.99",
+  retailBottle: "$17.99",
+},
 ];
 
 const containerVariants = {
@@ -155,9 +417,9 @@ const filteredRegions = wineRegions.filter((region) => {
 >
   {[
  
-  { val: "4", label: "Wines" },
-  { val: "1", label: "Cellar" },
-  { val: "2", label: "Wine Regions" },
+ { val: "21", label: "Wines" },
+  { val: "10", label: "Wine Houses" },
+  { val: "10", label: "Wine Regions" },
   { val: "1", label: "Country" },
 
   ].map((stat, idx) => (
@@ -183,7 +445,7 @@ const filteredRegions = wineRegions.filter((region) => {
   className="relative overflow-hidden"
   style={{
   backgroundImage:
-  "url('https://cdn.bfldr.com/UTM69Z3S/at/4ng7jq2wc332t4r4hjjrk8w/dan-meyers-EYnLjmjCViM-unsplash-LOWRES.jpg?auto=webp&enable=upscale&fit=cover&format=pjpg&height=640&quality=60&width=960')",
+  "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1200&q=85')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -358,13 +620,13 @@ const filteredRegions = wineRegions.filter((region) => {
 
                   <div className="mb-4 rounded-xl border border-[#f3ece9] bg-[#fcfaf9]/90 p-3">
 
-                    <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
+                    {/* <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
 
                       <Wine className="h-3 w-3 text-[#65002d]" />
 
                       Signature Grapes
 
-                    </p>
+                    </p> */}
 
                     <div className="flex flex-wrap gap-1">
 

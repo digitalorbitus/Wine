@@ -1640,7 +1640,7 @@ const wineRegions = [
   image: "/italy/Giuseppe-Campagnola/Fortificato.webp",
   description:
     "Giuseppe Campagnola Fortificato 500 ML — 19% ABV. A rich and concentrated fortified wine presented in a 500 ML bottle.",
-  grapes: [],
+  // grapes: [],
   style: "Fortified Wine",
   winery: "Giuseppe Campagnola",
   vintage: "N/V",
@@ -5613,6 +5613,173 @@ const wineRegions = [
 },
 
 
+
+
+// ========================================== Beer  ==========================================
+
+// Lombardy - Sandalmazi Brewing Company
+
+{
+  id: 354,
+  name: "Birra Biologica, Unfiltered Amber Ale",
+  country: "Lombardy, Italy",
+  image: "/Birra Biologica Amber Ale.webp",
+  description:
+    "Birra Biologica, Unfiltered Amber Ale — 6% ABV.",
+  style: "Sandalmazi Brewing Company",
+  abv: "6%",
+  pack: 24,
+  bottleSize: "33cl",
+  wholesaleBottle: "$2.20",
+  wholesaleCase: "$52.80",
+},
+
+{
+  id: 355,
+  name: "APA",
+  country: "Lombardy, Italy",
+  image: "/APA Beer.webp",
+  description:
+    "APA — 5.8% ABV.",
+  style: "Sandalmazi Brewing Company",
+  abv: "5.8%",
+  pack: 24,
+  bottleSize: "33cl",
+  wholesaleBottle: "$2.20",
+  wholesaleCase: "$52.80",
+},
+
+// Tuscany - Birrificio di Montepulciano
+
+{
+  id: 356,
+  name: "Dubbel Beer",
+  country: "Tuscany, Italy",
+  image: "/Dubbel Beer.webp",
+  description:
+    "Dubbel Beer — 6.2% ABV. IBU 23.",
+  style: "Birrificio di Montepulciano",
+  abv: "6.2%",
+  ibu: 23,
+  pack: 24,
+  bottleSize: "33cl / 11.16 fl oz",
+  wholesaleBottle: "$3.65",
+  wholesaleCase: "$87.60",
+},
+
+
+
+
+
+// ========================================  Olive Oil   ====================================
+
+// Tuscany - Nittardi
+{
+  id: 1,
+  name: "Olio Extra Vergine di Oliva, Biologico Italiano",
+  country: "Tuscany, Italy",
+  image: "/Nittardi Olive Oil.webp",
+  description:
+    "2024/2025 Olio Extra Vergine di Oliva, Biologico Italiano — 500ml.",
+  style: "Nittardi",
+  size: "500ml",
+},
+
+// Abruzzo - Marramiero
+{
+  id: 2,
+  name: "Olio Extra Vergine di Oliva",
+  country: "Abruzzo, Italy",
+  image: "/Marramiero Olive Oil.webp",
+  description:
+    "2024/2025 Olio Extra Vergine di Oliva — 500ml.",
+  style: "Marramiero",
+  size: "500ml",
+},
+
+// Abruzzo - Torre dei Beati
+{
+  id: 3,
+  name: "Olio Extra Vergine di Oliva",
+  country: "Abruzzo, Italy",
+  image: "/Torre dei Beati Olive Oil.webp",
+  description:
+    "2024 Olio Extra Vergine di Oliva — 500ml.",
+  style: "Torre dei Beati",
+  size: "500ml",
+},
+
+// Campania - Tenuta Le Lune del Vesuvio
+{
+  id: 4,
+  name: "Olio Extravergine di Oliva",
+  country: "Campania, Italy",
+  image: "/Tenuta Le Lune del Vesuvio Olive Oil.webp",
+  description:
+    "2023/2024 Olio Extravergine di Oliva — 250ml.",
+  style: "Tenuta Le Lune del Vesuvio",
+  size: "250ml",
+},
+
+// Sicily - Al-Cantàra
+{
+  id: 5,
+  name: "Olio Extra Vergine di Oliva",
+  country: "Sicily, Italy",
+  image: "/Al-Cantara Olive Oil.webp",
+  description:
+    "Olio Extra Vergine di Oliva — 500ml.",
+  style: "Al-Cantàra",
+  size: "500ml",
+},
+
+// Sicily - Firriato
+{
+  id: 6,
+  name: "Olio Extra Vergine di Oliva Biologico",
+  country: "Sicily, Italy",
+  image: "/Firriato Olive Oil.webp",
+  description:
+    "Olio Extra Vergine di Oliva Biologico — 500ml.",
+  style: "Firriato",
+  size: "500ml",
+},
+
+// Navarra - Tenuta Lamiotte
+{
+  id: 7,
+  name: "Olio Extra Vergine di Oliva Biologico",
+  country: "Navarra, Spain",
+  image: "/Tenuta Lamiotte Olive Oil Biologico.webp",
+  description:
+    "Olio Extra Vergine di Oliva Biologico — 500ml.",
+  style: "Tenuta Lamiotte",
+  size: "500ml",
+},
+
+{
+  id: 8,
+  name: "Olio Extravergine di Oliva",
+  country: "Navarra, Spain",
+  image: "/Tenuta Lamiotte Olive Oil 500ml.webp",
+  description:
+    "2024/2025 Olio Extravergine di Oliva — 500ml.",
+  style: "Tenuta Lamiotte",
+  size: "500ml",
+},
+
+{
+  id: 9,
+  name: "Olio Extravergine di Oliva",
+  country: "Navarra, Spain",
+  image: "/Tenuta Lamiotte Olive Oil 3L.webp",
+  description:
+    "2024/2025 Olio Extravergine di Oliva — 3L.",
+  style: "Tenuta Lamiotte",
+  size: "3L",
+},
+
+
 ];
 
 
@@ -5650,15 +5817,15 @@ const filteredRegions = wineRegions
 
     if (!term) return true;
 
-    const searchableText = [
-      region.name,
-      region.country,
-      region.style,
-      region.description,
-      region.winery,
-      region.vintage,
-      ...region.grapes,
-    ]
+const searchableText = [
+  region.name,
+  region.country,
+  region.style,
+  region.description,
+  region.winery,
+  region.vintage,
+  ...(Array.isArray(region.grapes) ? region.grapes : []),
+]
       .filter(Boolean)
       .join(" ")
       .toLowerCase();
@@ -5742,7 +5909,7 @@ refreshing Gavi, and classic Moscato d&apos;Asti from the renowned Piedmont regi
   className="mt-16 grid w-full max-w-4xl grid-cols-2 gap-4 rounded-2xl border border-[#ebdcd7] bg-white/70 p-2 font-philosopher shadow-xl shadow-[#65002d]/5 backdrop-blur-md sm:grid-cols-4"
 >
   {[
-    { val: "353", label: "Wines" },
+    { val: "356", label: "Wines" },
     { val: "25", label: "Wine Houses" },
     { val: "7", label: "Wine Regions" },
     { val: "1", label: "Country" },
@@ -5964,7 +6131,7 @@ refreshing Gavi, and classic Moscato d&apos;Asti from the renowned Piedmont regi
 
                     <div className="flex flex-wrap gap-1">
 
-                      {region.grapes.map((grape, idx) => (
+                      {/* {region.grapes.map((grape, idx) => (
 
                         <span
                           key={idx}
@@ -5973,7 +6140,13 @@ refreshing Gavi, and classic Moscato d&apos;Asti from the renowned Piedmont regi
                           {grape}
                         </span>
 
-                      ))}
+                      ))} */}
+
+                      {(Array.isArray(region.grapes) ? region.grapes : []).map((grape, idx) => (
+  <span key={idx}>
+    {grape}
+  </span>
+))}
 
                     </div>
 
@@ -6089,7 +6262,7 @@ Pinot Noir, Gewürztraminer, or Vidal Blanc.
       className={`rounded-full border px-5 py-2.5 text-xs font-philosopher tracking-wide transition-all duration-300 ${
         currentPage <= 4
           ? "cursor-not-allowed border-[#e8dedb] bg-[#f5f1ef] text-[#b8adaf]"
-          : "border-[#d8cbc7] bg-white text-[#65002d] hover:border-[#65002d] hover:bg-[#65002d] hover:text-white"
+          : "cursor-pointer border-[#d8cbc7] bg-white text-[#65002d] hover:border-[#65002d] hover:bg-[#65002d] hover:text-white"
       }`}
     >
       ← Previous
@@ -6116,7 +6289,7 @@ Pinot Noir, Gewürztraminer, or Vidal Blanc.
               key={page}
               type="button"
               onClick={() => setCurrentPage(page)}
-              className={`flex h-10 w-10 items-center justify-center rounded-full border text-xs font-philosopher transition-all duration-300 ${
+              className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border text-xs font-philosopher transition-all duration-300 ${
                 currentPage === page
                   ? "border-[#65002d] bg-[#65002d] text-white shadow-md shadow-[#65002d]/20"
                   : "border-[#e0d5d2] bg-white text-[#65002d] hover:border-[#65002d] hover:bg-[#65002d]/5"
@@ -6141,7 +6314,7 @@ Pinot Noir, Gewürztraminer, or Vidal Blanc.
       className={`rounded-full border px-5 py-2.5 text-xs font-philosopher tracking-wide transition-all duration-300 ${
         currentPage + 4 > totalPages
           ? "cursor-not-allowed border-[#e8dedb] bg-[#f5f1ef] text-[#b8adaf]"
-          : "border-[#d8cbc7] bg-white text-[#65002d] hover:border-[#65002d] hover:bg-[#65002d] hover:text-white"
+          : "cursor-pointer border-[#d8cbc7] bg-white text-[#65002d] hover:border-[#65002d] hover:bg-[#65002d] hover:text-white"
       }`}
     >
       Next →

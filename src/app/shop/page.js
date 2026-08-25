@@ -410,12 +410,12 @@ import { motion } from "framer-motion";
 // ==================== NAVBAR COUNTRIES ====================
 
 const navbarCountries = [
-  {
-    id: "01",
-    name: "ITALY",
-    link: "/italy",
-    flag: "https://flagcdn.com/w40/it.png",
-  },
+{
+  id: "01",
+  name: "ITALY",
+  link: "/italy",
+  flag: "https://flagcdn.com/w40/it.png",
+},
   {
     id: "02",
     name: "FRANCE",
@@ -428,12 +428,12 @@ const navbarCountries = [
     link: "/argentina",
     flag: "https://flagcdn.com/w40/ar.png",
   },
-  {
-    id: "04",
-    name: "CALIFORNIA",
-    link: "/california",
-    flag: "https://flagcdn.com/w40/us.png",
-  },
+{
+  id: "04",
+  name: "CALIFORNIA",
+  link: "/california",
+  flag: "https://flagcdn.com/w40/us-ca.png",
+},
   {
     id: "05",
     name: "SPAIN",
@@ -458,18 +458,18 @@ const navbarCountries = [
     link: "/Germany",
     flag: "https://flagcdn.com/w40/de.png",
   },
-  {
-    id: "09",
-    name: "OHIO",
-    link: "/Ohio",
-    flag: "https://flagcdn.com/w40/us.png",
-  },
-  {
-    id: "10",
-    name: "OREGON",
-    link: "/Oregon",
-    flag: "https://flagcdn.com/w40/us.png",
-  },
+{
+  id: "09",
+  name: "OHIO",
+  link: "/Ohio",
+  flag: "https://flagcdn.com/w40/us-oh.png",
+},
+{
+  id: "10",
+  name: "OREGON",
+  link: "/Oregon",
+  flag: "https://flagcdn.com/w40/us-or.png",
+},
 ];
 
 // Duplicate array for infinite slider
@@ -480,21 +480,21 @@ const loopCountries = [...navbarCountries, ...navbarCountries];
 const famousPlaces = [
   {
     name: "Italy",
-    count: 214,
+    count: 353,
     image:
       "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=85",
     route: "/italy",
   },
   {
     name: "France",
-    count: 4,
+    count: 97,
     image:
       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85",
     route: "/france",
   },
   {
     name: "Argentina",
-    count: 1,
+    count: 14,
     image:
       "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1200&q=85",
     route: "/Argentina",
@@ -515,14 +515,14 @@ const famousPlaces = [
   },
   {
     name: "Spain",
-    count: 1,
+    count: 21,
     image:
       "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1200&q=85",
     route: "/spain",
   },
   {
     name: "Portugal",
-    count: 1,
+    count: 8,
     image:
       "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=85",
     route: "/places/portugal",
@@ -536,14 +536,14 @@ const famousPlaces = [
   },
   {
     name: "Germany",
-    count: 4,
+    count: 1,
     image:
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85",
     route: "/Germany",
   },
   {
     name: "New Zealand",
-    count: 4,
+    count: 11,
     image:
       "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1600&q=85",
     route: "/New-Zealand",

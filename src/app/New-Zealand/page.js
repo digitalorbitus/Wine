@@ -7,49 +7,169 @@ import { ArrowUpRight, Sparkles, MapPin, Wine, Search, RefreshCw } from "lucide-
 
 
 const wineRegions = [
-  {
-    id: 1,
-    name: "EOLA-Amity Hills",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Zenith Vineyard, EOLA-Amity Hills.webp",
-    description:
-      "Pinot Noir, Zenith Vineyard 2021 — 13.5% ABV.",
-    grapes: ["Pinot Noir"],
-  },
+// New Zealand
 
-  {
-    id: 2,
-    name: "EOLA-Amity Hills",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Estate, EOLA-Amity Hills.webp",
-    description:
-      "Pinot Noir, Estate 2021 — 13.6% ABV. ",
-    grapes: ["Pinot Noir"],
-  },
+// Awatere River Wines - Marlborough
 
-  {
-    id: 3,
-    name: "Willamette Valley",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Pinot Noir, Willamette Valley.webp",
-    description:
-      "Pinot Noir 2023 — 14.8% ABV. ",
-    grapes: ["Pinot Noir"],
-  },
+{
+  id: 1,
+  name: "Anna's Way Sauvignon Blanc",
+  country: "Marlborough, New Zealand",
+  image: "/Annas Way Sauvignon Blanc.webp",
+  description:
+    "Anna's Way Sauvignon Blanc 2022 — 12.5% ABV.",
+  grapes: ["Sauvignon Blanc"],
+  style: "Awatere River Wines",
+  wholesaleCase: "$143.88",
+  wholesaleBottle: "$11.99",
+  retailBottle: "$17.99",
+},
 
-  {
-    id: 4,
-    name: "Willamette Valley",
-    country: "Oregon",
-    style: "Redhawk Winery",
-    image: "/Redhawk Red.webp",
-    description:
-      "Redhawk Red 2019 — 14% ABV.",
-    grapes: ["Merlot", "Cabernet Sauvignon", "Barbera"],
-  },
+{
+  id: 2,
+  name: "Saveé Sea Sauvignon Blanc",
+  country: "Marlborough, New Zealand",
+  image: "/Savee Sea Sauvignon Blanc.webp",
+  description:
+    "Saveé Sea Sauvignon Blanc 2021 — 12.5% ABV.",
+  grapes: ["Sauvignon Blanc"],
+  style: "Awatere River Wines",
+  wholesaleCase: "$135.96",
+  wholesaleBottle: "$11.33",
+  retailBottle: "$16.99",
+},
+
+// Ten Sisters - Marlborough
+
+{
+  id: 3,
+  name: "Sauvignon Blanc",
+  country: "Marlborough, New Zealand",
+  image: "/Ten Sisters Sauvignon Blanc.webp",
+  description:
+    "Sauvignon Blanc 2023 — 12.7% ABV.",
+  grapes: ["Sauvignon Blanc"],
+  style: "Ten Sisters",
+  wholesaleCase: "$143.88",
+  wholesaleBottle: "$11.99",
+  retailBottle: "$17.99",
+},
+
+// Tuscany - Large Format Bottles
+
+// Castello Romitorio
+
+{
+  id: 4,
+  name: "Brunello di Montalcino",
+  country: "Tuscany, Italy",
+  image: "/Brunello di Montalcino 1.5L.webp",
+  description:
+    "Brunello di Montalcino DOCG 2018 — 14.5% ABV. 1.5L Large Format. 96pts JS & RP, 94pts WS.",
+  grapes: ["Sangiovese"],
+  style: "Castello Romitorio - Large Format",
+  wholesaleBottle: "$132.66",
+  retailBottle: "$198.99",
+},
+
+// Vicchiomaggio
+
+{
+  id: 5,
+  name: "Ripa delle More",
+  country: "Tuscany, Italy",
+  image: "/Ripa delle More 1.5L.webp",
+  description:
+    "Ripa delle More IGT 2022 — 14% ABV. 1.5L Large Format.",
+  grapes: ["Sangiovese", "Merlot", "Cabernet Sauvignon"],
+  style: "Vicchiomaggio - Large Format",
+  wholesaleBottle: "$63.33",
+  retailBottle: "$94.99",
+},
+
+{
+  id: 6,
+  name: "Vigna La Prima Chianti Classico Riserva",
+  country: "Tuscany, Italy",
+  image: "/Vigna La Prima Chianti Classico Riserva 1.5L.webp",
+  description:
+    "Vigna La Prima Chianti Classico Riserva DOCG 2022 — 14% ABV. 1.5L Large Format.",
+  grapes: ["Sangiovese"],
+  style: "Vicchiomaggio - Large Format",
+  wholesaleBottle: "$86.66",
+  retailBottle: "$129.99",
+},
+
+// Fattoria Mancini
+
+{
+  id: 7,
+  name: "Focara",
+  country: "Tuscany, Italy",
+  image: "/Focara 1.5L.webp",
+  description:
+    "Focara Colli Pesaresi DOC 2020 — 13% ABV. 1.5L Large Format.",
+  grapes: ["Pinot Noir"],
+  style: "Fattoria Mancini - Large Format",
+  wholesaleBottle: "$49.99",
+  retailBottle: "$74.99",
+},
+
+{
+  id: 8,
+  name: "Impero - Blanc de Pinot Noir",
+  country: "Tuscany, Italy",
+  image: "/Impero Blanc de Pinot Noir 1.5L.webp",
+  description:
+    "Impero Blanc de Pinot Noir IGT 2021 — 14% ABV. 1.5L Large Format.",
+  grapes: ["Pinot Noir"],
+  style: "Fattoria Mancini - Large Format",
+  wholesaleBottle: "$62.66",
+  retailBottle: "$93.99",
+},
+
+// Marramiero
+
+{
+  id: 9,
+  name: "Inferi",
+  country: "Tuscany, Italy",
+  image: "/Inferi 3L.webp",
+  description:
+    "Inferi DOC 2019 — 14% ABV. 3L Large Format.",
+  grapes: ["Montepulciano d'Abruzzo"],
+  style: "Marramiero - Large Format",
+  wholesaleBottle: "$112.00",
+  retailBottle: "$168.00",
+},
+
+{
+  id: 10,
+  name: "Anima",
+  country: "Tuscany, Italy",
+  image: "/Anima 1.5L.webp",
+  description:
+    "Anima DOC 2018 — 13.5% ABV. 1.5L Large Format.",
+  grapes: ["Montepulciano d'Abruzzo"],
+  style: "Marramiero - Large Format",
+  wholesaleBottle: "$21.99",
+  retailBottle: "$32.99",
+},
+
+// Firriato
+
+{
+  id: 11,
+  name: "Harmonium",
+  country: "Tuscany, Italy",
+  image: "/Harmonium 3L.webp",
+  description:
+    "Harmonium DOC 2018 — 14.5% ABV. 3L Large Format.",
+  grapes: ["Nero d'Avola"],
+  style: "Firriato - Large Format",
+  wholesaleBottle: "$130.00",
+  retailBottle: "$195.00",
+},
 ];
 
 const containerVariants = {
@@ -155,10 +275,10 @@ const filteredRegions = wineRegions.filter((region) => {
 >
   {[
  
-  { val: "4", label: "Wines" },
-  { val: "1", label: "Cellar" },
+ { val: "11", label: "Wines" },
+  { val: "9", label: "Wine Houses" },
   { val: "2", label: "Wine Regions" },
-  { val: "1", label: "Country" },
+  { val: "2", label: "Countries" },
 
   ].map((stat, idx) => (
     <div
@@ -183,7 +303,7 @@ const filteredRegions = wineRegions.filter((region) => {
   className="relative overflow-hidden"
   style={{
   backgroundImage:
-  "url('https://cdn.bfldr.com/UTM69Z3S/at/4ng7jq2wc332t4r4hjjrk8w/dan-meyers-EYnLjmjCViM-unsplash-LOWRES.jpg?auto=webp&enable=upscale&fit=cover&format=pjpg&height=640&quality=60&width=960')",
+  "url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1600&q=85')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -358,13 +478,13 @@ const filteredRegions = wineRegions.filter((region) => {
 
                   <div className="mb-4 rounded-xl border border-[#f3ece9] bg-[#fcfaf9]/90 p-3">
 
-                    <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
+                    {/* <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
 
                       <Wine className="h-3 w-3 text-[#65002d]" />
 
                       Signature Grapes
 
-                    </p>
+                    </p> */}
 
                     <div className="flex flex-wrap gap-1">
 

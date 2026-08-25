@@ -159,7 +159,7 @@ const filteredRegions = wineRegions.filter((region) => {
   className="relative overflow-hidden"
   style={{
   backgroundImage:
-  "url('https://cdn.bfldr.com/UTM69Z3S/at/4ng7jq2wc332t4r4hjjrk8w/dan-meyers-EYnLjmjCViM-unsplash-LOWRES.jpg?auto=webp&enable=upscale&fit=cover&format=pjpg&height=640&quality=60&width=960')",
+  "url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -333,14 +333,14 @@ const filteredRegions = wineRegions.filter((region) => {
                   {/* SIGNATURE GRAPES */}
 
                   <div className="mb-4 rounded-xl border border-[#f3ece9] bg-[#fcfaf9]/90 p-3">
-
+{/* 
                     <p className="mb-1.5 flex items-center gap-1 text-[11px] font-old-standard tracking-[0.18em] text-[#9b8f92]">
 
                       <Wine className="h-3 w-3 text-[#65002d]" />
 
                       Signature Grapes
 
-                    </p>
+                    </p> */}
 
                     <div className="flex flex-wrap gap-1">
 
