@@ -15,7 +15,7 @@ export default function NewsletterSection() {
   return (
     <div>
   
-    <footer className="w-full bg-[#1b1b1b] text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
+    <footer className="w-full bg-[rgb(84_1_34)] text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Upper Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12">
