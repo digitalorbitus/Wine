@@ -846,8 +846,8 @@ export default function Navbar() {
           className="
             group
             relative
-            py-3
-            px-3
+            py-2
+            px-1
             shrink-0
           "
         >
@@ -1005,8 +1005,8 @@ export default function Navbar() {
           className="
             group
             relative
-            py-3
-            px-3
+            py-2
+            px-1
             shrink-0
           "
         >
@@ -1159,7 +1159,7 @@ export default function Navbar() {
                     d="M3 5.5C3 4.67 3.67 4 4.5 4h2.1c.6 0 1.13.4 1.3.98l.76 2.67c.16.55-.02 1.14-.45 1.5l-1.35 1.1a13.5 13.5 0 0 0 5.89 5.89l1.1-1.35c.36-.43.95-.61 1.5-.45l2.67.76c.58.17.98.7.98 1.3v2.1c0 .83-.67 1.5-1.5 1.5C10.04 20 4 13.96 4 6.5"
                   />
                 </svg>
-                <span>+1 234 567 890</span>
+                <span className="text-xl">+1 234 567 890</span>
               </a>
             </div>
 
