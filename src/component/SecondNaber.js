@@ -689,7 +689,7 @@ export default function Navbar() {
   
     {
       label: "SHOP WINES",
-      href: "/shop",
+      href: "",
       children: [
         { label: "Browse All Wines", href: "/shop" },
         { label: "Cabernet Sauvignon", href: "/shop/cabernet-sauvignon" },

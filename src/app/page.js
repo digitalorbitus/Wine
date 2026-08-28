@@ -764,80 +764,159 @@ export default function HeroSlider() {
 
 
 <section className="w-full max-w-6xl mx-auto px-4 py-12">
-      {/* Top Navigation Tabs */}
-      <div className="flex justify-center items-center gap-6 sm:gap-10 border-b border-gray-100 pb-4 mb-10 sm:mb-16">
-        <button
-          onClick={() => setActiveTab("red-wine")}
-          className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
-            activeTab === "red-wine"
-              ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
-              : "text-gray-700 hover:text-black"
-          }`}
-        >
-          RED WINE
-        </button>
 
-        <button
-          onClick={() => setActiveTab("rose-wine")}
-          className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
-            activeTab === "rose-wine"
-              ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
-              : "text-gray-700 hover:text-black"
-          }`}
-        >
-          ROSE WINE
-        </button>
+  {/* ================= TOP TABS ================= */}
+  <div className="flex justify-center items-center gap-6 sm:gap-10 border-b border-gray-100 pb-4 mb-10 sm:mb-16">
 
-        <button
-          onClick={() => setActiveTab("fortified")}
-          className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
-            activeTab === "fortified"
-              ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
-              : "text-gray-700 hover:text-black"
-          }`}
-        >
-          FORTIFIED
+    <button
+      onClick={() => setActiveTab("red-wine")}
+      className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
+        activeTab === "red-wine"
+          ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
+          : "text-gray-700 hover:text-black"
+      }`}
+    >
+      RED WINE
+    </button>
+
+    <button
+      onClick={() => setActiveTab("rose-wine")}
+      className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
+        activeTab === "rose-wine"
+          ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
+          : "text-gray-700 hover:text-black"
+      }`}
+    >
+      ROSE WINE
+    </button>
+
+    <button
+      onClick={() => setActiveTab("fortified")}
+      className={`text-xs sm:text-sm md:text-base font-semibold tracking-wider transition-all duration-300 pb-1 ${
+        activeTab === "fortified"
+          ? "bg-[#F3EFEA] text-red-950 px-3 py-1 font-bold"
+          : "text-gray-700 hover:text-black"
+      }`}
+    >
+      FORTIFIED
+    </button>
+
+  </div>
+
+
+  {/* ================= CONTENT ================= */}
+  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+
+    {/* ================= LEFT CONTENT ================= */}
+    <motion.div
+      initial={{ opacity: 0, x: -120 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{
+        once: false,
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 1,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
+        lg:col-span-6
+        flex
+        flex-col
+        justify-center
+        space-y-6
+        lg:pr-6
+      "
+    >
+
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-tight">
+        {currentContent.title}
+      </h2>
+
+      <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
+        {currentContent.description}
+      </p>
+
+      <div className="pt-2">
+        <button className="bg-[#F3EFEA] hover:bg-[#e7e1d8] text-gray-900 text-xs font-bold tracking-widest px-6 py-3.5 transition-colors uppercase">
+          Shop Now
         </button>
       </div>
 
-      {/* Dynamic Content Area */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* Left Side: Text Content */}
-        <div className="lg:col-span-6 flex flex-col justify-center space-y-6 lg:pr-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-tight">
-            {currentContent.title}
-          </h2>
+    </motion.div>
 
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl">
-            {currentContent.description}
-          </p>
 
-          <div className="pt-2">
-            <button className="bg-[#F3EFEA] hover:bg-[#e7e1d8] text-gray-900 text-xs font-bold tracking-widest px-6 py-3.5 transition-colors uppercase">
-              Shop Now
-            </button>
-          </div>
+    {/* ================= RIGHT IMAGE ================= */}
+    <motion.div
+      initial={{ opacity: 0, x: 120, scale: 0.92 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{
+        once: false,
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 1.1,
+        delay: 0.15,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
+        lg:col-span-6
+        relative
+        flex
+        justify-center
+        lg:justify-end
+      "
+    >
+
+      {/* IMAGE WRAPPER */}
+      <div className="relative w-full max-w-[500px]">
+
+        {/* ================= BEIGE BOX ================= */}
+        <motion.div
+          initial={{ opacity: 0, x: 30, y: 30 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          viewport={{
+            once: false,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 1.2,
+            delay: 0.25,
+          }}
+          className="
+            absolute
+            -top-4
+            -left-4
+            w-full
+            h-full
+            bg-[#F3EFEA]
+            -z-10
+            hidden
+            sm:block
+          "
+        />
+
+        {/* ================= IMAGE ================= */}
+        <div className="relative w-full h-[320px] sm:h-[400px] md:h-[450px]">
+
+          <Image
+            src={currentContent.image}
+            alt={currentContent.title}
+            fill
+            priority
+            className="object-cover shadow-sm"
+          />
+
         </div>
 
-        {/* Right Side: Image with Offset Background Card */}
-        <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-          {/* Subtle beige offset box behind the image */}
-          <div className="relative w-full max-w-[500px]">
-            <div className="absolute -top-4 -left-4 w-full h-full bg-[#F3EFEA] -z-10 hidden sm:block" />
-
-            <div className="relative w-full h-[320px] sm:h-[400px] md:h-[450px]">
-              <Image
-                src={currentContent.image}
-                alt={currentContent.title}
-                fill
-                priority
-                className="object-cover shadow-sm transition-opacity duration-300"
-              />
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
 
 
