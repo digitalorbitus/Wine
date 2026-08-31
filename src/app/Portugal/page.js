@@ -15,7 +15,7 @@ const wineRegions = [
   id: 1,
   name: "Fanal Madeira - Fine Rich",
   country: "Portugal",
-  image: "/Fanal Madeira Fine Rich.webp",
+  image: "/Portugal/Fanal Madeira - Rainwater.webp",
   description:
     "Fanal Madeira - Fine Rich N/V — 19% ABV.",
   grapes: ["Madeira"],
@@ -29,7 +29,7 @@ const wineRegions = [
   id: 2,
   name: "Fanal Madeira - Rainwater",
   country: "Portugal",
-  image: "/Fanal Madeira Rainwater.webp",
+  image: "/Portugal/Fanal Madeira - Rainwater.webp",
   description:
     "Fanal Madeira - Rainwater N/V — 19% ABV.",
   grapes: ["Madeira"],
@@ -45,7 +45,7 @@ const wineRegions = [
   id: 3,
   name: "10 Year Tawny Port",
   country: "Portugal",
-  image: "/10 Year Tawny Port.webp",
+  image: "/Portugal/10 Year Tawny Port.webp",
   description:
     "10 Year Tawny Port N/V — 19.5% ABV.",
   grapes: ["Port"],
@@ -61,7 +61,7 @@ const wineRegions = [
   id: 4,
   name: "Dona Cepa",
   country: "Portugal",
-  image: "/Dona Cepa.webp",
+  image: "/Portugal/Dona Cepa, DOC Douro.webp",
   description:
     "Dona Cepa, DOC Douro 2020 — 13% ABV. Touriga Nacional, Touriga Franca and Tinta Roriz.",
   grapes: ["Touriga Nacional", "Touriga Franca", "Tinta Roriz"],
@@ -75,7 +75,7 @@ const wineRegions = [
   id: 5,
   name: "Alvarinho",
   country: "Portugal",
-  image: "/Alvarinho.webp",
+  image: "/Portugal/Alvarinho, DOC.png",
   description:
     "Alvarinho, DOC 2023 — 13.5% ABV.",
   grapes: ["Alvarinho"],
@@ -89,7 +89,7 @@ const wineRegions = [
   id: 6,
   name: "Vinho Verde",
   country: "Portugal",
-  image: "/Vinho Verde.webp",
+  image: "/Portugal/Vinho Verde.webp",
   description:
     "Vinho Verde 2024 — 10.5% ABV.",
   grapes: ["Vinho Verde"],
@@ -103,7 +103,7 @@ const wineRegions = [
   id: 7,
   name: "Rosé Vinho Verde",
   country: "Portugal",
-  image: "/Rose Vinho Verde.webp",
+  image: "/Portugal/Rosé Vinho Verde.webp",
   description:
     "Rosé Vinho Verde 2021 — 11.5% ABV.",
   grapes: ["Vinho Verde"],
@@ -117,7 +117,7 @@ const wineRegions = [
   id: 8,
   name: "Palmira Ruby Port",
   country: "Portugal",
-  image: "/Palmira Ruby Port.webp",
+  image: "/Portugal/Palmira Ruby Port.png",
   description:
     "Palmira Ruby Port N/V — 19.5% ABV.",
   grapes: ["Port"],
@@ -131,7 +131,7 @@ const wineRegions = [
   id: 9,
   name: "Palmira Tawny Port",
   country: "Portugal",
-  image: "/Palmira Tawny Port.webp",
+  image: "/Portugal/Palmira Tawny Port.webp",
   description:
     "Palmira Tawny Port N/V — 19.5% ABV.",
   grapes: ["Port"],
@@ -245,7 +245,7 @@ const filteredRegions = wineRegions.filter((region) => {
 >
   {[
  
- { val: "8", label: "Wines" },
+ { val: "9", label: "Wines" },
   { val: "3", label: "Wine Houses" },
   { val: "1", label: "Wine Region" },
   { val: "1", label: "Country" },

@@ -17,7 +17,6 @@ const wineRegions = [
       "Pinot Noir, Zenith Vineyard 2021 — 13.5% ABV. Wholesale Case $319.92 • Wholesale Bottle $26.66 • Retail Bottle $39.99.",
     grapes: ["Pinot Noir"],
   },
-
   {
     id: 2,
     name: "EOLA-Amity Hills",
@@ -28,7 +27,6 @@ const wineRegions = [
       "Pinot Noir, Estate 2021 — 13.6% ABV. Only 300 cases. Wholesale Case $263.88 • Wholesale Bottle $21.99 • Retail Bottle $32.99.",
     grapes: ["Pinot Noir"],
   },
-
   {
     id: 3,
     name: "Willamette Valley",
@@ -39,7 +37,6 @@ const wineRegions = [
       "Pinot Noir 2023 — 14.8% ABV. Wholesale Case $223.92 • Wholesale Bottle $18.66 • Retail Bottle $27.99.",
     grapes: ["Pinot Noir"],
   },
-
   {
     id: 4,
     name: "Willamette Valley",
@@ -49,6 +46,191 @@ const wineRegions = [
     description:
       "Redhawk Red 2019 — 14% ABV. 51% Merlot, 39% Cabernet Sauvignon, 10% Barbera. Wholesale Case $143.88 • Wholesale Bottle $11.99 • Retail Bottle $17.99.",
     grapes: ["Merlot", "Cabernet Sauvignon", "Barbera"],
+  },
+
+  // =========================
+  // Laurentia - Ohio
+  // =========================
+
+  {
+    id: 5,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Cabernet Sauvignon.png",
+    description:
+      "Cabernet Sauvignon 2021 — 13% ABV. Wholesale Case $180.00 • Wholesale Bottle $15.00 • Retail Bottle $22.99.",
+    grapes: ["Cabernet Sauvignon"],
+    year: "2021",
+    wholesaleCase: "$180.00",
+    wholesaleBottle: "$15.00",
+    retailBottle: "$22.99",
+  },
+
+  {
+    id: 6,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Cabernet Franc.png",
+    description:
+      "Cabernet Franc 2022 — 12.5% ABV. Wholesale Case $180.00 • Wholesale Bottle $15.00 • Retail Bottle $22.99.",
+    grapes: ["Cabernet Franc"],
+    year: "2022",
+    wholesaleCase: "$180.00",
+    wholesaleBottle: "$15.00",
+    retailBottle: "$22.99",
+  },
+
+  {
+    id: 7,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Merlot.png",
+    description:
+      "Merlot 2020 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Merlot"],
+    year: "2020",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 8,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Pinot Noir.png",
+    description:
+      "Pinot Noir 2023 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Pinot Noir"],
+    year: "2023",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 9,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Chardonnay.png",
+    description:
+      "Chardonnay 2022 — 12.5% ABV. Wholesale Case $175.92 • Wholesale Bottle $14.66 • Retail Bottle $21.99.",
+    grapes: ["Chardonnay"],
+    year: "2022",
+    wholesaleCase: "$175.92",
+    wholesaleBottle: "$14.66",
+    retailBottle: "$21.99",
+  },
+
+  {
+    id: 10,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Unoaked Chardonnay.png",
+    description:
+      "Unoaked Chardonnay 2023 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Chardonnay"],
+    year: "2023",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 11,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Pinot Grigio.png",
+    description:
+      "Pinot Grigio 2024 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Pinot Grigio"],
+    year: "2024",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 12,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Riesling.png",
+    description:
+      "Riesling 2023 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Riesling"],
+    year: "2023",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 13,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Riesling Clone 49.png",
+    description:
+      "Riesling Clone 49 2024 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Riesling Clone 49"],
+    year: "2024",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 14,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Gewürztraminer.png",
+    description:
+      "Gewürztraminer 2024 — 12% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Gewürztraminer"],
+    year: "2024",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 15,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Sparkling Rosé.png",
+    description:
+      "Sparkling Rosé 2024 — 12.5% ABV. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Sparkling Rosé"],
+    year: "2024",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
+  },
+
+  {
+    id: 16,
+    name: "Ohio",
+    country: "Ohio",
+    style: "Laurentia",
+    image: "/Ohio/Vidal Blanc Ice Wine.jpg",
+    description:
+      "Vidal Blanc Ice Wine 2023 — 11.5% ABV, 375 ML. Wholesale Case $159.96 • Wholesale Bottle $13.33 • Retail Bottle $19.99.",
+    grapes: ["Vidal Blanc"],
+    year: "2023",
+    size: "375 ML",
+    wholesaleCase: "$159.96",
+    wholesaleBottle: "$13.33",
+    retailBottle: "$19.99",
   },
 ];
 

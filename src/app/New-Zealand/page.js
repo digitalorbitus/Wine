@@ -15,7 +15,7 @@ const wineRegions = [
   id: 1,
   name: "Anna's Way Sauvignon Blanc",
   country: "Marlborough, New Zealand",
-  image: "/Annas Way Sauvignon Blanc.webp",
+  image: "/New Zealand/Anna's Way Sauvignon Blanc.png",
   description:
     "Anna's Way Sauvignon Blanc 2022 — 12.5% ABV.",
   grapes: ["Sauvignon Blanc"],
@@ -29,7 +29,7 @@ const wineRegions = [
   id: 2,
   name: "Saveé Sea Sauvignon Blanc",
   country: "Marlborough, New Zealand",
-  image: "/Savee Sea Sauvignon Blanc.webp",
+  image: "/New Zealand/Saveé Sea Sauvignon Blanc.png",
   description:
     "Saveé Sea Sauvignon Blanc 2021 — 12.5% ABV.",
   grapes: ["Sauvignon Blanc"],
@@ -45,7 +45,7 @@ const wineRegions = [
   id: 3,
   name: "Sauvignon Blanc",
   country: "Marlborough, New Zealand",
-  image: "/Ten Sisters Sauvignon Blanc.webp",
+  image: "/New Zealand/Sauvignon Blanc.webp",
   description:
     "Sauvignon Blanc 2023 — 12.7% ABV.",
   grapes: ["Sauvignon Blanc"],

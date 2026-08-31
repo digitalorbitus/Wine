@@ -192,62 +192,81 @@ export default function Navbar() {
                 const hasCountries = Boolean(item.countries && item.countries.length > 0);
 
                 return (
-                  <div key={item.label} className="group py-6 relative">
-                    {/* Top Main Link */}
-                    <Link
-                      href={item.href}
-                      onClick={() => setActiveItem(item.label)}
-                      className={`text-lg transition-colors duration-200 font-philosopher  tracking-wide flex items-center gap-1.5 ${
-                        isActive
-                          ? "text-[#8b263e]"
-                          : "text-[#1a1a1a] hover:text-rgb(165, 62, 76)"
-                      }`}
-                    >
-                      {item.label}
-                      {hasCountries && (
-                        <svg
-                          className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </Link>
+            <div
+  key={item.label}
+  className="group py-6 relative"
+>
+  {/* Top Main Link */}
+  <Link
+    href={item.href}
+    onClick={() => setActiveItem(item.label)}
+    className={`relative text-lg transition-colors duration-200 font-philosopher tracking-wide flex items-center gap-1.5 ${
+      isActive
+        ? "text-[#8b263e]"
+        : "text-[#1a1a1a] hover:text-[rgb(165,62,76)]"
+    }`}
+  >
+    {item.label}
 
-                    {/* Simple Dropdown for 7 Countries (Centered under Shop) */}
-                    {hasCountries && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-60 bg-[#363543] text-white shadow-xl z-50 rounded-b-md overflow-hidden transition-all duration-300">
-                        <ul className="py-3">
-     <li>
-<div className="px-5 py-2.5 text-xs tracking-[0.25em] text-white border-b border-white/20">
-  <Link href="/shop">
-    {item.heading}
+    {hasCountries && (
+      <svg
+        className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    )}
+
+    {/* Active Bottom Line */}
+    <span
+      className={`absolute left-0 -bottom-2 h-[2px] bg-[#8b263e] transition-all duration-300 ease-out ${
+        isActive
+          ? "w-full opacity-100"
+          : "w-0 opacity-0"
+      }`}
+    />
   </Link>
+
+  {/* Simple Dropdown for Countries */}
+  {hasCountries && (
+    <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block w-60 bg-[#363543] text-white shadow-xl z-50 rounded-b-md overflow-hidden transition-all duration-300">
+      <ul className="py-3">
+
+        <li>
+          <div className="px-5 py-2.5 text-xs tracking-[0.25em] text-white border-b border-white/20">
+            <Link href="/shop">
+              {item.heading}
+            </Link>
+          </div>
+        </li>
+
+        {item.countries.map((country, idx) => (
+          <li key={idx}>
+            <Link
+              href={country.href}
+              onClick={() => setActiveItem(item.label)}
+              className="px-5 py-2.5 text-sm text-gray-200 hover:text-white hover:bg-[#8b263e]/80 transition-all duration-150 flex items-center gap-2"
+            >
+              <span className="text-xs opacity-70">
+                &rsaquo;
+              </span>
+
+              {country.label}
+            </Link>
+          </li>
+        ))}
+
+      </ul>
+    </div>
+  )}
 </div>
-</li>
-                          {item.countries.map((country, idx) => (
-                            <li key={idx}>
-                              <Link
-                                href={country.href}
-                                onClick={() => setActiveItem(item.label)}
-                                className="px-5 py-2.5 text-sm text-gray-200 hover:text-white hover:bg-[#8b263e]/80 transition-all duration-150 flex items-center gap-2"
-                              >
-                                <span className="text-xs opacity-70">&rsaquo;</span>
-                                {country.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
                 );
               })}
             </nav>

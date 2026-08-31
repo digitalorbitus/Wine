@@ -12,7 +12,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera",
-    image: "/La Espera Chardonnay.webp",
+    image: "/Argentina/La Espera, Mendoza.webp",
     description:
       "Chardonnay 2024 — 13.7% ABV. Aged 3 months in French oak.",
     grapes: ["Chardonnay"],
@@ -23,7 +23,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera",
-    image: "/La Espera Torrontes.webp",
+    image: "/Argentina/Torrontés.webp",
     description:
       "Torrontés 2025 — 12.5% ABV. Fresh and aromatic Argentine white wine.",
     grapes: ["Torrontés"],
@@ -34,7 +34,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera",
-    image: "/La Espera Malbec.webp",
+    image: "/Argentina/Malbec.webp",
     description:
       "Malbec 2024 — 13.8% ABV. 30% barrel aged for 6 months in French oak.",
     grapes: ["Malbec"],
@@ -45,7 +45,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera",
-    image: "/La Espera Malbec Syrah.webp",
+    image: "/Argentina/Malbec Syrah.webp",
     description:
       "Malbec Syrah 2022 — 13.8% ABV. 70% Malbec and 30% Syrah, aged 6 months in French oak barrels.",
     grapes: ["Malbec", "Syrah"],
@@ -56,7 +56,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera",
-    image: "/La Espera Cabernet Sauvignon.webp",
+    image: "/Argentina/Cabernet Sauvignon.webp",
     description:
       "Cabernet Sauvignon 2023 — 14% ABV. 30% barrel aged for 6 months in French oak.",
     grapes: ["Cabernet Sauvignon"],
@@ -67,7 +67,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera Reserva",
-    image: "/La Espera Malbec Reserva.webp",
+    image: "/Argentina/Malbec Reserva.webp",
     description:
       "Malbec Reserva 2021 — 14.5% ABV. Aged 12 months in 225-litre French oak barrels.",
     grapes: ["Malbec"],
@@ -78,7 +78,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "La Espera Reserva",
-    image: "/La Espera Cabernet Sauvignon Reserva.webp",
+    image: "/Argentina/Cabernet Sauvignon Reserva.webp",
     description:
       "Cabernet Sauvignon Reserva 2022 — 14.5% ABV. 30% aged 12 months in American oak and 70% in French oak, using 225-litre barrels.",
     grapes: ["Cabernet Sauvignon"],
@@ -89,7 +89,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Carpe Diem",
-    image: "/Carpe Diem Reserva Cabernet Franc.webp",
+    image: "/Argentina/Carpe Diem - Reserva Cabernet Franc.webp",
     description:
       "Reserva Cabernet Franc 2024 — 14% ABV. Aged 8 months in second- and third-use French oak.",
     grapes: ["Cabernet Franc"],
@@ -100,7 +100,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Carpe Diem",
-    image: "/Carpe Diem Reserva Cab Sauv Cab Franc.webp",
+    image: "/Argentina/Carpe Diem - Reserva Cab Sauv Cab Franc.webp",
     description:
       "Reserva Cabernet Sauvignon / Cabernet Franc 2023 — 14.5% ABV. 56% Cabernet Sauvignon and 44% Cabernet Franc. Cabernet Franc aged 10 months in oak; 50% of Cabernet Sauvignon aged 10 months in oak.",
     grapes: ["Cabernet Sauvignon", "Cabernet Franc"],
@@ -111,7 +111,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Carpe Diem",
-    image: "/Carpe Diem Syrah Nouveau.webp",
+    image: "/Argentina/Carpe Diem - Syrah Nouveau (1).webp",
     description:
       "Syrah Nouveau 2024 — 14.5% ABV. 100% Syrah, unoaked.",
     grapes: ["Syrah"],
@@ -122,7 +122,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Carpe Diem",
-    image: "/Carpe Diem Orange Reserva.webp",
+    image: "/Argentina/Carpe Diem - Orange Reserva.webp",
     description:
       "Orange Reserva 2023 — 13.5% ABV. 90% Chardonnay and 10% Riesling with 30 days of skin contact.",
     grapes: ["Chardonnay", "Riesling"],
@@ -133,7 +133,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Gran Reserva",
-    image: "/Gran Reserva Blend 2020.webp",
+    image: "/Argentina/Gran Reserva Blend.webp",
     description:
       "Gran Reserva Blend 2020 — 15% ABV. 55% Malbec, 35% Cabernet Sauvignon and 10% Syrah. Aged 18 months in new French oak (70%) and American oak (30%).",
     grapes: ["Malbec", "Cabernet Sauvignon", "Syrah"],
@@ -144,7 +144,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Gran Reserva",
-    image: "/Gran Reserva Blend 2017.webp",
+    image: "/Argentina/Gran Reserva Blendd.webp",
     description:
       "Gran Reserva Blend 2017 — 14.7% ABV, 1.5 L. 91 points James Suckling. 60% Malbec, 20% Cabernet Sauvignon and 20% Syrah. Aged 18 months in oak.",
     grapes: ["Malbec", "Cabernet Sauvignon", "Syrah"],
@@ -155,7 +155,7 @@ const wineRegions = [
     name: "Mendoza",
     country: "Argentina",
     style: "Kurt Heinlein",
-    image: "/Kurt Heinlein Malbec.webp",
+    image: "/Argentina/Kurt Heinlein Malbec.webp",
     description:
       "Kurt Heinlein Malbec 2020 — 15.2% ABV. Single Vineyard. Aged 23 months in French oak.",
     grapes: ["Malbec"],

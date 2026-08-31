@@ -15,7 +15,7 @@ const wineRegions = [
   id: 1,
   name: "Piesporter Goldtröpfchen Riesling Spätlese",
   country: "Germany",
-  image: "/Piesporter Goldtröpfchen Riesling Spätlese.webp",
+  image: "/Germany/Piesporter Goldtröpfchen Riesling Spätlese.webp",
   description:
     "Piesporter Goldtröpfchen Riesling Spätlese 2023 — 8.5% ABV.",
   grapes: ["Riesling"],

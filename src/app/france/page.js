@@ -16,7 +16,7 @@ const wineRegions = [
   id: 1,
   name: "Champagne Grand Cru",
   country: "Champagne, France",
-  image: "/Champagne Grand Cru.webp",
+  image: "/France/Champagne - Marie Clugny/Champagne Grand Cru.webp",
   description:
     "Champagne Grand Cru N/V — 12% ABV. 100% Chardonnay.",
   grapes: ["Chardonnay"],
@@ -31,7 +31,7 @@ const wineRegions = [
   id: 2,
   name: "Champagne Cuvée L",
   country: "Champagne, France",
-  image: "/Champagne Cuvee L.webp",
+  image: "/France/Champagne - Veuve Doussot/Champagne Cuvée L.webp",
   description:
     "Champagne Cuvée L N/V — 12.5% ABV. 100% Chardonnay.",
   grapes: ["Chardonnay"],
@@ -45,7 +45,7 @@ const wineRegions = [
   id: 3,
   name: "Champagne Brut Rosé",
   country: "Champagne, France",
-  image: "/Champagne Brut Rose.webp",
+  image: "/France/Champagne - Veuve Doussot/Champagne Brut Rosé.webp",
   description:
     "Champagne Brut Rosé N/V — 12.5% ABV. 100% Pinot Noir.",
   grapes: ["Pinot Noir"],
@@ -59,7 +59,7 @@ const wineRegions = [
   id: 4,
   name: "Champagne Brut Tradition",
   country: "Champagne, France",
-  image: "/Champagne Brut Tradition.webp",
+  image: "/France/Champagne - Veuve Doussot/Champagne Brut Tradition.webp",
   description:
     "Champagne Brut Tradition N/V — 12.5% ABV. 85% Pinot Noir, 15% Chardonnay.",
   grapes: ["Pinot Noir", "Chardonnay"],
@@ -91,7 +91,7 @@ const wineRegions = [
   id: 6,
   name: "Chardonnay",
   country: "Loire, France",
-  image: "/Domaine de la Bretonniere Chardonnay.webp",
+  image: "/France/Loire - Domaine de la Bretonnière/Chardonnay.webp",
   description:
     "Chardonnay 2023 — 12% ABV.",
   grapes: ["Chardonnay"],
@@ -105,7 +105,7 @@ const wineRegions = [
   id: 7,
   name: "Sauvignon Blanc",
   country: "Loire, France",
-  image: "/Domaine de la Bretonniere Sauvignon Blanc.webp",
+  image: "/France/Loire - Domaine Dupré/So Different! Sauvignon Blanc.webp",
   description:
     "Sauvignon Blanc 2024 — 11% ABV.",
   grapes: ["Sauvignon Blanc"],
@@ -119,7 +119,7 @@ const wineRegions = [
   id: 8,
   name: "Muscadet, Sèvre et Maine",
   country: "Loire, France",
-  image: "/Muscadet Sevre et Maine.webp",
+  image: "/France/Loire - Domaine de la Bretonnière/Muscadet, Sèvre et Maine.webp",
   description:
     "Muscadet, Sèvre et Maine 2024 — 11.5% ABV.",
   grapes: ["Muscadet"],
@@ -138,7 +138,7 @@ const wineRegions = [
   id: 9,
   name: "So Different! Sauvignon Blanc",
   country: "Loire, France",
-  image: "/So Different Sauvignon Blanc.webp",
+  image: "/France/Loire - Domaine Dupré/So Different! Sauvignon Blanc.webp",
   description:
     "So Different! Sauvignon Blanc N/V — 11% ABV.",
   grapes: ["Sauvignon Blanc"],
@@ -152,7 +152,7 @@ const wineRegions = [
   id: 10,
   name: "So Different! Sparkling Sauvignon Blanc",
   country: "Loire, France",
-  image: "/So Different Sparkling Sauvignon Blanc.webp",
+  image: "/France/Loire - Domaine Dupré/So Different! Sparkling Sauvignon Blanc.webp",
   description:
     "So Different! Sparkling Sauvignon Blanc N/V — 11% ABV.",
   grapes: ["Sauvignon Blanc"],
@@ -168,7 +168,7 @@ const wineRegions = [
   id: 11,
   name: "Chinon",
   country: "Loire, France",
-  image: "/Chinon.webp",
+  image: "/France/Loire - Jean Montbray/Chinon, ACC.webp",
   description:
     "Chinon 2023 — 12.5% ABV. 100% Cabernet Franc.",
   grapes: ["Cabernet Franc"],
@@ -182,7 +182,7 @@ const wineRegions = [
   id: 12,
   name: "Vouvray",
   country: "Loire, France",
-  image: "/Vouvray.webp",
+  image: "/France/Loire - Jean Montbray/Vouvray, AVC.webp",
   description:
     "Vouvray 2022 — 11% ABV.",
   grapes: ["Chenin Blanc"],
@@ -196,7 +196,7 @@ const wineRegions = [
   id: 13,
   name: "Rosé d'Anjou",
   country: "Loire, France",
-  image: "/Rose d'Anjou.webp",
+  image: "/France/Loire - Jean Montbray/Rosé d'Anjou.webp",
   description:
     "Rosé d'Anjou 2022 — 10.5% ABV. 85% Grolleau, 15% Gamay.",
   grapes: ["Grolleau", "Gamay"],
@@ -214,7 +214,7 @@ const wineRegions = [
   id: 14,
   name: "Grande Réserve Bordeaux",
   country: "Bordeaux, France",
-  image: "/Grande Reserve Bordeaux.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Grande Réserve Bordeaux.webp",
   description:
     "Grande Réserve Bordeaux 2018 — 14% ABV. 55% Merlot, 27% Cabernet Franc, 18% Cabernet Sauvignon.",
   grapes: ["Merlot", "Cabernet Franc", "Cabernet Sauvignon"],
@@ -228,7 +228,7 @@ const wineRegions = [
   id: 15,
   name: "\"Generation\" Bordeaux Supérieur",
   country: "Bordeaux, France",
-  image: "/Generation Bordeaux Superieur.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Bordeaux Supérieur Rouge.webp",
   description:
     "\"Generation\" Bordeaux Supérieur 2018 — 13.5% ABV. 45% Merlot, 55% Cabernet Franc. Aged 13 months in barrique.",
   grapes: ["Merlot", "Cabernet Franc"],
@@ -242,7 +242,7 @@ const wineRegions = [
   id: 16,
   name: "Réserve Bordeaux Supérieur",
   country: "Bordeaux, France",
-  image: "/Reserve Bordeaux Superieur.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Réserve Bordeaux Supérieur.webp",
   description:
     "Réserve Bordeaux Supérieur 2020 — 14% ABV. 60% Merlot, 40% Cabernet Sauvignon. 50% aged in oak and 50% in cement tanks for 12 months.",
   grapes: ["Merlot", "Cabernet Sauvignon"],
@@ -256,7 +256,7 @@ const wineRegions = [
   id: 17,
   name: "Bordeaux Supérieur Rouge",
   country: "Bordeaux, France",
-  image: "/Bordeaux Superieur Rouge.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Bordeaux Supérieur Rouge.webp",
   description:
     "Bordeaux Supérieur Rouge 2020 — 14% ABV. 70% Merlot, 30% Cabernet Sauvignon.",
   grapes: ["Merlot", "Cabernet Sauvignon"],
@@ -270,7 +270,7 @@ const wineRegions = [
   id: 18,
   name: "Bordeaux Blanc",
   country: "Bordeaux, France",
-  image: "/Bordeaux Blanc.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Bordeaux Blanc.webp",
   description:
     "Bordeaux Blanc 2023 — 12.5% ABV. 60% Sauvignon Blanc, 40% Sémillon.",
   grapes: ["Sauvignon Blanc", "Sémillon"],
@@ -284,7 +284,7 @@ const wineRegions = [
   id: 19,
   name: "Bordeaux Rosé",
   country: "Bordeaux, France",
-  image: "/Bordeaux Rose.webp",
+  image: "/France/Bordeaux - Château Le Grand Verdus/Bordeaux Rosé.png",
   description:
     "Bordeaux Rosé 2020 — 12.5% ABV. 50% Cabernet Franc, 20% Merlot, 30% Cabernet Sauvignon.",
   grapes: ["Cabernet Franc", "Merlot", "Cabernet Sauvignon"],
@@ -302,7 +302,7 @@ const wineRegions = [
   id: 20,
   name: "Mercurey 1er Cru 'Les Veleys' (Rouge)",
   country: "Burgundy, France",
-  image: "/Mercurey 1er Cru Les Veleys Rouge.webp",
+  image: "/France/Burgundy - Agnès du Couëdic/Mercurey 1er Cru 'Les Veleys.webp",
   description:
     "Mercurey 1er Cru 'Les Veleys' 2023 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -316,7 +316,7 @@ const wineRegions = [
   id: 21,
   name: "Mercurey (Rouge)",
   country: "Burgundy, France",
-  image: "/Mercurey Rouge.webp",
+  image: "/France/Burgundy - Agnès du Couëdic/Mercurey (Rouge).webp",
   description:
     "Mercurey 2023 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -330,7 +330,7 @@ const wineRegions = [
   id: 22,
   name: "Mercurey (Blanc)",
   country: "Burgundy, France",
-  image: "/Mercurey Blanc.webp",
+  image: "/France/Burgundy - Agnès du Couëdic/Mercurey (Blanc).webp",
   description:
     "Mercurey 2023 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -344,7 +344,7 @@ const wineRegions = [
   id: 23,
   name: "Bourgogne Aligoté",
   country: "Burgundy, France",
-  image: "/Bourgogne Aligote.webp",
+  image: "/France/Burgundy - Agnès du Couëdic/Bourgogne Aligoté.webp",
   description:
     "Bourgogne Aligoté 2023 — 12.5% ABV.",
   grapes: ["Aligoté"],
@@ -360,7 +360,7 @@ const wineRegions = [
   id: 24,
   name: "Chassagne-Montrachet 1er Cru Morgeot (Blanc)",
   country: "Burgundy, France",
-  image: "/Chassagne Montrachet 1er Cru Morgeot Blanc.webp",
+  image: "public/France/Burgundy - Bachey-Legros et Fils/Chassagne-Montrachet 1er Cru Morgeot (Blanc).webp",
   description:
     "Chassagne-Montrachet 1er Cru Morgeot 2023 — 14.5% ABV.",
   grapes: ["Chardonnay"],
@@ -374,7 +374,7 @@ const wineRegions = [
   id: 25,
   name: "Chassagne-Montrachet 1er Cru Morgeot (Blanc)",
   country: "Burgundy, France",
-  image: "/Chassagne Montrachet 1er Cru Morgeot Blanc 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Chassagne-Montrachet 1er Cru Morgeot.webp",
   description:
     "Chassagne-Montrachet 1er Cru Morgeot 2022 — 14% ABV.",
   grapes: ["Chardonnay"],
@@ -388,7 +388,7 @@ const wineRegions = [
   id: 26,
   name: "Chassagne-Montrachet (Blanc)",
   country: "Burgundy, France",
-  image: "/Chassagne Montrachet Blanc.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Chassagne-Montrachet (Blanc).webp",
   description:
     "Chassagne-Montrachet 2023 — 14% ABV.",
   grapes: ["Chardonnay"],
@@ -402,7 +402,7 @@ const wineRegions = [
   id: 27,
   name: "Chassagne-Montrachet (Blanc)",
   country: "Burgundy, France",
-  image: "/Chassagne Montrachet Blanc 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Chassagne-Montrachet (Blanc).webp",
   description:
     "Chassagne-Montrachet 2022 — 14% ABV.",
   grapes: ["Chardonnay"],
@@ -416,7 +416,7 @@ const wineRegions = [
   id: 28,
   name: "Puligny-Montrachet (Blanc)",
   country: "Burgundy, France",
-  image: "/Puligny Montrachet Blanc.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Puligny-Montrachet (Blanc).webp",
   description:
     "Puligny-Montrachet 2023 — 13.5% ABV.",
   grapes: ["Chardonnay"],
@@ -430,7 +430,7 @@ const wineRegions = [
   id: 29,
   name: "Santenay 1er Cru 'La Comme' (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay 1er Cru La Comme Rouge.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 1er Cru 'La Comme'(Rouge).webp",
   description:
     "Santenay 1er Cru 'La Comme' 2023 — 12.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -444,7 +444,7 @@ const wineRegions = [
   id: 30,
   name: "Santenay 1er Cru 'La Comme' (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay 1er Cru La Comme Rouge 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 1er Cru 'La Comme'(Rouge).webp",
   description:
     "Santenay 1er Cru 'La Comme' 2022 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -458,7 +458,7 @@ const wineRegions = [
   id: 31,
   name: "Santenay 1er Cru 'Clos des Gravières' (Blanc)",
   country: "Burgundy, France",
-  image: "/Santenay Clos des Gravieres Blanc.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 1er Cru 'Clos des Gravières'.webp",
   description:
     "Santenay 1er Cru 'Clos des Gravières' 2023 — 14% ABV.",
   grapes: ["Chardonnay"],
@@ -472,7 +472,7 @@ const wineRegions = [
   id: 32,
   name: "Santenay 1er Cru 'Clos des Gravières' (Blanc)",
   country: "Burgundy, France",
-  image: "/Santenay Clos des Gravieres Blanc 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 1er Cru 'Clos des Gravières'.webp",
   description:
     "Santenay 1er Cru 'Clos des Gravières' 2022 — 13.5% ABV.",
   grapes: ["Chardonnay"],
@@ -486,7 +486,7 @@ const wineRegions = [
   id: 33,
   name: "Santenay 'Clos des Hâtes' (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay Clos des Hates Rouge.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 'Clos des Hâtes' (Rouge).webp",
   description:
     "Santenay 'Clos des Hâtes' 2023 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -500,7 +500,7 @@ const wineRegions = [
   id: 34,
   name: "Santenay 'Clos des Hâtes' (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay Clos des Hates Rouge 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 'Clos des Hâtes' (Rouge).webp",
   description:
     "Santenay 'Clos des Hâtes' 2022 — 14% ABV.",
   grapes: ["Pinot Noir"],
@@ -514,7 +514,7 @@ const wineRegions = [
   id: 35,
   name: "Santenay 'Clos des Hâtes' (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay Clos des Hates Rouge 2021.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 'Clos des Hâtes' (Rouge).webp",
   description:
     "Santenay 'Clos des Hâtes' 2021 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -528,7 +528,7 @@ const wineRegions = [
   id: 36,
   name: "Santenay Vieilles Vignes (Rouge)",
   country: "Burgundy, France",
-  image: "/Santenay Vieilles Vignes Rouge.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay Vieilles Vignes (Rouge).webp",
   description:
     "Santenay Vieilles Vignes 2022 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -542,7 +542,7 @@ const wineRegions = [
   id: 37,
   name: "Santenay 'En Charron' (Blanc)",
   country: "Burgundy, France",
-  image: "/Santenay En Charron Blanc.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 'En Charron' (Blanc).webp",
   description:
     "Santenay 'En Charron' 2023 — 13.5% ABV.",
   grapes: ["Chardonnay"],
@@ -556,7 +556,7 @@ const wineRegions = [
   id: 38,
   name: "Santenay 'En Charron' (Blanc)",
   country: "Burgundy, France",
-  image: "/Santenay En Charron Blanc 2022.webp",
+  image: "/France/Burgundy - Bachey-Legros et Fils/Santenay 'En Charron' (Blanc).webp",
   description:
     "Santenay 'En Charron' 2022 — 13.5% ABV.",
   grapes: ["Chardonnay"],
@@ -572,7 +572,7 @@ const wineRegions = [
   id: 39,
   name: "Pommard 1er Cru 'La Refene'",
   country: "Burgundy, France",
-  image: "/Pommard 1er Cru La Refene.webp",
+  image: "/France/Burgundy - Benoît Sordet/Pommard 1er Cru 'La Refene'.webp",
   description:
     "Pommard 1er Cru 'La Refene' 2023 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -586,7 +586,7 @@ const wineRegions = [
   id: 40,
   name: "Pommard",
   country: "Burgundy, France",
-  image: "/Pommard 2022.webp",
+  image: "/France/Burgundy - Benoît Sordet/Pommard.webp",
   description:
     "Pommard 2022 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -600,7 +600,7 @@ const wineRegions = [
   id: 41,
   name: "Pommard",
   country: "Burgundy, France",
-  image: "/Pommard 2021.webp",
+  image: "/France/Burgundy - Benoît Sordet/Pommard.webp",
   description:
     "Pommard 2021 — 12.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -614,7 +614,7 @@ const wineRegions = [
   id: 42,
   name: "Saint Romain (Blanc)",
   country: "Burgundy, France",
-  image: "/Saint Romain Blanc 2023.webp",
+  image: "/France/Burgundy - Benoît Sordet/Saint Romain (Blanc) 12.5%.webp",
   description:
     "Saint Romain 2023 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -628,7 +628,7 @@ const wineRegions = [
   id: 43,
   name: "Saint Romain (Blanc)",
   country: "Burgundy, France",
-  image: "/Saint Romain Blanc 2022.webp",
+  image: "/France/Burgundy - Benoît Sordet/Saint Romain (Blanc).webp",
   description:
     "Saint Romain 2022 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -644,7 +644,7 @@ const wineRegions = [
   id: 44,
   name: "Givry 1er Cru 'Les Galaffres' (Blanc)",
   country: "Burgundy, France",
-  image: "/Givry 1er Cru Les Galaffres Blanc.webp",
+  image: "/France/Burgundy - Domaine Chofflet/Givry 1er Cru 'Les Galaffres' (Blanc).webp",
   description:
     "Givry 1er Cru 'Les Galaffres' 2022 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -658,7 +658,7 @@ const wineRegions = [
   id: 45,
   name: "Givry 1er Cru 'En Choué' (Rouge)",
   country: "Burgundy, France",
-  image: "/Givry 1er Cru En Choue Rouge.webp",
+  image: "/France/Burgundy - Domaine Chofflet/Givry 1er Cru 'Les Galaffres' (Blanc).webp",
   description:
     "Givry 1er Cru 'En Choué' 2022 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -672,7 +672,7 @@ const wineRegions = [
   id: 46,
   name: "Givry 'La Pièce' (Blanc)",
   country: "Burgundy, France",
-  image: "/Givry La Piece Blanc.webp",
+  image: "/France/Burgundy - Domaine Chofflet/Givry 'La Pièce' (Blanc).webp",
   description:
     "Givry 'La Pièce' 2022 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -686,7 +686,7 @@ const wineRegions = [
   id: 47,
   name: "Givry Héritage (Rouge)",
   country: "Burgundy, France",
-  image: "/Givry Heritage Rouge.webp",
+  image: "/France/Burgundy - Domaine Chofflet/Givry Héritage (Rouge).webp",
   description:
     "Givry Héritage 2022 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -704,7 +704,7 @@ const wineRegions = [
   id: 48,
   name: "Morey-Saint-Denis en Pierre Virant",
   country: "Burgundy, France",
-  image: "/Morey Saint Denis en Pierre Virant.webp",
+  image: "/France/Burgundy - Domaine des Monts Luisants/Morey-Saint-Denis en Pierre Virant.webp",
   description:
     "Morey-Saint-Denis en Pierre Virant 2022 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -720,7 +720,7 @@ const wineRegions = [
   id: 49,
   name: "Mâcon-Villages",
   country: "Burgundy, France",
-  image: "/Macon Villages.webp",
+  image: "/France/Burgundy - Domaine Dupré/Mâcon-Villages.webp",
   description:
     "Mâcon-Villages 2023 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -734,7 +734,7 @@ const wineRegions = [
   id: 50,
   name: "Bourgogne Aligoté",
   country: "Burgundy, France",
-  image: "/Bourgogne Aligote Dupré.webp",
+  image: "/France/Burgundy - Domaine Dupré/Bourgogne Aligoté.webp",
   description:
     "Bourgogne Aligoté 2023 — 12.5% ABV.",
   grapes: ["Aligoté"],
@@ -750,7 +750,7 @@ const wineRegions = [
   id: 51,
   name: "Pouilly-Fuissé 'Terroirs de Vergisson'",
   country: "Burgundy, France",
-  image: "/Pouilly Fuisse Terroirs de Vergisson.webp",
+  image: "/France/Burgundy - Domaine Gilles Morat/Pouilly-Fuissé 'Terroirs de Vergisson'.webp",
   description:
     "Pouilly-Fuissé 'Terroirs de Vergisson' 2023 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -766,7 +766,7 @@ const wineRegions = [
   id: 52,
   name: "Meursault 'Les Vireuils' (Blanc)",
   country: "Burgundy, France",
-  image: "/Meursault Les Vireuils Blanc.webp",
+  image: "/France/Burgundy - Domaine Labry/Meursault 'Les Vireuils' (Blanc).png",
   description:
     "Meursault 'Les Vireuils' 2017 — 12.7% ABV.",
   grapes: ["Chardonnay"],
@@ -780,7 +780,7 @@ const wineRegions = [
   id: 53,
   name: "Auxey-Duresses (Rouge)",
   country: "Burgundy, France",
-  image: "/Auxey Duresses Rouge.webp",
+  image: "/France/Burgundy - Domaine Labry/Auxey-Duresses (Blanc).webp",
   description:
     "Auxey-Duresses 2020 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -794,7 +794,7 @@ const wineRegions = [
   id: 54,
   name: "Auxey-Duresses (Blanc)",
   country: "Burgundy, France",
-  image: "/Auxey Duresses Blanc.webp",
+  image: "public/France/Burgundy - Domaine Labry/Auxey-Duresses (Blanc).webp",
   description:
     "Auxey-Duresses 2020 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -808,7 +808,7 @@ const wineRegions = [
   id: 55,
   name: "Bourgogne Hautes-Côtes de Beaune (Rouge)",
   country: "Burgundy, France",
-  image: "/Bourgogne Hautes Cotes de Beaune Rouge 2022.webp",
+  image: "/France/Burgundy - Domaine Labry/Bourgogne Hautes-Côtes de Beaune (Rouge).png",
   description:
     "Bourgogne Hautes-Côtes de Beaune 2022 — 12.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -822,7 +822,7 @@ const wineRegions = [
   id: 56,
   name: "Bourgogne Hautes-Côtes de Beaune (Rouge)",
   country: "Burgundy, France",
-  image: "/Bourgogne Hautes Cotes de Beaune Rouge 2021.webp",
+  image: "/France/Burgundy - Domaine Labry/Bourgogne Hautes-Côtes de Beaune (Rouge).png",
   description:
     "Bourgogne Hautes-Côtes de Beaune 2021 — 12.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -836,7 +836,7 @@ const wineRegions = [
   id: 57,
   name: "Bourgogne Hautes-Côtes de Beaune (Blanc)",
   country: "Burgundy, France",
-  image: "/Bourgogne Hautes Cotes de Beaune Blanc.webp",
+  image: "/France/Burgundy - Domaine Labry/Bourgogne Hautes-Côtes de Beaune (Rouge).png",
   description:
     "Bourgogne Hautes-Côtes de Beaune 2022 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -850,7 +850,7 @@ const wineRegions = [
   id: 58,
   name: "Côtes de Beaune Villages (Rouge)",
   country: "Burgundy, France",
-  image: "/Cotes de Beaune Villages Rouge.webp",
+  image: "/France/Burgundy - Domaine Labry/Côtes de Beaune Villages (Rouge).webp",
   description:
     "Côtes de Beaune Villages 2022 — 12.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -866,7 +866,7 @@ const wineRegions = [
   id: 59,
   name: "Corton-Charlemagne Grand Cru",
   country: "Burgundy, France",
-  image: "/Corton Charlemagne Grand Cru.webp",
+  image: "/France/Burgundy - Domaine Lebreuil/Corton-Charlemagne Grand Cru.webp",
   description:
     "Corton-Charlemagne Grand Cru 2023 — 13% ABV. 100% Chardonnay. Natural malolactic fermentation in barrels. 35% aged in new barrels for 14–18 months.",
   grapes: ["Chardonnay"],
@@ -882,7 +882,7 @@ const wineRegions = [
   id: 60,
   name: "Saint-Véran 'Les Charmones'",
   country: "Burgundy, France",
-  image: "/Saint Veran Les Charmones.webp",
+  image: "/France/Burgundy - Domaine Thomas/Saint-Veran 'Les Charmones'.webp",
   description:
     "Saint-Véran 'Les Charmones' 2023 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -898,7 +898,7 @@ const wineRegions = [
   id: 61,
   name: "Charmes-Chambertin Grand Cru",
   country: "Burgundy, France",
-  image: "/Charmes Chambertin Grand Cru.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Charmes-Chambertin Grand Cru.webp",
   description:
     "Charmes-Chambertin Grand Cru 2020 — 14% ABV.",
   grapes: ["Pinot Noir"],
@@ -912,7 +912,7 @@ const wineRegions = [
   id: 62,
   name: "Gevrey-Chambertin 1er Cru 'Le Poissenot'",
   country: "Burgundy, France",
-  image: "/Gevrey Chambertin 1er Cru Le Poissenot.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Gevrey-Chambertin 1er Cru 'Le Poissenot'.webp",
   description:
     "Gevrey-Chambertin 1er Cru 'Le Poissenot' 2022 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -926,7 +926,7 @@ const wineRegions = [
   id: 63,
   name: "Gevrey-Chambertin 'Vieilles Vignes'",
   country: "Burgundy, France",
-  image: "/Gevrey Chambertin Vieilles Vignes.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Gevrey-Chambertin 'Vieilles Vignes'.webp",
   description:
     "Gevrey-Chambertin 'Vieilles Vignes' 2021 — 14% ABV.",
   grapes: ["Pinot Noir"],
@@ -940,7 +940,7 @@ const wineRegions = [
   id: 64,
   name: "Chambolle-Musigny 'Vieilles Vignes'",
   country: "Burgundy, France",
-  image: "/Chambolle Musigny Vieilles Vignes.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Chambolle-Musigny 'Vieilles Vignes'.png",
   description:
     "Chambolle-Musigny 'Vieilles Vignes' 2020 — 13.5% ABV.",
   grapes: ["Pinot Noir"],
@@ -954,7 +954,7 @@ const wineRegions = [
   id: 65,
   name: "Marsannay 'Champs Perdrix'",
   country: "Burgundy, France",
-  image: "/Marsannay Champs Perdrix.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Marsannay 'Champs Perdrix'.webp",
   description:
     "Marsannay 'Champs Perdrix' 2021 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -968,7 +968,7 @@ const wineRegions = [
   id: 66,
   name: "Bourgogne Hautes-Côtes de Nuits (Rouge)",
   country: "Burgundy, France",
-  image: "/Bourgogne Hautes Cotes de Nuits Rouge.webp",
+  image: "/France/Burgundy - Geantet-Pansiot/Bourgogne Hautes-Côtes de Nuits (Rouge).webp",
   description:
     "Bourgogne Hautes-Côtes de Nuits 2022 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -984,7 +984,7 @@ const wineRegions = [
   id: 67,
   name: "Chablis",
   country: "Burgundy, France",
-  image: "/Chablis Notton.webp",
+  image: "/France/Burgundy - Notton/Chablis.png",
   description:
     "Chablis 2022 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -1000,7 +1000,7 @@ const wineRegions = [
   id: 68,
   name: "Gevrey-Chambertin",
   country: "Burgundy, France",
-  image: "/Gevrey Chambertin Paul Thevenin.webp",
+  image: "/France/Burgundy - Paul Thevenin/gevrey-chambertin.jpg",
   description:
     "Gevrey-Chambertin 2018 — 13% ABV.",
   grapes: ["Pinot Noir"],
@@ -1016,7 +1016,7 @@ const wineRegions = [
   id: 69,
   name: "Chablis 1er Cru \"Les Vaillons\"",
   country: "Burgundy, France",
-  image: "/Chablis 1er Cru Les Vaillons.webp",
+  image: "/France/Burgundy - Sébastien Dampt/Chablis 1er Cru Les Vaillons.webp",
   description:
     "Chablis 1er Cru \"Les Vaillons\" 2023 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -1030,7 +1030,7 @@ const wineRegions = [
   id: 70,
   name: "Chablis",
   country: "Burgundy, France",
-  image: "/Chablis Sebastien Dampt.webp",
+  image: "/France/Burgundy - Sébastien Dampt/Chablis.webp",
   description:
     "Chablis 2023 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -1048,7 +1048,7 @@ const wineRegions = [
   id: 71,
   name: "Coteaux Bourguignons Rouge",
   country: "Burgundy, France",
-  image: "/Coteaux Bourguignons Rouge.webp",
+  image: "/France/Burgundy - Vignerons de Bel Air/Coteaux Bourguignons Rouge.webp",
   description:
     "Coteaux Bourguignons Rouge 2022 — 13% ABV. 100% Gamay.",
   grapes: ["Gamay"],
@@ -1062,7 +1062,7 @@ const wineRegions = [
   id: 72,
   name: "Coteaux Bourguignons Blanc",
   country: "Burgundy, France",
-  image: "/Coteaux Bourguignons Blanc.webp",
+  image: "/France/Burgundy - Vignerons de Bel Air/Coteaux Bourguignons Blanc.webp",
   description:
     "Coteaux Bourguignons Blanc 2022 — 13% ABV. 100% Chardonnay.",
   grapes: ["Chardonnay"],
@@ -1076,7 +1076,7 @@ const wineRegions = [
   id: 73,
   name: "Bourgogne",
   country: "Burgundy, France",
-  image: "/Bourgogne.webp",
+  image: "/France/Burgundy - Vignerons de Bel Air/Bourgogne.webp",
   description:
     "Bourgogne 2021 — 12.5% ABV.",
   grapes: ["Chardonnay"],
@@ -1090,7 +1090,7 @@ const wineRegions = [
   id: 74,
   name: "Mâcon-Villages",
   country: "Burgundy, France",
-  image: "/Macon Villages.webp",
+  image: "/France/Burgundy - Vignerons de Bel Air/Mâcon-Villages.webp",
   description:
     "Mâcon-Villages 2022 — 13% ABV.",
   grapes: ["Chardonnay"],
@@ -1104,7 +1104,7 @@ const wineRegions = [
   id: 75,
   name: "Le Rosé de Bel-Air",
   country: "Burgundy, France",
-  image: "/Le Rose de Bel Air.webp",
+  image: "/France/Burgundy - Vignerons de Bel Air/Le Rosé de Bel-Air.webp",
   description:
     "Le Rosé de Bel-Air 2023 — 12.5% ABV. Made from Gamay Noir à Jus Blanc.",
   grapes: ["Gamay Noir à Jus Blanc"],
@@ -1120,7 +1120,7 @@ const wineRegions = [
   id: 76,
   name: "Crémant de Bourgogne Brut Réserve",
   country: "Burgundy, France",
-  image: "/Cremant de Bourgogne Brut Reserve.webp",
+  image: "/France/Burgundy - Vignerons de Mancey/Crémant de Bourgogne Brut Réserve.webp",
   description:
     "Crémant de Bourgogne Brut Réserve N/V — 12% ABV. 40% Chardonnay, 40% Pinot Noir, 10% Aligoté, 10% Gamay.",
   grapes: ["Chardonnay", "Pinot Noir", "Aligoté", "Gamay"],
@@ -1138,7 +1138,7 @@ const wineRegions = [
   id: 77,
   name: "Lirac 'Pierres Vivantes'",
   country: "Rhône, France",
-  image: "/Lirac Pierres Vivantes.webp",
+  image: "/France/Rhône - Château Boucarut/Lirac 'Pierres Vivantes', AOC Cru Lirac.webp",
   description:
     "Lirac 'Pierres Vivantes' 2022 — 14% ABV. Organic wine made with indigenous yeasts; not fined or filtered. Grenache, Syrah, Mourvèdre and Cinsault.",
   grapes: ["Grenache", "Syrah", "Mourvèdre", "Cinsault"],
@@ -1152,7 +1152,7 @@ const wineRegions = [
   id: 78,
   name: "Les Petits Ducs - Côtes du Rhône",
   country: "Rhône, France",
-  image: "/Les Petits Ducs Cotes du Rhone.webp",
+  image: "/France/Rhône - Château Boucarut/Les Petits Ducs - Côtes du Rhône.webp",
   description:
     "Les Petits Ducs - Côtes du Rhône 2022 — 14.5% ABV. Grenache & Syrah.",
   grapes: ["Grenache", "Syrah"],
@@ -1166,7 +1166,7 @@ const wineRegions = [
   id: 79,
   name: "Empusa - Coteaux du Pont du Gard",
   country: "Rhône, France",
-  image: "/Empusa Coteaux du Pont du Gard.webp",
+  image: "/France/Rhône - Château Boucarut/Empusa - Coteaux du Pont du Gard (Rouge).webp",
   description:
     "Empusa - Coteaux du Pont du Gard Rouge 2022 — 14.5% ABV. 100% Grenache.",
   grapes: ["Grenache"],
@@ -1180,7 +1180,7 @@ const wineRegions = [
   id: 80,
   name: "Tavel 'Qu'est ce qu'on attend?'",
   country: "Rhône, France",
-  image: "/Tavel Qu'est ce qu'on attend.webp",
+  image: "/France/Rhône - Château Boucarut/Tavel 'Qu'est ce qu.webp",
   description:
     "Tavel 'Qu'est ce qu'on attend?' 2023 — 13.5% ABV. Grenache & Cinsault.",
   grapes: ["Grenache", "Cinsault"],
@@ -1194,7 +1194,7 @@ const wineRegions = [
   id: 81,
   name: "Lirac 'd'Schlànga'",
   country: "Rhône, France",
-  image: "/Lirac d Schlanga.webp",
+  image: "/France/Rhône - Château Boucarut/Lirac 'd'Schlànga.webp",
   description:
     "Lirac 'd'Schlànga' 2022 — 13% ABV. Roussanne & Viognier.",
   grapes: ["Roussanne", "Viognier"],
@@ -1208,7 +1208,7 @@ const wineRegions = [
   id: 82,
   name: "Gag Blau - Coteaux du Pont du Gard",
   country: "Rhône, France",
-  image: "/Gag Blau Coteaux du Pont du Gard.webp",
+  image: "/France/Rhône - Château Boucarut/Gag Blau - Coteaux du Pont du Gard (Blanc).webp",
   description:
     "Gag Blau - Coteaux du Pont du Gard Blanc 2023 — 11.5% ABV. Roussanne & Viognier.",
   grapes: ["Roussanne", "Viognier"],
@@ -1224,7 +1224,7 @@ const wineRegions = [
   id: 83,
   name: "Plan de Dieu, Côtes du Rhône Villages",
   country: "Rhône, France",
-  image: "/Plan de Dieu Cotes du Rhone Villages.webp",
+  image: "/France/Rhône - Domaine Dame Guilherme/Plan de Dieu, Côtes du Rhône Villages.png",
   description:
     "Plan de Dieu, Côtes du Rhône Villages 2018 — 15% ABV. 65% Grenache, 25% Syrah, 10% Mourvèdre.",
   grapes: ["Grenache", "Syrah", "Mourvèdre"],
@@ -1240,7 +1240,7 @@ const wineRegions = [
   id: 84,
   name: "Châteauneuf-du-Pape",
   country: "Rhône, France",
-  image: "/Chateauneuf du Pape Rouge.webp",
+  image: "/France/Rhône - La Vigne du Roy/Châteauneuf-du-Pape.webp",
   description:
     "Châteauneuf-du-Pape Rouge 2018 — 14.5% ABV. 95% Grenache, 3% Mourvèdre, 2% Syrah. Fermented in truncated wooden vats and aged 18 months in stainless steel.",
   grapes: ["Grenache", "Mourvèdre", "Syrah"],
@@ -1254,7 +1254,7 @@ const wineRegions = [
   id: 85,
   name: "Châteauneuf-du-Pape Blanc",
   country: "Rhône, France",
-  image: "/Chateauneuf du Pape Blanc.webp",
+  image: "/France/Rhône - La Vigne du Roy/Châteauneuf-du-Pape.webp",
   description:
     "Châteauneuf-du-Pape Blanc 2023 — 14.5% ABV. 100% Roussanne. Fermented in demi-muids and aged on fine lees for 12 months.",
   grapes: ["Roussanne"],
@@ -1268,7 +1268,7 @@ const wineRegions = [
   id: 86,
   name: "Hédoniste Rouge",
   country: "Rhône, France",
-  image: "/Hedoniste Rouge.webp",
+  image: "/France/Rhône - Domaine La Durbane/Hédoniste Rouge.webp",
   description:
     "Hédoniste Rouge 2022 — 13.5% ABV. 100% Syrah.",
   grapes: ["Syrah"],
@@ -1282,7 +1282,7 @@ const wineRegions = [
   id: 87,
   name: "Hédoniste Blanc",
   country: "Rhône, France",
-  image: "/Hedoniste Blanc.webp",
+  image: "/France/Rhône - Domaine La Durbane/Hédoniste Blanc.webp",
   description:
     "Hédoniste Blanc 2022 — 14% ABV. 85% Viognier, 10% Vermentino, 5% Muscat Petit Grains.",
   grapes: ["Viognier", "Vermentino", "Muscat Petit Grains"],
@@ -1299,7 +1299,7 @@ const wineRegions = [
   id: 88,
   name: "Vinsobres Cuvée St. Pierre",
   country: "Rhône, France",
-  image: "/Vinsobres Cuvee St Pierre.webp",
+  image: "/France/Rhône - Domaine Saint Vincent/Vinsobres Cuvée St. Pierre.webp",
   description:
     "Vinsobres Cuvée St. Pierre 2021 — 14.5% ABV. 50% Grenache, 50% Syrah. Aged 12 months in used barrels. 92 pts Robert Parker.",
   grapes: ["Grenache", "Syrah"],
@@ -1313,7 +1313,7 @@ const wineRegions = [
   id: 89,
   name: "Vinsobres",
   country: "Rhône, France",
-  image: "/Vinsobres.webp",
+  image: "/France/Rhône - Domaine Saint Vincent/Vinsobres.webp",
   description:
     "Vinsobres 2021 — 14% ABV. 50% Grenache, 50% Syrah. Aged in concrete vats.",
   grapes: ["Grenache", "Syrah"],
@@ -1327,7 +1327,7 @@ const wineRegions = [
   id: 90,
   name: "Côtes du Rhône Villages",
   country: "Rhône, France",
-  image: "/Cotes du Rhone Villages Rouge.webp",
+  image: "/France/Rhône - Domaine Saint Vincent/Côtes du Rhône Villages (Rouge).webp",
   description:
     "Côtes du Rhône Villages Rouge 2021 — 13.5% ABV. 50% Grenache, 50% Syrah.",
   grapes: ["Grenache", "Syrah"],
@@ -1341,7 +1341,7 @@ const wineRegions = [
   id: 91,
   name: "Côtes du Rhône Blanc",
   country: "Rhône, France",
-  image: "/Cotes du Rhone Blanc.webp",
+  image: "/France/Rhône - La Vigne du Roy/Côtes du Rhône.png",
   description:
     "Côtes du Rhône Blanc 2023 — 14% ABV. 80% Grenache Blanc, 10% Marsanne, 10% Viognier.",
   grapes: ["Grenache Blanc", "Marsanne", "Viognier"],
@@ -1357,7 +1357,7 @@ const wineRegions = [
   id: 92,
   name: "Châteauneuf-du-Pape",
   country: "Rhône, France",
-  image: "/Chateauneuf du Pape La Vigne du Roy.webp",
+  image: "/France/Rhône - La Vigne du Roy/Châteauneuf-du-Pape.webp",
   description:
     "Châteauneuf-du-Pape 2021 — 14% ABV. 57% Grenache, 39% Syrah, 4% Cinsault.",
   grapes: ["Grenache", "Syrah", "Cinsault"],
@@ -1371,7 +1371,7 @@ const wineRegions = [
   id: 93,
   name: "Côtes du Rhône",
   country: "Rhône, France",
-  image: "/Cotes du Rhone La Vigne du Roy.webp",
+  image: "/France/Rhône - La Vigne du Roy/Côtes du Rhône.png",
   description:
     "Côtes du Rhône 2024 — 13.5% ABV. 60% Grenache, 40% Syrah.",
   grapes: ["Grenache", "Syrah"],
@@ -1385,7 +1385,7 @@ const wineRegions = [
   id: 94,
   name: "Costières de Nîmes Rosé",
   country: "Rhône, France",
-  image: "/Costieres de Nimes Rose.webp",
+  image: "/France/Rhône - La Vigne du Roy/Costières de Nîmes Rosé.webp",
   description:
     "Costières de Nîmes Rosé 2024 — 12.5% ABV. 80% Syrah, 20% Mourvèdre.",
   grapes: ["Syrah", "Mourvèdre"],
@@ -1401,7 +1401,7 @@ const wineRegions = [
   id: 95,
   name: "Gigondas",
   country: "Rhône, France",
-  image: "/Gigondas.webp",
+  image: "/France/Rhône - Les Sources de Montmirail/Gigondas.webp",
   description:
     "Gigondas 2021 — 14% ABV. Grenache, Syrah and Mourvèdre. 91 pts James Suckling.",
   grapes: ["Grenache", "Syrah", "Mourvèdre"],
@@ -1417,7 +1417,7 @@ const wineRegions = [
   id: 96,
   name: "Saint-Joseph",
   country: "Rhône, France",
-  image: "/Saint Joseph.webp",
+  image: "/France/Rhône - Rive de Malva/Saint-Joseph.webp",
   description:
     "Saint-Joseph 2020 — 13.5% ABV. 100% Syrah. 92 pts James Suckling.",
   grapes: ["Syrah"],
