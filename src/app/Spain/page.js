@@ -14,7 +14,7 @@ const wineRegions = [
   id: 1,
   name: "Laxas Albariño",
   country: "Rias Baixas, Spain",
-  image: "/Laxas Albarino.webp",
+  image: "/spain/Bodega As Laxas-Rias Baixas/Laxas Albariño.webp",
   description:
     "Laxas Albariño 2023 — 12.5% ABV.",
   grapes: ["Albariño"],
@@ -28,7 +28,7 @@ const wineRegions = [
   id: 2,
   name: "Laxas Sensum Brut Albariño",
   country: "Rias Baixas, Spain",
-  image: "/Laxas Sensum Brut Albarino.webp",
+  image: "/spain/Bodega As Laxas-Rias Baixas/Laxas Sensum Brut Albariño.png",
   description:
     "Laxas Sensum Brut Albariño N/V — 12.5% ABV. Traditional Method Brut.",
   grapes: ["Albariño"],
@@ -43,7 +43,7 @@ const wineRegions = [
   id: 3,
   name: "Milcampos",
   country: "Ribera del Duero, Spain",
-  image: "/Milcampos.webp",
+  image: "/spain/Bodega la Milagrosa-Ribera del Duero/Milcampos, Ribera del Duero.png",
   description:
     "Milcampos Ribera del Duero 2018 — 13.5% ABV. Tempranillo.",
   grapes: ["Tempranillo"],
@@ -58,7 +58,7 @@ const wineRegions = [
   id: 4,
   name: "Pedro Ximénez Sherry",
   country: "Jerez, Spain",
-  image: "/Pedro Ximenez Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Pedro Ximénez Sherry.webp",
   description:
     "Pedro Ximénez Sherry N/V — 15% ABV.",
   grapes: ["Pedro Ximénez"],
@@ -72,7 +72,7 @@ const wineRegions = [
   id: 5,
   name: "Amontillado Dry Sherry",
   country: "Jerez, Spain",
-  image: "/Amontillado Dry Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Amontillado Dry Sherry.webp",
   description:
     "Amontillado Dry Sherry N/V — 17.5% ABV.",
   grapes: ["Palomino"],
@@ -86,7 +86,7 @@ const wineRegions = [
   id: 6,
   name: "Oloroso Dry Sherry",
   country: "Jerez, Spain",
-  image: "/Oloroso Dry Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Oloroso Dry Sherry.webp",
   description:
     "Oloroso Dry Sherry N/V — 17.5% ABV.",
   grapes: ["Palomino"],
@@ -100,7 +100,7 @@ const wineRegions = [
   id: 7,
   name: "Fino Sherry",
   country: "Jerez, Spain",
-  image: "/Fino Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Fino Sherry.webp",
   description:
     "Fino Sherry N/V — 15% ABV.",
   grapes: ["Palomino"],
@@ -114,7 +114,7 @@ const wineRegions = [
   id: 8,
   name: "Manzanilla Sherry",
   country: "Jerez, Spain",
-  image: "/Manzanilla Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Manzanilla Sherry.webp",
   description:
     "Manzanilla Sherry N/V — 15% ABV.",
   grapes: ["Palomino"],
@@ -128,7 +128,7 @@ const wineRegions = [
   id: 9,
   name: "Cream Sherry",
   country: "Jerez, Spain",
-  image: "/Cream Sherry.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Cream Sherry.webp",
   description:
     "Cream Sherry N/V — 17.5% ABV.",
   grapes: ["Palomino", "Pedro Ximénez"],
@@ -142,7 +142,7 @@ const wineRegions = [
   id: 10,
   name: "Vermut Goyesco Manzanilla",
   country: "Jerez, Spain",
-  image: "/Vermut Goyesco Manzanilla.webp",
+  image: "/spain/Bodegas Delgado Zuleta - Jerez, Xeres, Sherry/Vermut Goyesco Manzanilla.webp",
   description:
     "Vermut Goyesco Manzanilla N/V — 15% ABV.",
   grapes: ["Palomino"],
@@ -157,7 +157,7 @@ const wineRegions = [
   id: 11,
   name: "Aleco",
   country: "La Mancha, Spain",
-  image: "/Aleco.webp",
+  image: "/spain/Bodegas Familia Bastida - La Mancha/Aleco.png",
   description:
     "Aleco 2020 — 14.1% ABV. 100% Tempranillo, aged 4–5 months in American oak.",
   grapes: ["Tempranillo"],
@@ -171,7 +171,7 @@ const wineRegions = [
   id: 12,
   name: "Titos",
   country: "La Mancha, Spain",
-  image: "/Titos.webp",
+  image: "/spain/Bodegas Familia Bastida - La Mancha/Titos.webp",
   description:
     "Titos 2018 — 14.1% ABV. 100% Garnacha, aged 11 months in oak.",
   grapes: ["Garnacha"],
@@ -186,7 +186,7 @@ const wineRegions = [
   id: 13,
   name: "Moscatel Vendimia Tardia",
   country: "Navarra, Spain",
-  image: "/Moscatel Vendimia Tardia.webp",
+  image: "/spain/Bodegas Ochoa - Navarra/Moscatel Vendimia Tardia.webp",
   description:
     "Moscatel Vendimia Tardia 2022 — 15% ABV. 500ml.",
   grapes: ["Moscatel"],
@@ -200,7 +200,7 @@ const wineRegions = [
   id: 14,
   name: "Calendas",
   country: "Navarra, Spain",
-  image: "/Calendas.webp",
+  image: "/spain/Bodegas Ochoa - Navarra/Calendas.webp",
   description:
     "Calendas 2023 — 13% ABV. 100% Tempranillo.",
   grapes: ["Tempranillo"],
@@ -215,7 +215,7 @@ const wineRegions = [
   id: 15,
   name: "Hilanda",
   country: "Jumilla, Spain",
-  image: "/Hilanda.webp",
+  image: "/spain/Bodegas Pedro Luis Martinez - Jumilla/Hilanda.webp",
   description:
     "Hilanda 2016 — 14% ABV. Monastrell.",
   grapes: ["Monastrell"],
@@ -230,7 +230,7 @@ const wineRegions = [
   id: 16,
   name: "Soplo",
   country: "Valencia, Spain",
-  image: "/Soplo.webp",
+  image: "/spain/Bodegas Rafael Cambra - Valencia/Soplo.webp",
   description:
     "Soplo 2014 — 14% ABV. Garnacha Tintorera.",
   grapes: ["Garnacha Tintorera"],
@@ -244,7 +244,7 @@ const wineRegions = [
   id: 17,
   name: "El Bon Homme",
   country: "Valencia, Spain",
-  image: "/El Bon Homme.webp",
+  image: "/spain/Bodegas Rafael Cambra - Valencia/El Bon Homme.webp",
   description:
     "El Bon Homme 2016 — 13.5% ABV. 50% Cabernet Sauvignon and 50% Monastrell.",
   grapes: ["Cabernet Sauvignon", "Monastrell"],
@@ -259,7 +259,7 @@ const wineRegions = [
   id: 18,
   name: "Blanco Nieva",
   country: "Rueda, Spain",
-  image: "/Blanco Nieva.webp",
+  image: "/spain/Bodegas Vinedos de Nieva - Rueda/Blanco Nieva.webp",
   description:
     "Blanco Nieva 2020 — 14% ABV. Verdejo.",
   grapes: ["Verdejo"],
@@ -274,7 +274,7 @@ const wineRegions = [
   id: 19,
   name: "Besllum",
   country: "Montsant, Spain",
-  image: "/Besllum.webp",
+  image: "/spain/Bodegas Vinedos de Nieva - Rueda/Besllum - Montsant.webp",
   description:
     "Besllum Montsant 2011 — 14% ABV. 45% Carinena, 45% Garnacha, 10% Syrah.",
   grapes: ["Carinena", "Garnacha", "Syrah"],
@@ -289,7 +289,7 @@ const wineRegions = [
   id: 20,
   name: "Jumenta",
   country: "Almansa, Spain",
-  image: "/Jumenta.webp",
+  image: "/spain/Bodegas Vinedos de Nieva - Rueda/Jumenta (Almansa).webp",
   description:
     "Jumenta Almansa 2022 — 14% ABV. 60% Syrah, 20% Merlot, 20% Garnacha Tintorera. Aged 6 months in used French oak.",
   grapes: ["Syrah", "Merlot", "Garnacha Tintorera"],
@@ -303,7 +303,7 @@ const wineRegions = [
   id: 21,
   name: "Pituco",
   country: "Jumilla, Spain",
-  image: "/Pituco.webp",
+  image: "/spain/Bodegas Vinedos de Nieva - Rueda/Pituco (Jumilla).png",
   description:
     "Pituco Jumilla 2022 — 14% ABV. 70% Monastrell, 15% Garnacha Tintorera, 15% Syrah. Aged 5 months in French oak.",
   grapes: ["Monastrell", "Garnacha Tintorera", "Syrah"],

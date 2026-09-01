@@ -23,7 +23,7 @@ const wineRegions = [
     name: "EOLA-Amity Hills",
     country: "Oregon",
     style: "Redhawk Winery",
-    image: "/Pinot Noir, Estate, EOLA-Amity Hills.webp",
+    image: "/organ/Pinot Noir, Estate, EOLA-Amity Hills.webp",
     description:
       "Pinot Noir, Estate 2021 — 13.6% ABV. ",
     grapes: ["Pinot Noir"],
@@ -34,7 +34,7 @@ const wineRegions = [
     name: "Willamette Valley",
     country: "Oregon",
     style: "Redhawk Winery",
-    image: "/Pinot Noir, Willamette Valley.webp",
+    image: "/organ/Pinot Noir, Willamette Valley.webp",
     description:
       "Pinot Noir 2023 — 14.8% ABV. ",
     grapes: ["Pinot Noir"],
@@ -45,7 +45,7 @@ const wineRegions = [
     name: "Willamette Valley",
     country: "Oregon",
     style: "Redhawk Winery",
-    image: "/Redhawk Red.webp",
+    image: "/organ/Redhawk Red.webp",
     description:
       "Redhawk Red 2019 — 14% ABV.",
     grapes: ["Merlot", "Cabernet Sauvignon", "Barbera"],

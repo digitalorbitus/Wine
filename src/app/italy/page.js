@@ -4,10 +4,10 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState,useMemo } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Sparkles, MapPin, Wine, Search, RefreshCw } from "lucide-react";
+import { ArrowUpRight, Sparkles, MapPin, Wine, Search, RefreshCw,  } from "lucide-react";
 
 
 
@@ -2094,7 +2094,7 @@ const wineRegions = [
    //=============================Vinicola Serena ---27---Veneto  end ===============================
 
 
-      //=============================Cantina Settecani---28---Emilia Romagna  start ===============================
+      //=============================Cantina-Settecani---28---Emilia Romagna  start ===============================
       {
   id: 126,
   name: "Vini del Re, Lambrusco di Modena Rosato",
@@ -2602,12 +2602,12 @@ const wineRegions = [
 
 
 
-          //=============================Donna Olga ---35---Tuscany    start ===============================
+          //=============================Donna-Olga ---35---Tuscany    start ===============================
       {
   id: 154,
   name: "Brunello di Montalcino",
   country: "Tuscany, Italy",
-  image: "/Brunello di Montalcino, DOCG Donna Olga.webp",
+  image: "/italy/Donna-olga/Brunello di Montalcino, DOCG.jpg",
   description:
     "Donna Olga Brunello di Montalcino 2020 — 15% ABV. A refined DOCG Brunello showcasing the classic Tuscan character of Sangiovese. Rated 92 points by James Suckling.",
   grapes: ["Sangiovese"],
@@ -2624,7 +2624,7 @@ const wineRegions = [
   id: 155,
   name: "Clos degli Amodeo",
   country: "Tuscany, Italy",
-  image: "/Clos degli Amodeo, IGT.webp",
+  image: "/italy/Donna-olga/Clos degli Amodeo, IGT.webp",
   description:
     "Donna Olga Clos degli Amodeo 2019 — 14% ABV. An elegant Tuscan IGT blend of Cabernet Sauvignon and Sangiovese, offering structure, fruit character and refined balance. Rated 92 points by James Suckling.",
   grapes: ["Cabernet Sauvignon", "Sangiovese"],
@@ -3854,7 +3854,7 @@ const wineRegions = [
   id: 232,
   name: "Roma Rosso",
   country: "Lazio, Italy",
-  image: "/Roma Rosso.webp",
+  image: "/italy/Vinea Domini/Roma Rosso, DOC.webp",
   description:
     "Roma Rosso 2020 — 13% ABV. Montepulciano and Sangiovese, aged 6 months in oak.",
   grapes: ["Montepulciano", "Sangiovese"],
@@ -3864,7 +3864,7 @@ const wineRegions = [
   id: 233,
   name: "Gotto d'Oro Roma Rosso",
   country: "Lazio, Italy",
-  image: "/Gotto d'Oro Roma Rosso.webp",
+  image: "/italy/Vinea Domini/Gotto d'Oro Roma Rosso.webp",
   description:
     "Gotto d'Oro Roma Rosso 2019 — 13% ABV. Montepulciano and Sangiovese.",
   grapes: ["Montepulciano", "Sangiovese"],
@@ -3874,7 +3874,7 @@ const wineRegions = [
   id: 234,
   name: "Cesanese del Piglio",
   country: "Lazio, Italy",
-  image: "/Cesanese del Piglio.webp",
+  image: "/italy/Vinea Domini/Cesanese del Piglio.webp",
   description:
     "Cesanese del Piglio 2022 — 14% ABV. Cesanese and Cesanese d'Affile, aged 3 months in barriques.",
   grapes: ["Cesanese", "Cesanese d'Affile"],
@@ -3884,7 +3884,7 @@ const wineRegions = [
   id: 235,
   name: "Frascati Superiore",
   country: "Lazio, Italy",
-  image: "/Frascati Superiore.webp",
+  image: "/italy/Vinea Domini/Frascati Superiore.webp",
   description:
     "Frascati Superiore 2022 — 13% ABV. Malvasia di Candia, Malvasia Puntinata and Trebbiano Toscano.",
   grapes: ["Malvasia di Candia", "Malvasia Puntinata", "Trebbiano Toscano"],
@@ -4422,7 +4422,7 @@ const wineRegions = [
   id: 272,
   name: "Don Antonio Primitivo",
   country: "Puglia, Italy",
-  image: "/Don Antonio Primitivo.webp",
+  image: "/italy/Coppi/Don Antonio Primitivo.png",
   description:
     "Don Antonio Primitivo 2017 — 14.5% ABV. 100% Primitivo. Tre Bicchieri.",
   grapes: ["Primitivo"],
@@ -4436,7 +4436,7 @@ const wineRegions = [
   id: 273,
   name: "Susanuvole Susumaniello",
   country: "Puglia, Italy",
-  image: "/Susanuvole Susumaniello.webp",
+  image: "/italy/Coppi/Susanuvole Susumaniello.webp",
   description:
     "Susanuvole Susumaniello 2023 — 13.5% ABV.",
   grapes: ["Susumaniello"],
@@ -4450,7 +4450,7 @@ const wineRegions = [
   id: 274,
   name: "Pellirosso Negroamaro",
   country: "Puglia, Italy",
-  image: "/Pellirosso Negroamaro.webp",
+  image: "/italy/Coppi/Pellirosso Negroamaro.webp",
   description:
     "Pellirosso Negroamaro 2020 — 13% ABV.",
   grapes: ["Negroamaro"],
@@ -4464,7 +4464,7 @@ const wineRegions = [
   id: 275,
   name: "Sannace Malvasia Nera",
   country: "Puglia, Italy",
-  image: "/Sannace Malvasia Nera.webp",
+  image: "/italy/Coppi/Sannace Malvasia Nera.webp",
   description:
     "Sannace Malvasia Nera 2020 — 12% ABV.",
   grapes: ["Malvasia Nera"],
@@ -4478,7 +4478,7 @@ const wineRegions = [
   id: 276,
   name: "Serralto Malvasia Bianca",
   country: "Puglia, Italy",
-  image: "/Serralto Malvasia Bianca.webp",
+  image: "/italy/Coppi/Serralto Malvasia Bianca.webp",
   description:
     "Serralto Malvasia Bianca 2024 — 12% ABV.",
   grapes: ["Malvasia Bianca"],
@@ -4492,7 +4492,7 @@ const wineRegions = [
   id: 277,
   name: "Coré - Rosato",
   country: "Puglia, Italy",
-  image: "/Core Rosato.webp",
+  image: "/italy/Coppi/Coré - Rosato, IGP.webp",
   description:
     "Coré Rosato 2024 — 12% ABV. 100% Negroamaro.",
   grapes: ["Negroamaro"],
@@ -4508,7 +4508,7 @@ const wineRegions = [
   id: 278,
   name: "Due Palme 1943, Salento Rosso",
   country: "Puglia, Italy",
-  image: "/Due Palme 1943 Salento Rosso.webp",
+  image: "/italy/due-plame/Due Palme 1943, Salento Rosso.webp",
   description:
     "Due Palme 1943 Salento Rosso 2021 — 15% ABV. 50% Primitivo, 50% Aglianico. Part of the wine is appassimento. Aged 9 months in French and American barrels.",
   grapes: ["Primitivo", "Aglianico"],
@@ -4522,7 +4522,7 @@ const wineRegions = [
   id: 279,
   name: "Terra, Salice Salentino Riserva",
   country: "Puglia, Italy",
-  image: "/Terra Salice Salentino Riserva.webp",
+  image: "/italy/due-plame/Terra, Salice Salentino Riserva.webp",
   description:
     "Terra Salice Salentino Riserva 2012 — 15% ABV. Negroamaro and Malvasia Nera. Part of the wine is appassimento. Aged 12 months in French barriques.",
   grapes: ["Negroamaro", "Malvasia Nera"],
@@ -4536,7 +4536,7 @@ const wineRegions = [
   id: 280,
   name: "Selvarossa, Salice Salentino Riserva",
   country: "Puglia, Italy",
-  image: "/Selvarossa Salice Salentino Riserva.webp",
+  image: "/italy/due-plame/Terra, Salice Salentino Riserva.webp",
   description:
     "Selvarossa Salice Salentino Riserva 2020 — 14.5% ABV. Negroamaro and Malvasia Nera, aged 9 months in barriques. Tre Bicchieri.",
   grapes: ["Negroamaro", "Malvasia Nera"],
@@ -4550,7 +4550,7 @@ const wineRegions = [
   id: 281,
   name: "San Gaetano Riserva, Primitivo di Manduria",
   country: "Puglia, Italy",
-  image: "/San Gaetano Riserva Primitivo di Manduria.webp",
+  image: "/italy/due-plame/San Gaetano Riserva, Primitivo di Manduria.webp",
   description:
     "San Gaetano Riserva Primitivo di Manduria 2019 — 15% ABV. 100% Primitivo di Manduria, aged 9 months in barriques.",
   grapes: ["Primitivo di Manduria"],
@@ -4578,7 +4578,7 @@ const wineRegions = [
   id: 283,
   name: "Serre, Susumaniello",
   country: "Puglia, Italy",
-  image: "/Serre Susumaniello.webp",
+  image: "/italy/due-plame/Serre, Susumaniello.webp",
   description:
     "Serre Susumaniello 2022 — 13.5% ABV. 100% Susumaniello, short aging in second and third passage French barriques.",
   grapes: ["Susumaniello"],
@@ -4592,7 +4592,7 @@ const wineRegions = [
   id: 284,
   name: "Tinaia, Salice Salentino Bianco",
   country: "Puglia, Italy",
-  image: "/Tinaia Salice Salentino Bianco.webp",
+  image: "/italy/due-plame/Tinaia, Salice Salentino Bianco.webp",
   description:
     "Tinaia Salice Salentino Bianco 2023 — 12.5% ABV. 100% Chardonnay, short aging in wood.",
   grapes: ["Chardonnay"],
@@ -4854,7 +4854,7 @@ const wineRegions = [
   id: 301,
   name: "Syrah & Cabernet Sauvignon",
   country: "Sicily, Italy",
-  image: "/Syrah Cabernet Sauvignon.webp",
+  image: "/italy/Cataldo/Syrah & Cabernet Sauvignon.webp",
   description:
     "Syrah & Cabernet Sauvignon 2022 — 13.5% ABV.",
   grapes: ["Syrah", "Cabernet Sauvignon"],
@@ -5807,6 +5807,7 @@ const cardVariants = {
 };
 
 export default function WineRegionsPage() {
+    const [conversations, setConversations] = useState([]);
 
   const [activeRegion, setActiveRegion] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -6023,6 +6024,94 @@ refreshing Gavi, and classic Moscato d&apos;Asti from the renowned Piedmont regi
 ).padStart(2, "0");
 
             const isActive = activeRegion === index;
+
+
+            const uniqueConversations = useMemo(() => {
+  const map = new Map();
+
+  conversations.forEach((chat) => {
+    if (!chat) return;
+
+    const type = chat.type || "direct";
+
+    let uniqueKey;
+
+    if (type === "group") {
+      uniqueKey = `group-${chat.id}`;
+    } else {
+      const userId =
+        chat.user_id ||
+        chat.other_user_id ||
+        chat.contact_id ||
+        chat.id;
+
+      uniqueKey = `direct-${userId}`;
+    }
+
+    const existing = map.get(uniqueKey);
+
+    if (!existing) {
+      map.set(uniqueKey, {
+        ...chat,
+        type,
+        messages: Array.isArray(chat.messages)
+          ? chat.messages
+          : [],
+      });
+      return;
+    }
+
+    // Existing record ke saath latest data merge karein
+    const existingTime = existing.last_msg_time
+      ? new Date(existing.last_msg_time).getTime()
+      : 0;
+
+    const currentTime = chat.last_msg_time
+      ? new Date(chat.last_msg_time).getTime()
+      : 0;
+
+    const latest =
+      currentTime > existingTime ? chat : existing;
+
+    map.set(uniqueKey, {
+      ...existing,
+      ...latest,
+
+      // Agar kisi record mein messages hain to preserve karein
+      messages:
+        Array.isArray(latest.messages) &&
+        latest.messages.length > 0
+          ? latest.messages
+          : existing.messages || [],
+
+      // last message preserve
+      lastMsg:
+        latest.lastMsg ||
+        latest.last_msg ||
+        existing.lastMsg ||
+        existing.last_msg ||
+        null,
+
+      last_msg:
+        latest.last_msg ||
+        latest.lastMsg ||
+        existing.last_msg ||
+        existing.lastMsg ||
+        null,
+
+      last_msg_time:
+        latest.last_msg_time ||
+        existing.last_msg_time ||
+        null,
+
+      unread_count:
+        Number(latest.unread_count || 0) ||
+        Number(existing.unread_count || 0),
+    });
+  });
+
+  return Array.from(map.values());
+}, [conversations]);
 
             return (
 
