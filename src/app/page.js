@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
 import { Link as LinkIcon, Search } from 'lucide-react'; // icons ke liye lucide-react (optional)
-
+import WineLoader from "../component/WineLoader"; // WineLoader component ko import karein
 // Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -330,6 +330,7 @@ const product = [
 // Tastefully Yours ends
 
 export default function HeroSlider() {
+   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto Play
@@ -354,6 +355,17 @@ export default function HeroSlider() {
       prev === 0 ? images.length - 1 : prev - 1
     );
   };
+    useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <WineLoader />;
+  }
 
   return (
    <div className="w-full">
@@ -774,7 +786,7 @@ export default function HeroSlider() {
       <section className="relative bg-[#F4F2EC] py-20 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
         
         {/* Animated Top Flow Line */}
-        <div className="relative w-[1px] h-10 bg-gray-300 overflow-hidden mb-6">
+        <div className="relative w-[2px] h-10 bg-gray-300 overflow-hidden mb-6">
           <div className="absolute inset-0 bg-red-700/80 animate-lineFlow"></div>
         </div>
 
@@ -794,18 +806,25 @@ export default function HeroSlider() {
         </div>
 
         {/* Animated Drop + W Logo Container */}
-        <div className="relative flex flex-col items-center my-2">
-          {/* Animated Wine Drop */}
-          <div className="w-2.5 h-3.5 bg- rounded-b-full rounded-t-sm animate-wineDrop shadow-sm"></div>
+  {/* Animated Drop + W Logo Container */}
+<div className="relative flex flex-col items-center my-2">
 
-          {/* Animated Water/Wine Fill 'W' Logo */}
-          <div className="relative text-5xl sm:text-9xl font-serif font-black tracking-widest text-transparent bg-clip-text bg-[linear-gradient(to_top,#991b1b_50%,#d1d5db_50%)] bg-[length:100%_200%] animate-liquidFill select-none">
-            W
-          </div>
-        </div>
+  {/* Animated Wine Drop */}
+  <div className="w-2.5 h-3.5 bg-red-700 rounded-b-full rounded-t-sm animate-wineDrop shadow-sm"></div>
+
+  {/* W Logo Image */}
+  <div className="relative w-24 h-24 sm:w-32 sm:h-32">
+    <img
+      src="	https://dt-winey.myshopify.com/cdn/shop/files/Wine-animation-W-2.gif?v=1654685848"
+      alt="W Wine Logo"
+      className="w-full h-full object-contain animate-liquidFill select-none"
+    />
+  </div>
+
+</div>
 
         {/* Animated Bottom Line */}
-        <div className="relative w-[1px] h-10 bg-gray-300 overflow-hidden">
+        <div className="relative w-[2px] h-10 bg-gray-300 overflow-hidden">
           <div className="absolute inset-0 bg-red-700/80 animate-lineFlow"></div>
         </div>
       </section>
