@@ -290,6 +290,43 @@ const products = [
     rating: 5,
   },
 ];
+
+
+
+const product = [
+  {
+    id: 1,
+    name: 'De Barlow Grape Wine',
+    category: 'italy',
+    image: '/italy/Ascheri/Arneis, DOC.webp', // apni image ka path lagayein
+    badge: 'SAVE 10%',
+    badgeColor: 'bg-green-600',
+  },
+  {
+    id: 2,
+    name: 'Champion Red Wine',
+    category: 'France',
+    
+    image: '/France/Bordeaux - Château Le Grand Verdus/Bordeaux Blanc.webp',
+  },
+  {
+    id: 3,
+    name: 'Britain White Wine',
+    category: 'Argentina',
+    
+    image: '/Argentina/Cabernet Sauvignon Reserva.webp',
+    badge: 'SOLD OUT',
+    badgeColor: 'bg-red-600',
+    isSoldOut: true,
+  },
+  {
+    id: 4,
+    name: 'Alho American Wine',
+    category: 'Germany',
+   
+    image: '/Germany/Piesporter Goldtröpfchen Riesling Spätlese.webp',
+  },
+];
 // Tastefully Yours ends
 
 export default function HeroSlider() {
@@ -663,86 +700,231 @@ export default function HeroSlider() {
   </button>
 </section>
 
-    <section className="w-full py-12 px-4 sm:px-6  text-center bg-white">
-      <div className="max-w-3xl mx-auto flex flex-col items-center">
-        {/* Script / Cursive Top Heading */}
-      <span
-  className={`
-    ${scriptFont.className}
-    text-[28px]
-    sm:text-[36px]
-    md:text-[48px]
-    leading-[48px]
-    text-[#a3485e]
-    tracking-wide
-    mb-1
-  `}
->
-  Discover the
-</span>
+   
+{/* New Arrival start */}
 
-        {/* Main Serif Heading */}
-    <h2
-  className={`
-   font-philosopher
-    text-[38px]
-    leading-normal
-    font-normal
-    text-[#111111]
-    tracking-wider
-    uppercase
-    mb-4
-  `}
->
-  Wine Collection
-</h2>
-        {/* Description Paragraph */}
-        <p className="text-gray-500 text-18px sm:text-base md:text-lg leading-relaxed max-w-2xl font-serif">
-        Experience the art of winemaking through our carefully selected collection. 
-Every bottle carries a story of heritage, craftsmanship, and unforgettable taste.
-        </p>
+<section className="py-16 px-4 max-w-7xl mx-auto bg-white text-center">
+      {/* Header Section */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif tracking-widest text-gray-900 uppercase mb-3">
+        NEW ARRIVALS
+      </h2>
+      <p className="text-xs sm:text-sm text-gray-500 max-w-lg mx-auto mb-12 font-light leading-relaxed">
+        Tempus quam pellentesque nec nam aliquam sem et tortor.
+        <br className="hidden sm:inline" />
+        Massa enim nec dui nunc volutpat commodo.
+      </p>
+
+      {/* Grid Layout (Responsive sm, md, lg) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+        {product.map((product) => (
+          <div key={product.id} className="flex flex-col items-center group">
+            {/* Image Container */}
+            <div className="relative w-full h-80 bg-gray-50 flex items-center justify-center p-4 mb-4 rounded-sm overflow-hidden">
+              {/* Badge */}
+              {product.badge && (
+                <span
+                  className={`absolute top-3 left-3 ${product.badgeColor} text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider z-10`}
+                >
+                  {product.badge}
+                </span>
+              )}
+
+              {/* Product Image */}
+              <div className={`relative w-full h-full transition-transform duration-300 group-hover:scale-105 ${product.isSoldOut ? 'opacity-60' : ''}`}>
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            </div>
+
+            {/* Content Details */}
+            <h3 className="font-serif text-sm font-semibold text-gray-800 mb-1">
+              {product.name}
+            </h3>
+            <p className="text-xs text-gray-400 mb-2">{product.category}</p>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold text-gray-900">
+                {product.price}
+              </span>
+              {product.oldPrice && (
+                <span className="text-xs text-gray-400 line-through">
+                  {product.oldPrice}
+                </span>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
+
+      {/* Bottom Button */}
+      <button className="bg-[#EAE6DE] hover:bg-[#dfd9cd] text-gray-800 text-xs font-semibold uppercase tracking-wider py-3 px-8 transition-colors duration-200">
+        VIEW ALL COLLECTIONS
+      </button>
     </section>
-{/* Wine Collection start */}
 
-<section className="w-full bg-white">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+{/* New Arrival end */}
 
-    {categories.map((item) => (
-      <Link
-        key={item.id}
-        href={item.link}
-        className="group relative h-[420px] overflow-hidden"
-      >
-        {/* Image */}
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/45 transition-all duration-500 group-hover:bg-transparent" />
 
-        {/* Default Text - Hover par Hide */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center transition-opacity duration-500 group-hover:opacity-0">
-          <h3 className="text-black text-2xl font-philosopher  uppercase">
-            {item.title}
-          </h3>
-
-          <span className="mt-3 text-white font-old-standard border-b border-white pb-1">
-            SHOP NOW
-          </span>
+<div className="w-full bg-white text-gray-800">
+      {/* Upper Hero Banner */}
+      <section className="relative bg-[#F4F2EC] py-20 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
+        
+        {/* Animated Top Flow Line */}
+        <div className="relative w-[1px] h-10 bg-gray-300 overflow-hidden mb-6">
+          <div className="absolute inset-0 bg-red-700/80 animate-lineFlow"></div>
         </div>
 
-      </Link>
-    ))}
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight max-w-2xl mb-8 font-normal">
+          Our wines are very <br />
+          well-made to refresh <br />
+          your mind and taste
+        </h1>
 
-  </div>
-</section>
+        <button className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm">
+          SHOP NOW
+        </button>
 
-{/* Wine Collection end */}
+        {/* Animated Middle Line */}
+        <div className="relative w-[1px] h-10 bg-gray-300 overflow-hidden mt-8">
+          <div className="absolute inset-0 bg-black animate-lineFlow"></div>
+        </div>
+
+        {/* Animated Drop + W Logo Container */}
+        <div className="relative flex flex-col items-center my-2">
+          {/* Animated Wine Drop */}
+          <div className="w-2.5 h-3.5 bg- rounded-b-full rounded-t-sm animate-wineDrop shadow-sm"></div>
+
+          {/* Animated Water/Wine Fill 'W' Logo */}
+          <div className="relative text-5xl sm:text-9xl font-serif font-black tracking-widest text-transparent bg-clip-text bg-[linear-gradient(to_top,#991b1b_50%,#d1d5db_50%)] bg-[length:100%_200%] animate-liquidFill select-none">
+            W
+          </div>
+        </div>
+
+        {/* Animated Bottom Line */}
+        <div className="relative w-[1px] h-10 bg-gray-300 overflow-hidden">
+          <div className="absolute inset-0 bg-red-700/80 animate-lineFlow"></div>
+        </div>
+      </section>
+
+      {/* Feature Section: New Grape Wine */}
+      <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Text Column */}
+          <div className="flex flex-col items-start text-left z-10">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight uppercase mb-6 tracking-wide">
+              NEW <br />
+              GRAPE <br />
+              WINE
+            </h2>
+
+            <p className="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-sm mb-8 font-light">
+              Solicitudin aliquam ultrices sagittis orci a. Vulputate enim nulla aliquet porttitor lacus. 
+              Vitae semper quis lectus nulla at volutpat diam ut venenatis. Sed viverra ipsum nunc aliquet bibendum enim. 
+              Vulputate dignissim suspendisse in est ante in.
+            </p>
+
+            <button className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm">
+              SHOP NOW
+            </button>
+          </div>
+
+          {/* Right Image Composition */}
+          <div className="relative flex items-center justify-center min-h-[380px] sm:min-h-[450px]">
+            {/* Background Main Image */}
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-sm overflow-hidden shadow-lg z-0">
+              <Image 
+                src="/wine-main.jpg"
+                alt="Premium Wine Bottle"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Overlapping Bottom Left Image */}
+            <div className="absolute left-2 bottom-0 sm:left-6 w-40 h-44 sm:w-48 sm:h-52 rounded-sm overflow-hidden border-4 border-white shadow-xl z-10">
+              <Image 
+                src="/wine-sub1.jpg"
+                alt="Wine Glass & Grapes"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Overlapping Bottom Right Image */}
+            <div className="absolute right-0 -bottom-6 w-36 h-36 sm:w-44 sm:h-44 rounded-sm overflow-hidden border-4 border-white shadow-xl z-20">
+              <Image 
+                src="/wine-sub2.jpg"
+                alt="Wine Corks Collection"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Tailwind Animations & Keyframes */}
+      <style jsx global>{`
+        @keyframes lineFlow {
+          0% {
+            transform: translateY(-100%);
+          }
+          100% {
+            transform: translateY(100%);
+          }
+        }
+
+        @keyframes wineDrop {
+          0% {
+            transform: translateY(-8px) scaleY(0.8);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(14px) scaleY(1.1);
+            opacity: 0;
+          }
+        }
+
+        @keyframes liquidFill {
+          0% {
+            background-position: 0 0%;
+          }
+          50% {
+            background-position: 0 100%;
+          }
+          100% {
+            background-position: 0 0%;
+          }
+        }
+
+        .animate-lineFlow {
+          animation: lineFlow 2s infinite linear;
+        }
+
+        .animate-wineDrop {
+          animation: wineDrop 2s infinite ease-in-out;
+        }
+
+        .animate-liquidFill {
+          animation: liquidFill 4s infinite ease-in-out;
+        }
+      `}</style>
+    </div>
+
+
+
+
+
+
 
 {/* Message from Wine Maker Upgrade to the latest!  start*/}
 

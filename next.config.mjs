@@ -54,6 +54,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "dt-winey.myshopify.com",
       },
+            {
+        protocol: "https",
+        hostname: "img.magnific.com",
+      },
     ],
   },
 };

@@ -295,7 +295,7 @@ import {
 } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "../component/Navbar";
+// import Navbar from "../component/Navbar";
 import SecondNavbar from "../component/SecondNaber";
 import Footer from "../component/Footer";
 import ScrollToTop from "../component/ScrollToTop";
@@ -351,7 +351,7 @@ export default function RootLayout({ children }) {
       `}
     >
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         <SecondNavbar />
 
         {children}
