@@ -45,6 +45,15 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'flagcdn.com',
       },
+            {
+        protocol: "https",
+        hostname: "wineryn-store-demo.myshopify.com",
+        pathname: "/cdn/shop/**",
+      },
+          {
+        protocol: "https",
+        hostname: "dt-winey.myshopify.com",
+      },
     ],
   },
 };

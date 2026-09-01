@@ -978,8 +978,7 @@ Every bottle carries a story of heritage, craftsmanship, and unforgettable taste
 
       </div>
 
-</section>
-
+    </section>
     {/* IN THE HEART OF NAPA VALLEY end */}
 
 {/* ===================Tastefully Yours  start ===================*/}

@@ -208,7 +208,7 @@ export default function RootLayout({ children }) {
       `}
     >
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         <SecondNavbar />
 
         {children}
