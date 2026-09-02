@@ -405,7 +405,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import WineLoader from "../../component/WineLoader";
 
 // ==================== NAVBAR COUNTRIES ====================
 
@@ -550,9 +552,24 @@ const famousPlaces = [
   },
 ];
 
+
+ 
 // ==================== SHOP PAGE ====================
 
 export default function ShopPage() {
+    const [loading, setLoading] = useState(true);
+
+       useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <WineLoader />;
+  }
   return (
     <main className="min-h-screen bg-white font-serif text-gray-800">
 
