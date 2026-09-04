@@ -15,7 +15,7 @@ export default function NewsletterSection() {
   return (
     <div>
   
-    <footer className="w-full bg-[rgb(84_1_34)] text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
+    <footer className="w-full bg-black text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Upper Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12">
@@ -51,9 +51,10 @@ export default function NewsletterSection() {
 
             {/* Address & Contact Info */}
             <div className="text-xs sm:text-sm text-stone-400 space-y-1.5 leading-relaxed font-old-standard">
-              <p>Designed and developed in New York City.</p>
-              <p>Call us 1-888-814-5411. 10:00am - 5.00px ET M-F.</p>
-              <p>Copyright © 2017, DesignThemes. All right reserved Privacy Terms.</p>
+              <p>7607 Detour Ave Cleveland OH 44103 US.</p>
+              <p>Call us 440.812.3776.</p>
+              <p>ciaodaniel@gmail.com</p>
+              {/* <p>Copyright © 2017, DesignThemes. All right reserved Privacy Terms.</p> */}
             </div>
 
             {/* Email Subscription Form */}
