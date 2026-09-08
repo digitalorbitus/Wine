@@ -366,37 +366,37 @@ const serifFont = Playfair_Display({
 const categories = [
   {
     id: 1,
-    title: 'BURGUNDY',
+    title: 'Italy',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg', // Aapki image ka path
     link: '#',
   },
   {
     id: 2,
-    title: 'RED WINE',
+    title: 'Spain',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg',
     link: '#',
   },
   {
     id: 3,
-    title: 'WHITE WINE',
+    title: 'Organ',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg',
     link: '#',
   },
   {
     id: 4,
-    title: 'FINEST RED WINE',
+    title: 'Portugal',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg',
     link: '#',
   },
   {
     id: 5,
-    title: 'CLASSIC VINTAGE',
+    title: 'France',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg',
     link: '#',
   },
   {
     id: 6,
-    title: 'FRENCH WINE',
+    title: 'Argentina',
     image: 'https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/img4-1.jpg',
     link: '#',
   },
@@ -405,48 +405,48 @@ const categories = [
 const images = [
   {
     id: 1,
-    src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider1-1.jpg", // Desktop
-    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider1-1.jpg", // Mobile (ya mobile portrait image ka link)
+    src: "/winellc home page banner.png", // Desktop
+    mobileSrc: "/winellc home page banner.png", // Mobile (ya mobile portrait image ka link)
     alt: "Slide 1",
   },
-  {
-    id: 2,
-    src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
-    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
-    alt: "Slide 2",
-  },
-  {
-    id: 3,
-    src: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
-    mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
-    alt: "Slide 3",
-  },
+  // {
+  //   id: 2,
+  //   src: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
+  //   mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/revslider/winery/slider3-2.jpg",
+  //   alt: "Slide 2",
+  // },
+  // {
+  //   id: 3,
+  //   src: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
+  //   mobileSrc: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/slider4.jpg",
+  //   alt: "Slide 3",
+  // },
 ];
 // Tastefully Yours  start
 const categorie = [
   {
     id: 1,
-    name: "BURGUNDY",
+    name: "Italy",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon1.png",
   },
   {
     id: 2,
-    name: "WHITEWINE",
+    name: "France",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon2.png",
   },
   {
     id: 3,
-    name: "CHAMPAGNE",
+    name: "Argentina",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon4.png",
   },
   {
     id: 4,
-    name: "CHAMPAGNE",
+    name: "Oregon",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon3.png",
   },
   {
     id: 5,
-    name: "VINTAGE WINES",
+    name: "California",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon5.png",
   },
 ];
@@ -570,346 +570,67 @@ export default function HeroSlider() {
   return (
    <div className="w-full">
 
-<section className="relative w-full h-[100dvh] min-h-[100dvh] overflow-hidden group bg-white m-0 p-0">
-  {/* Background Image - Optimized for Mobile & Desktop */}
-  <Image
-    src={images[currentIndex].src}
-    alt={images[currentIndex].alt}
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover object-[center_top] sm:object-center transition-all duration-700"
-  />
+<section className="relative w-full overflow-hidden bg-black m-0 p-0 group">
 
-  {/* Content for Slide 1 */}
-  {currentIndex === 0 && (
-    <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-      <div className="relative w-full max-w-5xl h-full flex flex-col md:flex-row items-center justify-center text-center">
+  <div className="relative w-full aspect-[1983/793]">
 
-        {/* Top Text */}
-        <motion.h3
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="
-            georgia-font
-            static md:absolute
-            md:top-[22%] md:left-[25%]
-            text-[#B20A2F]
-            text-[18px] sm:text-[24px] md:text-[30px]
-            leading-snug
-            font-normal uppercase
-            tracking-[3px] sm:tracking-[6px]
-          "
-        >
-          DELIGHTFULL
-        </motion.h3>
+    <Image
+      src={images[currentIndex].src}
+      alt={images[currentIndex].alt}
+      fill
+      priority
+      sizes="100vw"
+      className="object-contain object-center transition-all duration-700"
+    />
 
-        {/* Big Text */}
-        <TypeAnimation
-          sequence={["Wine", 5000]}
-          wrapper="h1"
-          speed={50}
-          cursor={false}
-          className="
-            philosopher
-            text-black
-            text-5xl sm:text-7xl md:text-[11rem] lg:text-[250px]
-            font-bold
-            leading-none
-          "
-        />
-
-        {/* Bottom Text */}
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 0.8 }}
-          className="
-            static md:absolute
-            md:bottom-[28%] md:right-[24%]
-            font-[Georgia,serif] font-normal
-            text-[#B20A2F]
-            text-[18px] sm:text-[24px] md:text-[30px]
-            leading-snug
-            uppercase tracking-[4px] text-center
-          "
-        >
-          EST - 1942
-        </motion.p>
-
-      </div>
-    </div>
-  )}
-
-  {/* Content for Slide 2 */}
-  {currentIndex === 1 && (
-    <div
-      key={currentIndex}
-      className="absolute inset-0 z-10 flex items-center justify-center md:justify-end px-6 sm:px-10 md:pr-16 lg:pr-28"
+    {/* LEFT ARROW */}
+    <button
+      onClick={prevSlide}
+      aria-label="Previous slide"
+      className="
+        absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30
+        w-10 h-10 sm:w-12 sm:h-12
+        flex items-center justify-center
+        rounded-full
+        bg-black/40 backdrop-blur-sm
+        border border-white/30
+        text-white
+        opacity-0
+        group-hover:opacity-100
+        hover:bg-[#741C29]
+        hover:border-white
+        scale-90 hover:scale-100
+        transition-all duration-300
+      "
     >
-      <div className="max-w-xl text-center flex flex-col items-center justify-center">
+      <FiChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+    </button>
 
-        {/* Top Text */}
-        <motion.h3
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="
-            text-[#b20a2f]
-            text-[18px] sm:text-[24px] md:text-[30px]
-            leading-snug
-            font-[100] uppercase
-            tracking-[3px] sm:tracking-[6px]
-            font-serif
-          "
-          style={{ fontFamily: "Georgia, serif" }}
-        >
-          A Perfect Blend
-        </motion.h3>
+    {/* RIGHT ARROW */}
+    <button
+      onClick={nextSlide}
+      aria-label="Next slide"
+      className="
+        absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30
+        w-10 h-10 sm:w-12 sm:h-12
+        flex items-center justify-center
+        rounded-full
+        bg-black/40 backdrop-blur-sm
+        border border-white/30
+        text-white
+        opacity-0
+        group-hover:opacity-100
+        hover:bg-[#741C29]
+        hover:border-white
+        scale-90 hover:scale-100
+        transition-all duration-300
+      "
+    >
+      <FiChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+    </button>
 
-        {/* Center Big Text */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full flex justify-center my-2"
-        >
-          <TypeAnimation
-            sequence={["in a Bottle", 5000]}
-            wrapper="h1"
-            speed={50}
-            cursor={false}
-            className="
-              font-['Philosopher'] font-bold
-              text-[#111111]
-              text-[40px] sm:text-[60px] md:text-[90px] lg:text-[120px]
-              leading-none
-              text-center
-            "
-          />
-        </motion.div>
+  </div>
 
-        {/* Bottom Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 0.8 }}
-          className="
-            text-[#111111]
-            text-[16px] sm:text-[17px] md:text-[18px]
-            leading-relaxed
-            font-[100] max-w-xl mx-auto text-center
-          "
-          style={{ fontFamily: "Georgia, serif" }}
-        >
-          Wine improves with age, The older it gets, the better you like it....
-        </motion.p>
-
-      </div>
-    </div>
-  )}
-
-  {/* Content for Slide 3 */}
-  {currentIndex === 2 && (
-    <div className="absolute inset-0 z-10 flex items-center justify-end pl-4 pr-2 sm:pr-6 md:pr-10 lg:pr-16">
-      
-      {/* Container */}
-      <div className="relative w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[560px] ml-auto mr-0 flex items-center justify-center">
-
-        {/* Polygon Background Container */}
-        <div className="absolute inset-0 overflow-hidden rounded-xl">
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(6% 0%, 100% 8%, 100% 92%, 6% 100%, 0% 50%)",
-              background: "#97B97A",
-            }}
-          />
-          <div className="absolute inset-0 overflow-hidden">
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 88%, 50% 100%, 0% 88%)",
-                background: "#8FB077",
-              }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: "polygon(0% 12%, 50% 0%, 100% 12%, 100% 28%, 50% 16%, 0% 28%)",
-                background: "#A8C58C",
-              }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: "polygon(0% 72%, 50% 84%, 100% 72%, 100% 88%, 50% 100%, 0% 88%)",
-                background: "#A8C58C",
-              }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: "polygon(0% 28%, 50% 16%, 100% 28%, 100% 72%, 50% 84%, 0% 72%)",
-                background: "#84A868",
-              }}
-            />
-            <div
-              className="absolute left-0 top-0 w-1/2 h-full"
-              style={{
-                clipPath: "polygon(0% 12%, 100% 22%, 100% 78%, 0% 88%)",
-                background: "rgba(255,255,255,0.08)",
-              }}
-            />
-            <div
-              className="absolute right-0 top-0 w-1/2 h-full"
-              style={{
-                clipPath: "polygon(0% 22%, 100% 12%, 100% 88%, 0% 78%)",
-                background: "rgba(0,0,0,0.05)",
-              }}
-            />
-          </div>
-
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(55% 12%, 100% 0%, 100% 100%, 55% 88%)",
-              background: "#A8C58C",
-            }}
-          />
-
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(8% 25%, 50% 12%, 100% 25%, 100% 75%, 50% 88%, 8% 75%)",
-              background: "#89AA6E",
-            }}
-          />
-
-          <div
-            className="absolute top-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, 50% 100%)",
-              background: "rgba(255,255,255,.12)",
-            }}
-          />
-
-          <div
-            className="absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 pointer-events-none"
-            style={{
-              clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
-              background: "rgba(255,255,255,.08)",
-            }}
-          />
-
-          <div className="absolute -left-10 top-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-white/20 blur-2xl pointer-events-none" />
-          <div className="absolute -right-10 bottom-10 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-black/15 blur-2xl pointer-events-none" />
-        </div>
-
-        {/* Foreground Content */}
-        <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-3 sm:px-6 md:px-8 py-6">
-
-          <motion.h3
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="
-              uppercase
-              tracking-[2px] sm:tracking-[4px] md:tracking-[6px]
-              text-[11px] sm:text-[16px] md:text-[20px]
-              leading-normal
-              text-[#B20A2F]
-              font-normal
-              [font-family:Georgia,serif]
-            "
-          >
-            BOTTLED POETRY
-          </motion.h3>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 2.2,
-              duration: 0.8,
-              type: "spring",
-            }}
-            className="my-2 sm:my-3 flex h-9 w-9 sm:h-12 sm:w-12 md:h-16 md:w-16 items-center justify-center "
-          >
-            <div className="relative w-15 h-15 sm:w-20 sm:h-20 md:w-24 md:h-24">
-              <Image
-                src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/icon.png"
-                alt="Wine Icon"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="w-full"
-          >
-            <TypeAnimation
-              sequence={["Vineyard & Winery", 5000]}
-              wrapper="h1"
-              speed={40}
-              cursor={false}
-              className="
-                font-['Philosopher']
-                font-bold
-                text-white
-                text-[28px]
-                sm:text-[40px]
-                md:text-[50px]
-                lg:text-[70px]
-                leading-tight
-                text-center
-              "
-            />
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3.2, duration: 0.8 }}
-            className="mt-2 text-white/90 text-[10px] sm:text-xs md:text-sm leading-relaxed"
-          >
-            Experience handcrafted wines created with passion,
-            tradition and generations of excellence.
-          </motion.p>
-
-        </div>
-
-      </div>
-    </div>
-  )}
-
-  {/* Navigation Arrows */}
-  <button
-    onClick={prevSlide}
-    className="absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 z-20
-    bg-red-800/80 hover:bg-red-900 text-white
-    p-2 sm:p-3 rounded-full
-    opacity-100 md:opacity-0 md:group-hover:opacity-100
-    transition-all duration-300"
-  >
-    <FiChevronLeft size={15} />
-  </button>
-
-  <button
-    onClick={nextSlide}
-    className="absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 z-20
-    bg-red-800/80 hover:bg-red-900 text-white
-    p-2 sm:p-3 rounded-full
-    opacity-100 md:opacity-0 md:group-hover:opacity-100
-    transition-all duration-300"
-  >
-    <FiChevronRight size={15} />
-  </button>
 </section>
 
    {/* ====================  inderduded your self start   =========================*/}
@@ -994,10 +715,10 @@ export default function HeroSlider() {
       md:h-[580px]
       md:max-w-[540px]
 
-      lg:h-[620px]
+      lg:h-[720px]
       lg:max-w-[560px]
 
-      xl:h-[680px]
+      xl:h-[720px]
       xl:max-w-[610px]
 
       2xl:h-[740px]
@@ -1006,7 +727,7 @@ export default function HeroSlider() {
   >
 
     <img
-      src="/image-removebg-preview.png"
+      src="/to our wine world.png"
       alt="Premium Wine"
       className="
         block
@@ -1189,35 +910,33 @@ export default function HeroSlider() {
 
           {/* SHOP WINES */}
 
-          <button
-            type="button"
-            className="
-              w-full
-              rounded-sm
-              bg-[#71111B]
-              px-8
-              py-4
 
-              text-[10px]
-              font-semibold
-              uppercase
-              tracking-[0.24em]
-              text-white
-
-              transition-all
-              duration-300
-
-              hover:bg-[#5A0D15]
-              hover:shadow-xl
-
-              active:scale-[0.98]
-
-              sm:w-auto
-              sm:px-9
-            "
-          >
-            Shop Wines
-          </button>
+<Link
+  href="/shop"
+  className="
+    inline-block
+    w-full
+    rounded-sm
+    bg-[#71111B]
+    px-8
+    py-4
+    text-center
+    text-[10px]
+    font-semibold
+    uppercase
+    tracking-[0.24em]
+    text-white
+    transition-all
+    duration-300
+    hover:bg-[#5A0D15]
+    hover:shadow-xl
+    active:scale-[0.98]
+    sm:w-auto
+    sm:px-9
+  "
+>
+  Shop Wines
+</Link>
 
 
           {/* DISCOVER MORE */}
@@ -1437,9 +1156,26 @@ export default function HeroSlider() {
       </div>
 
       {/* Bottom Button */}
-      <button className="bg-[#EAE6DE] hover:bg-[#dfd9cd] text-gray-800 text-xs font-semibold uppercase tracking-wider py-3 px-8 transition-colors duration-200">
-        VIEW ALL COLLECTIONS
-      </button>
+     
+<Link
+  href="/shop"
+  className="
+    inline-block
+    bg-[#EAE6DE]
+    hover:bg-[#dfd9cd]
+    text-gray-800
+    text-xs
+    font-semibold
+    uppercase
+    tracking-wider
+    py-3
+    px-8
+    transition-colors
+    duration-200
+  "
+>
+  VIEW ALL COLLECTIONS
+</Link>
     </section>
 
 {/* New Arrival end */}
@@ -1579,9 +1315,12 @@ export default function HeroSlider() {
       your mind and taste
     </h1>
 
-    <button className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs Our wines are very uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm">
-      SHOP NOW
-    </button>
+ <Link
+  href="/shop"
+  className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
+>
+  SHOP NOW
+</Link>
 
     {/* Animated Middle Line + Rain Drops */}
     <div className="relative w-[1px] h-10 bg-gray-300 overflow-visible mt-8 rain-line">
@@ -1620,70 +1359,76 @@ export default function HeroSlider() {
 
 
   {/* Feature Section: New Grape Wine */}
-  <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+<section className="w-full max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* LEFT */}
+    <div className="flex flex-col items-start text-left z-10">
+      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight uppercase mb-6 tracking-wide">
+        NEW 
+        GRAPE 
+        WINE
+      </h2>
 
-      {/* Left Text Column */}
-      <div className="flex flex-col items-start text-left z-10">
+      <p className="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-sm mb-8 font-light">
+        Solicitudin aliquam ultrices sagittis orci a. Vulputate enim nulla
+        aliquet porttitor lacus. Vitae semper quis lectus nulla at volutpat
+        diam ut venenatis. Sed viverra ipsum nunc aliquet bibendum enim.
+        Vulputate dignissim suspendisse in est ante in.
+      </p>
 
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight uppercase mb-6 tracking-wide">
-          NEW <br />
-          GRAPE <br />
-          WINE
-        </h2>
+     <Link
+  href="/shop"
+  className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
+>
+  SHOP NOW
+</Link>
+    </div>
 
-        <p className="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-sm mb-8 font-light">
-          Solicitudin aliquam ultrices sagittis orci a. Vulputate enim nulla aliquet porttitor lacus.
-          Vitae semper quis lectus nulla at volutpat diam ut venenatis. Sed viverra ipsum nunc aliquet bibendum enim.
-          Vulputate dignissim suspendisse in est ante in.
-        </p>
+    {/* RIGHT IMAGES */}
+    <div className="relative w-full min-h-[550px] flex items-center justify-center">
 
-        <button className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm">
-          SHOP NOW
-        </button>
-
+      {/* MAIN IMAGE */}
+      <div className="relative w-64 h-[380px] sm:w-72 sm:h-[430px] rounded-sm shadow-lg z-0">
+        <Image
+          src="/italy/Ascheri/Arneis, DOC.webp"
+          alt="Premium Wine Bottle"
+          fill
+          className="object-contain"
+          sizes="(max-width: 640px) 256px, 288px"
+        />
       </div>
 
-
-      {/* Right Image Composition */}
-      <div className="relative flex items-center justify-center min-h-[380px] sm:min-h-[450px]">
-
-        {/* Background Main Image */}
-        <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-sm overflow-hidden shadow-lg z-0">
+      {/* LEFT IMAGE */}
+      <div className="absolute left-0 sm:left-4 bottom-4 w-40 h-48 sm:w-48 sm:h-56 z-10">
+        <div className="relative w-full h-full rounded-sm border-4 border-white shadow-xl">
           <Image
-            src="/wine-main.jpg"
-            alt="Premium Wine Bottle"
+            src="/Germany/Piesporter Goldtröpfchen Riesling Spätlese.webp"
+            alt="Wine"
             fill
-            className="object-cover"
+            className="object-contain"
+            sizes="(max-width: 640px) 160px, 192px"
           />
         </div>
+      </div>
 
-        {/* Overlapping Bottom Left Image */}
-        <div className="absolute left-2 bottom-0 sm:left-6 w-40 h-44 sm:w-48 sm:h-52 rounded-sm overflow-hidden border-4 border-white shadow-xl z-10">
+      {/* RIGHT IMAGE */}
+      <div className="absolute right-0 sm:right-4 bottom-0 w-36 h-40 sm:w-44 sm:h-48 z-20">
+        <div className="relative w-full h-full rounded-sm border-4 border-white shadow-xl">
           <Image
-            src="/wine-sub1.jpg"
-            alt="Wine Glass & Grapes"
+            src="/organ/Pinot Noir, Estate, EOLA-Amity Hills.webp"
+            alt="Wine Collection"
             fill
-            className="object-cover"
+            className="object-contain"
+            sizes="(max-width: 640px) 144px, 176px"
           />
         </div>
-
-        {/* Overlapping Bottom Right Image */}
-        <div className="absolute right-0 -bottom-6 w-36 h-36 sm:w-44 sm:h-44 rounded-sm overflow-hidden border-4 border-white shadow-xl z-20">
-          <Image
-            src="/wine-sub2.jpg"
-            alt="Wine Corks Collection"
-            fill
-            className="object-cover"
-          />
-        </div>
-
       </div>
 
     </div>
 
-  </section>
+  </div>
+</section>
 
 
   {/* Animations */}
@@ -2210,59 +1955,7 @@ export default function HeroSlider() {
 
 {/* IN THE HEART OF NAPA VALLEY start */}
 
-<section className="group relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] overflow-hidden flex items-center justify-center">
-      
-      {/* 1. Background Image with Hover Zoom effect */}
-      <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/parallax-img1.jpg" // Image path yahan add karein
-          alt="Our Manor Vineyard"
-          fill
-          priority
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-        />
-        {/* Dark Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/25 transition-opacity duration-300 group-hover:bg-black/35" />
-      </div>
 
-      {/* 2. Content Overlay */}
-      <div className="relative z-10 text-center px-4 max-w-3xl mx-auto flex flex-col items-center">
-        
-        {/* Cursive Subtitle */}
-      <span
-  className={`
-    ${scriptFont.className}
-    block
-    text-[28px]
-    sm:text-[36px]
-    md:text-[48px]
-    leading-[48px]
-    text-white
-    tracking-wide
-    mb-2
-    drop-shadow-md
-  `}
->
-  Our Manor
-</span>
-
-        {/* Main Heading */}
-        <h2 className="text-white text-sm sm:text-base font-philosopher md:text-lg lg:text-xl font-light tracking-[0.25em] uppercase mb-8 drop-shadow-sm">
-          In the heart of napa valley
-        </h2>
-
-        {/* CTA Button */}
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-[#A04355] hover:bg-[#853444] text-white px-6 py-3 rounded-full text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
-        >
-          <span>Visit our farm</span>
-          <span className="text-base leading-none">→</span>
-        </a>
-
-      </div>
-
-    </section>
     {/* IN THE HEART OF NAPA VALLEY end */}
 
 {/* ===================Tastefully Yours  start ===================*/}

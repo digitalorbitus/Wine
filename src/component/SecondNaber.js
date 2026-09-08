@@ -389,7 +389,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     {
-      label: "PORTFOLIO",
+      label: "Portfolio",
       href: "/shop",
       heading: "OUR COUNTRY WINES",
       countries: [
@@ -405,7 +405,7 @@ export default function Navbar() {
         { label: "Germany", href: "/Germany" },
       ],
     },
-    { label: "contact", href: "/contact" },
+    { label: "Contact", href: "/contact" },
     { label: "Why Choose Us", href: "/why-us" },
   ];
 
@@ -447,15 +447,15 @@ export default function Navbar() {
           className={`relative text-base xl:text-lg transition-colors duration-200 font-philosopher tracking-wide flex items-center gap-1.5
             ${
               isActive
-                ? "text-[#8b263e]"
-                : "text-[#1a1a1a] hover:text-[#8b263e]"
+                ? "text-[#790214]"
+                : "text-[#1a1a1a] hover:text-[#790214]"
             }
 
             after:absolute
             after:left-0
             after:-bottom-2
             after:h-[2px]
-            after:bg-[#8b263e]
+            after:bg-[#790214]
             after:transition-all
             after:duration-300
             ${
@@ -517,10 +517,10 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm text-[#2a110b] flex-shrink-0">
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-1.5 hover:text-[#8b263e] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#790214] transition-colors"
               >
                 <svg
-                  className="w-4 h-4 text-[#8b263e]"
+                  className="w-4 h-4 text-[#790214]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -537,7 +537,7 @@ export default function Navbar() {
 
               <a
                 href="mailto:ciaodaniel@gmail.com"
-                className="flex items-center gap-1.5 hover:text-[#8b263e] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#790214] transition-colors"
               >
                 <svg
                   className="w-4 h-4 text-[#8b263e]"
@@ -565,7 +565,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="p-2 rounded-md text-[#2a110b] hover:text-[#8b263e] focus:outline-none"
+                className="p-2 rounded-md text-[#2a110b] hover:text-[#790214] focus:outline-none"
                 aria-label="Toggle Menu"
               >
                 <svg
@@ -601,10 +601,10 @@ export default function Navbar() {
           <div className="lg:hidden border-t border-dashed border-[#8b263e]/40 bg-[#fbf9f5] z-30 relative">
             <div className="px-4 py-3 border-b border-gray-200 flex flex-col gap-2 text-sm text-[#2a110b]">
               <a href="tel:+1234567890" className="flex items-center gap-2">
-                <span className="text-[#8b263e]">📞</span> +1 (234) 567-890
+                <span className="text-[#790214]">📞</span> +1 (234) 567-890
               </a>
               <a href="mailto:info@winestore.com" className="flex items-center gap-2">
-                <span className="text-[#8b263e]">✉️</span> info@winestore.com
+                <span className="text-[#790214]">✉️</span> info@winestore.com
               </a>
             </div>
 
@@ -630,8 +630,8 @@ export default function Navbar() {
                         }}
                         className={`text-base font-medium transition-colors ${
                           isActive
-                            ? "text-[#8b263e] font-semibold"
-                            : "text-[#1a1a1a] hover:text-[#8b263e]"
+                            ? "text-[#790214] font-semibold"
+                            : "text-[#1a1a1a] hover:text-[#790214]"
                         }`}
                       >
                         {item.label}
@@ -640,7 +640,7 @@ export default function Navbar() {
                       {hasCountries && (
                         <button
                           onClick={() => toggleMobileSubmenu(item.label)}
-                          className="p-1 text-[#8b263e] focus:outline-none"
+                          className="p-1 text-[#790214] focus:outline-none"
                         >
                           <svg
                             className={`w-5 h-5 transition-transform duration-200 ${

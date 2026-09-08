@@ -15,7 +15,7 @@ export default function NewsletterSection() {
   return (
     <div>
   
-    <footer className="w-full bg-black text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
+    <footer className="w-full bg-[#790214] text-stone-300 font-serif pt-12 pb-6 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Upper Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12">
@@ -24,7 +24,7 @@ export default function NewsletterSection() {
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-80">
               <Image
-                src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/08/footer-element.png"
+                src="/winesfromitalylogo.png"
                 alt="Best Wine Since 1903"
                 fill
                 className="object-contain"

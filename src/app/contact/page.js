@@ -748,51 +748,124 @@
 
 "use client";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import WineLoader from "../../component/WineLoader";
 
-
+// =========================
 // SVG Icons
+// =========================
+
 const PhoneIcon = () => (
-  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
   </svg>
 );
 
 const CalendarIcon = () => (
-  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+    />
   </svg>
 );
 
 const CheckIcon = () => (
-  <svg className="w-4 h-4 text-[#E2C792]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+  <svg
+    className="w-4 h-4 text-[#E2C792]"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M5 13l4 4L19 7"
+    />
   </svg>
 );
 
+// =========================
 // Motion Variants
+// =========================
+
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.215, 0.61, 0.355, 1] } },
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.215, 0.61, 0.355, 1],
+    },
+  },
 };
 
 const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  hidden: {
+    opacity: 0,
+  },
+
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
 };
 
+// =========================
+// Options
+// =========================
+
 const interestOptions = [
-  "Italian", "French", "Argentine", "California", 
-  "Oregon", "Spanish", "Portuguese", "Curated Cases", "Other"
+  "Italian",
+  "French",
+  "Argentine",
+  "California",
+  "Oregon",
+  "Spanish",
+  "Portuguese",
+  "Curated Cases",
+  "Other",
 ];
 
 const businessTypes = [
-  "Restaurant", "Hotel & Hospitality", "Wine Retailer", 
-  "Bar", "Catering & Events", "Other"
+  "Restaurant",
+  "Hotel & Hospitality",
+  "Wine Retailer",
+  "Bar",
+  "Catering & Events",
+  "Other",
 ];
+
+// =========================
+// Contact Us Component
+// =========================
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -806,13 +879,21 @@ export default function ContactUs() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  // Interest Multi-select Toggle Handler
+  // =========================
+  // Interest Toggle
+  // =========================
+
   const toggleInterest = (option) => {
     setFormData((prev) => {
       const exists = prev.interests.includes(option);
+
       return {
         ...prev,
+
         interests: exists
           ? prev.interests.filter((item) => item !== option)
           : [...prev.interests, option],
@@ -820,35 +901,100 @@ export default function ContactUs() {
     });
   };
 
-  const handleSubmit = (e) => {
+  // =========================
+  // Submit Form
+  // =========================
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-  };
-  const [loading, setLoading] = useState(true);
-  
-         useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 4000);
-  
-      return () => clearTimeout(timer);
-    }, []);
-  
-    if (loading) {
-      return <WineLoader />;
+
+    setSending(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "Something went wrong. Please try again."
+        );
+      }
+
+      // Success
+      setSubmitted(true);
+
+      // Reset form
+      setFormData({
+        businessName: "",
+        contactName: "",
+        email: "",
+        phone: "",
+        businessType: "",
+        interests: [],
+        message: "",
+      });
+    } catch (err) {
+      console.error("Form submit error:", err);
+
+      setError(
+        err.message || "Failed to send your request. Please try again."
+      );
+    } finally {
+      setSending(false);
     }
+  };
+
+  // =========================
+  // Wine Loader
+  // =========================
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <WineLoader />;
+  }
+
+  // =========================
+  // UI
+  // =========================
+
   return (
     <main className="bg-[#120D0B] text-[#F3EFE6] min-h-screen font-sans selection:bg-[#8C2332] selection:text-white overflow-x-hidden">
-      
+
       {/* ================= HERO SECTION ================= */}
+
       <section className="relative py-20 sm:py-28 px-4 sm:px-8 lg:px-16 overflow-hidden">
-        
+
         {/* Glow Effects */}
+
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#8C2332]/20 rounded-full blur-[140px] pointer-events-none" />
+
         <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-[#C5A059]/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative z-10 max-w-[1200px] mx-auto text-center">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          >
+
             <span className="inline-block py-1.5 px-4 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/5 text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A059] mb-6">
               05. Contact Us
             </span>
@@ -858,17 +1004,25 @@ export default function ContactUs() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg lg:text-xl text-[#A39990] max-w-2xl mx-auto leading-relaxed">
-              Interested in our portfolio? Whether you&apos;re looking for specific wines, exploring new selections, or interested in wholesale pricing, our team is ready to help.
+              Interested in our portfolio? Whether you&apos;re looking for
+              specific wines, exploring new selections, or interested in
+              wholesale pricing, our team is ready to help.
             </p>
+
           </motion.div>
+
         </div>
+
       </section>
 
       {/* ================= FORM & BOOK CALL GRID ================= */}
+
       <section className="pb-24 px-4 sm:px-8 lg:px-16">
+
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* ================= LEFT: REQUEST WHOLESALE FORM ================= */}
+
+          {/* ================= LEFT FORM ================= */}
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -876,118 +1030,241 @@ export default function ContactUs() {
             variants={fadeInUp}
             className="lg:col-span-8 bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 p-6 sm:p-10 lg:p-12 rounded-3xl backdrop-blur-xl shadow-2xl relative"
           >
+
             <div className="mb-8">
+
               <h2 className="font-philosopher text-2xl sm:text-3xl font-bold text-white">
                 Request Wholesale Information
               </h2>
+
               <p className="mt-2 text-xs sm:text-sm text-[#A39990]">
-                Complete the form below and tell us a little about your business and what you&apos;re looking for.
+                Complete the form below and tell us a little about your
+                business and what you&apos;re looking for.
               </p>
+
             </div>
 
+            {/* ================= SUCCESS MESSAGE ================= */}
+
             {submitted ? (
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="py-16 text-center">
+
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.95,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                className="py-16 text-center"
+              >
+
                 <div className="w-16 h-16 bg-[#C5A059]/20 border border-[#C5A059] rounded-full flex items-center justify-center mx-auto mb-6 text-[#C5A059]">
                   <CheckIcon />
                 </div>
-                <h3 className="font-philosopher text-2xl font-bold text-white">Thank You for Reaching Out</h3>
+
+                <h3 className="font-philosopher text-2xl font-bold text-white">
+                  Thank You for Reaching Out
+                </h3>
+
                 <p className="mt-2 text-sm text-[#A39990] max-w-md mx-auto">
-                  We have received your wholesale inquiry. A member of our team will review your business needs and contact you shortly.
+                  We have received your wholesale inquiry. A member of our
+                  team will review your business needs and contact you shortly.
                 </p>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSubmitted(false);
+                    setError("");
+                  }}
+                  className="mt-8 px-6 py-3 border border-[#C5A059] text-[#C5A059] rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#C5A059] hover:text-[#120D0B] transition-all"
+                >
+                  Submit Another Request
+                </button>
+
               </motion.div>
+
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                {/* Business Name & Contact Name */}
+
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+
+                {/* ================= ERROR ================= */}
+
+                {error && (
+                  <div className="bg-red-500/10 border border-red-500/30 text-red-300 px-4 py-3 rounded-xl text-sm">
+                    {error}
+                  </div>
+                )}
+
+                {/* ================= BUSINESS NAME & CONTACT NAME ================= */}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                  {/* Business Name */}
+
                   <div>
+
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                       Business Name *
                     </label>
+
                     <input
                       type="text"
                       required
                       placeholder="Enter Business Name"
                       value={formData.businessName}
-                      onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          businessName: e.target.value,
+                        })
+                      }
                       className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white placeholder-[#6E655F] focus:outline-none focus:border-[#C5A059] focus:bg-white/10 transition-all"
                     />
+
                   </div>
 
+                  {/* Contact Name */}
+
                   <div>
+
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                       Contact Name *
                     </label>
+
                     <input
                       type="text"
                       required
                       placeholder="Enter Your Name"
                       value={formData.contactName}
-                      onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          contactName: e.target.value,
+                        })
+                      }
                       className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white placeholder-[#6E655F] focus:outline-none focus:border-[#C5A059] focus:bg-white/10 transition-all"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Email & Phone */}
+                {/* ================= EMAIL & PHONE ================= */}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                  {/* Email */}
+
                   <div>
+
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                       Email Address *
                     </label>
+
                     <input
                       type="email"
                       required
                       placeholder="Enter Email Address"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          email: e.target.value,
+                        })
+                      }
                       className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white placeholder-[#6E655F] focus:outline-none focus:border-[#C5A059] focus:bg-white/10 transition-all"
                     />
+
                   </div>
 
+                  {/* Phone */}
+
                   <div>
+
                     <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                       Phone Number *
                     </label>
+
                     <input
                       type="tel"
                       required
                       placeholder="Enter Phone Number"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          phone: e.target.value,
+                        })
+                      }
                       className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white placeholder-[#6E655F] focus:outline-none focus:border-[#C5A059] focus:bg-white/10 transition-all"
                     />
+
                   </div>
+
                 </div>
 
-                {/* Business Type Select */}
+                {/* ================= BUSINESS TYPE ================= */}
+
                 <div>
+
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                     Business Type *
                   </label>
+
                   <select
                     required
                     value={formData.businessType}
-                    onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        businessType: e.target.value,
+                      })
+                    }
                     className="w-full bg-[#1A1310] border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#C5A059] transition-all"
                   >
-                    <option value="" disabled>Select Business Type</option>
+
+                    <option
+                      value=""
+                      disabled
+                    >
+                      Select Business Type
+                    </option>
+
                     {businessTypes.map((type) => (
-                      <option key={type} value={type} className="bg-[#120D0B] text-white">
+                      <option
+                        key={type}
+                        value={type}
+                        className="bg-[#120D0B] text-white"
+                      >
                         {type}
                       </option>
                     ))}
+
                   </select>
+
                 </div>
 
-                {/* Interest Multi-Select Pills */}
+                {/* ================= INTERESTS ================= */}
+
                 <div>
+
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-3">
                     What are you interested in?
                   </label>
+
                   <div className="flex flex-wrap gap-2.5">
+
                     {interestOptions.map((option) => {
-                      const isSelected = formData.interests.includes(option);
+
+                      const isSelected =
+                        formData.interests.includes(option);
+
                       return (
                         <button
                           type="button"
@@ -1002,40 +1279,76 @@ export default function ContactUs() {
                           {option}
                         </button>
                       );
+
                     })}
+
                   </div>
+
                 </div>
 
-                {/* Message Field */}
+                {/* ================= MESSAGE ================= */}
+
                 <div>
+
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#D4C3B5] mb-2">
                     Message
                   </label>
+
                   <textarea
                     rows={4}
                     placeholder="Tell us what you're looking for..."
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        message: e.target.value,
+                      })
+                    }
                     className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3.5 text-sm text-white placeholder-[#6E655F] focus:outline-none focus:border-[#C5A059] focus:bg-white/10 transition-all resize-none"
                   />
+
                 </div>
 
-                {/* Submit Button */}
+                {/* ================= SUBMIT BUTTON ================= */}
+
                 <motion.button
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{
+                    scale: sending ? 1 : 1.01,
+                  }}
+                  whileTap={{
+                    scale: sending ? 1 : 0.98,
+                  }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#C5A059] via-[#D8B674] to-[#997334] text-[#120D0B] font-bold text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl shadow-xl hover:brightness-110 transition-all"
+                  disabled={sending}
+                  className={`w-full bg-gradient-to-r from-[#C5A059] via-[#D8B674] to-[#997334] text-[#120D0B] font-bold text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl shadow-xl transition-all ${
+                    sending
+                      ? "opacity-60 cursor-not-allowed"
+                      : "hover:brightness-110"
+                  }`}
                 >
-                  Request Wholesale Pricing
+
+                  {sending ? (
+                    <span className="flex items-center justify-center gap-3">
+
+                      <span className="w-4 h-4 border-2 border-[#120D0B]/30 border-t-[#120D0B] rounded-full animate-spin" />
+
+                      Sending Request...
+
+                    </span>
+                  ) : (
+                    "Request Wholesale Pricing"
+                  )}
+
                 </motion.button>
 
               </form>
+
             )}
 
           </motion.div>
 
-          {/* ================= RIGHT: PREFER TO SPEAK / BOOK A CALL ================= */}
+          {/* ================= RIGHT SIDE ================= */}
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -1043,9 +1356,11 @@ export default function ContactUs() {
             variants={staggerContainer}
             className="lg:col-span-4 space-y-8"
           >
-            
-            {/* Book A Call Box */}
+
+            {/* ================= BOOK A CALL ================= */}
+
             <div className="bg-gradient-to-b from-[#8C2332]/30 via-[#211215] to-[#120D0B] border border-[#8C2332]/50 p-8 rounded-3xl backdrop-blur-md relative overflow-hidden shadow-2xl">
+
               <div className="p-3.5 rounded-xl bg-[#8C2332] text-white w-fit mb-6">
                 <CalendarIcon />
               </div>
@@ -1055,11 +1370,19 @@ export default function ContactUs() {
               </h3>
 
               <p className="mt-3 text-xs sm:text-sm text-[#D4C3B5] leading-relaxed">
-                If you&apos;d rather discuss your needs directly, schedule a conversation with our team. We&apos;ll be happy to discuss your business, your wine program, and the selections that may be right for you.
+                If you&apos;d rather discuss your needs directly, schedule a
+                conversation with our team. We&apos;ll be happy to discuss your
+                business, your wine program, and the selections that may be
+                right for you.
               </p>
 
               <div className="mt-8 pt-6 border-t border-white/10">
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+
                   <Link
                     href="#"
                     className="flex items-center justify-center gap-3 w-full border border-[#C5A059] bg-[#C5A059]/10 text-[#E2C792] hover:bg-[#C5A059] hover:text-[#120D0B] font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition-all duration-300"
@@ -1067,24 +1390,36 @@ export default function ContactUs() {
                     <PhoneIcon />
                     Book A Call
                   </Link>
+
                 </motion.div>
+
               </div>
+
             </div>
 
-            {/* Direct Support Card */}
+            {/* ================= DIRECT SUPPORT ================= */}
+
             <div className="bg-white/[0.03] border border-white/10 p-8 rounded-3xl">
-              <h4 className="font-serif text-lg font-bold text-white mb-2">Direct Wine Desk</h4>
+
+              <h4 className="font-serif text-lg font-bold text-white mb-2">
+                Direct Wine Desk
+              </h4>
+
               <p className="text-xs text-[#A39990] leading-relaxed mb-4">
-                Our portfolio managers are available Monday – Friday to answer questions regarding regional selections and current vintages.
+                Our portfolio managers are available Monday – Friday to answer
+                questions regarding regional selections and current vintages.
               </p>
+
               <div className="text-xs font-mono text-[#C5A059]">
                 Mon - Fri: 9:00 AM – 6:00 PM EST
               </div>
+
             </div>
 
           </motion.div>
 
         </div>
+
       </section>
 
     </main>
