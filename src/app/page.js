@@ -852,32 +852,32 @@ font-philosopher
     PROFESSIONAL WINE INTRO SECTION
 ========================================================= */}
 
-<section className="w-full overflow-hidden  font-philosopher">
+<section className="w-full overflow-hidden font-philosopher">
   <div
     className="
       mx-auto w-full max-w-[1600px]
-      px-5 py-14
-      sm:px-8 sm:py-16
-      md:px-10 md:py-20
-      lg:px-14 lg:py-24
-      xl:px-20 xl:py-28
-      2xl:px-24 2xl:py-32
+      px-5 py-8
+      sm:px-8 sm:py-10
+      md:px-10 md:py-12
+      lg:px-14 lg:py-14
+      xl:px-20 xl:py-16
+      2xl:px-24 2xl:py-20
     "
   >
     <div
       className="
         grid grid-cols-1 items-center
-        gap-12
-        sm:gap-14
-        md:gap-16
-        lg:grid-cols-2 lg:gap-16
-        xl:gap-24
-        2xl:gap-32
+        gap-8
+        sm:gap-10
+        md:gap-12
+        lg:grid-cols-2 lg:gap-12
+        xl:gap-16
+        2xl:gap-20
       "
     >
 
       {/* =====================================================
-          LEFT — IMAGE
+          LEFT — IMAGE + INFO
       ====================================================== */}
 
       <div className="flex w-full justify-center lg:justify-start">
@@ -885,7 +885,7 @@ font-philosopher
           className="
             relative flex w-full
             max-w-[430px]
-            items-center justify-center
+            flex-col
             sm:max-w-[500px]
             md:max-w-[540px]
             lg:max-w-[560px]
@@ -893,26 +893,346 @@ font-philosopher
             2xl:max-w-[660px]
           "
         >
-          {/* Image Frame */}
+
+          {/* IMAGE */}
           <div className="relative w-full overflow-hidden bg-transparent">
-  <img
-    src="/to our wine world.png"
-    alt="Premium Wine"
-    className="
-      block w-full
-      h-[440px]
-      sm:h-[520px]
-      md:h-[580px]
-      lg:h-[650px]
-      xl:h-[700px]
-      2xl:h-[740px]
-      object-contain object-center
-      select-none
-      transition-transform duration-700
-      hover:scale-[1.02]
-    "
-  />
+            <img
+              src="/to our wine world.png"
+              alt="Premium Wine"
+              className="
+                block w-full
+                h-[360px]
+                sm:h-[420px]
+                md:h-[370px]
+                lg:h-[420px]
+                xl:h-[470px]
+                2xl:h-[510px]
+                object-contain object-center
+                select-none
+                transition-transform duration-700
+                hover:scale-[1.015]
+              "
+            />
+          </div>
+
+
+          {/* =====================================================
+              BUTTONS
+          ====================================================== */}
+
+<div
+  className="
+    flex w-full
+    flex-col gap-2.5
+    pl-3
+    sm:pl-5
+    md:pl-8
+    lg:pl-11
+    xl:pl-22
+    2xl:pl-16
+    sm:w-auto
+    sm:flex-row
+    sm:items-center
+    sm:gap-6
+  "
+>
+
+            {/* SHOP WINES */}
+
+            <Link
+              href="/shop"
+              className="
+                inline-flex
+                w-full
+                items-center
+                justify-center
+                rounded-sm
+                bg-[#71111B]
+                px-7 py-4.5
+                text-center
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-[0.22em]
+                text-white
+                transition-all
+                duration-300
+                hover:bg-[#5A0D15]
+                hover:shadow-[0_8px_24px_rgba(113,17,27,0.16)]
+                active:scale-[0.98]
+                sm:w-auto
+                sm:px-14
+              "
+            >
+              Shop Wines
+            </Link>
+
+
+            {/* DISCOVER MORE */}
+
+            <button
+              type="button"
+              onClick={() => setShowMore(!showMore)}
+              aria-expanded={showMore}
+              className="
+                inline-flex
+                w-full
+                items-center
+                justify-center
+                rounded-sm
+                border
+                border-[#BDB4A9]
+                bg-transparent
+                px-7 py-3.5
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-[0.22em]
+                text-[#5E554F]
+                transition-all
+                duration-300
+                hover:border-[#71111B]
+                hover:bg-white
+                hover:text-[#71111B]
+                active:scale-[0.98]
+                cursor-pointer
+                sm:w-auto
+                sm:px-8
+              "
+            >
+              <span>
+                {showMore ? "Show Less" : "Discover More"}
+              </span>
+
+              <span
+                className={`
+                  ml-2.5 text-sm
+                  transition-transform duration-300
+                  ${showMore ? "rotate-180" : "rotate-0"}
+                `}
+              >
+                ↓
+              </span>
+            </button>
+
+          </div>
+
+{/* =====================================================
+    DISCOVER MORE CONTENT
+====================================================== */}
+
+<div
+  className={`
+    grid w-full
+    transition-all duration-500 ease-in-out
+    ${
+      showMore
+        ? "mt-4 grid-rows-[1fr] opacity-100"
+        : "grid-rows-[0fr] opacity-0"
+    }
+  `}
+>
+  <div className="overflow-hidden">
+    <div
+      className="
+        border-t border-[#D5CEC3]
+        pt-4
+        text-center
+      "
+    >
+
+      <p
+        className="
+          mx-auto
+          max-w-2xl
+          text-sm
+          leading-6
+          text-[#6D625B]
+          sm:text-[14px]
+          sm:leading-7
+        "
+      >
+        We carefully select wines from distinctive regions
+        and producers, focusing on quality, character and
+        regional identity. Our portfolio is designed to help
+        restaurants, hotels, retailers, bars and hospitality
+        businesses discover wines that genuinely fit their
+        customers and individual needs.
+      </p>
+
+
+      {/* MINI FEATURES */}
+
+      <div
+        className="
+          mx-auto
+          mt-4
+          grid
+          w-full
+          max-w-2xl
+          grid-cols-1
+          gap-2.5
+          sm:grid-cols-3
+        "
+      >
+
+        {/* QUALITY */}
+
+        <div
+          className="
+            border border-[#D8D0C5]
+            bg-[#ECE8E0]
+            p-3.5
+            text-center
+            sm:p-4
+          "
+        >
+          <span
+            className="
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.2em]
+              text-[#71111B]
+            "
+          >
+            01
+          </span>
+
+          <h4
+            className="
+              mt-1.5
+              text-sm
+              font-semibold
+              text-[#241B16]
+            "
+          >
+            Quality
+          </h4>
+
+          <p
+            className="
+              mt-1
+              text-xs
+              leading-5
+              text-[#7B716A]
+            "
+          >
+            Carefully selected wines with character.
+          </p>
+        </div>
+
+
+        {/* CRAFT */}
+
+        <div
+          className="
+            border border-[#D8D0C5]
+            bg-[#ECE8E0]
+            p-3.5
+            text-center
+            sm:p-4
+          "
+        >
+          <span
+            className="
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.2em]
+              text-[#71111B]
+            "
+          >
+            02
+          </span>
+
+          <h4
+            className="
+              mt-1.5
+              text-sm
+              font-semibold
+              text-[#241B16]
+            "
+          >
+            Craft
+          </h4>
+
+          <p
+            className="
+              mt-1
+              text-xs
+              leading-5
+              text-[#7B716A]
+            "
+          >
+            Tradition and expertise in every bottle.
+          </p>
+        </div>
+
+
+        {/* CHARACTER */}
+
+        <div
+          className="
+            border border-[#D8D0C5]
+            bg-[#ECE8E0]
+            p-3.5
+            text-center
+            sm:p-4
+          "
+        >
+          <span
+            className="
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.2em]
+              text-[#71111B]
+            "
+          >
+            03
+          </span>
+
+          <h4
+            className="
+              mt-1.5
+              text-sm
+              font-semibold
+              text-[#241B16]
+            "
+          >
+            Character
+          </h4>
+
+          <p
+            className="
+              mt-1
+              text-xs
+              leading-5
+              text-[#7B716A]
+            "
+          >
+            Distinctive wines from unique regions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </div>
+
+
+          {/* =====================================================
+              BOTTOM ACCENT
+          ====================================================== */}
+
+          {/* <div className="mt-5 flex items-center gap-2">
+            <div className="h-px w-10 bg-[#B89B6A]" />
+            <div className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
+            <div className="h-px w-5 bg-[#D3CCC2]" />
+          </div> */}
+
         </div>
       </div>
 
@@ -932,16 +1252,18 @@ font-philosopher
 
         {/* TOP LABEL */}
 
-        <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
-          <span className="h-px w-8 bg-[#71111B] sm:w-10 md:w-12" />
+        <div className="mb-4 flex items-center gap-3 sm:mb-5">
+          <span className="h-px w-8 bg-[#71111B] sm:w-10" />
 
           <span
             className="
-              text-[9px] font-medium uppercase
-              tracking-[0.25em] text-[#7B716A]
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[0.24em]
+              text-[#7B716A]
               sm:text-[10px]
-              sm:tracking-[0.3em]
-              md:text-xs
+              sm:tracking-[0.28em]
             "
           >
             Welcome to Our Wine World
@@ -955,15 +1277,15 @@ font-philosopher
           className="
             max-w-3xl
             font-philosopher
-            text-[2.3rem]
-            leading-[1.08]
+            text-[2.15rem]
+            leading-[1.06]
             tracking-[-0.025em]
             text-[#241B16]
-            sm:text-[3rem]
-            md:text-[3.7rem]
-            lg:text-[3.5rem]
-            xl:text-[4.25rem]
-            2xl:text-[4.7rem]
+            sm:text-[2.7rem]
+            md:text-[3.3rem]
+            lg:text-[3.25rem]
+            xl:text-[3.9rem]
+            2xl:text-[4.3rem]
           "
         >
           Our wines are
@@ -981,19 +1303,23 @@ font-philosopher
 
         {/* DIVIDER */}
 
-        <div className="mt-7 h-px w-16 bg-[#B89B6A] sm:mt-8 sm:w-20" />
+        <div className="mt-5 h-px w-14 bg-[#B89B6A] sm:mt-6 sm:w-18" />
 
 
         {/* DESCRIPTION */}
 
         <p
           className="
-            mt-6 max-w-xl
-            text-sm font-light
-            leading-7 text-[#6D625B]
-            sm:mt-7 sm:text-[15px]
+            mt-5
+            max-w-xl
+            text-sm
+            font-light
+            leading-6
+            text-[#6D625B]
+            sm:mt-6
+            sm:text-[15px]
             sm:leading-7
-            md:mt-8 md:text-base
+            md:text-base
             md:leading-8
             xl:max-w-2xl
           "
@@ -1004,315 +1330,8 @@ font-philosopher
           elevate every moment.
         </p>
 
-
-        {/* =====================================================
-            BUTTONS
-        ====================================================== */}
-
-        <div
-          className="
-            mt-8 flex w-full
-            flex-col gap-3
-            sm:mt-9
-            sm:w-auto
-            sm:flex-row
-            sm:items-center
-            sm:gap-4
-            md:mt-10
-          "
-        >
-
-          {/* SHOP WINES */}
-
-          <Link
-            href="/shop"
-            className="
-              inline-flex
-              w-full
-              items-center
-              justify-center
-              rounded-sm
-              bg-[#71111B]
-              px-8 py-4
-              text-center
-              text-[10px]
-              font-semibold
-              uppercase
-              tracking-[0.24em]
-              text-white
-              transition-all
-              duration-300
-              hover:bg-[#5A0D15]
-              hover:shadow-[0_10px_30px_rgba(113,17,27,0.18)]
-              active:scale-[0.98]
-              sm:w-auto
-              sm:px-9
-            "
-          >
-            Shop Wines
-          </Link>
-
-
-          {/* DISCOVER MORE */}
-
-          <button
-            type="button"
-            onClick={() => setShowMore(!showMore)}
-            aria-expanded={showMore}
-            className="
-              inline-flex
-              w-full
-              items-center
-              justify-center
-              rounded-sm
-              border
-              border-[#BDB4A9]
-              bg-transparent
-              px-8 py-4
-              text-[10px]
-              font-semibold
-              uppercase
-              tracking-[0.24em]
-              text-[#5E554F]
-              transition-all
-              duration-300
-              hover:border-[#71111B]
-              hover:bg-white
-              hover:text-[#71111B]
-              active:scale-[0.98]
-              cursor-pointer
-              sm:w-auto
-              sm:px-9
-            "
-          >
-            <span>
-              {showMore ? "Show Less" : "Discover More"}
-            </span>
-
-            <span
-              className={`
-                ml-3 text-sm
-                transition-transform duration-300
-                ${showMore ? "rotate-180" : "rotate-0"}
-              `}
-            >
-              ↓
-            </span>
-          </button>
-
-        </div>
-
-
-        {/* =====================================================
-            DISCOVER MORE CONTENT
-        ====================================================== */}
-
-        <div
-          className={`
-            grid w-full transition-all duration-500 ease-in-out
-            ${
-              showMore
-                ? "mt-6 grid-rows-[1fr] opacity-100"
-                : "grid-rows-[0fr] opacity-0"
-            }
-          `}
-        >
-          <div className="overflow-hidden">
-
-            <div
-              className="
-                border-t border-[#D5CEC3]
-                pt-6
-              "
-            >
-
-              <p
-                className="
-                  max-w-2xl
-                  text-sm
-                  leading-7
-                  text-[#6D625B]
-                  sm:text-[15px]
-                  sm:leading-8
-                "
-              >
-                We carefully select wines from distinctive regions
-                and producers, focusing on quality, character and
-                regional identity. Our portfolio is designed to help
-                restaurants, hotels, retailers, bars and hospitality
-                businesses discover wines that genuinely fit their
-                customers and individual needs.
-              </p>
-
-
-              {/* MINI FEATURES */}
-
-              <div
-                className="
-                  mt-6
-                  grid grid-cols-1
-                  gap-3
-                  sm:grid-cols-3
-                "
-              >
-
-                <div
-                  className="
-                    border border-[#D8D0C5]
-                    bg-[#ECE8E0]
-                    p-4
-                    sm:p-5
-                  "
-                >
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
-                    01
-                  </span>
-
-                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
-                    Quality
-                  </h4>
-
-                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
-                    Carefully selected wines with character.
-                  </p>
-                </div>
-
-
-                <div
-                  className="
-                    border border-[#D8D0C5]
-                    bg-[#ECE8E0]
-                    p-4
-                    sm:p-5
-                  "
-                >
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
-                    02
-                  </span>
-
-                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
-                    Craft
-                  </h4>
-
-                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
-                    Tradition and expertise in every bottle.
-                  </p>
-                </div>
-
-
-                <div
-                  className="
-                    border border-[#D8D0C5]
-                    bg-[#ECE8E0]
-                    p-4
-                    sm:p-5
-                  "
-                >
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
-                    03
-                  </span>
-
-                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
-                    Character
-                  </h4>
-
-                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
-                    Distinctive wines from unique regions.
-                  </p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-        {/* =====================================================
-            QUALITY INFORMATION
-        ====================================================== */}
-
-        <div
-          className="
-            mt-8 flex flex-wrap
-            items-center
-            gap-x-7 gap-y-3
-            border-t border-[#DDD6CC]
-            pt-6
-            sm:mt-9
-            md:mt-10
-          "
-        >
-
-          <div className="flex items-center gap-2.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
-
-            <span
-              className="
-                text-[8px]
-                font-medium
-                uppercase
-                tracking-[0.18em]
-                text-[#8A8179]
-                sm:text-[9px]
-                md:text-[10px]
-              "
-            >
-              Premium Quality
-            </span>
-          </div>
-
-
-          <div className="flex items-center gap-2.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
-
-            <span
-              className="
-                text-[8px]
-                font-medium
-                uppercase
-                tracking-[0.18em]
-                text-[#8A8179]
-                sm:text-[9px]
-                md:text-[10px]
-              "
-            >
-              Crafted With Care
-            </span>
-          </div>
-
-
-          <div className="flex items-center gap-2.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
-
-            <span
-              className="
-                text-[8px]
-                font-medium
-                uppercase
-                tracking-[0.18em]
-                text-[#8A8179]
-                sm:text-[9px]
-                md:text-[10px]
-              "
-            >
-              Selected With Purpose
-            </span>
-          </div>
-
-        </div>
-
-
-        {/* BOTTOM ACCENT */}
-
-        <div className="mt-8 flex items-center gap-3 sm:mt-10">
-          <div className="h-px w-12 bg-[#B89B6A]" />
-          <div className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
-          <div className="h-px w-6 bg-[#D3CCC2]" />
-        </div>
-
       </div>
+
     </div>
   </div>
 </section>
@@ -1588,76 +1607,7 @@ font-philosopher
 
 
   {/* Feature Section: New Grape Wine */}
-<section className="w-full max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-    {/* LEFT */}
-    <div className="flex flex-col items-start text-left z-10">
-      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-gray-900 leading-tight uppercase mb-6 tracking-wide">
-        NEW 
-        GRAPE 
-        WINE
-      </h2>
-
-      <p className="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-sm mb-8 font-light">
-        Solicitudin aliquam ultrices sagittis orci a. Vulputate enim nulla
-        aliquet porttitor lacus. Vitae semper quis lectus nulla at volutpat
-        diam ut venenatis. Sed viverra ipsum nunc aliquet bibendum enim.
-        Vulputate dignissim suspendisse in est ante in.
-      </p>
-
-     <Link
-  href="/shop"
-  className="bg-[#E2DDD3] hover:bg-[#71111B] text-gray-800 hover:text-white text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
->
-  EXPLORE OUR PORTFOLIO
-</Link>
-    </div>
-
-    {/* RIGHT IMAGES */}
-    <div className="relative w-full min-h-[550px] flex items-center justify-center">
-
-      {/* MAIN IMAGE */}
-      <div className="relative w-64 h-[380px] sm:w-72 sm:h-[430px] rounded-sm shadow-lg z-0">
-        <Image
-          src="/italy/Ascheri/Arneis, DOC.webp"
-          alt="Premium Wine Bottle"
-          fill
-          className="object-contain"
-          sizes="(max-width: 640px) 256px, 288px"
-        />
-      </div>
-
-      {/* LEFT IMAGE */}
-      <div className="absolute left-0 sm:left-4 bottom-4 w-40 h-48 sm:w-48 sm:h-56 z-10">
-        <div className="relative w-full h-full rounded-sm border-4 border-white shadow-xl">
-          <Image
-            src="/Germany/Piesporter Goldtröpfchen Riesling Spätlese.webp"
-            alt="Wine"
-            fill
-            className="object-contain"
-            sizes="(max-width: 640px) 160px, 192px"
-          />
-        </div>
-      </div>
-
-      {/* RIGHT IMAGE */}
-      <div className="absolute right-0 sm:right-4 bottom-0 w-36 h-40 sm:w-44 sm:h-48 z-20">
-        <div className="relative w-full h-full rounded-sm border-4 border-white shadow-xl">
-          <Image
-            src="/organ/Pinot Noir, Estate, EOLA-Amity Hills.webp"
-            alt="Wine Collection"
-            fill
-            className="object-contain"
-            sizes="(max-width: 640px) 144px, 176px"
-          />
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 
   {/* Animations */}
@@ -2004,92 +1954,7 @@ font-philosopher
 
 {/* Message from Wine Maker Upgrade to the latest!  start*/}
 
-<section className="relative w-full min-h-[500px] md:min-h-[650px] overflow-hidden">
 
-  {/* Background Image - Mobile Alignment Fixed */}
-  <Image
-    src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/men-img-2.jpg"
-    alt="Background"
-    fill
-    priority
-    quality={90}
-    sizes="100vw"
-    className="absolute inset-0 object-cover  object-[25%_center] sm:object-[20%_center] md:object-left z-0"
-  />
-
-  {/* Overlay - Mobile par light kar diya taake image nazar aaye */}
-  <div className="absolute inset-0 bg-black/10 "></div>
-
-  {/* Content */}
-  <div className="relative z-20 flex items-center min-h-[500px] md:min-h-[650px] px-5 sm:px-8 md:px-16 py-10 md:py-0">
-
-    <div className="w-full md:max-w-xl md:ml-auto text-center md:text-left text-black">
-
-      {/* Small Heading */}
-      <span
-        className={`
-          ${scriptFont.className}
-          italic
-          text-[30px]
-          sm:text-[16px]
-          md:text-[40px]
-          leading-[34px]
-          md:leading-[28px]
-          font-normal
-          text-[#a3485e]
-          block
-        `}
-      >
-        Message from Wine Maker
-      </span>
-
-      {/* Main Heading */}
-      <h2
-        className="
-          mt-2
-          mb-4
-          md:mb-6
-          text-[30px]
-          sm:text-[36px]
-          md:text-[38px]
-          leading-normal
-          font-normal
-          text-[#111111]
-        "
-        style={{
-          fontFamily: '"Old Standard TT", serif',
-        }}
-      >
-        Upgrade to the latest!
-      </h2>
-
-      {/* Paragraphs */}
-      <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8 mb-4">
-        Discover the elegance of our handcrafted wines, created with passion and dedication. 
-        Every bottle reflects a story of tradition, quality, and timeless craftsmanship.
-      </p>
-
-      <p className="text-sm sm:text-base md:text-lg leading-6 md:leading-8">
-        From carefully selected grapes to the finest aging process, we bring you a collection 
-        that celebrates exceptional taste and unforgettable moments.
-      </p>
-
-      {/* Signature */}
-      <div className="relative w-28 h-12 sm:w-36 sm:h-16 md:w-44 md:h-20 mt-6 md:mt-8 mx-auto md:mx-0">
-        <Image
-          src="https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/signature-1.png"
-          alt="Signature"
-          fill
-          sizes="(max-width: 768px) 112px, 176px"
-          className="object-contain"
-        />
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
     {/* Message from Wine Maker Upgrade to the latest! end*/}
 
@@ -2188,221 +2053,7 @@ font-philosopher
     {/* IN THE HEART OF NAPA VALLEY end */}
 
 {/* ===================Tastefully Yours  start ===================*/}
-    <section className="relative w-full bg-[#FFFFFF] py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      
-      {/* Background Decorative Vine/Leaf Effect (Optional) */}
-      <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 pointer-events-none opacity-30">
-        <Image
-          src="/images/leaf-bg.png"
-          alt="Vine Leaf"
-          fill
-          className="object-contain object-top-left"
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto">
-        
-        {/* ==================== 1. HEADER SECTION ==================== */}
-        <div className="text-center max-w-xl mx-auto mb-10">
-        <span
-  className={`
-    ${scriptFont.className}
-    block
-    text-[28px]
-    sm:text-[36px]
-    md:text-[48px]
-    leading-[48px]
-    text-[#a3485e]
-    tracking-wide
-    mb-1
-  `}
->
-  Our Delightful offerings
-</span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-philosopher text-[#2D2B2A] tracking-wide mb-3">
-            Tastefully Yours
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans px-4">
-           Savor the finest selection of wines crafted with passion, tradition, and elegance. 
-Every bottle delivers a unique taste experience made to be remembered.
-          </p>
-        </div>
-
-        {/* ==================== 2. CIRCULAR CATEGORIES FILTER ==================== */}
-{/* ==================== 2. CIRCULAR CATEGORIES FILTER ==================== */}
-
-<div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mb-16">
-  {categorie.map((cat, idx) => (
-    <div key={cat.id} className="flex items-center">
-
-      <Link
-        href={cat.href}
-        className="
-          group
-          block
-          rounded-full
-          focus:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-[#71111B]
-          focus-visible:ring-offset-4
-        "
-      >
-        <div
-          className="
-            relative
-            w-24 h-24
-            sm:w-28 sm:h-28
-            lg:w-32 lg:h-32
-            transition-all
-            duration-500
-            group-hover:-translate-y-2
-            group-hover:scale-105
-          "
-        >
-
-          {/* Background Image */}
-          <Image
-            src={cat.image}
-            alt={cat.name}
-            fill
-            className="
-              object-contain
-              transition-all
-              duration-500
-              group-hover:drop-shadow-[0_12px_18px_rgba(113,17,27,0.18)]
-            "
-          />
-
-          {/* Text Inside Image */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span
-              className="
-                text-[10px]
-                sm:text-xs
-                font-old-standard
-                text-center
-                text-black
-                whitespace-pre-line
-                leading-4
-                transition-colors
-                duration-300
-                group-hover:text-[#71111B]
-              "
-            >
-              {cat.name}
-            </span>
-          </div>
-
-        </div>
-      </Link>
-
-      {/* Separator */}
-      {idx !== categorie.length - 1 && (
-        <span
-          className="
-            hidden
-            lg:block
-            mx-5
-            text-[#D8D2CA]
-            text-lg
-          "
-        >
-          |
-        </span>
-      )}
-
-    </div>
-  ))}
-</div>
-
-        {/* ==================== 3. PRODUCTS GRID ==================== */}
-   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-  {products.map((product) => (
-    <div
-      key={product.id}
-      className="group flex flex-col items-center text-center p-4 rounded-lg hover:shadow-lg transition-shadow duration-300 relative bg-white"
-    >
-      {/* SALE Badge */}
-      {product.sale && (
-        <span className="absolute top-4 right-4 sm:right-6 bg-[#689F38] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm z-10">
-          SALE
-        </span>
-      )}
-
-      {/* Product Image Wrapper */}
-      <div className="relative w-full h-64 sm:h-72 mb-4 overflow-hidden group">
-        {/* Product Image */}
-        <Image
-          src={product.image}
-          alt={product.title}
-          fill
-          className="object-contain transition-transform duration-500 group-hover:scale-110"
-        />
-
-        {/* Bottom Hover Icons */}
-        {/* <div className="absolute bottom-3 left-0 right-0 z-10 flex justify-center gap-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"> */}
-          {/* Shopping Cart */}
-          {/* <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
-            <FiShoppingCart size={20} />
-          </button> */}
-
-          {/* Favorite */}
-          {/* <button className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-[#A04355] transition-all duration-300 shadow-md">
-            <FiHeart size={20} />
-          </button> */}
-        {/* </div> */}
-      </div>
-
-      {/* Product Info */}
-      <h3 className="text-sm sm:text-base font-serif text-gray-800 mb-2 border-b border-gray-200 pb-2 w-full">
-        {product.title}
-      </h3>
-
-      {/* Price */}
-      {/* <div className="flex items-center gap-2 mb-2 text-xs sm:text-sm">
-        {product.oldPrice && (
-          <span className="text-gray-400 line-through">{product.oldPrice}</span>
-        )}
-        <span className="text-gray-900 font-semibold">{product.price}</span>
-      </div> */}
-
-      {/* Rating Stars */}
-      {/* <div className="flex text-amber-400 text-xs">
-        {Array.from({ length: product.rating }).map((_, i) => (
-          <span key={i}>★</span>
-        ))}
-      </div> */}
-    </div>
-  ))}
-</div>
-        {/* ==================== 4. BOTTOM DISCOVERY SECTION ==================== */}
-        <div className="text-center max-w-xl mx-auto pt-8 border-t border-gray-100">
-       <span
-  className={`
-    ${scriptFont.className}
-    block
-    text-[28px]
-    sm:text-[36px]
-    md:text-[48px]
-    leading-[48px]
-    text-[#a3485e]
-    tracking-wide
-    mb-1
-  `}
->
-  Discovery
-</span>
-          <h2 className="text-2xl sm:text-3xl font-philosopher text-[#2D2B2A] tracking-wide mb-3">
-            That Gets Better with Ageing
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans px-4">
-           Like a fine wine, every moment becomes more refined with time. 
-Our carefully aged collection captures depth, character, and exceptional flavor in every bottle.
-          </p>
-        </div>
-
-      </div>
-    </section>
+    
 
 
 
@@ -3939,86 +3590,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
     </section>
 
     {/* HOME EMAIL SEND START */}
-  <section className="relative w-full min-h-[400px] md:min-h-[500px] flex items-center justify-center bg-black/80 text-white overflow-hidden py-16 px-4">
-      
-      {/* Background Image with Dark Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30 z-0" 
-        style={{ backgroundImage: "url('https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/13-2.jpg')" }}
-      />
 
-      {/* Main Content Container */}
-      <div className="relative z-10 max-w-3xl w-full mx-auto text-center flex flex-col items-center justify-center">
-        
-        {/* Cursive / Serif Title */}
-     <h2
-  className={`
-    ${scriptFont.className}
-    text-[28px]
-    sm:text-[36px]
-    md:text-[48px]
-    leading-[48px]
-    tracking-wide
-    text-stone-100
-    mb-4
-  `}
->
-  Subscribe to Stay Informed
-</h2>
-
-        {/* Subtitle / Description Text */}
-        <p className="text-sm sm:text-base md:text-lg text-stone-300 font-old-standard  max-w-lg mb-8 leading-relaxed">
-         Stay updated with our latest wines, exclusive releases, and stories from our vineyard. 
-Join our community and discover the world of fine winemaking.
-        </p>
-
-        {/* Newsletter Form */}
-        <form 
-          onSubmit={(e) => e.preventDefault()}
-          className="w-full max-w-xl flex flex-col sm:flex-row items-center justify-between border border-white/70 rounded-full p-1.5 sm:p-2 bg-black/20 backdrop-blur-sm gap-2 sm:gap-0"
-        >
-          {/* Input Field */}
-          <input 
-            type="email" 
-            placeholder="Your Email Address" 
-            className="w-full bg-transparent px-6 py-2.5 sm:py-3 text-stone-200 placeholder-stone-400 font-serif focus:outline-none text-center sm:text-left text-sm md:text-base"
-            required
-          />
-
-          {/* Subscribe Button */}
-  <button
-  type="submit"
-  className="
-    w-auto
-    bg-white
-    hover:bg-stone-200
-    text-stone-800
-    font-serif
-    text-xs
-    sm:text-sm
-    md:text-base
-    px-5
-    sm:px-7
-    md:px-8
-    py-2
-    sm:py-2.5
-    md:py-3
-    rounded-full
-    transition-colors
-    duration-300
-    font-medium
-    whitespace-nowrap
-    cursor-pointer
-    mx-auto
-    sm:mx-0
-  "
->
-  Subscribe!
-</button>
-        </form>
-
-      </div>
-    </section>
      {/* HOME EMAIL SEND START */}
     </div>
   );
