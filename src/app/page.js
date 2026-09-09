@@ -630,7 +630,7 @@ export default function HeroSlider() {
           className="
             px-2 py-1.5
             text-[7px]
-
+font-philosopher
             sm:px-4 sm:py-2
             sm:text-[10px]
 
@@ -677,6 +677,7 @@ export default function HeroSlider() {
 
             sm:px-4 sm:py-2
             sm:text-[10px]
+            font-philosopher
 
             md:px-5 md:py-2.5
             md:text-xs
@@ -851,7 +852,7 @@ export default function HeroSlider() {
     PROFESSIONAL WINE INTRO SECTION
 ========================================================= */}
 
-<section className="w-full overflow-hidden bg-[#F4F2EC] font-philosopher">
+<section className="w-full overflow-hidden  font-philosopher">
   <div
     className="
       mx-auto w-full max-w-[1600px]
@@ -893,70 +894,25 @@ export default function HeroSlider() {
           "
         >
           {/* Image Frame */}
-          <div
-            className="
-              relative w-full overflow-hidden
-              border border-[#D8D1C5]
-              bg-[#EAE5DC]
-              shadow-[0_20px_60px_rgba(36,27,22,0.08)]
-            "
-          >
-            <img
-              src="/to our wine world.png"
-              alt="Premium Wine"
-              className="
-                block w-full
-                h-[440px]
-                sm:h-[520px]
-                md:h-[580px]
-                lg:h-[650px]
-                xl:h-[700px]
-                2xl:h-[740px]
-                object-contain object-center
-                select-none
-                transition-transform duration-700
-                hover:scale-[1.02]
-              "
-            />
-
-            {/* Image Overlay */}
-            <div
-              className="
-                pointer-events-none absolute inset-0
-                bg-gradient-to-t
-                from-[#241B16]/20
-                via-transparent
-                to-transparent
-              "
-            />
-
-            {/* Image Label */}
-            <div
-              className="
-                absolute bottom-5 left-5
-                sm:bottom-7 sm:left-7
-              "
-            >
-              <div
-                className="
-                  border border-white/30
-                  bg-[#241B16]/55
-                  px-4 py-2.5
-                  backdrop-blur-sm
-                "
-              >
-                <p
-                  className="
-                    text-[8px] font-medium uppercase
-                    tracking-[0.28em] text-white
-                    sm:text-[9px]
-                  "
-                >
-                  Our Wine World
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="relative w-full overflow-hidden bg-transparent">
+  <img
+    src="/to our wine world.png"
+    alt="Premium Wine"
+    className="
+      block w-full
+      h-[440px]
+      sm:h-[520px]
+      md:h-[580px]
+      lg:h-[650px]
+      xl:h-[700px]
+      2xl:h-[740px]
+      object-contain object-center
+      select-none
+      transition-transform duration-700
+      hover:scale-[1.02]
+    "
+  />
+</div>
         </div>
       </div>
 
@@ -1124,7 +1080,7 @@ export default function HeroSlider() {
               hover:bg-white
               hover:text-[#71111B]
               active:scale-[0.98]
-              cursor-
+              cursor-pointer
               sm:w-auto
               sm:px-9
             "
