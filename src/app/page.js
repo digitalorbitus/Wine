@@ -3208,7 +3208,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
 
 {/*======================= Final Home CTA start ================ */}
 
-<section className="relative overflow-hidden bg-[#741C29] px-4 py-20 text-center text-white xs:px-6 sm:px-8 sm:py-28 md:px-12 md:py-32 lg:py-36 xl:py-40">
+<section className="relative overflow-hidden bg-[#790214] px-4 py-20 text-center text-white xs:px-6 sm:px-8 sm:py-28 md:px-12 md:py-32 lg:py-36 xl:py-40">
 
   {/* ================= DECORATIVE CIRCLES ================= */}
 

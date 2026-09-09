@@ -50,7 +50,7 @@ export default function NewsletterSection() {
             </nav>
 
             {/* Address & Contact Info */}
-            <div className="text-xs sm:text-sm text-stone-400 space-y-1.5 leading-relaxed font-old-standard">
+            <div className="text-xs sm:text-lg text-white space-y-1.5 leading-relaxed font-old-standard">
               <p>7607 Detour Ave Cleveland OH 44103 US.</p>
               <p>Call us 440.812.3776.</p>
               <p>ciaodaniel@gmail.com</p>
