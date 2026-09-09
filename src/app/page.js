@@ -89,44 +89,44 @@ const regions = [
     count: "20 Regional Selections",
     description:
       "Italy is home to one of the world's most diverse wine cultures, with each region offering its own grapes, traditions, and styles.",
-    href: "/portfolio/italy",
+    href: "/italy",
   },
   {
     name: "France",
     count: "4 Regional Selections",
     description:
       "Discover wines from 4 regional selections, representing the heritage and diversity of French winemaking.",
-    href: "/portfolio/france",
+    href: "/france",
   },
   {
     name: "Argentina",
     description:
       "Discover our selection from Argentina and wines shaped by distinctive growing regions and winemaking traditions.",
-    href: "/portfolio/argentina",
+    href: "/Argentina",
   },
   {
     name: "California",
     description:
       "Discover selected California wines representing the state's diverse wine-growing regions and styles.",
-    href: "/portfolio/california",
+    href: "/california",
   },
   {
     name: "Oregon",
     description:
       "Explore distinctive wines from Oregon and selections from one of America's emerging wine regions.",
-    href: "/portfolio/oregon",
+    href: "/Oregon",
   },
   {
     name: "Spain",
     description:
       "Discover wines reflecting Spain's diverse regions, indigenous grapes, and winemaking traditions.",
-    href: "/portfolio/spain",
+    href: "/Spain",
   },
   {
     name: "Portugal",
     description:
       "Explore wines that showcase Portugal's unique grape varieties and rich winemaking heritage.",
-    href: "/portfolio/portugal",
+    href: "/Portugal",
   },
 ];
 
@@ -423,34 +423,39 @@ const images = [
   // },
 ];
 // Tastefully Yours  start
+// Tastefully Yours start
 const categorie = [
   {
     id: 1,
     name: "Italy",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon1.png",
+    href: "/italy",
   },
   {
     id: 2,
     name: "France",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon2.png",
+    href: "/france",
   },
   {
     id: 3,
     name: "Argentina",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon4.png",
+    href: "/Argentina",
   },
   {
     id: 4,
     name: "Oregon",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon3.png",
+    href: "/Oregon",
   },
   {
     id: 5,
     name: "California",
     image: "https://dtwine.wpenginepowered.com/wp-content/uploads/2017/06/tab-icon5.png",
+    href: "/california",
   },
 ];
-
 // Products Data
 const products = [
   {
@@ -532,6 +537,7 @@ const product = [
 export default function HeroSlider() {
    const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   // Auto Play
   useEffect(() => {
@@ -571,39 +577,204 @@ export default function HeroSlider() {
    <div className="w-full">
 
 <section className="relative w-full overflow-hidden bg-black m-0 p-0 group">
-
   <div className="relative w-full aspect-[1983/793]">
 
-    <Image
-      src={images[currentIndex].src}
-      alt={images[currentIndex].alt}
-      fill
-      priority
-      sizes="100vw"
-      className="object-contain object-center transition-all duration-700"
-    />
+    {/* HERO IMAGE */}
+    {images.length > 0 && images[currentIndex] && (
+      <Image
+        src={images[currentIndex].src}
+        alt={images[currentIndex].alt || "Hero image"}
+        fill
+        priority
+        sizes="100vw"
+        className="object-contain object-center transition-all duration-700"
+      />
+    )}
+
+    {/* SLIDE CONTENT / BUTTONS */}
+    <div
+      className="
+        absolute inset-0 z-20
+        flex items-end
+        px-3 pb-4
+
+        sm:px-5 sm:pb-6
+
+        md:px-8 md:pb-8
+
+        lg:px-12 lg:pb-10
+
+        xl:px-16 xl:pb-14
+
+        2xl:px-20 2xl:pb-16
+      "
+    >
+      <div
+        className="
+          flex items-center
+          gap-2
+
+          sm:gap-3
+
+          md:gap-4
+
+          lg:gap-5
+        "
+      >
+
+        {/* SHOP NOW */}
+        <button
+          onClick={() => {
+            window.location.href = "/shop";
+          }}
+          className="
+            px-2 py-1.5
+            text-[7px]
+
+            sm:px-4 sm:py-2
+            sm:text-[10px]
+
+            md:px-5 md:py-2.5
+            md:text-xs
+
+            lg:px-7 lg:py-3
+            lg:text-sm
+
+            xl:px-8 xl:py-3
+            xl:text-base
+
+            2xl:px-9 2xl:py-3.5
+
+            bg-[#71111B]
+            hover:bg-[#5c1621]
+
+            text-white
+            font-semibold
+
+            rounded-md
+            shadow-lg
+            cursor-pointer
+
+            transition-all
+            duration-300
+
+            hover:scale-105
+
+            whitespace-nowrap
+          "
+        >
+          SHOP NOW
+        </button>
+
+        {/* CONTACT */}
+        <button
+          onClick={() => {
+            window.location.href = "/contact";
+          }}
+          className="
+            px-2 py-1.5
+            text-[7px]
+
+            sm:px-4 sm:py-2
+            sm:text-[10px]
+
+            md:px-5 md:py-2.5
+            md:text-xs
+
+            lg:px-7 lg:py-3
+            lg:text-sm
+
+            xl:px-8 xl:py-3
+            xl:text-base
+
+            2xl:px-9 2xl:py-3.5
+
+            bg-white/90
+            hover:bg-white
+            cursor-pointer
+
+            text-[#741C29]
+            font-semibold
+
+            rounded-md
+            shadow-lg
+
+            transition-all
+            duration-300
+
+            hover:scale-105
+
+            whitespace-nowrap
+          "
+        >
+          CONTACT
+        </button>
+
+      </div>
+    </div>
 
     {/* LEFT ARROW */}
     <button
       onClick={prevSlide}
       aria-label="Previous slide"
       className="
-        absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30
-        w-10 h-10 sm:w-12 sm:h-12
+        absolute
+        left-2
+        sm:left-3
+        md:left-4
+        lg:left-6
+        xl:left-8
+
+        top-1/2
+        -translate-y-1/2
+        z-30
+
+        w-7 h-7
+
+        sm:w-8 sm:h-8
+
+        md:w-10 md:h-10
+
+        lg:w-11 lg:h-11
+
+        xl:w-12 xl:h-12
+
         flex items-center justify-center
+
         rounded-full
-        bg-black/40 backdrop-blur-sm
+
+        bg-black/40
+        backdrop-blur-sm
+
         border border-white/30
+
         text-white
+
         opacity-0
         group-hover:opacity-100
+
         hover:bg-[#741C29]
         hover:border-white
-        scale-90 hover:scale-100
+
+        scale-90
+        hover:scale-100
+
         transition-all duration-300
       "
     >
-      <FiChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+      <FiChevronLeft
+        className="
+          w-3 h-3
+
+          sm:w-3.5 sm:h-3.5
+
+          md:w-4 md:h-4
+
+          lg:w-5 lg:h-5
+
+          xl:w-6 xl:h-6
+        "
+      />
     </button>
 
     {/* RIGHT ARROW */}
@@ -611,26 +782,66 @@ export default function HeroSlider() {
       onClick={nextSlide}
       aria-label="Next slide"
       className="
-        absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30
-        w-10 h-10 sm:w-12 sm:h-12
+        absolute
+        right-2
+        sm:right-3
+        md:right-4
+        lg:right-6
+        xl:right-8
+
+        top-1/2
+        -translate-y-1/2
+        z-30
+
+        w-7 h-7
+
+        sm:w-8 sm:h-8
+
+        md:w-10 md:h-10
+
+        lg:w-11 lg:h-11
+
+        xl:w-12 xl:h-12
+
         flex items-center justify-center
+
         rounded-full
-        bg-black/40 backdrop-blur-sm
+
+        bg-black/40
+        backdrop-blur-sm
+
         border border-white/30
+
         text-white
+
         opacity-0
         group-hover:opacity-100
+
         hover:bg-[#741C29]
         hover:border-white
-        scale-90 hover:scale-100
+
+        scale-90
+        hover:scale-100
+
         transition-all duration-300
       "
     >
-      <FiChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+      <FiChevronRight
+        className="
+          w-3 h-3
+
+          sm:w-3.5 sm:h-3.5
+
+          md:w-4 md:h-4
+
+          lg:w-5 lg:h-5
+
+          xl:w-6 xl:h-6
+        "
+      />
     </button>
 
   </div>
-
 </section>
 
    {/* ====================  inderduded your self start   =========================*/}
@@ -640,51 +851,26 @@ export default function HeroSlider() {
     PROFESSIONAL WINE INTRO SECTION
 ========================================================= */}
 
-<section className="w-full font-philosopher overflow-hidden bg-[#F4F2EC]">
-
+<section className="w-full overflow-hidden bg-[#F4F2EC] font-philosopher">
   <div
     className="
-      mx-auto
-      w-full
-      font-philosopher
-      max-w-[1600px]
-      px-5
-      py-14
-
-      sm:px-8
-      sm:py-16
-
-      md:px-10
-      md:py-20
-
-      lg:px-14
-      lg:py-24
-
-      xl:px-20
-      xl:py-28
-
-      2xl:px-24
-      2xl:py-32
+      mx-auto w-full max-w-[1600px]
+      px-5 py-14
+      sm:px-8 sm:py-16
+      md:px-10 md:py-20
+      lg:px-14 lg:py-24
+      xl:px-20 xl:py-28
+      2xl:px-24 2xl:py-32
     "
   >
-
     <div
       className="
-        grid
-        grid-cols-1
-        items-center
-
+        grid grid-cols-1 items-center
         gap-12
-
         sm:gap-14
-
         md:gap-16
-
-        lg:grid-cols-2
-        lg:gap-16
-
+        lg:grid-cols-2 lg:gap-16
         xl:gap-24
-
         2xl:gap-32
       "
     >
@@ -693,57 +879,86 @@ export default function HeroSlider() {
           LEFT — IMAGE
       ====================================================== */}
 
- 
-{/* LEFT SIDE IMAGE */}
+      <div className="flex w-full justify-center lg:justify-start">
+        <div
+          className="
+            relative flex w-full
+            max-w-[430px]
+            items-center justify-center
+            sm:max-w-[500px]
+            md:max-w-[540px]
+            lg:max-w-[560px]
+            xl:max-w-[610px]
+            2xl:max-w-[660px]
+          "
+        >
+          {/* Image Frame */}
+          <div
+            className="
+              relative w-full overflow-hidden
+              border border-[#D8D1C5]
+              bg-[#EAE5DC]
+              shadow-[0_20px_60px_rgba(36,27,22,0.08)]
+            "
+          >
+            <img
+              src="/to our wine world.png"
+              alt="Premium Wine"
+              className="
+                block w-full
+                h-[440px]
+                sm:h-[520px]
+                md:h-[580px]
+                lg:h-[650px]
+                xl:h-[700px]
+                2xl:h-[740px]
+                object-contain object-center
+                select-none
+                transition-transform duration-700
+                hover:scale-[1.02]
+              "
+            />
 
-<div className="flex w-full justify-center lg:justify-start">
+            {/* Image Overlay */}
+            <div
+              className="
+                pointer-events-none absolute inset-0
+                bg-gradient-to-t
+                from-[#241B16]/20
+                via-transparent
+                to-transparent
+              "
+            />
 
-  <div
-    className="
-      relative
-      flex
-      w-full
-      max-w-[430px]
-      items-center
-      justify-center
-
-      h-[440px]
-
-      sm:h-[520px]
-      sm:max-w-[500px]
-
-      md:h-[580px]
-      md:max-w-[540px]
-
-      lg:h-[720px]
-      lg:max-w-[560px]
-
-      xl:h-[720px]
-      xl:max-w-[610px]
-
-      2xl:h-[740px]
-      2xl:max-w-[660px]
-    "
-  >
-
-    <img
-      src="/to our wine world.png"
-      alt="Premium Wine"
-      className="
-        block
-        h-full
-        w-full
-        object-contain
-        object-center
-        select-none
-      "
-    />
-
-  </div>
-
-</div>
-
-
+            {/* Image Label */}
+            <div
+              className="
+                absolute bottom-5 left-5
+                sm:bottom-7 sm:left-7
+              "
+            >
+              <div
+                className="
+                  border border-white/30
+                  bg-[#241B16]/55
+                  px-4 py-2.5
+                  backdrop-blur-sm
+                "
+              >
+                <p
+                  className="
+                    text-[8px] font-medium uppercase
+                    tracking-[0.28em] text-white
+                    sm:text-[9px]
+                  "
+                >
+                  Our Wine World
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       {/* =====================================================
@@ -752,131 +967,78 @@ export default function HeroSlider() {
 
       <div
         className="
-          flex
-          w-full
-          flex-col
-          items-start
-          text-left
-
+          flex w-full flex-col
+          items-start text-left
           lg:max-w-xl
-
           xl:max-w-2xl
         "
       >
 
-        {/* ===================================================
-            TOP LABEL
-        ==================================================== */}
+        {/* TOP LABEL */}
 
-        <div
-          className="
-            mb-5
-            flex
-            items-center
-            gap-3
-
-            sm:mb-6
-            sm:gap-4
-
-            md:mb-7
-          "
-        >
+        <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
+          <span className="h-px w-8 bg-[#71111B] sm:w-10 md:w-12" />
 
           <span
             className="
-              h-px
-              w-8
-              bg-[#71111B]
-
-              sm:w-10
-
-              md:w-12
-            "
-          />
-
-          <span
-            className="
-              text-[9px]
-              font-medium
-              uppercase
-              tracking-[0.25em]
-              text-gray-500
-
+              text-[9px] font-medium uppercase
+              tracking-[0.25em] text-[#7B716A]
               sm:text-[10px]
               sm:tracking-[0.3em]
-
               md:text-xs
             "
           >
-            Welcome to our wine world
+            Welcome to Our Wine World
           </span>
-
         </div>
 
 
-        {/* ===================================================
-            MAIN HEADING
-        ==================================================== */}
+        {/* HEADING */}
 
         <h1
           className="
             max-w-3xl
-        font-philosopher
+            font-philosopher
+            text-[2.3rem]
             leading-[1.08]
             tracking-[-0.025em]
-            text-gray-900
-
-            text-[2.3rem]
-
+            text-[#241B16]
             sm:text-[3rem]
-
             md:text-[3.7rem]
-
             lg:text-[3.5rem]
-
             xl:text-[4.25rem]
-
             2xl:text-[4.7rem]
           "
         >
-
           Our wines are
-
           <br />
 
-          <span className="italic font-Philosopher text-[#71111B]">
+          <span className="italic text-[#71111B]">
             made with passion
           </span>
 
           <br />
 
           and crafted with care.
-
         </h1>
 
 
-        {/* ===================================================
-            DESCRIPTION
-        ==================================================== */}
+        {/* DIVIDER */}
+
+        <div className="mt-7 h-px w-16 bg-[#B89B6A] sm:mt-8 sm:w-20" />
+
+
+        {/* DESCRIPTION */}
 
         <p
           className="
-            mt-6
-            max-w-xl
-            text-sm
-            font-light
-            leading-7
-            text-gray-500
-
-            sm:mt-7
-            sm:text-[15px]
+            mt-6 max-w-xl
+            text-sm font-light
+            leading-7 text-[#6D625B]
+            sm:mt-7 sm:text-[15px]
             sm:leading-7
-
-            md:mt-8
-            md:text-base
+            md:mt-8 md:text-base
             md:leading-8
-             font-philosopher
-
             xl:max-w-2xl
           "
         >
@@ -887,127 +1049,248 @@ export default function HeroSlider() {
         </p>
 
 
-        {/* ===================================================
+        {/* =====================================================
             BUTTONS
-        ==================================================== */}
+        ====================================================== */}
 
         <div
           className="
-            mt-8
-            flex
-            w-full
-            flex-col
-            gap-3
-
+            mt-8 flex w-full
+            flex-col gap-3
             sm:mt-9
             sm:w-auto
             sm:flex-row
+            sm:items-center
             sm:gap-4
-
             md:mt-10
           "
         >
 
           {/* SHOP WINES */}
 
-
-<Link
-  href="/shop"
-  className="
-    inline-block
-    w-full
-    rounded-sm
-    bg-[#71111B]
-    px-8
-    py-4
-    text-center
-    text-[10px]
-    font-semibold
-    uppercase
-    tracking-[0.24em]
-    text-white
-    transition-all
-    duration-300
-    hover:bg-[#5A0D15]
-    hover:shadow-xl
-    active:scale-[0.98]
-    sm:w-auto
-    sm:px-9
-  "
->
-  Shop Wines
-</Link>
+          <Link
+            href="/shop"
+            className="
+              inline-flex
+              w-full
+              items-center
+              justify-center
+              rounded-sm
+              bg-[#71111B]
+              px-8 py-4
+              text-center
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-[0.24em]
+              text-white
+              transition-all
+              duration-300
+              hover:bg-[#5A0D15]
+              hover:shadow-[0_10px_30px_rgba(113,17,27,0.18)]
+              active:scale-[0.98]
+              sm:w-auto
+              sm:px-9
+            "
+          >
+            Shop Wines
+          </Link>
 
 
           {/* DISCOVER MORE */}
 
           <button
             type="button"
+            onClick={() => setShowMore(!showMore)}
+            aria-expanded={showMore}
             className="
+              inline-flex
               w-full
+              items-center
+              justify-center
               rounded-sm
               border
-              border-gray-400
+              border-[#BDB4A9]
               bg-transparent
-              px-8
-              py-4
-
+              px-8 py-4
               text-[10px]
               font-semibold
               uppercase
               tracking-[0.24em]
-              text-gray-700
-
+              text-[#5E554F]
               transition-all
               duration-300
-
               hover:border-[#71111B]
               hover:bg-white
               hover:text-[#71111B]
-
               active:scale-[0.98]
-
+              cursor-
               sm:w-auto
               sm:px-9
             "
           >
-            Discover More
+            <span>
+              {showMore ? "Show Less" : "Discover More"}
+            </span>
+
+            <span
+              className={`
+                ml-3 text-sm
+                transition-transform duration-300
+                ${showMore ? "rotate-180" : "rotate-0"}
+              `}
+            >
+              ↓
+            </span>
           </button>
 
         </div>
 
 
-        {/* ===================================================
+        {/* =====================================================
+            DISCOVER MORE CONTENT
+        ====================================================== */}
+
+        <div
+          className={`
+            grid w-full transition-all duration-500 ease-in-out
+            ${
+              showMore
+                ? "mt-6 grid-rows-[1fr] opacity-100"
+                : "grid-rows-[0fr] opacity-0"
+            }
+          `}
+        >
+          <div className="overflow-hidden">
+
+            <div
+              className="
+                border-t border-[#D5CEC3]
+                pt-6
+              "
+            >
+
+              <p
+                className="
+                  max-w-2xl
+                  text-sm
+                  leading-7
+                  text-[#6D625B]
+                  sm:text-[15px]
+                  sm:leading-8
+                "
+              >
+                We carefully select wines from distinctive regions
+                and producers, focusing on quality, character and
+                regional identity. Our portfolio is designed to help
+                restaurants, hotels, retailers, bars and hospitality
+                businesses discover wines that genuinely fit their
+                customers and individual needs.
+              </p>
+
+
+              {/* MINI FEATURES */}
+
+              <div
+                className="
+                  mt-6
+                  grid grid-cols-1
+                  gap-3
+                  sm:grid-cols-3
+                "
+              >
+
+                <div
+                  className="
+                    border border-[#D8D0C5]
+                    bg-[#ECE8E0]
+                    p-4
+                    sm:p-5
+                  "
+                >
+                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
+                    01
+                  </span>
+
+                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
+                    Quality
+                  </h4>
+
+                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
+                    Carefully selected wines with character.
+                  </p>
+                </div>
+
+
+                <div
+                  className="
+                    border border-[#D8D0C5]
+                    bg-[#ECE8E0]
+                    p-4
+                    sm:p-5
+                  "
+                >
+                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
+                    02
+                  </span>
+
+                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
+                    Craft
+                  </h4>
+
+                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
+                    Tradition and expertise in every bottle.
+                  </p>
+                </div>
+
+
+                <div
+                  className="
+                    border border-[#D8D0C5]
+                    bg-[#ECE8E0]
+                    p-4
+                    sm:p-5
+                  "
+                >
+                  <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#71111B]">
+                    03
+                  </span>
+
+                  <h4 className="mt-2 text-sm font-semibold text-[#241B16]">
+                    Character
+                  </h4>
+
+                  <p className="mt-1.5 text-xs leading-5 text-[#7B716A]">
+                    Distinctive wines from unique regions.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+        {/* =====================================================
             QUALITY INFORMATION
-        ==================================================== */}
+        ====================================================== */}
 
         <div
           className="
-            mt-8
-            flex
-            flex-wrap
+            mt-8 flex flex-wrap
             items-center
-            gap-x-6
-            gap-y-3
-
+            gap-x-7 gap-y-3
+            border-t border-[#DDD6CC]
+            pt-6
             sm:mt-9
-
             md:mt-10
           "
         >
 
-          {/* QUALITY */}
-
           <div className="flex items-center gap-2.5">
-
-            <span
-              className="
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#71111B]
-              "
-            />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
 
             <span
               className="
@@ -1015,31 +1298,18 @@ export default function HeroSlider() {
                 font-medium
                 uppercase
                 tracking-[0.18em]
-                text-gray-400
-
+                text-[#8A8179]
                 sm:text-[9px]
-
                 md:text-[10px]
               "
             >
               Premium Quality
             </span>
-
           </div>
 
 
-          {/* CRAFT */}
-
           <div className="flex items-center gap-2.5">
-
-            <span
-              className="
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#71111B]
-              "
-            />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
 
             <span
               className="
@@ -1047,47 +1317,49 @@ export default function HeroSlider() {
                 font-medium
                 uppercase
                 tracking-[0.18em]
-                text-gray-400
-
+                text-[#8A8179]
                 sm:text-[9px]
-
                 md:text-[10px]
               "
             >
               Crafted With Care
             </span>
+          </div>
 
+
+          <div className="flex items-center gap-2.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
+
+            <span
+              className="
+                text-[8px]
+                font-medium
+                uppercase
+                tracking-[0.18em]
+                text-[#8A8179]
+                sm:text-[9px]
+                md:text-[10px]
+              "
+            >
+              Selected With Purpose
+            </span>
           </div>
 
         </div>
 
 
-        {/* ===================================================
-            DECORATIVE BOTTOM LINE
-        ==================================================== */}
+        {/* BOTTOM ACCENT */}
 
-        <div
-          className="
-            mt-8
-            h-px
-            w-16
-            bg-gray-300
-
-            sm:mt-10
-            sm:w-20
-
-            md:mt-12
-          "
-        />
+        <div className="mt-8 flex items-center gap-3 sm:mt-10">
+          <div className="h-px w-12 bg-[#B89B6A]" />
+          <div className="h-1.5 w-1.5 rounded-full bg-[#71111B]" />
+          <div className="h-px w-6 bg-[#D3CCC2]" />
+        </div>
 
       </div>
-
     </div>
-
   </div>
-
 </section>
-
 
 
 
@@ -1162,8 +1434,9 @@ export default function HeroSlider() {
   className="
     inline-block
     bg-[#EAE6DE]
-    hover:bg-[#dfd9cd]
+    hover:bg-[#71111B]
     text-gray-800
+    hover:text-white
     text-xs
     font-semibold
     uppercase
@@ -1317,7 +1590,7 @@ export default function HeroSlider() {
 
  <Link
   href="/shop"
-  className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
+  className="bg-[#E2DDD3] hover:bg-[#71111B] text-gray-800 hover:text-white text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
 >
   SHOP NOW
 </Link>
@@ -1379,9 +1652,9 @@ export default function HeroSlider() {
 
      <Link
   href="/shop"
-  className="bg-[#E2DDD3] hover:bg-[#d5cfc3] text-gray-800 text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
+  className="bg-[#E2DDD3] hover:bg-[#71111B] text-gray-800 hover:text-white text-xs font-semibold uppercase tracking-widest py-3 px-8 transition-colors duration-200 rounded-sm inline-block"
 >
-  SHOP NOW
+  EXPLORE OUR PORTFOLIO
 </Link>
     </div>
 
@@ -2000,31 +2273,86 @@ Every bottle delivers a unique taste experience made to be remembered.
         </div>
 
         {/* ==================== 2. CIRCULAR CATEGORIES FILTER ==================== */}
-<div className="flex flex-wrap justify-center items-center gap-8 mb-16">
+{/* ==================== 2. CIRCULAR CATEGORIES FILTER ==================== */}
+
+<div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mb-16">
   {categorie.map((cat, idx) => (
     <div key={cat.id} className="flex items-center">
 
-      <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32">
+      <Link
+        href={cat.href}
+        className="
+          group
+          block
+          rounded-full
+          focus:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-[#71111B]
+          focus-visible:ring-offset-4
+        "
+      >
+        <div
+          className="
+            relative
+            w-24 h-24
+            sm:w-28 sm:h-28
+            lg:w-32 lg:h-32
+            transition-all
+            duration-500
+            group-hover:-translate-y-2
+            group-hover:scale-105
+          "
+        >
 
-        {/* Background Image */}
-        <Image
-          src={cat.image}
-          alt={cat.name}
-          fill
-          className="object-contain"
-        />
+          {/* Background Image */}
+          <Image
+            src={cat.image}
+            alt={cat.name}
+            fill
+            className="
+              object-contain
+              transition-all
+              duration-500
+              group-hover:drop-shadow-[0_12px_18px_rgba(113,17,27,0.18)]
+            "
+          />
 
-        {/* Text Inside Image */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[10px] sm:text-xs font-old-standard text-center text-black whitespace-pre-line leading-4">
-            {cat.name}
-          </span>
+          {/* Text Inside Image */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span
+              className="
+                text-[10px]
+                sm:text-xs
+                font-old-standard
+                text-center
+                text-black
+                whitespace-pre-line
+                leading-4
+                transition-colors
+                duration-300
+                group-hover:text-[#71111B]
+              "
+            >
+              {cat.name}
+            </span>
+          </div>
+
         </div>
+      </Link>
 
-      </div>
-
+      {/* Separator */}
       {idx !== categorie.length - 1 && (
-        <span className="hidden lg:block mx-5 text-gray-300">|</span>
+        <span
+          className="
+            hidden
+            lg:block
+            mx-5
+            text-[#D8D2CA]
+            text-lg
+          "
+        >
+          |
+        </span>
       )}
 
     </div>
@@ -2247,7 +2575,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
 
             {offer.title === "Wholesale Opportunities" ? (
               <Link
-                href="/wholesale"
+                href="/contact"
                 className="
                   inline-flex items-center gap-3
                   border-b border-[#7B1E2B]
@@ -3309,7 +3637,7 @@ Our carefully aged collection captures depth, character, and exceptional flavor 
 
       {/* Primary */}
       <Link
-        href="/wholesale"
+        href="/contact"
         className="
           group
           inline-flex

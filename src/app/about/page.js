@@ -1058,20 +1058,26 @@ export default function AboutUs() {
       </section>
 
       {/* ================= OUR APPROACH SECTION ================= */}
-<section className="bg-[#EAE2D5] py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 border-y border-[#C8BBAA]">
+<section className=" py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 border-y border-[#C8BBAA]">
   <div className="mx-auto max-w-[1400px]">
 
     <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 xl:gap-20 items-start">
 
       {/* LEFT — IMAGE */}
       <div className="relative lg:sticky lg:top-24">
-        <div className="relative overflow-hidden border border-[#C8BBAA] bg-[#F5F1E8] shadow-sm">
+        <div className="relative overflow-hidden ">
 
-          <img
+          {/* <img
             src="/about.png"
             alt="Curated selection of wines representing quality, character, and regional identity"
             className="w-full h-[420px] sm:h-[520px] lg:h-[650px] object-cover"
-          />
+          /> */}
+
+          <img
+  src="/about.png"
+  alt="Curated selection of wines representing quality, character, and regional identity"
+  className="w-full h-[420px] sm:h-[520px] lg:h-[650px] object-contain bg-[#F5F1E8]"
+/>
 
           {/* Subtle overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#241B16]/30 via-transparent to-transparent" />

@@ -1330,11 +1330,11 @@ export default function ContactUs() {
                   {sending ? (
                     <span className="flex items-center justify-center gap-3">
 
-                      <span className="w-4 h-4 border-2 border-[#120D0B]/30 border-t-[#120D0B] rounded-full animate-spin" />
+                      <span className="w-4 h-4 border-2 cursor-pointer border-[#120D0B]/30 border-t-[#120D0B] rounded-full animate-spin" />
 
                       Sending Request...
 
-                    </span>
+                    </span >
                   ) : (
                     "Request Wholesale Pricing"
                   )}
@@ -1384,7 +1384,7 @@ export default function ContactUs() {
                 >
 
                   <Link
-                    href="#"
+                    href="/contact"
                     className="flex items-center justify-center gap-3 w-full border border-[#C5A059] bg-[#C5A059]/10 text-[#E2C792] hover:bg-[#C5A059] hover:text-[#120D0B] font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition-all duration-300"
                   >
                     <PhoneIcon />
