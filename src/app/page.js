@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
+import { ArrowRight, Compass, ShieldCheck, Globe, Wine } from 'lucide-react';
 import { Link as LinkIcon, Search } from 'lucide-react'; // icons ke liye lucide-react (optional)
 import WineLoader from "../component/WineLoader"; // WineLoader component ko import karein
 // Swiper styles
@@ -1138,7 +1139,7 @@ export default function HeroSlider() {
           IMAGE + BUTTONS + DISCOVER = LEFT SIDE
       ====================================================== */}
 
-    <div className="contents lg:block">
+<div className="contents lg:block">
 
   {/* =====================================================
       IMAGE
@@ -1155,7 +1156,8 @@ export default function HeroSlider() {
   >
     <div
       className="
-        relative w-full
+        relative
+        w-full
         max-w-[430px]
 
         sm:max-w-[500px]
@@ -1169,18 +1171,23 @@ export default function HeroSlider() {
       {/* IMAGE CONTAINER */}
       <div
         className="
-          relative w-full
-          overflow-hidden
+          relative
+          w-full
+          overflow-visible
           bg-transparent
         "
       >
 
-        {/* MAIN IMAGE */}
+        {/* =================================================
+            MAIN IMAGE
+        ================================================== */}
+
         <img
           src="/to our wine world.png"
           alt="Premium Wine"
           className="
-            block w-full
+            block
+            w-full
 
             h-[300px]
             sm:h-[380px]
@@ -1200,38 +1207,49 @@ export default function HeroSlider() {
           "
         />
 
+
         {/* =================================================
-            CIAO DANIEL LOGO
-            UPPER LEFT OF IMAGE
+            26 YEARS LOGO
+            RESPONSIVE UPPER-RIGHT
         ================================================== */}
 
-   <div 
+   <div
   className="
     pointer-events-none
     absolute
-    right-[6%]
-    top-[-3%]
-    z-20
+    right-[-2%]
+    top-[8%]
+    z-30
+    sm:right-[-1%]
+    sm:top-[7%]
+    md:right-[0%]
+    md:top-[6%]
+    lg:right-[1%]
+    lg:top-[5%]
+    xl:right-[1%]
+    xl:top-[5%]
+    2xl:right-[2%]
+    2xl:top-[5%]
   "
 >
-  <Image 
+  <Image
     src="/26 YEARS.png"
-    alt="Ciao Daniel Logo"
+    alt="26 Years of Wine Excellence"
     width={300}
-    height={100}
+    height={120}
     priority
     quality={100}
     unoptimized
     className="
       block
       h-auto
-      w-[95px]
-      sm:w-[120px]
-      md:w-[140px]
-      lg:w-[160px]
-      xl:w-[180px]
-      2xl:w-[200px]
       object-contain
+      w-[85px]
+      sm:w-[105px]
+      md:w-[120px]
+      lg:w-[135px]
+      xl:w-[150px]
+      2xl:w-[165px]
     "
   />
 </div>
@@ -1266,6 +1284,7 @@ export default function HeroSlider() {
       lg:order-none
       lg:mt-7
       lg:pl-11
+
       xl:pl-22
       2xl:pl-16
     "
@@ -2481,11 +2500,6 @@ export default function HeroSlider() {
 
 
 
-{/* Message from Wine Maker Upgrade to the latest!  start*/}
-
-
-
-    {/* Message from Wine Maker Upgrade to the latest! end*/}
 
 
 {/* The Process of WineMaking start */}
@@ -2590,220 +2604,181 @@ export default function HeroSlider() {
 {/* ===================  What CIAO DANIEL'S  Offers  start  =======================*/}
 
 
-<section className="relative overflow-hidden bg-[#F4F2EC] px-4 py-16 xs:px-6 sm:px-8 sm:py-24 md:px-12 lg:px-16 lg:py-32">
-      <div className="mx-auto max-w-[1500px]">
+<section className="min-h-screen bg-[#EAE3DA] text-[#2C2421] px-4 py-8 md:px-12 md:py-16 font-sans antialiased selection:bg-[#5A2D23] selection:text-white">
+      {/* Top Floating Metallic Navigation Bar */}
+      
+      {/* Hero Header Section */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 mb-16 items-end">
+        <div className="md:col-span-7 space-y-3">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#741C29] font-bold block">
+            Boutique Wine Selection
+          </span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal leading-[1.05] text-[#1C1514] tracking-tight">
+            What <span className="font-semibold">CIAO</span><br />
+            <span class="italic font-light">DANIEL'S</span><br />
+            Offers
+          </h1>
+        </div>
+
+        {/* Top Right Floating Detail Box */}
+        <div className="md:col-span-5 bg-[#DFD6CB]/80 backdrop-blur-md p-6 rounded-2xl border border-[#C2B7A8] shadow-sm space-y-4">
+          <p className="text-xs leading-relaxed text-[#544640] font-normal">
+            From carefully selected wines to tailored wholesale solutions, we help hospitality businesses create exceptional wine programs with confidence and consistency.
+          </p>
+          <div className="pt-4 border-t border-[#C2B7A8]/60 flex items-center justify-between">
+            <div>
+              <span className="text-4xl font-serif font-bold text-[#1C1514] leading-none">26</span>
+              <span className="text-[10px] tracking-widest uppercase text-[#741C29] block mt-1">Years in Hospitality</span>
+            </div>
+            <div className="w-8 h-8 rounded-full border border-[7a0218]/40 flex items-center justify-center text-[#8C6B5D]">
+              <Wine className="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main 4 Cards Section */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        {/* =========================================================
-            HEADER SECTION
-        ========================================================= */}
-        <div className="relative mb-16 sm:mb-20 lg:mb-28">
-          
-          {/* Top Meta Bar */}
-          <div className="mb-8 flex items-center justify-between border-b border-[#CFC5B7]/60 pb-6 sm:mb-12">
-            <div className="flex items-center gap-3 sm:gap-4">
-              <span className="font-philosopher text-xl font-bold text-[#7B1E2B] sm:text-2xl">
-                01
-              </span>
-              <span className="h-px w-8 bg-[#C8BDAF] sm:w-16" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#7B1E2B] sm:text-xs">
-                Our Services
-              </span>
-            </div>
-
-            <div className="hidden sm:flex items-center gap-3">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8A7D73]">
-                Fine Wine
-              </span>
-              <span className="h-1.5 w-1.5 rounded-full bg-[#A98552]" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8A7D73]">
-                Hospitality
-              </span>
+        {/* Card 01: Rich Mahogany Wood Texture */}
+        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#4A241C] via-[#331711] to-[#1F0C08] text-[#F3EEEA] shadow-2xl border border-[#6E3A2E]/50 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
+          <div className="flex justify-between items-start z-10">
+            <span className="text-3xl font-serif text-amber-200/90 font-light">01</span>
+            <div className="flex items-center space-x-2 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-500/20">
+              <Wine className="w-3.5 h-3.5 text-amber-300" />
+              <span className="text-[10px] tracking-widest uppercase text-amber-200/80">Wine Family's</span>
             </div>
           </div>
 
-          {/* Main Hero Header Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-end">
-            
-            {/* Left: Heading Block */}
-            <div className="relative">
-              {/* Vertical Accent Label (Desktop Only) */}
-              <div className="absolute -left-6 top-2 hidden xl:block">
-                <span className="block [writing-mode:vertical-rl] rotate-180 text-[9px] font-bold uppercase tracking-[0.35em] text-[#A98552]">
-                  Curated Wine Experience
-                </span>
-              </div>
-
-              <div className="xl:pl-6">
-                <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#8A7D73] sm:text-xs">
-                  The CIAO DANIEL&apos;S Approach
-                </p>
-
-                <h2 className="font-philosopher text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tight text-[#1A1412]">
-                  What <span className="text-[#7B1E2B]">CIAO</span>
-                  <br />
-                  DANIEL&apos;S
-                  <span className="block mt-2 text-[#1A1412]">Offers</span>
-                </h2>
-
-                <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:gap-4">
-                  <span className="h-[2px] w-16 bg-[#7B1E2B] sm:w-20" />
-                  <span className="h-px w-6 bg-[#A98552]" />
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-[#8A7D73] sm:text-[10px]">
-                    Beyond the bottle
-                  </span>
-                </div>
-              </div>
+          <div className="z-10 space-y-2">
+            <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-100">
+              Handpicked Selections
+            </h3>
+            <p className="text-xs text-amber-100/70 leading-relaxed max-w-sm">
+              Carefully selected small-batch and regional European wines, focusing on wines with quality, character, and a strong connection to their region.
+            </p>
+            <div className="pt-3">
+              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-300 transition-colors space-x-2">
+                <span>Explore Selection</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
-
-            {/* Right: Overview Panel */}
-            <div className="relative border-l-2 border-[#A98552]/40 pl-6 sm:pl-8 lg:pl-10">
-              <div className="mb-4 flex items-center gap-2.5">
-                <span className="h-2 w-2 rounded-full bg-[#7B1E2B]" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#7B1E2B]">
-                  Wine · Hospitality · Partnership
-                </span>
-              </div>
-
-              <p className="text-sm sm:text-base leading-relaxed text-[#544A42]">
-                From carefully selected wines to tailored wholesale solutions,
-                we help hospitality businesses create exceptional wine programs
-                with confidence and consistency.
-              </p>
-
-              {/* Experience Stat */}
-              <div className="mt-6 border-t border-[#CFC5B7]/80 pt-5 sm:mt-8">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-philosopher text-5xl font-bold leading-none text-[#7B1E2B] sm:text-6xl">
-                    26
-                  </span>
-                  <div>
-                    <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-[#1A1412]">
-                      Years
-                    </span>
-                    <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A98552]">
-                      Of Experience
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
 
-          {/* Section Divider */}
-          <div className="mt-12 flex items-center gap-4 sm:mt-16 lg:mt-20">
-            <span className="h-px flex-1 bg-[#CFC5B7]/80" />
-            <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#A98552]/60">
-              <span className="text-[10px] text-[#7B1E2B]">✦</span>
-            </div>
-            <span className="h-px flex-1 bg-[#CFC5B7]/80" />
-          </div>
-
+          {/* Background Watermark */}
+          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+            01
+          </span>
         </div>
 
-        {/* =========================================================
-            SERVICES CARDS GRID
-        ========================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {offers.map((offer, index) => (
-            <div
-              key={offer.title || index}
-              className="group relative flex flex-col justify-between overflow-hidden border border-[#D2C8BB] bg-[#EEEAE2] p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:bg-white hover:border-[#A98552] hover:shadow-xl hover:shadow-[#241B16]/5 min-h-[340px] sm:min-h-[380px]"
-            >
-              {/* Background Watermark Number */}
-              <span className="pointer-events-none absolute -right-4 -bottom-6 font-philosopher text-[140px] sm:text-[180px] lg:text-[200px] font-bold leading-none text-[#241B16]/[0.03] transition-all duration-700 group-hover:text-[#7B1E2B]/[0.06] group-hover:scale-105 select-none">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 h-12 w-12 border-l border-b border-[#A98552]/30 transition-all duration-500 group-hover:h-16 group-hover:w-16 group-hover:border-[#A98552]" />
-              <div className="absolute top-0 right-0 h-1.5 w-1.5 bg-[#A98552]" />
-
-              {/* Card Top */}
-              <div className="relative z-10 flex items-start justify-between">
-                <div>
-                  <span className="block font-philosopher text-4xl sm:text-5xl font-bold leading-none text-[#7B1E2B]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div className="mt-4 h-px w-8 bg-[#A98552] transition-all duration-500 group-hover:w-14" />
-                </div>
-
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#A98552]/40 transition-all duration-500 group-hover:rotate-45 group-hover:bg-[#7B1E2B] group-hover:border-[#7B1E2B]">
-                  <span className="h-2 w-2 rounded-full bg-[#A98552] transition-colors duration-500 group-hover:bg-white" />
-                </div>
-              </div>
-
-              {/* Card Content */}
-              <div className="relative z-10 mt-8 sm:mt-12">
-                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#A98552]">
-                  CIAO DANIEL&apos;S
-                </p>
-
-                <h3 className="font-philosopher text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#1A1412] transition-colors duration-300 group-hover:text-[#7B1E2B]">
-                  {offer.title}
-                </h3>
-
-                <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#544A42] max-w-[90%]">
-                  {offer.description}
-                </p>
-
-                {/* Call to Action */}
-                <div className="mt-6 pt-2">
-                  {offer.title === "Wholesale Opportunities" ? (
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[#7B1E2B] transition-all"
-                    >
-                      <span className="relative pb-1 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-[#7B1E2B] after:transition-all hover:after:w-1/2">
-                        Request Information
-                      </span>
-                      <span className="text-base transition-transform duration-300 group-hover:translate-x-1.5">
-                        →
-                      </span>
-                    </Link>
-                  ) : (
-                    <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#8A7D73]">
-                      <span>Premium Selection</span>
-                      <span className="h-px w-6 bg-[#A98552]" />
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Bottom Hover Accent Line */}
-              <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#7B1E2B] transition-all duration-500 group-hover:w-full" />
-            </div>
-          ))}
-        </div>
-
-        {/* =========================================================
-            BOTTOM FOOTER BAR
-        ========================================================= */}
-        <div className="mt-16 sm:mt-20 border-t border-[#CFC5B7]/80 pt-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
-              <span className="h-px w-8 bg-[#7B1E2B]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#8A7D73]">
-                Experience · Selection · Partnership
-              </span>
-            </div>
-
-            <div className="flex items-center gap-4 text-xs">
-              <span className="uppercase tracking-widest text-[#8A7D73]">
-                Since
-              </span>
-              <span className="font-philosopher text-lg font-bold text-[#7B1E2B]">
-                2000
-              </span>
-              <span className="h-px w-6 bg-[#A98552]" />
-              <span className="font-philosopher text-lg font-bold text-[#1A1412]">
-                26 Years
-              </span>
+        {/* Card 02: Dark Marble / Slate Surface */}
+        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#212429] via-[#16181C] to-[#0B0C0E] text-[#E0E2E5] shadow-2xl border border-[#3A3E47]/60 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
+          <div className="flex justify-between items-start z-10">
+            <span className="text-3xl font-serif text-gray-300/90 font-light">02</span>
+            <div className="flex items-center space-x-2 bg-gray-800/40 px-3 py-1 rounded-full border border-gray-500/20">
+              <Compass className="w-3.5 h-3.5 text-gray-300" />
+              <span className="text-[10px] tracking-widest uppercase text-gray-300/80">Wine Family's</span>
             </div>
           </div>
+
+          <div className="z-10 space-y-2">
+            <h3 className="text-2xl font-serif font-medium tracking-wide text-gray-100">
+              Personal Guidance
+            </h3>
+            <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
+              Choosing the right wine for your business can be challenging. Our team provides personal recommendations to help you make informed decisions.
+            </p>
+            <div className="pt-3">
+              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-gray-200 group-hover:text-white transition-colors space-x-2">
+                <span>Book a Consultation</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
+          {/* Background Watermark */}
+          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+            02
+          </span>
+        </div>
+
+        {/* Card 03: Carved Dark Wood / Leather Finish */}
+        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#382119] via-[#24130E] to-[#120805] text-[#EADBD3] shadow-2xl border border-[#523328]/60 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
+          <div className="flex justify-between items-start z-10">
+            <span className="text-3xl font-serif text-amber-300/80 font-light">03</span>
+            <div className="flex items-center space-x-2 bg-amber-950/30 px-3 py-1 rounded-full border border-amber-600/20">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-200/80" />
+              <span className="text-[10px] tracking-widest uppercase text-amber-200/70">Wine Family's</span>
+            </div>
+          </div>
+
+          <div className="z-10 space-y-2">
+            <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-50">
+              Curated Cases
+            </h3>
+            <p className="text-xs text-amber-100/60 leading-relaxed max-w-sm">
+              Looking to explore several wines at once? Our curated cases bring together thoughtfully selected bottles representing different regions and styles.
+            </p>
+            <div className="pt-3">
+              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-100 transition-colors space-x-2">
+                <span>View Cases</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
+          {/* Background Watermark */}
+          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+            03
+          </span>
+        </div>
+
+        {/* Card 04: Frosted Glassmorphism Overlay */}
+        <div className="group relative overflow-hidden rounded-3xl p-8 bg-white/40 backdrop-blur-xl text-[#1C1514] shadow-2xl border border-white/70 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
+          <div className="flex justify-between items-start z-10">
+            <span className="text-3xl font-serif text-[#4A3A33] font-light">04</span>
+            <div className="flex items-center space-x-2 bg-white/60 px-3 py-1 rounded-full border border-black/10">
+              <Globe className="w-3.5 h-3.5 text-[#5A4A42]" />
+              <span className="text-[10px] tracking-widest uppercase text-[#5A4A42]">Wine Family's</span>
+            </div>
+          </div>
+
+          <div className="z-10 space-y-2">
+            <h3 className="text-2xl font-serif font-medium tracking-wide text-[#1C1514]">
+              Wholesale Opportunities
+            </h3>
+            <p className="text-xs text-[#5A4A42] leading-relaxed max-w-sm">
+              Interested in carrying our wines? Contact our team to learn about wholesale pricing, availability, and ordering options tailored for businesses.
+            </p>
+            <div className="pt-3">
+              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-bold text-[#1C1514] group-hover:text-black transition-colors space-x-2">
+                <span>Partner With Us</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
+          {/* Background Watermark */}
+          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-black/[0.05] select-none pointer-events-none font-bold">
+            04
+          </span>
         </div>
 
       </div>
+
+      {/* Footer Meta Details */}
+      <footer className="max-w-6xl mx-auto mt-16 pt-6 border-t border-[#C2B7A8]/60 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-[#8C6B5D] gap-4">
+        <div className="flex space-x-6">
+          <span>Contact</span>
+          <span>/</span>
+          <span>Consultation</span>
+          <span>/</span>
+          <span>Membership</span>
+        </div>
+        <div>
+          Est. 2026 — Wine Collective
+        </div>
+      </footer>
     </section>
 
 
@@ -2812,295 +2787,302 @@ export default function HeroSlider() {
 
 
 {/*======================= Discover Wines by Country & Region start ================ */}
-<section className="relative overflow-hidden bg-[#EAE2D5] px-4 py-20 xs:px-6 sm:px-8 sm:py-24 md:px-12 md:py-28 lg:px-16 lg:py-32 xl:py-36">
-  <div className="mx-auto max-w-[1500px]">
+<section
+  className="relative overflow-hidden bg-[#F6F4F0] bg-cover bg-center bg-no-repeat px-4 py-16 xs:px-6 sm:px-8 md:px-12 lg:px-16 lg:py-20 xl:py-24"
+  style={{
+    backgroundImage: "url('/wines_all.png')",
+  }}
+>
+  {/* ================= BACKGROUND OVERLAY ================= */}
+  <div className="pointer-events-none absolute inset-0 bg-[#F6F4F0]/70" />
+
+  {/* Soft Decorative Glow */}
+  <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#741C29]/5 blur-3xl" />
+  <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[#C2A385]/10 blur-3xl" />
+
+  {/* ================= CONTENT ================= */}
+  <div className="relative z-10 mx-auto max-w-[1400px]">
 
     {/* ================= HEADER ================= */}
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16 xl:gap-24">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
 
-      <div>
+      {/* LEFT HEADER */}
+      <div className="lg:col-span-7">
+
         {/* Eyebrow */}
-        <div className="mb-5 flex items-center gap-3 sm:mb-6">
-          <span className="h-px w-10 bg-[#7B1E2B] sm:w-14" />
+        <div className="mb-5 flex items-center gap-3">
+          <span className="h-px w-10 bg-[#741C29]" />
 
-          <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#7B1E2B] xs:text-[11px] sm:text-xs sm:tracking-[0.32em]">
-            Explore Our Portfolio
+          <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#741C29]">
+            Explore Our Collection
           </p>
         </div>
 
         {/* Main Heading */}
-        <h2 className="font-philosopher text-4xl font-bold leading-[0.98] tracking-[-0.02em] text-[#241B16] xs:text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-[80px]">
+        <h2 className="font-serif text-4xl font-normal leading-[1.05] tracking-[-0.02em] text-[#1A1A1A] sm:text-5xl lg:text-6xl xl:text-[68px]">
           Discover Wines
-          <span className="mt-1 block text-[#7B1E2B]">
-            by Country &amp; Region
+          <br />
+
+          <span className="italic text-[#741C29]">
+            by Country & Region
           </span>
         </h2>
+
+        {/* Subtext */}
+        <p className="mt-5 max-w-xl text-sm leading-7 text-[#6D625B] sm:text-base">
+          From the rolling vineyards of Europe to the sun-kissed valleys of
+          the New World, explore exceptional wines from the world's most
+          renowned regions.
+        </p>
       </div>
 
-      {/* Intro */}
-      <div className="max-w-xl lg:ml-auto">
-        <p className="text-sm leading-7 text-[#685D54] xs:text-base sm:text-lg sm:leading-8">
-          Our portfolio brings together wines from carefully selected
-          producers across several renowned wine-producing regions.
-        </p>
+      {/* RIGHT Cursive Statement */}
+      <div className="hidden justify-end lg:col-span-5 lg:flex">
+        <div className="relative pr-6">
 
-        <div className="mt-6 flex items-center gap-3">
-          <span className="h-px w-8 bg-[#A98552] sm:w-12" />
+          {/* Small decorative line */}
+          <span className="absolute -left-8 top-4 h-px w-5 bg-[#C2A385]" />
 
-          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8A7A6C]">
-            Curated Selection
+          <p className="font-serif text-3xl italic leading-relaxed tracking-wide text-[#C2A385] opacity-90 -rotate-3 xl:text-4xl">
+            Exceptional Wines,
+            <br />
+
+            <span className="ml-10">
+              Global Origins.
+            </span>
+          </p>
+
+          {/* Small number */}
+          <span className="absolute -bottom-6 right-0 text-[9px] uppercase tracking-[0.3em] text-[#741C29]/60">
+            Est. Collection
           </span>
         </div>
       </div>
-
     </div>
 
-
     {/* ================= REGION GRID ================= */}
-    <div className="mt-14 grid grid-cols-1 gap-4 xs:mt-16 sm:grid-cols-2 sm:gap-5 md:mt-20 lg:grid-cols-3 lg:gap-6 xl:gap-7">
+    <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-      {regions.map((region, index) => (
+      {regions.map((region) => (
         <Link
           key={region.name}
           href={region.href}
           className="
-            group relative
-            min-h-[320px]
-            overflow-hidden
-            border border-[#C8BBAA]
-            bg-[#F5F1E8]
-            p-6
-            transition-all duration-500 ease-out
-
-            xs:min-h-[340px]
-            xs:p-7
-
-            sm:min-h-[360px]
-            sm:p-8
-
-            md:min-h-[380px]
-            md:p-9
-
-            lg:min-h-[400px]
-            lg:p-9
-
-            xl:min-h-[420px]
-            xl:p-10
-
+            group relative flex h-[220px] min-h-[220px] w-full
+            overflow-hidden rounded-2xl
+            border border-black/[0.06]
+            bg-white/95
+            shadow-[0_8px_30px_rgba(40,20,10,0.06)]
+            transition-all duration-500
             hover:-translate-y-2
             hover:border-[#741C29]
             hover:bg-[#741C29]
-            hover:shadow-[0_25px_60px_rgba(49,32,24,0.18)]
+            hover:shadow-[0_20px_45px_rgba(116,28,41,0.22)]
           "
         >
 
-          {/* Top Burgundy Line */}
-          <span
+          {/* ================= CARD IMAGE ================= */}
+          <div className="absolute inset-y-0 right-0 w-[47%] overflow-hidden">
+
+            <Image
+              src={region.image}
+              alt={region.name}
+              fill
+              className="
+                object-cover object-center
+                opacity-95
+                transition-all duration-700
+                group-hover:scale-110
+                group-hover:opacity-75
+              "
+            />
+
+            {/* Normal Gradient */}
+            <div
+              className="
+                absolute inset-0
+                bg-gradient-to-r
+                from-white
+                via-white/50
+                to-transparent
+                transition-opacity duration-500
+                group-hover:opacity-0
+              "
+            />
+
+            {/* Hover Wine Overlay */}
+            <div
+              className="
+                absolute inset-0
+                bg-gradient-to-r
+                from-[#741C29]/20
+                via-[#741C29]/10
+                to-[#741C29]/30
+                opacity-0
+                transition-opacity duration-500
+                group-hover:opacity-100
+              "
+            />
+          </div>
+
+          {/* ================= CARD TEXT ================= */}
+          <div
             className="
-              absolute left-0 top-0
+              relative z-10
+              flex w-[68%]
+              flex-col justify-between
+              p-6
+              transition-all duration-500
+            "
+          >
+
+            <div>
+
+              {/* Region Number */}
+              <div className="mb-2 flex items-center gap-2">
+
+                <span
+                  className="
+                    text-[10px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.18em]
+                    text-[#741C29]
+                    transition-colors duration-500
+                    group-hover:text-[#F4E9DF]
+                  "
+                >
+                  {region.id}
+                </span>
+
+                <span
+                  className="
+                    h-px w-5
+                    bg-[#741C29]/40
+                    transition-all duration-500
+                    group-hover:w-8
+                    group-hover:bg-[#F4E9DF]/50
+                  "
+                />
+              </div>
+
+              {/* Country Name */}
+              <h3
+                className="
+                  font-serif
+                  text-[27px]
+                  font-normal
+                  leading-tight
+                  text-[#1A1A1A]
+                  transition-colors duration-500
+                  group-hover:text-white
+                "
+              >
+                {region.name}
+              </h3>
+
+              {/* Description */}
+              <p
+                className="
+                  mt-2
+                  line-clamp-3
+                  max-w-[250px]
+                  text-[11px]
+                  leading-[1.65]
+                  text-[#6D625B]
+                  transition-colors duration-500
+                  group-hover:text-white/75
+                "
+              >
+                {region.description}
+              </p>
+            </div>
+
+            {/* ================= EXPLORE ================= */}
+            <div
+              className="
+                mt-3
+                flex items-center gap-2
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-[0.15em]
+                text-[#741C29]
+                transition-colors duration-500
+                group-hover:text-white
+              "
+            >
+              <span>
+                Explore Wines
+              </span>
+
+              {/* Arrow Circle */}
+              <span
+                className="
+                  flex h-6 w-6
+                  items-center justify-center
+                  rounded-full
+                  bg-[#741C29]
+                  text-white
+                  transition-all duration-500
+                  group-hover:bg-white
+                  group-hover:text-[#741C29]
+                  group-hover:translate-x-1
+                "
+              >
+                <ArrowRight
+                  size={11}
+                  strokeWidth={2}
+                />
+              </span>
+            </div>
+          </div>
+
+          {/* ================= HOVER EDGE ================= */}
+          <div
+            className="
+              pointer-events-none
+              absolute bottom-0 left-0
               h-[3px] w-0
-              bg-[#D8BB85]
+              bg-[#C2A385]
               transition-all duration-500
               group-hover:w-full
             "
           />
 
-          {/* Large Background Number */}
-          <span
+          {/* ================= CORNER DETAIL ================= */}
+          <div
             className="
               pointer-events-none
-              absolute -bottom-12 -right-4
-              font-philosopher
-              text-[150px]
-              font-bold
-              leading-none
-              text-[#241B16]/[0.035]
-              transition-all duration-700
-
-              sm:text-[170px]
-              md:text-[180px]
-              lg:text-[190px]
-              xl:text-[210px]
-
-              group-hover:-translate-y-4
-              group-hover:text-white/[0.045]
+              absolute right-4 top-4
+              h-7 w-7
+              border-r border-t
+              border-transparent
+              transition-all duration-500
+              group-hover:border-[#C2A385]/70
             "
-          >
-            {String(index + 1).padStart(2, "0")}
-          </span>
-
-
-          {/* ================= CARD TOP ================= */}
-          <div className="relative z-10 flex items-center justify-between">
-
-            {/* Number */}
-            <span
-              className="
-                font-philosopher
-                text-3xl
-                font-bold
-                leading-none
-                text-[#A98552]
-                transition-colors duration-300
-
-                sm:text-4xl
-
-                group-hover:text-[#D8BB85]
-              "
-            >
-              {String(index + 1).padStart(2, "0")}
-            </span>
-
-            {/* Arrow Circle */}
-            <span
-              className="
-                flex h-9 w-9
-                items-center justify-center
-                border border-[#C8BBAA]
-                text-base
-                text-[#7B1E2B]
-                transition-all duration-500
-
-                sm:h-10 sm:w-10 sm:text-lg
-
-                group-hover:translate-x-1
-                group-hover:border-[#D8BB85]
-                group-hover:text-[#D8BB85]
-              "
-            >
-              →
-            </span>
-
-          </div>
-
-
-          {/* ================= CARD CONTENT ================= */}
-          <div className="relative z-10 mt-12 sm:mt-14">
-
-            {/* Region Name */}
-            <h3
-              className="
-                font-philosopher
-                text-3xl
-                font-bold
-                leading-[1.05]
-                text-[#241B16]
-                transition-colors duration-300
-
-                xs:text-4xl
-                sm:text-[38px]
-                md:text-[40px]
-                lg:text-[38px]
-                xl:text-[44px]
-
-                group-hover:text-white
-              "
-            >
-              {region.name}
-            </h3>
-
-
-            {/* Wine Count */}
-            {region.count && (
-              <p
-                className="
-                  mt-4
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-[0.2em]
-                  text-[#7B1E2B]
-                  transition-colors duration-300
-
-                  sm:text-xs
-
-                  group-hover:text-[#D8BB85]
-                "
-              >
-                {region.count}
-              </p>
-            )}
-
-
-            {/* Description */}
-            <p
-              className="
-                mt-5
-                max-w-md
-                text-xs
-                leading-6
-                text-[#6D625B]
-                transition-colors duration-300
-
-                xs:text-sm
-                sm:text-[15px]
-                sm:leading-7
-
-                group-hover:text-[#E9DFD6]
-              "
-            >
-              {region.description}
-            </p>
-
-          </div>
-
-
-          {/* ================= CARD FOOTER ================= */}
-          <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between xs:bottom-7 xs:left-7 xs:right-7 sm:bottom-8 sm:left-8 sm:right-8 lg:bottom-9 lg:left-9 lg:right-9 xl:bottom-10 xl:left-10 xl:right-10">
-
-            <span
-              className="
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.2em]
-                text-[#A98552]
-                transition-colors duration-300
-
-                sm:text-[10px]
-
-                group-hover:text-[#D8BB85]
-              "
-            >
-              Explore Region
-            </span>
-
-            <span
-              className="
-                h-px w-8
-                bg-[#C8BBAA]
-                transition-all duration-500
-
-                sm:w-12
-
-                group-hover:w-20
-                group-hover:bg-[#D8BB85]
-              "
-            />
-
-          </div>
+          />
 
         </Link>
       ))}
-
     </div>
 
-
     {/* ================= BOTTOM STATEMENT ================= */}
-    <div className="mt-12 flex flex-col gap-5 border-t border-[#C8BBAA] pt-6 xs:mt-14 sm:mt-16 sm:flex-row sm:items-center sm:justify-between">
+    <div className="mt-16 flex items-center justify-end gap-3">
 
-      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#82756B] sm:text-xs">
-        From Vineyard to Market
-      </p>
+      <span className="h-px w-10 bg-[#741C29]/50" />
 
-      <div className="flex items-center gap-3">
-        <span className="h-px w-8 bg-[#A98552] sm:w-12" />
-
-        <span className="font-philosopher text-base text-[#7B1E2B] sm:text-lg">
-          Exceptional Wines. Curated.
-        </span>
-      </div>
-
+      <span
+        className="
+          text-[9px]
+          font-semibold
+          uppercase
+          tracking-[0.25em]
+          text-[#741C29]
+        "
+      >
+        Exceptional Wines, Global Origins.
+      </span>
     </div>
 
   </div>
@@ -4160,487 +4142,3 @@ export default function HeroSlider() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// "use client";
-
-// import Link from "next/link";
-
-// const regions = [
-//   {
-//     name: "Italy",
-//     count: "20 Regional Selections",
-//     description:
-//       "Italy is home to one of the world's most diverse wine cultures, with each region offering its own grapes, traditions, and styles.",
-//     href: "/portfolio/italy",
-//   },
-//   {
-//     name: "France",
-//     count: "4 Regional Selections",
-//     description:
-//       "Discover wines from 4 regional selections, representing the heritage and diversity of French winemaking.",
-//     href: "/portfolio/france",
-//   },
-//   {
-//     name: "Argentina",
-//     description:
-//       "Discover our selection from Argentina and wines shaped by distinctive growing regions and winemaking traditions.",
-//     href: "/portfolio/argentina",
-//   },
-//   {
-//     name: "California",
-//     description:
-//       "Discover selected California wines representing the state's diverse wine-growing regions and styles.",
-//     href: "/portfolio/california",
-//   },
-//   {
-//     name: "Oregon",
-//     description:
-//       "Explore distinctive wines from Oregon and selections from one of America's emerging wine regions.",
-//     href: "/portfolio/oregon",
-//   },
-//   {
-//     name: "Spain",
-//     description:
-//       "Discover wines reflecting Spain's diverse regions, indigenous grapes, and winemaking traditions.",
-//     href: "/portfolio/spain",
-//   },
-//   {
-//     name: "Portugal",
-//     description:
-//       "Explore wines that showcase Portugal's unique grape varieties and rich winemaking heritage.",
-//     href: "/portfolio/portugal",
-//   },
-// ];
-
-// const solutions = [
-//   {
-//     number: "01",
-//     title: "Restaurants",
-//     description:
-//       "Build or expand your wine list with selections that complement your cuisine and customer base.",
-//   },
-//   {
-//     number: "02",
-//     title: "Hotels & Hospitality",
-//     description:
-//       "Source wines for restaurants, lounges, events, banquets, and hospitality programs.",
-//   },
-//   {
-//     number: "03",
-//     title: "Wine Retailers",
-//     description:
-//       "Discover distinctive wines that can add variety and value to your retail selection.",
-//   },
-//   {
-//     number: "04",
-//     title: "Bars & Wine Programs",
-//     description:
-//       "Explore wines suitable for by-the-glass programs, bottle service, and curated wine menus.",
-//   },
-//   {
-//     number: "05",
-//     title: "Catering & Events",
-//     description:
-//       "Create wine selections for private events, corporate functions, and special occasions.",
-//   },
-// ];
-
-// const offers = [
-//   {
-//     title: "Handpicked Selections",
-//     description:
-//       "We carefully select wines from regional European winemakers and other respected producers, focusing on wines with quality, character, and a strong connection to their region.",
-//   },
-//   {
-//     title: "Personal Guidance",
-//     description:
-//       "Choosing the right wines for your business can be challenging. Our team provides personal recommendations and answers questions to help you make informed selections for your wine program.",
-//   },
-//   {
-//     title: "Curated Cases",
-//     description:
-//       "Looking to explore several wines at once? Our curated cases bring together thoughtfully selected bottles representing different regions and styles.",
-//   },
-//   {
-//     title: "Wholesale Opportunities",
-//     description:
-//       "Interested in carrying our wines? Contact our team to learn about wholesale pricing, availability, and ordering options.",
-//   },
-// ];
-
-// const reasons = [
-//   {
-//     title: "26 Years in the Wine Business",
-//     description:
-//       "Our decades of experience have helped us develop a strong understanding of producers, regions, wine styles, and the needs of business customers.",
-//   },
-//   {
-//     title: "Carefully Selected Portfolio",
-//     description:
-//       "We don't simply offer wines—we curate a portfolio of selections we believe are worth bringing to your business.",
-//   },
-//   {
-//     title: "Regional Expertise",
-//     description:
-//       "Our portfolio allows businesses to explore wines from distinctive regions while understanding the story and character behind each selection.",
-//   },
-//   {
-//     title: "Personal Service",
-//     description:
-//       "We're available to answer questions, provide recommendations, and help businesses identify wines that fit their specific needs.",
-//   },
-//   {
-//     title: "Curated Cases",
-//     description:
-//       "Our curated cases provide businesses with an opportunity to explore multiple wines and regional styles in one selection.",
-//   },
-// ];
-
-// export default function Home() {
-//   return (
-//     <main className="bg-[#F5F1E8] text-[#241B16] overflow-x-hidden selection:bg-[#741C29] selection:text-white">
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center py-12 xs:py-16 sm:py-20 md:py-28 lg:py-32 overflow-hidden">
-        
-//         {/* Background Gradients */}
-//         <div className="absolute inset-0 pointer-events-none">
-//           <div className="absolute -right-20 -top-20 xs:-right-40 xs:-top-40 h-[300px] w-[300px] xs:h-[500px] xs:w-[500px] lg:h-[700px] lg:w-[700px] rounded-full bg-[#6F1824]/10 blur-[80px] lg:blur-[120px]" />
-//           <div className="absolute -left-20 -bottom-20 xs:-left-40 xs:-bottom-40 h-[250px] w-[250px] xs:h-[450px] xs:w-[450px] lg:h-[600px] lg:w-[600px] rounded-full bg-[#B08A55]/15 blur-[70px] lg:blur-[100px]" />
-//         </div>
-
-//         <div className="relative z-10 mx-auto w-full max-w-[1500px] px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
-
-//           {/* Hero Left Content */}
-//           <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
-//             <p className="mb-3 sm:mb-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-[#7B1E2B]">
-//               CIAO DANIEL&apos;S
-//             </p>
-
-//             <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] 2xl:text-[88px] leading-[1.05] sm:leading-[1] tracking-tight font-bold">
-//               Exceptional Wines.
-//               <span className="mt-1 sm:mt-2 block text-[#7B1E2B]">
-//                 Built for Your Business.
-//               </span>
-//             </h1>
-
-//             <p className="mt-5 sm:mt-8 max-w-2xl mx-auto lg:mx-0 text-sm xs:text-base md:text-lg leading-relaxed sm:leading-8 text-[#665950]">
-//               A carefully selected portfolio of wines from renowned regions and producers, backed by 26 years of experience in the wine industry.
-//             </p>
-
-//             <p className="mt-3 sm:mt-4 max-w-2xl mx-auto lg:mx-0 text-sm xs:text-base md:text-lg leading-relaxed sm:leading-8 text-[#665950]">
-//               Whether you&apos;re a restaurant, hotel, wine retailer, bar, or hospitality business, CIAO DANIEL&apos;S helps you discover wines that fit your customers, menu, and business.
-//             </p>
-
-//             {/* CTA Buttons */}
-//             <div className="mt-8 sm:mt-10 flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center lg:justify-start w-full xs:w-auto">
-//               <Link
-//                 href="/portfolio"
-//                 className="group w-full xs:w-auto inline-flex items-center justify-center bg-[#741C29] px-6 xs:px-8 py-3.5 sm:py-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-[#52121C] hover:shadow-lg shadow-md active:scale-95"
-//               >
-//                 Explore Our Portfolio
-//                 <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">
-//                   →
-//                 </span>
-//               </Link>
-
-//               <Link
-//                 href="/wholesale"
-//                 className="w-full xs:w-auto inline-flex items-center justify-center border-2 border-[#741C29] px-6 xs:px-8 py-3.5 sm:py-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.12em] text-[#741C29] transition-all duration-300 hover:bg-[#741C29] hover:text-white active:scale-95"
-//               >
-//                 Request Wholesale Pricing
-//               </Link>
-//             </div>
-//           </div>
-
-//           {/* Hero Right Visual */}
-//           <div className="lg:col-span-5 relative mx-auto w-full max-w-[350px] xs:max-w-[420px] sm:max-w-[480px] lg:max-w-none h-[380px] xs:h-[450px] sm:h-[520px] lg:h-[580px] xl:h-[620px] flex items-center justify-center mt-6 lg:mt-0">
-//             <div className="absolute right-0 top-0 h-[75%] w-[75%] border border-[#B08A55]/40 rounded-sm" />
-
-//             <div className="absolute bottom-0 left-0 h-[80%] w-[78%] overflow-hidden bg-[#5B1520] shadow-2xl rounded-sm transition-transform duration-500 hover:scale-[1.01]">
-//               <div className="absolute inset-0 flex items-center justify-center">
-//                 <div className="relative h-[280px] xs:h-[320px] sm:h-[380px] w-[130px] xs:w-[150px] sm:w-[170px]">
-//                   {/* Bottle Design */}
-//                   <div className="absolute left-1/2 top-0 h-[70px] sm:h-[95px] w-[40px] sm:w-[52px] -translate-x-1/2 rounded-t-[16px] sm:rounded-t-[20px] bg-[#35100F]" />
-//                   <div className="absolute left-1/2 top-[55px] sm:top-[75px] h-[225px] sm:h-[300px] w-[110px] sm:w-[145px] -translate-x-1/2 rounded-[36px_36px_18px_18px] sm:rounded-[48px_48px_22px_22px] bg-gradient-to-r from-[#270D0D] via-[#5E201D] to-[#220909] shadow-2xl" />
-                  
-//                   {/* Bottle Label */}
-//                   <div className="absolute left-1/2 top-[130px] sm:top-[175px] flex h-[100px] sm:h-[135px] w-[80px] sm:w-[105px] -translate-x-1/2 flex-col items-center justify-center bg-[#E8D8B9] text-center p-2 shadow-inner">
-//                     <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.2em] text-[#241B16]">
-//                       CIAO
-//                     </span>
-//                     <span className="font-serif text-base sm:text-xl font-bold text-[#741C29]">
-//                       Daniel&apos;s
-//                     </span>
-//                     <span className="mt-1 sm:mt-2 text-[6px] sm:text-[7px] font-medium uppercase tracking-[0.15em] text-[#665950]">
-//                       Fine Wine
-//                     </span>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             <div className="absolute bottom-6 right-2 sm:bottom-10 sm:right-4 h-20 w-20 sm:h-28 sm:w-28 rounded-full border border-[#B08A55]/60 animate-pulse" />
-//             <div className="absolute bottom-12 right-8 sm:bottom-16 sm:right-10 h-12 w-12 sm:h-16 sm:w-16 rounded-full border border-[#B08A55]/40" />
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= EXPERIENCE SECTION ================= */}
-//       <section className="bg-[#241B16] px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24 text-[#F5F1E8]">
-//         <div className="mx-auto max-w-[1500px] grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          
-//           <div className="lg:col-span-5 relative text-center lg:text-left">
-//             <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#C7A66A]">
-//               Our Experience
-//             </p>
-//             <div className="mt-2 font-serif text-[100px] xs:text-[130px] sm:text-[160px] lg:text-[180px] xl:text-[200px] leading-none text-[#F5F1E8] font-bold select-none">
-//               26
-//             </div>
-//             <p className="text-base sm:text-lg font-semibold uppercase tracking-[0.25em] text-[#C7A66A] -mt-2 sm:-mt-6">
-//               Years of Excellence
-//             </p>
-//           </div>
-
-//           <div className="lg:col-span-7">
-//             <h2 className="font-serif text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-bold">
-//               26 Years of Wine Industry Experience
-//             </h2>
-
-//             <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6 text-sm xs:text-base md:text-lg leading-relaxed text-[#D7CDC4]">
-//               <p>
-//                 For more than 26 years, CIAO DANIEL&apos;S has been building relationships within the wine industry and developing a portfolio of carefully selected wines from distinctive producers and regions.
-//               </p>
-//               <p>
-//                 Our focus is simple: help businesses find the right wines for their customers.
-//               </p>
-//               <p>
-//                 From established European wine regions to carefully selected wines from the United States and South America, our portfolio offers a variety of styles, regions, and producers.
-//               </p>
-//               <p>
-//                 Explore our portfolio and contact our team for wholesale pricing, availability, and recommendations.
-//               </p>
-//             </div>
-//           </div>
-
-//         </div>
-//       </section>
-
-//       {/* ================= OFFERS SECTION ================= */}
-//       <section className="px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24">
-//         <div className="mx-auto max-w-[1500px]">
-//           <div className="max-w-3xl">
-//             <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#7B1E2B]">
-//               Our Services
-//             </p>
-//             <h2 className="mt-3 font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-tight font-bold">
-//               What CIAO DANIEL&apos;S Offers
-//             </h2>
-//           </div>
-
-//           <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
-//             {offers.map((offer, index) => (
-//               <div
-//                 key={offer.title}
-//                 className="group relative flex flex-col justify-between bg-white/60 backdrop-blur-sm border border-[#CFC5B7] p-6 xs:p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1"
-//               >
-//                 <div>
-//                   <span className="text-xs sm:text-sm font-bold text-[#A98552]">
-//                     0{index + 1}
-//                   </span>
-//                   <h3 className="mt-4 font-serif text-xl xs:text-2xl sm:text-3xl font-bold text-[#241B16]">
-//                     {offer.title}
-//                   </h3>
-//                   <p className="mt-4 text-xs xs:text-sm sm:text-base leading-relaxed text-[#6D625B]">
-//                     {offer.description}
-//                   </p>
-//                 </div>
-
-//                 {offer.title === "Wholesale Opportunities" && (
-//                   <Link
-//                     href="/wholesale"
-//                     className="mt-6 inline-flex items-center gap-2 border-b-2 border-[#741C29] pb-1 text-xs xs:text-sm font-bold uppercase tracking-[0.1em] text-[#741C29] transition-all hover:gap-3"
-//                   >
-//                     Request Information <span>→</span>
-//                   </Link>
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= REGIONS SECTION ================= */}
-//       <section className="bg-[#EAE2D5] px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24">
-//         <div className="mx-auto max-w-[1500px]">
-//           <div className="max-w-3xl">
-//             <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#7B1E2B]">
-//               Explore Our Portfolio
-//             </p>
-//             <h2 className="mt-3 font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-tight font-bold">
-//               Discover Wines by Country &amp; Region
-//             </h2>
-//             <p className="mt-4 text-sm xs:text-base sm:text-lg leading-relaxed text-[#685D54]">
-//               Our portfolio brings together wines from carefully selected producers across several renowned wine-producing regions.
-//             </p>
-//           </div>
-
-//           <div className="mt-10 sm:mt-14 grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-//             {regions.map((region, index) => (
-//               <Link
-//                 key={region.name}
-//                 href={region.href}
-//                 className="group relative flex flex-col justify-between min-h-[280px] xs:min-h-[300px] border border-[#C8BBAA] bg-[#F5F1E8] p-6 xs:p-8 transition-all duration-500 hover:-translate-y-1.5 hover:bg-[#741C29] hover:text-white hover:shadow-2xl"
-//               >
-//                 <div>
-//                   <div className="flex justify-between items-center">
-//                     <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#A98552] group-hover:text-[#D8BB85]">
-//                       0{index + 1}
-//                     </span>
-//                     <span className="text-lg transition-transform duration-300 group-hover:translate-x-2">
-//                       →
-//                     </span>
-//                   </div>
-
-//                   <h3 className="mt-6 sm:mt-8 font-serif text-3xl sm:text-4xl font-bold">
-//                     {region.name}
-//                   </h3>
-
-//                   {region.count && (
-//                     <p className="mt-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#7B1E2B] group-hover:text-[#D8BB85]">
-//                       {region.count}
-//                     </p>
-//                   )}
-
-//                   <p className="mt-4 text-xs xs:text-sm sm:text-base leading-relaxed text-[#6D625B] group-hover:text-[#E9DFD6]">
-//                     {region.description}
-//                   </p>
-//                 </div>
-//               </Link>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= BUSINESS SOLUTIONS SECTION ================= */}
-//       <section className="px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24">
-//         <div className="mx-auto max-w-[1500px]">
-//           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-            
-//             <div className="lg:col-span-5">
-//               <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#7B1E2B]">
-//                 Built for Business
-//               </p>
-//               <h2 className="mt-3 font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-tight font-bold lg:sticky lg:top-10">
-//                 Wine Solutions for Businesses
-//               </h2>
-//             </div>
-
-//             <div className="lg:col-span-7 divide-y divide-[#CEC3B5] border-y border-[#CEC3B5]">
-//               {solutions.map((solution) => (
-//                 <div
-//                   key={solution.number}
-//                   className="group py-6 xs:py-8 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-start transition-colors duration-300 hover:bg-white/40 px-2"
-//                 >
-//                   <span className="sm:col-span-2 text-xs sm:text-sm font-bold text-[#A98552]">
-//                     {solution.number}
-//                   </span>
-//                   <h3 className="sm:col-span-4 font-serif text-xl sm:text-2xl font-bold transition-colors duration-300 group-hover:text-[#7B1E2B]">
-//                     {solution.title}
-//                   </h3>
-//                   <p className="sm:col-span-6 text-xs xs:text-sm sm:text-base leading-relaxed text-[#6D625B]">
-//                     {solution.description}
-//                   </p>
-//                 </div>
-//               ))}
-//             </div>
-
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY US SECTION ================= */}
-//       <section className="bg-[#241B16] px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-16 sm:py-24 text-[#F5F1E8]">
-//         <div className="mx-auto max-w-[1500px]">
-//           <div className="max-w-3xl">
-//             <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#C7A66A]">
-//               The CIAO DANIEL&apos;S Difference
-//             </p>
-//             <h2 className="mt-3 font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-tight font-bold">
-//               Why CIAO DANIEL&apos;S?
-//             </h2>
-//           </div>
-
-//           <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-//             {reasons.map((reason, index) => (
-//               <div key={reason.title} className="flex flex-col">
-//                 <span className="text-xs sm:text-sm font-bold text-[#C7A66A]">
-//                   0{index + 1}
-//                 </span>
-//                 <h3 className="mt-3 font-serif text-xl sm:text-2xl font-bold">
-//                   {reason.title}
-//                 </h3>
-//                 <p className="mt-3 text-xs xs:text-sm sm:text-base leading-relaxed text-[#CFC4BB]">
-//                   {reason.description}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= FINAL CTA SECTION ================= */}
-//       <section className="relative overflow-hidden bg-[#741C29] px-4 xs:px-6 sm:px-8 md:px-12 py-20 sm:py-28 text-center text-white">
-//         <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 pointer-events-none" />
-
-//         <div className="relative z-10 mx-auto max-w-4xl">
-//           <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#E2CFA8]">
-//             Let&apos;s Work Together
-//           </p>
-
-//           <h2 className="mt-4 font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold">
-//             Looking for the Right Wines for Your Business?
-//           </h2>
-
-//           <p className="mx-auto mt-6 max-w-2xl text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed text-white/80">
-//             Explore our portfolio and discover wines that could be the next addition to your restaurant, retail store, hotel, bar, or hospitality program.
-//           </p>
-
-//           <p className="mt-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.1em] text-[#E2CFA8]">
-//             Wholesale pricing and availability are available upon request.
-//           </p>
-
-//           <div className="mt-8 sm:mt-10 flex flex-col xs:flex-row justify-center gap-3 xs:gap-4 w-full xs:w-auto">
-//             <Link
-//               href="/wholesale"
-//               className="w-full xs:w-auto bg-white px-8 py-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.12em] text-[#741C29] transition-all duration-300 hover:bg-[#E8DCC8] shadow-lg active:scale-95"
-//             >
-//               Request Wholesale Pricing
-//             </Link>
-
-//             <Link
-//               href="/contact"
-//               className="w-full xs:w-auto border-2 border-white/80 px-8 py-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-white hover:text-[#741C29] active:scale-95"
-//             >
-//               Book a Call
-//             </Link>
-//           </div>
-//         </div>
-//       </section>
-
-//     </main>
-//   );
-// }

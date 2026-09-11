@@ -972,6 +972,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import WineLoader from "../../component/WineLoader";
+import Image from "next/image";
 
 
 const portfolioRegions = [
@@ -1154,11 +1155,11 @@ export default function AboutUs() {
         <div className="relative mx-auto w-full max-w-[600px]">
 
           {/* Animated Frame */}
-          <div className="absolute -right-3 -bottom-3 sm:-right-5 sm:-bottom-5 h-full w-full border border-[#741C29]/30 animate-frameMove" />
+          <div className="absolute -right-3 -bottom-3 sm:-right-5 sm:-bottom-5 h-full w-full " />
 
 
           {/* Image */}
-          <div className="relative overflow-hidden bg-[#241B16] group">
+          <div className="relative overflow-hidden  group">
 
             <img
               src="/to our wine world.png"
@@ -1174,35 +1175,56 @@ export default function AboutUs() {
 
 
             {/* 26 Badge */}
-            <div className="absolute left-5 bottom-5 sm:left-8 sm:bottom-8 animate-badgeReveal">
-
-              <div className="font-philosopher text-7xl xs:text-8xl sm:text-9xl font-normal text-white leading-none animate-numberFloat">
-                26
-              </div>
-
-              <div className="mt-2 flex items-center gap-3">
-
-                <span className="h-px w-8 bg-[#C7A66A] animate-lineGrow" />
-
-                <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#F0E6D5]">
-                  Years of Wine Excellence
-                </span>
-
-              </div>
-
-            </div>
+<div
+  className="
+    absolute
+    right-0
+    bottom-[-8px]
+    xs:right-0
+    xs:bottom-[-10px]
+    sm:right-0
+    sm:bottom-[-12px]
+    md:right-1
+    md:bottom-[-14px]
+    lg:right-2
+    lg:bottom-[-16px]
+    xl:right-3
+    xl:bottom-[-18px]
+    2xl:right-4
+    2xl:bottom-[-20px]
+    z-20
+    animate-badgeReveal
+  "
+>
+  <Image
+    src="/26 YEARS.png"
+    alt="26 Years of Wine Excellence"
+    width={300}
+    height={120}
+    priority
+    quality={100}
+    unoptimized
+    className="
+      block
+      w-[95px]
+      xs:w-[115px]
+      sm:w-[145px]
+      md:w-[175px]
+      lg:w-[210px]
+      xl:w-[250px]
+      2xl:w-[300px]
+      h-auto
+      object-contain
+      object-right
+      animate-numberFloat
+    "
+  />
+</div>
 
           </div>
 
 
-          {/* Floating Quote */}
-          <div className="absolute -bottom-8 right-4 sm:-bottom-10 sm:right-8 lg:right-0 w-[220px] sm:w-[270px] bg-[#241B16] px-5 py-5 sm:px-7 sm:py-6 shadow-2xl animate-quoteReveal">
-
-            <p className="font-philosopher text-sm sm:text-base italic leading-relaxed text-[#F5F1E8]">
-              “Building long-term partnerships, not simply completing transactions.”
-            </p>
-
-          </div>
+       
 
         </div>
 
