@@ -706,7 +706,7 @@ export default function HeroSlider() {
             outline-offset-1
           "
         >
-          PREMIUM WINE WHOLESALE
+          PREMIUM WINE WHOLESELLER
         </div>
 
 
@@ -758,8 +758,10 @@ export default function HeroSlider() {
   <span className="text-[#741C29] font-semibold">
     Ciao Daniel
   </span>{" "}
-  offers a curated selection of quality wines from renowned regions worldwide,
-  chosen for the American hospitality and retail market.
+ offers a curated selection of quality wines   from renowned regions<br/> 
+ worldwide, from Italy, France, Spain, and Germany to Argentina, California,<br/>
+  Oregon, Ohio, and New Zealand. Every wine is selected with <br/><br/>
+  <span className="text-[#741C29] font-semibold">RESTURANTS, RETAILERS, HOTELS, BARS, and hospitality businesses in mind.</span>
 </p>
 
 
@@ -960,7 +962,7 @@ export default function HeroSlider() {
 
 
     {/* LEFT ARROW */}
-    <button
+    {/* <button
       onClick={prevSlide}
       aria-label="Previous slide"
       className="
@@ -1024,11 +1026,11 @@ export default function HeroSlider() {
           lg:h-6
         "
       />
-    </button>
+    </button> */}
 
 
     {/* RIGHT ARROW */}
-    <button
+    {/* <button
       onClick={nextSlide}
       aria-label="Next slide"
       className="
@@ -1092,7 +1094,7 @@ export default function HeroSlider() {
           lg:h-6
         "
       />
-    </button>
+    </button> */}
 
   </div>
 </section>
@@ -1784,7 +1786,7 @@ export default function HeroSlider() {
                 lg:text-[17px]
               "
             >
-              For more than 26 years,<span className="text-[#741C29] text-bold"> CIAO DANIEL </span>&apos;S has been building
+              For more than 26 years,<span className="text-[#741C29] text-bold"> CIAO DANIEL </span> has been building
               relationships within the wine industry and developing a
               portfolio of carefully selected wines from distinctive
               producers and regions.
