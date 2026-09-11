@@ -57,6 +57,63 @@
   }
 }
 
+
+@keyframes heroItemIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-item {
+  opacity: 0;
+  animation-name: heroItemIn;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+
+/* 1st — immediately */
+.hero-delay-1 {
+  animation-delay: 0s;
+}
+
+
+/* 2nd — after 2 seconds */
+.hero-delay-2 {
+  animation-delay: 2s;
+}
+
+
+/* 3rd — after 4 seconds */
+.hero-delay-3 {
+  animation-delay: 4s;
+}
+
+
+/* 4th — after 6 seconds */
+.hero-delay-4 {
+  animation-delay: 6s;
+}
+
+
+/* 5th — after 8 seconds */
+.hero-delay-5 {
+  animation-delay: 8s;
+}
+
+
+/* 6th — after 10 seconds */
+.hero-delay-6 {
+  animation-delay: 10s;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -67,6 +124,14 @@
     transform: translateY(-6px);
   }
 }
+
+
+
+
+
+
+
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -235,4 +300,240 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+
+
+
+
+
+/* ============================= */
+/* ABOUT SECTION ANIMATIONS */
+/* ============================= */
+
+
+
+.animate-fadeUp {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* Animation Delays */
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+
+/* ============================= */
+/* LINE ANIMATION */
+/* ============================= */
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.animate-lineGrow {
+  animation: lineGrow 1s ease-out forwards;
+}
+
+
+@keyframes lineGrowVertical {
+  from {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  to {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+.animate-lineGrowVertical {
+  animation: lineGrowVertical 0.8s ease-out forwards;
+}
+
+
+/* ============================= */
+/* IMAGE REVEAL */
+/* ============================= */
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-imageReveal {
+  animation: imageReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* ============================= */
+/* FRAME FLOAT */
+/* ============================= */
+
+@keyframes frameMove {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(6px, 6px);
+  }
+}
+
+.animate-frameMove {
+  animation: frameMove 5s ease-in-out infinite;
+}
+
+
+/* ============================= */
+/* BADGE */
+/* ============================= */
+
+@keyframes badgeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-badgeReveal {
+  animation: badgeReveal 1s 0.8s ease-out both;
+}
+
+
+/* ============================= */
+/* 26 FLOAT */
+/* ============================= */
+
+@keyframes numberFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-numberFloat {
+  animation: numberFloat 4s ease-in-out infinite;
+}
+
+
+/* ============================= */
+/* QUOTE */
+/* ============================= */
+
+@keyframes quoteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-quoteReveal {
+  animation: quoteReveal 1s 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* ============================= */
+/* BACKGROUND GLOW */
+/* ============================= */
+
+@keyframes glowFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, 25px);
+  }
+}
+
+.animate-glowFloat {
+  animation: glowFloat 10s ease-in-out infinite;
+}
+
+
+@keyframes glowFloatReverse {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, -25px);
+  }
+}
+
+.animate-glowFloatReverse {
+  animation: glowFloatReverse 12s ease-in-out infinite;
+}
+
+
+/* ============================= */
+/* HOVER LIFT */
+/* ============================= */
+
+.hover-lift {
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
 }

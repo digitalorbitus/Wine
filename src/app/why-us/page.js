@@ -274,10 +274,10 @@ export default function WhyChooseUs() {
 
       {/* ================= BOTTOM HIGH-CONVERSION BANNER ================= */}
       <section className="relative py-20 px-4 sm:px-8 lg:px-16 overflow-hidden">
-        <div className="max-w-[1300px] mx-auto rounded-3xl bg-gradient-to-r from-[#211215] via-[#8C2332]/40 to-[#211215] border border-[#8C2332]/50 p-8 sm:p-14 lg:p-16 relative overflow-hidden text-center sm:text-left flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+        <div className="max-w-[1300px] mx-auto rounded-3xl bg-gradient-to-r from-[#741C29] via-[#741C29]/40 to-[#741C29] border border-[#741C29]/50 p-8 sm:p-14 lg:p-16 relative overflow-hidden text-center sm:text-left flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
           
           {/* Ambient Glow */}
-          <div className="absolute -left-20 -top-20 w-80 h-80 bg-[#8C2332] rounded-full blur-[100px] opacity-40 pointer-events-none" />
+          <div className="absolute -left-20 -top-20 w-80 h-80 bg-[#741C29] rounded-full blur-[100px] opacity-40 pointer-events-none" />
 
           <div className="max-w-2xl relative z-10">
             <h2 className="font-philosopher text-2xl sm:text-4xl font-bold text-white leading-tight">

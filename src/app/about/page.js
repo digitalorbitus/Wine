@@ -973,15 +973,46 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import WineLoader from "../../component/WineLoader";
 
+
 const portfolioRegions = [
-  { name: "Italy", detail: "20 Regional Selections" },
-  { name: "France", detail: "4 Regional Selections" },
-  { name: "Argentina", detail: "Distinctive Terroirs" },
-  { name: "California", detail: "Curated Coastal Style" },
-  { name: "Oregon", detail: "Emerging Excellence" },
-  { name: "Spain", detail: "Indigenous Grapes" },
-  { name: "Portugal", detail: "Rich Winemaking Heritage" },
+  {
+    name: "Italy",
+    detail: "20 Regional Selections",
+    link: "/italy",
+  },
+  {
+    name: "France",
+    detail: "4 Regional Selections",
+    link: "/france",
+  },
+  {
+    name: "Argentina",
+    detail: "Distinctive Terroirs",
+    link: "/Argentina",
+  },
+  {
+    name: "California",
+    detail: "Curated Coastal Style",
+    link: "/california",
+  },
+  {
+    name: "Oregon",
+    detail: "Emerging Excellence",
+    link: "/Oregon",
+  },
+  {
+    name: "Spain",
+    detail: "Indigenous Grapes",
+    link: "/Spain",
+  },
+  {
+    name: "Portugal",
+    detail: "Rich Winemaking Heritage",
+    link: "/Portugal",
+  },
 ];
+
+
 
 export default function AboutUs() {
   const [loading, setLoading] = useState(true);
@@ -1001,61 +1032,188 @@ export default function AboutUs() {
     <main className="bg-[#F5F1E8] text-[#241B16] overflow-x-hidden selection:bg-[#741C29] selection:text-white">
 
       {/* ================= HERO & MAIN ABOUT SECTION ================= */}
-      <section className="relative py-16 xs:py-20 sm:py-28 lg:py-36 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden">
-        
-        {/* Subtle Decorative Background Glows */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute right-0 top-0 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] rounded-full bg-[#6F1824]/5 blur-[100px]" />
-          <div className="absolute left-0 bottom-0 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] rounded-full bg-[#B08A55]/10 blur-[100px]" />
-        </div>
 
-        <div className="relative z-10 mx-auto max-w-[1400px]">
-          
-          {/* Header Tag */}
-          <div className="text-center lg:text-left">
-            <p className="text-xs xs:text-sm font-philosopher uppercase tracking-[0.3em] text-[#7B1E2B]">
-              02. About Us
+
+<section className="relative bg-[#F4F2EC] py-16 xs:py-20 sm:py-24 lg:py-32 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden">
+
+  {/* Decorative Background */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+    <div className="absolute -right-32 -top-32 h-[350px] w-[350px] sm:h-[550px] sm:w-[550px] rounded-full bg-[#741C29]/[0.04] blur-[100px] animate-glowFloat" />
+
+    <div className="absolute -left-32 -bottom-32 h-[350px] w-[350px] sm:h-[550px] sm:w-[550px] rounded-full bg-[#B08A55]/[0.07] blur-[100px] animate-glowFloatReverse" />
+
+  </div>
+
+
+  <div className="relative z-10 mx-auto max-w-[1400px]">
+
+    {/* Section Number */}
+    <div className="flex items-center gap-4 mb-6 animate-fadeUp">
+
+      <span className="h-px w-10 sm:w-16 bg-[#741C29] origin-left animate-lineGrow" />
+
+   
+
+    </div>
+
+
+    {/* Main Layout */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
+
+
+      {/* ================= LEFT CONTENT ================= */}
+      <div className="lg:col-span-6">
+
+        <h2 className="font-philosopher text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] font-normal text-[#241B16] leading-[0.95] animate-fadeUp delay-100">
+
+          26 Years
+
+          <span className="block text-[#741C29] mt-2 animate-fadeUp delay-200">
+            of Experience
+          </span>
+
+        </h2>
+
+
+        <div className="mt-8 sm:mt-10 max-w-2xl">
+
+          <p className="font-philosopher text-lg xs:text-xl sm:text-2xl text-[#241B16] leading-relaxed animate-fadeUp delay-300">
+
+            For over 26 years,{" "}
+
+            <strong className="text-[#741C29] font-semibold">
+              CIAO DANIEL’S
+            </strong>{" "}
+
+            has been dedicated to discovering and providing quality wines
+            for businesses and wine professionals.
+
+          </p>
+
+
+          <div className="mt-6 space-y-5 text-sm xs:text-base sm:text-lg leading-relaxed text-[#5C5046]">
+
+            <p className="animate-fadeUp delay-400">
+              Our business has been built through years of experience,
+              trusted relationships with producers, and an appreciation
+              for wines that genuinely represent where they come from.
             </p>
-            <h1 className="mt-3 font-philosopher text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              26 Years of Experience in the Wine Trade
-            </h1>
-          </div>
 
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6 text-sm xs:text-base sm:text-lg leading-relaxed text-[#5C5046]">
-              <p className="font-philosopher text-lg xs:text-xl sm:text-2xl text-[#241B16] font-medium leading-relaxed">
-                For over 26 years, <strong className="text-[#741C29] font-semibold">CIAO DANIEL’S</strong> has been dedicated to discovering and providing quality wines for businesses and wine professionals.
-              </p>
-              
-              <p>
-                Our business has been built through years of experience, relationships with producers, and an appreciation for wines that genuinely represent where they come from.
-              </p>
-              
-              <p>
-                Today, we continue to bring together a carefully selected portfolio of wines from Europe, the United States, and other respected wine-producing regions.
-              </p>
-            </div>
-
-            {/* Right Stat Visual Box */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-[420px] bg-[#241B16] text-[#F5F1E8] p-8 sm:p-12 text-center shadow-2xl border-t-4 border-[#741C29]">
-                <div className="font-serif text-7xl xs:text-8xl sm:text-9xl font-bold text-[#C7A66A] leading-none">
-                  26
-                </div>
-                <div className="mt-4 text-xs sm:text-sm uppercase tracking-[0.25em] text-[#E8DCC8] font-medium">
-                  Years of Wine Trade Excellence
-                </div>
-                <div className="mt-6 border-t border-[#C7A66A]/20 pt-6 text-xs text-[#D7CDC4] italic">
-                  &ldquo;Building long-term partnerships—not simply completing transactions.&rdquo;
-                </div>
-              </div>
-            </div>
+            <p className="animate-fadeUp delay-500">
+              Today, we continue to bring together a carefully selected
+              portfolio of wines from Europe, the United States, and other
+              respected wine-producing regions.
+            </p>
 
           </div>
+
         </div>
-      </section>
+
+
+        {/* Small Details */}
+        <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-6 sm:gap-10 animate-fadeUp delay-600">
+
+          <div className="hover-lift">
+
+            <div className="font-philosopher text-2xl sm:text-3xl text-[#741C29]">
+              26+
+            </div>
+
+            <p className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#756960]">
+              Years Experience
+            </p>
+
+          </div>
+
+
+          <div className="h-10 w-px bg-[#C9C0B5] animate-lineGrowVertical" />
+
+
+          <div className="hover-lift">
+
+            <div className="font-philosopher text-2xl sm:text-3xl text-[#741C29]">
+              Global
+            </div>
+
+            <p className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#756960]">
+              Wine Selection
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      {/* ================= RIGHT IMAGE ================= */}
+      <div className="lg:col-span-6 animate-imageReveal">
+
+        <div className="relative mx-auto w-full max-w-[600px]">
+
+          {/* Animated Frame */}
+          <div className="absolute -right-3 -bottom-3 sm:-right-5 sm:-bottom-5 h-full w-full border border-[#741C29]/30 animate-frameMove" />
+
+
+          {/* Image */}
+          <div className="relative overflow-hidden bg-[#241B16] group">
+
+            <img
+              src="/to our wine world.png"
+              alt="Our Wine World"
+              className="w-full h-[420px] xs:h-[480px] sm:h-[560px] lg:h-[620px] object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+            />
+
+            {/* Moving Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#241B16]/75 via-transparent to-transparent pointer-events-none" />
+
+            {/* Shine Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1400ms] ease-in-out pointer-events-none" />
+
+
+            {/* 26 Badge */}
+            <div className="absolute left-5 bottom-5 sm:left-8 sm:bottom-8 animate-badgeReveal">
+
+              <div className="font-philosopher text-7xl xs:text-8xl sm:text-9xl font-normal text-white leading-none animate-numberFloat">
+                26
+              </div>
+
+              <div className="mt-2 flex items-center gap-3">
+
+                <span className="h-px w-8 bg-[#C7A66A] animate-lineGrow" />
+
+                <span className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-[#F0E6D5]">
+                  Years of Wine Excellence
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* Floating Quote */}
+          <div className="absolute -bottom-8 right-4 sm:-bottom-10 sm:right-8 lg:right-0 w-[220px] sm:w-[270px] bg-[#241B16] px-5 py-5 sm:px-7 sm:py-6 shadow-2xl animate-quoteReveal">
+
+            <p className="font-philosopher text-sm sm:text-base italic leading-relaxed text-[#F5F1E8]">
+              “Building long-term partnerships, not simply completing transactions.”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
       {/* ================= OUR APPROACH SECTION ================= */}
 <section className=" py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 border-y border-[#C8BBAA]">
@@ -1175,47 +1333,192 @@ export default function AboutUs() {
   </div>
 </section>
       {/* ================= OUR PORTFOLIO REGIONS ================= */}
-      <section className="py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16">
-        <div className="mx-auto max-w-[1400px]">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-            <div>
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#7B1E2B]">
-                Curated Selections
-              </p>
-              <h2 className="mt-3 font-philosopher text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold">
-                Our Portfolio Regions
-              </h2>
-            </div>
-            
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-3 bg-[#741C29] px-6 py-3.5 text-xs xs:text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-[#52121C] transition-all duration-300 w-fit"
-            >
-              Explore Our Portfolio
-              <span>→</span>
-            </Link>
-          </div>
+  
 
-          {/* Region Grid */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-            {portfolioRegions.map((region) => (
-              <div
-                key={region.name}
-                className="group p-6 bg-white/50 backdrop-blur-sm border border-[#CFC5B7] hover:border-[#741C29] hover:bg-white transition-all duration-300 hover:-translate-y-1"
-              >
-                <h3 className="font-philosopher text-xl sm:text-2xl font-bold text-[#241B16] group-hover:text-[#741C29] transition-colors">
-                  {region.name}
-                </h3>
-                <p className="mt-2 text-xs sm:text-sm text-[#A98552] font-medium uppercase tracking-wider">
-                  {region.detail}
-                </p>
-              </div>
-            ))}
-          </div>
+<section className="relative bg-[#F4F2EC] py-20 sm:py-28 lg:py-36 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden">
+
+  {/* Background Decoration */}
+  <div className="absolute inset-0 pointer-events-none">
+
+    <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-[#741C29]/[0.035] blur-[120px] animate-portfolioGlow" />
+
+    <div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#B08A55]/[0.06] blur-[120px] animate-portfolioGlowReverse" />
+
+  </div>
+
+
+  <div className="relative z-10 mx-auto max-w-[1400px]">
+
+
+    {/* ================= HEADER ================= */}
+
+    <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 sm:mb-16 lg:mb-20">
+
+      <div className="max-w-3xl">
+
+        {/* Small Label */}
+        <div className="flex items-center gap-4 mb-5 animate-portfolioFadeUp">
+
+          <span className="h-px w-10 sm:w-14 bg-[#741C29] origin-left animate-portfolioLine" />
+
+          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#741C29]">
+            Curated Selections
+          </p>
 
         </div>
-      </section>
+
+
+        {/* Heading */}
+        <h2 className="font-philosopher text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-normal leading-[0.95] text-[#241B16] animate-portfolioFadeUp portfolio-delay-1">
+
+          Our Portfolio
+
+          <span className="block text-[#741C29] mt-2">
+            Regions
+          </span>
+
+        </h2>
+
+
+        <p className="mt-6 max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed text-[#6B5D52] animate-portfolioFadeUp portfolio-delay-2">
+
+          A carefully selected collection of wines from renowned
+          wine-producing regions, bringing authentic character and
+          craftsmanship to every bottle.
+
+        </p>
+
+      </div>
+
+
+      {/* Portfolio Button */}
+      <Link
+        href="/portfolio"
+        className="group inline-flex items-center justify-between gap-8 w-fit min-w-[220px] border border-[#741C29] px-6 py-4 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#741C29] hover:bg-[#741C29] hover:text-white transition-all duration-500 animate-portfolioFadeUp portfolio-delay-3"
+      >
+
+        <span>
+          Explore Portfolio
+        </span>
+
+        <span className="text-lg transition-transform duration-500 group-hover:translate-x-2">
+          →
+        </span>
+
+      </Link>
+
+    </div>
+
+
+
+    {/* ================= REGION GRID ================= */}
+
+    <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-px bg-[#CFC5B7] border border-[#CFC5B7]">
+
+      {portfolioRegions.map((region, index) => (
+
+        <Link
+          href={region.link}
+          key={region.name}
+          className={`portfolio-card group relative min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] bg-[#F4F2EC] p-6 sm:p-8 lg:p-9 overflow-hidden transition-all duration-700 hover:bg-[#241B16] animate-portfolioCard portfolio-card-delay-${Math.min(index + 1, 7)}`}
+        >
+
+          {/* Large Background Number */}
+          <div className="absolute -right-2 -top-8 font-philosopher text-[9rem] sm:text-[10rem] lg:text-[11rem] font-normal leading-none text-[#741C29]/[0.045] group-hover:text-white/[0.035] transition-all duration-700 select-none group-hover:scale-110 group-hover:-translate-x-2">
+
+            {String(index + 1).padStart(2, "0")}
+
+          </div>
+
+
+          {/* Top Number */}
+          <div className="relative z-10 flex items-center justify-between">
+
+            <span className="font-philosopher text-sm sm:text-base text-[#741C29] group-hover:text-[#C7A66A] transition-colors duration-500">
+
+              {String(index + 1).padStart(2, "0")}
+
+            </span>
+
+
+            <span className="h-px w-8 bg-[#C7A66A]/50 group-hover:w-14 transition-all duration-700" />
+
+          </div>
+
+
+          {/* Content */}
+          <div className="relative z-10 mt-20 sm:mt-24 transition-transform duration-700 group-hover:translate-y-[-6px]">
+
+            <h3 className="font-philosopher text-2xl sm:text-3xl lg:text-[2rem] font-normal text-[#241B16] group-hover:text-white transition-colors duration-500">
+
+              {region.name}
+
+            </h3>
+
+
+            <p className="mt-3 text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium text-[#A98552] group-hover:text-[#D8C6A9] transition-colors duration-500">
+
+              {region.detail}
+
+            </p>
+
+          </div>
+
+
+          {/* Bottom Arrow */}
+          <div className="absolute left-6 bottom-6 sm:left-8 sm:bottom-8">
+
+            <span className="flex h-9 w-9 items-center justify-center border border-[#CFC5B7] text-sm text-[#741C29] transition-all duration-500 group-hover:border-[#C7A66A] group-hover:text-[#C7A66A] group-hover:translate-x-2 group-hover:rotate-[-5deg]">
+
+              →
+
+            </span>
+
+          </div>
+
+
+          {/* Hover Bottom Line */}
+          <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#741C29] group-hover:w-full transition-all duration-700" />
+
+
+          {/* Hover Light Sweep */}
+          <div className="absolute inset-y-0 -left-full w-1/2 bg-gradient-to-r from-transparent via-white/[0.04] to-transparent skew-x-[-20deg] group-hover:left-[130%] transition-all duration-[1200ms] pointer-events-none" />
+
+        </Link>
+
+      ))}
+
+    </div>
+
+
+
+    {/* ================= BOTTOM STATEMENT ================= */}
+
+    <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-5 animate-portfolioFadeUp portfolio-delay-4">
+
+      <p className="font-philosopher text-base sm:text-lg italic text-[#5C5046]">
+        From the world's finest vineyards to your portfolio.
+      </p>
+
+
+      <div className="flex items-center gap-3">
+
+        <span className="h-px w-10 bg-[#741C29]" />
+
+        <span className="text-[9px] uppercase tracking-[0.25em] text-[#806F63]">
+          Quality • Origin • Character
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 
       {/* ================= BUILT ON RELATIONSHIPS ================= */}
       <section className="bg-[#241B16] text-[#F5F1E8] py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 relative">

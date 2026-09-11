@@ -5887,18 +5887,32 @@ const paginatedRegions = filteredRegions.slice(
             </motion.h1>
 
             {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-6 max-w-2xl text-center font-old-standard leading-relaxed text-[#6d6264] sm:text-lg"
-            >
-Explore the distinctive wines of Italy.
+   <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="mt-6 max-w-2xl text-center font-old-standard leading-relaxed text-[#6d6264] sm:text-lg"
+>
+  Explore the distinctive wines of Italy.
 
-Discover a curated collection of carefully crafted Italian wines,
-featuring prestigious Barolo, expressive Barbera, elegant Arneis,
-refreshing Gavi, and classic Moscato d&apos;Asti from the renowned Piedmont region.
-            </motion.p>
+  <br />
+
+  Discover a curated collection of carefully crafted Italian wines,
+  featuring prestigious Barolo, expressive Barbera, elegant Arneis,
+  refreshing Gavi, and classic Moscato d&apos;Asti from the renowned
+  Piedmont region.
+
+  <br />
+  <br />
+
+  <span className="font-philosopher font-semibold text-[#741C29]">
+    ITALY
+  </span>{" "}
+  → Tuscany → Piedmont → Veneto → Sicily → Lombardy → Abruzzo →{" "}
+  <span className="italic text-[#741C29]">
+    Organic &amp; Biodynamic
+  </span>
+</motion.p>
           </div>
 
           {/* STATS STRIP - CENTERED */}

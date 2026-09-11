@@ -393,16 +393,21 @@ export default function Navbar() {
       href: "/shop",
       heading: "OUR COUNTRY WINES",
       countries: [
-        { label: "Ohio", href: "/Ohio" },
-        { label: "California", href: "/california" },
-        { label: "Oregon", href: "/Oregon" },
         { label: "Italy", href: "/italy" },
-        { label: "Argentina", href: "/Argentina" },
+             { label: "Spain", href: "/Spain" },
+                 { label: "Argentina", href: "/Argentina" },
         { label: "France", href: "/france" },
-        { label: "Spain", href: "/Spain" },
-        { label: "New Zealand", href: "/New-Zealand" },
-        { label: "Portugal", href: "/Portugal" },
+              { label: "California", href: "/california" },
+        { label: "Oregon", href: "/Oregon" },
+            { label: "Portugal", href: "/Portugal" },
         { label: "Germany", href: "/Germany" },
+        { label: "Ohio", href: "/Ohio" },
+  
+        
+    
+   
+        { label: "New Zealand", href: "/New-Zealand" },
+    
       ],
     },
     { label: "Contact", href: "/contact" },
@@ -414,22 +419,32 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#fbf9f5] font-serif text-[#2a110b] shadow-md">
-      <div className="relative border-y border-dashed border-[#8b263e]/40">
+    <header className="sticky top-0 z-50 w-full bg-[#fbf9f5] font-serif text-[#741C29] shadow-md">
+      <div className="relative border-y border-dashed border-[#741C29]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Single Row: Logo (Left) | Nav Links (Center) | Contact (Right) */}
           <div className="flex items-center justify-between h-20 gap-4">
             
             {/* Left: Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <Image
-                src="/Logo%20CD1.png" // Apne logo image ka path yahan dein
-                alt="Logo"
-                width={130}
-                height={50}
-                className="h-20 w-auto object-contain"
-              />
-            </Link>
+<Link href="/" className="flex-shrink-0 flex items-center">
+  <Image
+    src="/Logo_CD1-removebg-preview.png"
+    alt="Ciao Daniel Logo"
+    width={220}
+    height={80}
+    priority
+    quality={100}
+    className="
+      h-20
+      sm:h-20
+      md:h-22
+      lg:h-26
+      w-auto
+      object-contain
+      block
+    "
+  />
+</Link>
 
             {/* Center: Desktop Navigation */}
        <nav className="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 z-20">
@@ -514,10 +529,10 @@ export default function Navbar() {
 </nav>
 
             {/* Right: Contact Details (Phone & Email) */}
-            <div className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm text-[#2a110b] flex-shrink-0">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6 font-serif  text-xs xl:text-sm text-[#2a110b] flex-shrink-0">
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-1.5 hover:text-[#790214] transition-colors"
+                className="flex items-center gap-1.5 font-normal  hover:text-[#790214] transition-colors"
               >
                 <svg
                   className="w-4 h-4 text-[#790214]"
