@@ -406,8 +406,8 @@ const categories = [
 const images = [
   {
     id: 1,
-    src: "/slide-1.png", // Desktop
-    mobileSrc: "/slide-1.png", // Mobile (ya mobile portrait image ka link)
+    src: "/1790013370228-t37fk3-Wine_New_bnner.webp", // Desktop
+    mobileSrc: "/1790013370228-t37fk3-Wine_New_bnner.webp", // Mobile (ya mobile portrait image ka link)
     alt: "Slide 1",
   },
   // {
@@ -598,7 +598,7 @@ export default function HeroSlider() {
         src={images[currentIndex].src}
         alt={
           images[currentIndex].alt ||
-          "Ciao Daniel wine wholesale"
+          "Wines LLC wine wholesale"
         }
         fill
         priority
@@ -756,7 +756,7 @@ export default function HeroSlider() {
   "
 >
   <span className="text-[#741C29] font-semibold">
-    Ciao Daniel
+    Wines LLC
   </span>{" "}
  offers a curated selection of quality wines   from renowned regions<br/> 
  worldwide, from Italy, France, Spain, and Germany to Argentina, California,<br/>
@@ -1786,7 +1786,7 @@ export default function HeroSlider() {
                 lg:text-[17px]
               "
             >
-              For more than 26 years,<span className="text-[#741C29] text-bold"> CIAO DANIEL </span> has been building
+              For more than 26 years,<span className="text-[#741C29] text-bold">Wines LLC</span> has been building
               relationships within the wine industry and developing a
               portfolio of carefully selected wines from distinctive
               producers and regions.
@@ -1894,85 +1894,210 @@ export default function HeroSlider() {
    
 {/* New Arrival start */}
 
-<section className="py-16 px-4 max-w-7xl mx-auto bg-white text-center">
-      {/* Header Section */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif tracking-widest text-gray-900 uppercase mb-3">
-        NEW ARRIVALS
-      </h2>
-      <p className="text-xs sm:text-sm text-gray-500 max-w-lg mx-auto mb-12 font-light leading-relaxed">
-        Tempus quam pellentesque nec nam aliquam sem et tortor.
-        <br className="hidden sm:inline" />
-        Massa enim nec dui nunc volutpat commodo.
-      </p>
 
-      {/* Grid Layout (Responsive sm, md, lg) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
-        {product.map((product) => (
-          <div key={product.id} className="flex flex-col items-center group">
-            {/* Image Container */}
-            <div className="relative w-full h-80 bg-gray-50 flex items-center justify-center p-4 mb-4 rounded-sm overflow-hidden">
-              {/* Badge */}
-              {product.badge && (
-                <span
-                  className={`absolute top-3 left-3 ${product.badgeColor} text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider z-10`}
-                >
-                  {product.badge}
-                </span>
-              )}
+<section
+  className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-20 px-4 sm:px-6 lg:px-8"
+  style={{
+    backgroundImage: "url('/1790013370228-t37fk3-Wine_New_bnner.webp')",
+  }}
+>
+  {/* =========================================================
+      SECTION BACKGROUND OVERLAY
+  ========================================================= */}
+  <div className="absolute inset-0 bg-[#F4F2EC]/45" />
 
-              {/* Product Image */}
-              <div className={`relative w-full h-full transition-transform duration-300 group-hover:scale-105 ${product.isSoldOut ? 'opacity-60' : ''}`}>
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-            </div>
+  {/* Extra Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-[#F4F2EC]/20 to-[#741C29]/10" />
 
-            {/* Content Details */}
-            <h3 className="font-serif text-sm font-semibold text-gray-800 mb-1">
-              {product.name}
-            </h3>
-            <p className="text-xs text-gray-400 mb-2">{product.category}</p>
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-gray-900">
-                {product.price}
-              </span>
-              {product.oldPrice && (
-                <span className="text-xs text-gray-400 line-through">
-                  {product.oldPrice}
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
+  {/* Decorative Blur */}
+  <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#741C29]/10 blur-3xl" />
+
+  <div className="pointer-events-none absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-[#D4AF37]/10 blur-3xl" />
+
+  {/* =========================================================
+      MAIN CONTENT
+  ========================================================= */}
+  <div className="relative z-10 mx-auto max-w-7xl">
+
+    {/* =======================================================
+        HEADER
+    ======================================================= */}
+    <div className="mb-14 flex flex-col items-center text-center">
+
+      {/* Small Top Label */}
+      <div className="mb-5 flex items-center gap-3">
+        <span className="h-px w-10 bg-[#741C29]" />
+
+        <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#741C29]">
+          Curated Selection
+        </span>
+
+        <span className="h-px w-10 bg-[#741C29]" />
       </div>
 
-      {/* Bottom Button */}
-     
-<Link
-  href="/shop"
-  className="
-    inline-block
-    bg-[#EAE6DE]
-    hover:bg-[#71111B]
-    text-gray-800
-    hover:text-white
-    text-xs
-    font-semibold
-    uppercase
-    tracking-wider
-    py-3
-    px-8
-    transition-colors
-    duration-200
-  "
->
-  VIEW ALL COLLECTIONS
-</Link>
-    </section>
+      {/* Main Heading */}
+      <h2 className="font-serif text-3xl uppercase tracking-[0.18em] text-[#1D1D1B] sm:text-4xl md:text-5xl">
+        New Arrivals
+      </h2>
+
+      {/* Description */}
+      <p className="mt-5 max-w-2xl text-sm font-light leading-7 text-gray-600 sm:text-[15px]">
+        Discover our newest wine selections, carefully curated from exceptional
+        wineries and regions around the world. Explore fresh arrivals and find
+        your next favorite bottle.
+      </p>
+    </div>
+
+    {/* =======================================================
+        PRODUCT GRID
+    ======================================================= */}
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+      {product.map((product) => (
+        <div
+          key={product.id}
+          className="group relative flex min-h-[520px] flex-col overflow-hidden rounded-[26px] border border-white/70 bg-white/70 shadow-[0_10px_35px_rgba(0,0,0,0.07)] backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:bg-white/80 hover:shadow-[0_25px_55px_rgba(0,0,0,0.14)]"
+        >
+
+          {/* =================================================
+              CARD INNER GLOW
+          ================================================= */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-[#741C29]/5 opacity-80" />
+
+          {/* =================================================
+              PRODUCT IMAGE AREA
+          ================================================= */}
+          <div className="relative flex h-[350px] items-center justify-center overflow-hidden px-6 pt-6">
+
+            {/* Decorative Circle */}
+            <div className="absolute left-1/2 top-1/2 h-60 w-60 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/70 blur-3xl transition-all duration-700 group-hover:scale-125" />
+
+            {/* Decorative Ring */}
+            <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60 transition-all duration-700 group-hover:scale-110" />
+
+            {/* =================================================
+                BADGE
+            ================================================= */}
+            {product.badge && (
+              <span
+                className={`absolute left-5 top-5 z-20 ${
+                  product.badgeColor || "bg-[#741C29]"
+                } rounded-full px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-white shadow-lg`}
+              >
+                {product.badge}
+              </span>
+            )}
+
+            {/* =================================================
+                SOLD OUT
+            ================================================= */}
+            {product.isSoldOut && (
+              <span className="absolute right-5 top-5 z-20 rounded-full bg-black/75 px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-white shadow-lg backdrop-blur-md">
+                Sold Out
+              </span>
+            )}
+
+            {/* =================================================
+                PRODUCT IMAGE
+            ================================================= */}
+            <div
+              className={`relative z-10 h-full w-full transition-all duration-700 ease-out group-hover:scale-[1.06] ${
+                product.isSoldOut
+                  ? "opacity-40 grayscale"
+                  : ""
+              }`}
+            >
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.20)]"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+              />
+            </div>
+
+            {/* Bottle Ground Shadow */}
+            <div className="absolute bottom-7 left-1/2 h-4 w-28 -translate-x-1/2 rounded-[50%] bg-black/15 blur-lg transition-all duration-500 group-hover:w-36" />
+
+            {/* Floating Arrow */}
+            <div className="absolute bottom-5 right-5 z-20 flex h-10 w-10 translate-y-3 items-center justify-center rounded-full border border-white/80 bg-white/80 text-[#741C29] opacity-0 shadow-lg backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <span className="text-base">
+                ↗
+              </span>
+            </div>
+          </div>
+
+          {/* =================================================
+              PRODUCT DETAILS
+          ================================================= */}
+          <div className="relative mt-auto border-t border-white/70 bg-white/75 px-5 py-5 backdrop-blur-xl">
+
+            {/* Category */}
+            <div className="mb-2 flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#741C29]" />
+
+              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                {product.category}
+              </p>
+            </div>
+
+            {/* Product Name */}
+            <h3 className="line-clamp-2 min-h-[48px] font-serif text-[17px] font-semibold leading-6 text-[#1D1D1B] transition-colors duration-300 group-hover:text-[#741C29]">
+              {product.name}
+            </h3>
+
+            {/* Price + Arrow */}
+            <div className="mt-4 flex items-center justify-between">
+
+              {/* Price */}
+              <div className="flex items-center gap-2">
+                <span className="text-[15px] font-semibold text-[#1D1D1B]">
+                  {product.price}
+                </span>
+
+                {product.oldPrice && (
+                  <span className="text-xs text-gray-400 line-through">
+                    {product.oldPrice}
+                  </span>
+                )}
+              </div>
+
+              {/* Arrow Button */}
+              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white/90 text-gray-500 transition-all duration-300 group-hover:border-[#741C29] group-hover:bg-[#741C29] group-hover:text-white">
+                <span className="text-sm transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* =======================================================
+        BOTTOM CTA
+    ======================================================= */}
+    <div className="mt-14 flex justify-center">
+
+      <Link
+        href="/shop"
+        className="group inline-flex items-center gap-4 rounded-full bg-[#741C29] px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-[#741C29]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#5D1621] hover:shadow-2xl"
+      >
+        <span>
+          View All Collections
+        </span>
+
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 transition-transform duration-300 group-hover:translate-x-1">
+          →
+        </span>
+      </Link>
+
+    </div>
+
+  </div>
+</section>
+
+
 
 {/* New Arrival end */}
 
@@ -2616,8 +2741,8 @@ export default function HeroSlider() {
             Boutique Wine Selection
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal leading-[1.05] text-[#1C1514] tracking-tight">
-            What <span className="font-semibold">CIAO</span><br />
-            <span class="italic font-light">DANIEL'S</span><br />
+            What <span className="font-semibold">Wines</span><br />
+            <span class="italic font-light">LLC</span><br />
             Offers
           </h1>
         </div>
@@ -3408,7 +3533,7 @@ export default function HeroSlider() {
           <span className="h-px w-10 bg-[#C7A66A] sm:w-14" />
 
           <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#C7A66A] xs:text-[11px] sm:text-xs sm:tracking-[0.32em]">
-            The CIAO DANIEL&apos;S Difference
+            The  Wines LLC&apos;S Difference
           </p>
         </div>
 
@@ -3430,9 +3555,9 @@ export default function HeroSlider() {
             xl:text-[80px]
           "
         >
-          Why CIAO
+          Why Wines 
           <span className="block text-[#C7A66A]">
-            DANIEL&apos;S?
+            LLC
           </span>
         </h2>
 
@@ -3617,7 +3742,7 @@ export default function HeroSlider() {
           <div className="absolute bottom-7 left-7 right-7 flex items-center justify-between xs:bottom-8 xs:left-8 xs:right-8 sm:bottom-9 sm:left-9 sm:right-9 lg:bottom-10 lg:left-10 lg:right-10">
 
             <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#8F8076] sm:text-[10px]">
-              Ciao Daniel&apos;s
+               Wines LLC
             </span>
 
             <span

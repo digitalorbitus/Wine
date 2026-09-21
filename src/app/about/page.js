@@ -1084,7 +1084,7 @@ export default function AboutUs() {
             For over 26 years,{" "}
 
             <strong className="text-[#741C29] font-semibold">
-              CIAO DANIEL’S
+              CIAO DANIEL
             </strong>{" "}
 
             has been dedicated to discovering and providing quality wines
@@ -1096,15 +1096,26 @@ export default function AboutUs() {
           <div className="mt-6 space-y-5 text-sm xs:text-base sm:text-lg leading-relaxed text-[#5C5046]">
 
             <p className="animate-fadeUp delay-400">
-              Our business has been built through years of experience,
-              trusted relationships with producers, and an appreciation
-              for wines that genuinely represent where they come from.
+             Wholesale Wine Distributor in Ohio  Wines, 
+             LLC is a leading wholesale wine distributor in Ohio, 
+             serving wine retailers, restaurants, hospitality businesses, 
+             and other industry professionals since 2000. 
+             We offer a complete wine portfolio featuring
+              carefully selected wines from renowned 
+              wine regions around the world.  
+             
             </p>
 
             <p className="animate-fadeUp delay-500">
-              Today, we continue to bring together a carefully selected
-              portfolio of wines from Europe, the United States, and other
-              respected wine-producing regions.
+             We import directly from wineries in Italy, France,
+               and Argentina, providing exceptional wines 
+               with a strong price-to-quality ratio. Our 
+               portfolio also includes wines from California, Ohio, Oregon,
+                New Zealand, Spain, Portugal, and Germany.  
+                From premium wines to quality everyday selections,
+                 we choose wines that represent the unique grape varieties
+                  and appellations of their regions. Our trained team provides 
+                  the knowledge and support businesses need to build the right wine selection.
             </p>
 
           </div>
