@@ -73,7 +73,7 @@
 .hero-item {
   opacity: 0;
   animation-name: heroItemIn;
-  animation-duration: 0.8s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
@@ -87,31 +87,31 @@
 
 /* 2nd — after 2 seconds */
 .hero-delay-2 {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 
 /* 3rd — after 4 seconds */
 .hero-delay-3 {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 
 
 /* 4th — after 6 seconds */
 .hero-delay-4 {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 
 
 /* 5th — after 8 seconds */
 .hero-delay-5 {
-  animation-delay: 8s;
+  animation-delay: 3s;
 }
 
 
 /* 6th — after 10 seconds */
 .hero-delay-6 {
-  animation-delay: 10s;
+  animation-delay: 3s;
 }
 
 @keyframes float {

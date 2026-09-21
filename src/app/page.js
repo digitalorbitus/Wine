@@ -613,352 +613,353 @@ export default function HeroSlider() {
     )}
 
     {/* HERO CONTENT */}
+  
+{/* =========================================================
+    HERO CONTENT - ALL LEFT SIDE
+========================================================= */}
+<div
+  className="
+    absolute
+    inset-0
+    z-20
+
+    flex
+    items-center
+    justify-start
+
+    px-4
+    py-5
+
+    sm:px-6
+    sm:py-6
+
+    md:px-8
+    md:py-8
+
+    lg:px-12
+    lg:py-10
+
+    xl:px-16
+    xl:py-12
+
+    2xl:px-20
+    2xl:py-16
+  "
+>
+  {/* CONTENT INNER CONTAINER */}
+  <div
+    key={currentIndex}
+    className="
+      w-full
+      max-w-4xl
+
+      flex
+      flex-col
+      items-start
+      justify-center
+
+      text-left
+
+      gap-2
+      sm:gap-2
+      md:gap-2.5
+      lg:gap-3
+    "
+  >
+
+    {/* =====================================================
+        SMALL LABEL
+    ===================================================== */}
     <div
       className="
-        absolute
-        inset-0
-        z-20
+        hero-item
+        hero-delay-1
+
+        inline-block
+        w-fit
+        max-w-[95%]
+
+        text-[clamp(9px,1.2vw,14px)]
+
+        tracking-[0.12em]
+        sm:tracking-[0.18em]
+        md:tracking-[0.22em]
+        lg:tracking-[0.25em]
+
+        uppercase
+
+        font-philosopher
+        font-semibold
+
+        text-[#D4AF37]
+        bg-black
+
+        border
+        border-[#D4AF37]
+
+        rounded-full
+
+        px-3
+        py-1.5
+
+        sm:px-4
+        sm:py-2
+
+        md:px-5
+        md:py-2
+
+        leading-normal
+
+        outline
+        outline-1
+        outline-[#D4AF37]/40
+        outline-offset-1
+      "
+    >
+      PREMIUM WINE WHOLESALER
+    </div>
+
+
+    {/* =====================================================
+        MAIN HEADING
+    ===================================================== */}
+    <h1
+      className="
+        hero-item
+        hero-delay-2
+
+        font-philosopher
+        font-bold
+
+        leading-[1.15]
+        sm:leading-[1.1]
+
+        text-[clamp(22px,4vw,64px)]
+
+        max-w-3xl
+
+        text-[#741C29]
+        text-left
+
+        drop-shadow-[0_2px_5px_rgba(255,255,255,0.6)]
+
+        m-0
+      "
+    >
+      Exceptional Wines.
+      <br />
+      Built for Your Business.
+    </h1>
+
+
+    {/* =====================================================
+        DESCRIPTION
+    ===================================================== */}
+    <p
+      className="
+        hero-item
+        hero-delay-3
+
+        w-full
+        max-w-2xl
+
+        text-[clamp(11px,1.5vw,18px)]
+
+        leading-[1.55]
+
+        font-philosopher
+        font-light
+
+        text-black
+        text-left
+
+        drop-shadow-[0_1px_4px_rgba(255,255,255,0.6)]
+
+        m-0
+      "
+    >
+      <span className="text-[#741C29] font-semibold">
+        Wines LLC
+      </span>{" "}
+      offers a curated selection of quality wines from renowned regions
+      <br />
+
+      worldwide, from Italy, France, Spain, and Germany to Argentina, California,
+      <br />
+
+      Oregon, Ohio, and New Zealand. Every wine is selected with
+      <br />
+      <br />
+
+      <span className="text-[#741C29] font-semibold">
+        RESTAURANTS, RETAILERS, HOTELS, BARS, and hospitality businesses in mind.
+      </span>
+    </p>
+
+
+    {/* =====================================================
+        TAGLINE
+    ===================================================== */}
+    <div
+      className="
+        hero-item
+        hero-delay-5
+
+        text-[clamp(9.5px,1.2vw,15px)]
+
+        leading-normal
+        sm:leading-snug
+
+        tracking-[0.08em]
+        sm:tracking-[0.12em]
+        md:tracking-[0.16em]
+
+        uppercase
+
+        font-philosopher
+        font-semibold
+
+        text-black
+        text-left
+
+        m-0
+      "
+    >
+      Personally Selected. Globally Sourced. Wholesale Focused.
+    </div>
+
+
+    {/* =====================================================
+        BUTTONS
+    ===================================================== */}
+    <div
+      className="
+        hero-item
+        hero-delay-6
+
         flex
+        flex-wrap
         items-center
-        md:items-end
+        justify-start
 
-        px-4
-        py-5
+        gap-2
+        sm:gap-3
+        md:gap-4
 
-        sm:px-6
-        sm:py-6
+        pt-1
 
-        md:px-8
-        md:py-8
-
-        lg:px-12
-        lg:py-10
-
-        xl:px-16
-        xl:py-12
-
-        2xl:px-20
-        2xl:py-16
+        m-0
       "
     >
 
-      {/* CONTENT INNER CONTAINER */}
-      <div
-        key={currentIndex}
+      {/* REQUEST WHOLESALE PRICING */}
+      <button
+        onClick={() => {
+          window.location.href = "/contact";
+        }}
         className="
-          w-full
-          max-w-4xl
-          text-[#241B16]
-
-          flex
-          flex-col
-
+          inline-flex
+          items-center
           justify-center
-          md:justify-end
 
-          gap-2
-          sm:gap-2
-          md:gap-2.5
-          lg:gap-3
+          px-3.5
+          py-2
+
+          sm:px-5
+          sm:py-2.5
+
+          md:px-6
+          md:py-3
+
+          lg:px-7
+          lg:py-3.5
+
+          text-[clamp(9.5px,1.1vw,14px)]
+
+          font-philosopher
+          font-semibold
+
+          bg-transparent
+
+          border
+          border-[#741C29]
+
+          text-[#741C29]
+
+          rounded-md
+
+          shadow-md
+
+          transition-all
+          duration-300
+
+          hover:bg-[#741C29]
+          hover:text-white
+          hover:scale-105
+          hover:shadow-xl
+
+          whitespace-nowrap
+          cursor-pointer
         "
       >
+        REQUEST WHOLESALE PRICING
+      </button>
 
-        {/* SMALL LABEL */}
-        <div
-          className="
-            hero-item
-            hero-delay-1
-
-            inline-block
-            w-fit
-            max-w-[95%]
-
-            text-[clamp(9px,1.2vw,14px)]
-            tracking-[0.12em]
-            sm:tracking-[0.18em]
-            md:tracking-[0.22em]
-            lg:tracking-[0.25em]
-
-            uppercase
-            font-philosopher
-            font-semibold
-            text-[#D4AF37]
-            bg-black
-
-            border
-            border-[#D4AF37]
-            rounded-full
-
-            px-3
-            py-1.5
-
-            sm:px-4
-            sm:py-2
-
-            md:px-5
-            md:py-2
-
-            leading-normal
-
-            outline
-            outline-1
-            outline-[#D4AF37]/40
-            outline-offset-1
-          "
-        >
-          PREMIUM WINE WHOLESELLER
-        </div>
-
-
-        {/* MAIN HEADING */}
-        <h1
-          className="
-            hero-item
-            hero-delay-2
-
-            font-philosopher
-            font-bold
-
-            leading-[1.15]
-            sm:leading-[1.1]
-
-            text-[clamp(22px,4vw,64px)]
-
-            max-w-3xl
-
-            text-[#741C29]
-
-            drop-shadow-[0_2px_5px_rgba(255,255,255,0.6)]
-
-            m-0
-          "
-        >
-          Exceptional Wines.
-          <br />
-          Built for Your Business.
-        </h1>
-
-
-        {/* FIRST DESCRIPTION */}
-    <p
-  className="
-    hero-item 
-    hero-delay-3
-    w-full 
-    max-w-2xl
-    text-[clamp(11px,1.5vw,18px)]
-    leading-[1.55]
-    font-philosopher
-    font-light
-    text-black
-    drop-shadow-[0_1px_4px_rgba(255,255,255,0.6)]
-    m-0
-  "
->
-  <span className="text-[#741C29] font-semibold">
-    Wines LLC
-  </span>{" "}
- offers a curated selection of quality wines   from renowned regions<br/> 
- worldwide, from Italy, France, Spain, and Germany to Argentina, California,<br/>
-  Oregon, Ohio, and New Zealand. Every wine is selected with <br/><br/>
-  <span className="text-[#741C29] font-semibold">RESTURANTS, RETAILERS, HOTELS, BARS, and hospitality businesses in mind.</span>
-</p>
-
 
-        {/* SECOND DESCRIPTION */}
-        {/* <p
-          className="
-            hero-item
-            hero-delay-4
+      {/* EXPLORE PORTFOLIO */}
+      <Link
+        href="/shop"
+        className="
+          inline-flex
+          items-center
+          justify-center
 
-            w-full
-            max-w-2xl
+          px-3.5
+          py-2
 
-            text-[clamp(10.5px,1.25vw,16px)]
+          sm:px-5
+          sm:py-2.5
 
-            leading-[1.55]
+          md:px-6
+          md:py-3
 
-            font-philosopher
-            font-light
+          lg:px-7
+          lg:py-3.5
 
-            text-black
+          text-[clamp(9.5px,1.1vw,14px)]
 
-            drop-shadow-[0_1px_4px_rgba(255,255,255,0.6)]
+          font-philosopher
+          font-semibold
 
-            m-0
-          "
-        >
-          From{" "}
-          <span className="text-[#741C29] font-semibold">
-            Italy, France, Spain and Germany
-          </span>{" "}
-          to{" "}
-          <span className="text-[#741C29] font-semibold">
-            Argentina, California, Oregon,<br/> Ohio and New Zealand
-          </span>
-          , every wine is personally selected with{" "}
-          <span className="text-[#741C29] font-semibold">
-            restaurants,<br/> retailers, hotels, bars, and hospitality
-            businesses
-          </span>{" "}
-          in mind.
-        </p> */}
+          bg-[#741C29]
 
+          hover:bg-[#5c1621]
 
-        {/* TAGLINE */}
-        <div
-          className="
-            hero-item
-            hero-delay-5
+          text-white
 
-            text-[clamp(9.5px,1.2vw,15px)]
+          rounded-md
 
-            leading-normal
-            sm:leading-snug
+          shadow-lg
 
-            tracking-[0.08em]
-            sm:tracking-[0.12em]
-            md:tracking-[0.16em]
+          transition-all
+          duration-300
 
-            uppercase
+          hover:scale-105
+          hover:shadow-xl
 
-            font-philosopher
-            font-semibold
+          whitespace-nowrap
+          cursor-pointer
+        "
+      >
+        EXPLORE OUR PORTFOLIO
+      </Link>
 
-            text-black
-
-            m-0
-          "
-        >
-          Personally Selected. Globally Sourced. Wholesale Focused.
-        </div>
-
-
-        {/* BUTTONS */}
-        <div
-          className="
-            hero-item
-            hero-delay-6
-
-            flex
-            flex-wrap
-            items-center
-
-            gap-2
-            sm:gap-3
-            md:gap-4
-
-            pt-1
-
-            m-0
-          "
-        >
-
-          {/* REQUEST WHOLESALE PRICING */}
-          <button
-            onClick={() => {
-              window.location.href = "/contact";
-            }}
-            className="
-              inline-flex
-              items-center
-              justify-center
-
-              px-3.5
-              py-2
-
-              sm:px-5
-              sm:py-2.5
-
-              md:px-6
-              md:py-3
-
-              lg:px-7
-              lg:py-3.5
-
-              text-[clamp(9.5px,1.1vw,14px)]
-
-              font-philosopher
-              font-semibold
-
-              bg-transparent
-
-              border
-              border-[#741C29]
-
-              text-[#741C29]
-
-              rounded-md
-
-              shadow-md
-
-              transition-all
-              duration-300
-
-              hover:bg-[#741C29]
-              hover:text-white
-              hover:scale-105
-              hover:shadow-xl
-
-              whitespace-nowrap
-              cursor-pointer
-            "
-          >
-            REQUEST WHOLESALE PRICING
-          </button>
-
-
-          {/* EXPLORE PORTFOLIO */}
-          <Link
-            href="/shop"
-            className="
-              inline-flex
-              items-center
-              justify-center
-
-              px-3.5
-              py-2
-
-              sm:px-5
-              sm:py-2.5
-
-              md:px-6
-              md:py-3
-
-              lg:px-7
-              lg:py-3.5
-
-              text-[clamp(9.5px,1.1vw,14px)]
-
-              font-philosopher
-              font-semibold
-
-              bg-[#741C29]
-
-              hover:bg-[#5c1621]
-
-              text-white
-
-              rounded-md
-
-              shadow-lg
-
-              transition-all
-              duration-300
-
-              hover:scale-105
-              hover:shadow-xl
-
-              whitespace-nowrap
-              cursor-pointer
-            "
-          >
-            EXPLORE OUR PORTFOLIO
-          </Link>
-
-        </div>
-      </div>
     </div>
+
+  </div>
+</div>
+
+
 
 
     {/* LEFT ARROW */}
@@ -2894,7 +2895,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Footer Meta Details */}
-      <footer className="max-w-6xl mx-auto mt-16 pt-6 border-t border-[#C2B7A8]/60 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-[#8C6B5D] gap-4">
+      {/* <footer className="max-w-6xl mx-auto mt-16 pt-6 border-t border-[#C2B7A8]/60 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-[#8C6B5D] gap-4">
         <div className="flex space-x-6">
           <span>Contact</span>
           <span>/</span>
@@ -2905,7 +2906,7 @@ export default function HeroSlider() {
         <div>
           Est. 2026 — Wine Collective
         </div>
-      </footer>
+      </footer> */}
     </section>
 
 
