@@ -52,8 +52,19 @@ export default function NewsletterSection() {
             {/* Address & Contact Info */}
             <div className="text-xs sm:text-lg text-white space-y-1.5 leading-relaxed font-old-standard">
               <p>Wines,LLC 7607 Shoreway Commerce Rd, Cleveland, Ohio 44103</p>
-              <p>Call us 440.812.3776.</p>
-              <p>ciaodaniel@gmail.com</p>
+           <p>
+  Call us{" "}
+  <a href="tel:4408123776" className="hover:underline">
+    440.812.3776
+  </a>
+  .
+</p>
+
+<p>
+  <a href="mailto:ciaodaniel@gmail.com" className="hover:underline">
+    ciaodaniel@gmail.com
+  </a>
+</p>
               {/* <p>Copyright © 2017, DesignThemes. All right reserved Privacy Terms.</p> */}
             </div>
 
