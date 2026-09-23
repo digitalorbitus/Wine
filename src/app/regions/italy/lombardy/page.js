@@ -5,271 +5,156 @@ import { ArrowLeft } from "lucide-react";
 
 const producers = [
   {
-    name: "Ascheri",
+    name: "BellaVista - Franciacorta",
     wines: [
       {
-        name: "Barolo Coste & Bricco, DOCG",
-        year: "2019",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barolo Sorano, DOCG",
-        year: "2020",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barolo Pisapola, DOCG",
-        year: "2020",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barolo, DOCG",
-        year: "2021",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barbera Langhe",
-        year: "2023",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barbera d'Alba, DOC",
-        year: "2018",
-        alcohol: "14%",
-      },
-      {
-        name: "Barbera d'Alba, DOC",
-        year: "2017",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Dolcetto Langhe",
-        year: "2024",
-        alcohol: "13%",
-      },
-      {
-        name: "Gavi del comune di Gavi, DOCG",
-        year: "2024",
-        alcohol: "12.5%",
-      },
-      {
-        name: "Arneis, DOC",
-        year: "2024",
-        alcohol: "13%",
-      },
-    ],
-  },
-
-  {
-    name: "Carlo & Sylvia Soc. Agr.",
-    wines: [
-      {
-        name: "Moscato d'Asti, DOCG",
-        year: "2024",
-        alcohol: "5%",
-      },
-      {
-        name: "Chardonnay, DOC",
-        year: "2024",
-        alcohol: "12.5%",
-      },
-    ],
-  },
-
-  {
-    name: "Fratelli Ferrero, La Morra",
-    wines: [
-      {
-        name: "Barolo Manzoni Bricco, DOCG",
-        year: "2017",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barolo Gattera, DOCG",
-        year: "2019",
-        alcohol: "14%",
-      },
-      {
-        name: "Barolo Pinin, DOCG",
-        year: "2020",
-        alcohol: "14%",
-      },
-      {
-        name: "Nebbiolo Langhe, DOC",
-        year: "2021",
-        alcohol: "13.5%",
-      },
-      {
-        name: "Barbera d'Alba, DOC",
-        year: "2022",
-        alcohol: "13.5%",
-      },
-    ],
-  },
-
-  {
-    name: "Punset",
-    wines: [
-      {
-        name: "Barbaresco Riserva 'Campo Quadro', DOCG",
+        name: "Vittorio Moretti Riserva, DOCG",
         year: "2016",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barbaresco Riserva 'Basarin', DOCG",
-        year: "2017",
-        alcohol: "14%",
-      },
-      {
-        name: "Nebbiolo Langhe, DOC",
-        year: "2022",
-        alcohol: "14%",
-      },
-      {
-        name: "Barbera d'Alba, DOC",
-        year: "2021",
-        alcohol: "15%",
-      },
-      {
-        name: "Dolcetto d'Alba, DOC",
-        year: "2022",
         alcohol: "12.5%",
+        detail:
+          "62% Chardonnay, 38% Pinot Nero · Only created in exceptional harvest years · Manual harvest, soft pressing, fermentation in small oak barrels, long aging on yeasts with cork stopper.",
       },
       {
-        name: "Langhe Arneis, DOC",
-        year: "2023",
+        name: "La Scala, DOCG",
+        year: "2018",
+        alcohol: "12.5%",
+        detail: "75% Chardonnay, 25% Pinot Nero",
+      },
+      {
+        name: "Alma Gran Cuvée, DOCG",
+        year: "N/V",
+        alcohol: "12.5%",
+        detail: "90% Chardonnay, 10% Pinot Nero · JS 90 pts",
+      },
+      {
+        name: "Satèn Brut, DOCG",
+        year: "2018",
+        alcohol: "12.5%",
+        detail: "100% Chardonnay",
+      },
+      {
+        name: "Brut Rosé, DOCG",
+        year: "2020",
+        alcohol: "12.5%",
+        detail: "65% Chardonnay, 35% Pinot Nero",
+      },
+    ],
+  },
+
+  {
+    name: "Caven - Valtellina",
+    wines: [
+      {
+        name: "Messere - Sforzato di Valtellina, DOCG",
+        year: "2015",
+        alcohol: "15.5%",
+        detail:
+          "100% Chiavennasca (Nebbiolo) · Grapes dried on mats for 3 months · 15 months small oak barrels, then in large oak barrels",
+      },
+      {
+        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
+        year: "2017",
         alcohol: "13.5%",
       },
       {
-        name: "NE? Langhe Bianco, DOC",
+        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
+        year: "2015",
+        alcohol: "13%",
+      },
+      {
+        name: "La Priora - Valtellina Superiore Sassella Riserva, DOCG",
+        year: "2016",
+        alcohol: "13%",
+        detail:
+          "100% Chiavennasca (Nebbiolo) · 18 months small oak barrels, then large oak barrels · 8 months in bottle",
+      },
+      {
+        name: "La Martellina Inferno Valtellina Superiore, DOCG",
+        year: "2020",
+        alcohol: "13.5%",
+        detail:
+          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
+      },
+      {
+        name: "La Martellina Inferno Valtellina Superiore, DOCG",
+        year: "2019",
+        alcohol: "13.5%",
+      },
+      {
+        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
+        year: "2020",
+        alcohol: "13.5%",
+        detail:
+          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
+      },
+      {
+        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
+        year: "2019",
+        alcohol: "13.5%",
+      },
+    ],
+  },
+
+  {
+    name: "Contadi Castaldi - Franciacorta",
+    wines: [
+      {
+        name: "Brut, DOCG",
+        year: "N/V",
+        alcohol: "12.5%",
+        detail: "80% Chardonnay, 10% Pinot Nero, 10% Pinot Bianco",
+      },
+      {
+        name: "Rosé Brut, DOCG",
+        year: "N/V",
+        alcohol: "12.5%",
+        detail: "65% Chardonnay, 35% Pinot Nero · WE 90 pts",
+      },
+    ],
+  },
+
+  {
+    name: "Nera - Valtellina",
+    wines: [
+      {
+        name: "Rosso di Valtellina Satiro, DOC",
+        year: "2021",
+        alcohol: "12.5%",
+        detail:
+          "Chiavennasca (Nebbiolo), Pignola, and Rossola · Aged 6 months in medium oak barrels and steel tanks",
+      },
+    ],
+  },
+
+  {
+    name: "Torti",
+    wines: [
+      {
+        name: "Pinot Noir, IGP",
         year: "2023",
         alcohol: "13%",
       },
       {
-        name: "Arneis & Nascetta",
-        year: "—",
-        alcohol: "—",
-      },
-    ],
-  },
-
-  {
-    name: "Vegis",
-    wines: [
-      {
-        name: "Gattinara Riserva, DOCG",
-        year: "2015",
-        alcohol: "13.5%",
-      },
-    ],
-  },
-
-  /* =====================================================
-     VITE COLTE
-  ===================================================== */
-  {
-    name: "Vite Colte",
-    wines: [
-      {
-        name: "Barolo Riserva, DOCG",
-        year: "2015",
-        alcohol: "14.5%",
-        detail: "JS 93 pts",
-      },
-      {
-        name: "Barolo di Serralunga d'Alba, DOCG",
-        year: "2015",
-        alcohol: "14.5%",
-        detail: "JS 93 pts",
-      },
-      {
-        name: "Barolo di Barolo, DOCG",
+        name: "Barbera, DOC",
         year: "2019",
-        alcohol: "14.5%",
-        detail: "JS 91 pts",
+        alcohol: "13%",
       },
       {
-        name: "Barolo di Monforte d'Alba, DOCG",
-        year: "2013",
-        alcohol: "14%",
-      },
-      {
-        name: "Barolo 'Paesi Tuoi', DOCG",
-        year: "2020",
-        alcohol: "14%",
-        detail: "JS 91 pts",
-      },
-      {
-        name: "Barbaresco Riserva, DOCG",
-        year: "2015",
-        alcohol: "14.5%",
-        detail: "JS 93 pts",
-      },
-      {
-        name: "Barbaresco 'La Casa in Collina', DOCG",
-        year: "2021",
-        alcohol: "14%",
-        detail: "JS 91 pts",
-      },
-      {
-        name: "Barbera d'Asti Superiore, DOCG",
-        year: "2022",
-        alcohol: "14.5%",
-      },
-      {
-        name: "Barbera d'Asti 'Rossofuoco', DOCG",
+        name: "Crotina, IGP",
         year: "2023",
-        alcohol: "13.5%",
-        detail: "Vino Biologico",
+        alcohol: "13%",
       },
       {
-        name: "Surpass - Rosso Passito, DOC",
-        year: "2021",
-        alcohol: "15%",
-        detail: "Late harvest Barbera · 6 months barriques",
-      },
-      {
-        name: "Nizza, DOCG",
-        year: "2020",
-        alcohol: "15%",
-        detail: "JS 92 pts",
-      },
-      {
-        name: "Barbera Riserva",
-        year: "—",
-        alcohol: "—",
-        detail: "12 months barrique · 12 months in barrel",
-      },
-      {
-        name: "Nebbiolo d'Alba Valdolmo, DOC",
+        name: "Blanc de Noir, DOC",
         year: "2023",
-        alcohol: "13.5%",
+        alcohol: "12%",
+        detail: "100% Pinot Nero vinified Bianco",
       },
       {
-        name: "Nebbiolo Langhe, DOC",
-        year: "2023",
-        alcohol: "14%",
-        detail: "Vino Biologico",
-      },
-      {
-        name: "Timorasso 'Derthona', Colli Tortonesi DOC",
-        year: "2023",
-        alcohol: "14%",
-      },
-      {
-        name: "Gavi, DOCG",
-        year: "2024",
-        alcohol: "11%",
-      },
-      {
-        name: "Sauvignon, DOC 'Tra Donne Sole'",
-        year: "2022",
-        alcohol: "14%",
-      },
-      {
-        name: "Roero Arneis, DOCG",
-        year: "—",
-        alcohol: "13.5%",
+        name: "Rosé Brut 'Casaleggio'",
+        year: "N/V",
+        alcohol: "11.5%",
+        detail: "Pinot Nero & Chardonnay",
       },
     ],
   },
@@ -280,7 +165,7 @@ const totalWines = producers.reduce(
   0
 );
 
-export default function PiedmontPage() {
+export default function LombardyPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
       {/* =====================================================
@@ -320,17 +205,18 @@ export default function PiedmontPage() {
             </div>
 
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
-              From the heart of Northern Italy
+              From the lakes to the Alpine valleys
             </p>
 
             <h1 className="mt-3 font-philosopher text-5xl leading-tight sm:text-6xl lg:text-7xl">
-              Piedmont
+              Lombardy
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
-              Discover our selection of wines from Piedmont, featuring
-              celebrated Barolo, Barbaresco, Nebbiolo, Barbera, Dolcetto,
-              Arneis and other wines from this historic Italian region.
+              Discover our selection of wines from Lombardy, featuring
+              Franciacorta sparkling wines and the distinctive reds of
+              Valtellina, alongside Pinot Noir, Barbera and other regional
+              selections.
             </p>
 
             <div className="mx-auto mt-8 flex items-center justify-center gap-3">
@@ -386,7 +272,7 @@ export default function PiedmontPage() {
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
-                Piedmont
+                Lombardy
               </p>
             </div>
           </div>
@@ -405,11 +291,11 @@ export default function PiedmontPage() {
             </p>
 
             <h2 className="mt-1 font-philosopher text-3xl text-[#741C29] sm:text-4xl lg:text-5xl">
-              Wines from Piedmont
+              Wines from Lombardy
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl font-old-standard text-sm leading-6 text-[#6D625B]">
-              A curated selection from Piedmont producers and vineyards.
+              A curated selection from Lombardy producers and vineyards.
             </p>
           </div>
 
@@ -480,7 +366,7 @@ export default function PiedmontPage() {
                   {/* TABLE ROWS */}
                   {producer.wines.map((wine, index) => (
                     <div
-                      key={`${wine.name}-${index}`}
+                      key={`${wine.name}-${wine.year}-${index}`}
                       className="
                         group
                         grid
@@ -523,7 +409,7 @@ export default function PiedmontPage() {
                           </p>
 
                           {wine.detail && (
-                            <p className="mt-1 font-old-standard text-xs text-[#B89B6A]">
+                            <p className="mt-1 max-w-3xl font-old-standard text-xs leading-5 text-[#B89B6A]">
                               {wine.detail}
                             </p>
                           )}
@@ -553,7 +439,7 @@ export default function PiedmontPage() {
                 <div className="divide-y divide-[#741C29]/10 lg:hidden">
                   {producer.wines.map((wine, index) => (
                     <article
-                      key={`${wine.name}-${index}`}
+                      key={`${wine.name}-${wine.year}-${index}`}
                       className="p-5 sm:p-6"
                     >
                       <div className="flex gap-4">
@@ -622,7 +508,7 @@ export default function PiedmontPage() {
           ===================================================== */}
           <div className="mt-14 border-t border-[#741C29]/10 pt-8 text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A]">
-              Piedmont, Italy
+              Lombardy, Italy
             </p>
 
             <p className="mt-2 font-old-standard text-sm text-[#6D625B]">
