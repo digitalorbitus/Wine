@@ -313,7 +313,7 @@ export default function VenetoPage() {
         <div className="mx-auto max-w-7xl">
           {/* Back Link */}
           <Link
-            href="/regions/italy"
+            href="/italy"
             className="mb-10 inline-flex items-center gap-2 font-old-standard text-sm text-[#6D625B] transition-colors hover:text-[#741C29]"
           >
             <ArrowLeft className="h-4 w-4" />
