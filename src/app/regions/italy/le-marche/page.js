@@ -5,167 +5,25 @@ import { ArrowLeft } from "lucide-react";
 
 const producers = [
   {
-    name: "BellaVista - Franciacorta",
+    name: "Fattoria Colmone della Marca",
     wines: [
       {
-        name: "Vittorio Moretti Riserva, DOCG",
-        year: "2016",
-        alcohol: "12.5%",
-        detail:
-          "62% Chardonnay, 38% Pinot Nero · Only created in exceptional harvest years · Manual harvest, soft pressing, fermentation in small oak barrels, long aging on yeasts with cork stopper.",
-      },
-      {
-        name: "La Scala, DOCG",
-        year: "2018",
-        alcohol: "12.5%",
-        detail: "75% Chardonnay, 25% Pinot Nero",
-      },
-      {
-        name: "Alma Gran Cuvée, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "90% Chardonnay, 10% Pinot Nero · JS 90 pts",
-      },
-      {
-        name: "Satèn Brut, DOCG",
-        year: "2018",
-        alcohol: "12.5%",
-        detail: "100% Chardonnay",
-      },
-      {
-        name: "Brut Rosé, DOCG",
-        year: "2020",
-        alcohol: "12.5%",
-        detail: "65% Chardonnay, 35% Pinot Nero",
-      },
-    ],
-  },
-
-  {
-    name: "Caven - Valtellina",
-    wines: [
-      {
-        name: "Messere - Sforzato di Valtellina, DOCG",
-        year: "2015",
-        alcohol: "15.5%",
-        detail:
-          "100% Chiavennasca (Nebbiolo) · Grapes dried on mats for 3 months · 15 months small oak barrels, then in large oak barrels",
-      },
-      {
-        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
-        year: "2017",
-        alcohol: "13.5%",
-      },
-      {
-        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
-        year: "2015",
-        alcohol: "13%",
-      },
-      {
-        name: "La Priora - Valtellina Superiore Sassella Riserva, DOCG",
-        year: "2016",
-        alcohol: "13%",
-        detail:
-          "100% Chiavennasca (Nebbiolo) · 18 months small oak barrels, then large oak barrels · 8 months in bottle",
-      },
-      {
-        name: "La Martellina Inferno Valtellina Superiore, DOCG",
-        year: "2020",
-        alcohol: "13.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
-      },
-      {
-        name: "La Martellina Inferno Valtellina Superiore, DOCG",
-        year: "2019",
-        alcohol: "13.5%",
-      },
-      {
-        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
-        year: "2020",
-        alcohol: "13.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
-      },
-      {
-        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
-        year: "2019",
-        alcohol: "13.5%",
-      },
-    ],
-  },
-
-  {
-    name: "Contadi Castaldi - Franciacorta",
-    wines: [
-      {
-        name: "Brut, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "80% Chardonnay, 10% Pinot Nero, 10% Pinot Bianco",
-      },
-      {
-        name: "Rosé Brut, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "65% Chardonnay, 35% Pinot Nero · WE 90 pts",
-      },
-    ],
-  },
-
-  {
-    name: "Nera - Valtellina",
-    wines: [
-      {
-        name: "Rosso di Valtellina Satiro, DOC",
-        year: "2021",
-        alcohol: "12.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · Aged 6 months in medium oak barrels and steel tanks",
-      },
-    ],
-  },
-
-  {
-    name: "Torti",
-    wines: [
-      {
-        name: "Pinot Noir, IGP",
-        year: "2023",
-        alcohol: "13%",
-      },
-      {
-        name: "Barbera, DOC",
-        year: "2019",
-        alcohol: "13%",
-      },
-      {
-        name: "Crotina, IGP",
-        year: "2023",
-        alcohol: "13%",
-      },
-      {
-        name: "Blanc de Noir, DOC",
-        year: "2023",
-        alcohol: "12%",
-        detail: "100% Pinot Nero vinified Bianco",
-      },
-      {
-        name: "Rosé Brut 'Casaleggio'",
-        year: "N/V",
+        name: "Il Ciarliero",
+        appellation: "Frizzante",
         alcohol: "11.5%",
-        detail: "Pinot Nero & Chardonnay",
+        year: "N/V",
+        detail: "100% Vernaccia Nera · Charmat Method",
       },
     ],
   },
 ];
 
-const totalWines = producers.reduce(
+const wineCount = producers.reduce(
   (total, producer) => total + producer.wines.length,
   0
 );
 
-export default function LombardyPage() {
+export default function LeMarchePage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
       {/* =====================================================
@@ -207,7 +65,7 @@ export default function LombardyPage() {
             </div>
 
             <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
-              Lombardy
+              Le Marche
             </h1>
           </div>
 
@@ -223,14 +81,13 @@ export default function LombardyPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
-              From the lakes to the Alpine valleys
+              A hidden treasure of central Italy
             </p>
 
             <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
-              Discover our selection of wines from Lombardy, featuring
-              Franciacorta sparkling wines and the distinctive reds of
-              Valtellina, alongside Pinot Noir, Barbera and other regional
-              selections.
+              Discover our selection of wines from Le Marche, featuring the
+              region&apos;s distinctive Vernaccia Nera and elegant sparkling
+              wines from dedicated local producers.
             </p>
 
             <div className="mx-auto mt-7 flex items-center justify-center gap-3">
@@ -254,6 +111,7 @@ export default function LombardyPage() {
               sm:grid-cols-3
             "
           >
+            {/* PRODUCERS */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                Wineries
@@ -264,23 +122,25 @@ export default function LombardyPage() {
               </p>
             </div>
 
+            {/* WINES */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Wines
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
-                {totalWines}
+                {wineCount}
               </p>
             </div>
 
+            {/* REGION */}
             <div className="col-span-2 bg-white p-6 text-center sm:col-span-1">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Region
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
-                Lombardy
+                Le Marche
               </p>
             </div>
           </div>
@@ -292,9 +152,23 @@ export default function LombardyPage() {
       ===================================================== */}
       <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
-          {/* =================================================
-              PRODUCERS
-          ================================================= */}
+          {/* SECTION HEADING */}
+          <div className="mb-12 text-center">
+            <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
+              From the Vineyards
+            </p>
+
+            <h2 className="mt-1 font-philosopher text-3xl text-[#741C29] sm:text-4xl lg:text-5xl">
+              Wines from Le Marche
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-xl font-old-standard text-sm leading-6 text-[#6D625B]">
+              A curated selection from distinguished Marche producers and
+              vineyards.
+            </p>
+          </div>
+
+          {/* PRODUCERS */}
           <div className="space-y-10">
             {producers.map((producer) => (
               <section
@@ -312,8 +186,7 @@ export default function LombardyPage() {
                   className="
                     border-b border-[#741C29]/10
                     bg-[#F4F2EC]/50
-                    px-6 py-7 text-center
-                    sm:px-8
+                    px-6 py-7 text-center sm:px-8
                   "
                 >
                   <p className="font-great-vibes text-2xl text-[#B89B6A]">
@@ -376,16 +249,15 @@ export default function LombardyPage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
-                        <div>
+                        <div className="min-w-0">
                           <p className="font-philosopher text-lg text-[#741C29]">
                             {wine.name}
                           </p>
 
-                          {wine.detail && (
-                            <p className="mt-1 max-w-3xl font-old-standard text-xs leading-5 text-[#B89B6A]">
-                              {wine.detail}
-                            </p>
-                          )}
+                          <p className="mt-1 max-w-3xl font-old-standard text-xs leading-5 text-[#B89B6A]">
+                            {wine.appellation}
+                            {wine.detail ? ` · ${wine.detail}` : ""}
+                          </p>
                         </div>
                       </div>
 
@@ -431,16 +303,16 @@ export default function LombardyPage() {
                             {wine.name}
                           </h4>
 
-                          {wine.detail && (
-                            <p className="mt-1 font-old-standard text-xs leading-5 text-[#B89B6A]">
-                              {wine.detail}
-                            </p>
-                          )}
+                          <p className="mt-1 font-old-standard text-xs leading-5 text-[#B89B6A]">
+                            {wine.appellation}
+                            {wine.detail ? ` · ${wine.detail}` : ""}
+                          </p>
                         </div>
                       </div>
 
                       {/* DETAILS */}
                       <div className="mt-5 grid grid-cols-2 gap-3">
+                        {/* YEAR */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Year
@@ -451,6 +323,7 @@ export default function LombardyPage() {
                           </p>
                         </div>
 
+                        {/* ALCOHOL */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Alcohol
@@ -473,11 +346,11 @@ export default function LombardyPage() {
           ===================================================== */}
           <div className="mt-14 border-t border-[#741C29]/10 pt-8 text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A]">
-              Lombardy, Italy
+              Le Marche, Italy
             </p>
 
             <p className="mt-2 font-old-standard text-sm text-[#6D625B]">
-              {totalWines} wines from {producers.length} producers
+              {wineCount} wines from {producers.length} producer
             </p>
           </div>
         </div>

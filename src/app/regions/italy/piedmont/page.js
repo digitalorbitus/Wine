@@ -284,56 +284,70 @@ export default function PiedmontPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
       {/* =====================================================
-          HERO
+          TOP
       ===================================================== */}
-      <section className="px-6 pb-14 pt-20 sm:px-10 lg:px-16 lg:pb-20 lg:pt-28">
-        <div className="mx-auto max-w-7xl">
-          {/* BACK */}
-          <Link
-            href="/italy"
-            className="
-              mb-12
-              inline-flex
-              items-center
-              gap-2
-              font-old-standard
-              text-sm
-              text-[#6D625B]
-              transition-colors
-              hover:text-[#741C29]
-            "
-          >
-            <ArrowLeft size={16} />
-            Back to Italy
-          </Link>
+      <section className="px-6 pt-3 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-5 md:grid-cols-[1fr_auto_1fr]">
+          {/* LEFT */}
+          <div className="flex justify-start">
+            <Link
+              href="/shop"
+              className="
+                group inline-flex items-center gap-2 rounded-full
+                border border-[#741C29]/15 bg-white px-4 py-2.5
+                font-old-standard text-sm uppercase tracking-[0.12em]
+                text-[#741C29] transition-all duration-300
+                hover:border-[#741C29] hover:bg-[#741C29] hover:text-white
+              "
+            >
+              <ArrowLeft
+                size={16}
+                strokeWidth={1.6}
+                className="transition-transform duration-300 group-hover:-translate-x-1"
+              />
+              Back
+            </Link>
+          </div>
 
-          {/* CENTER HEADING */}
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-5 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-[#D4AF37]" />
+          {/* CENTER */}
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
 
-              <span className="font-old-standard text-sm uppercase tracking-[0.3em]">
+              <span className="font-old-standard text-xs uppercase tracking-[0.3em] text-[#741C29]">
                 Italy
               </span>
 
-              <span className="h-px w-10 bg-[#D4AF37]" />
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
             </div>
 
+            <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
+              Piedmont
+            </h1>
+          </div>
+
+          {/* RIGHT SPACER */}
+          <div className="hidden md:block" />
+        </div>
+      </section>
+
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+      <section className="px-6 pb-12 pt-8 sm:px-10 lg:px-16 lg:pb-16 lg:pt-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
               From the heart of Northern Italy
             </p>
 
-            <h1 className="mt-3 font-philosopher text-5xl leading-tight sm:text-6xl lg:text-7xl">
-              Piedmont
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
               Discover our selection of wines from Piedmont, featuring
               celebrated Barolo, Barbaresco, Nebbiolo, Barbera, Dolcetto,
               Arneis and other wines from this historic Italian region.
             </p>
 
-            <div className="mx-auto mt-8 flex items-center justify-center gap-3">
+            <div className="mx-auto mt-7 flex items-center justify-center gap-3">
               <span className="h-px w-16 bg-[#D4AF37]/60" />
 
               <span className="h-1.5 w-1.5 rotate-45 bg-[#D4AF37]" />
@@ -347,22 +361,16 @@ export default function PiedmontPage() {
           ================================================= */}
           <div
             className="
-              mx-auto
-              mt-12
-              grid
-              max-w-5xl
-              grid-cols-2
-              overflow-hidden
-              rounded-2xl
-              border
-              border-[#741C29]/10
+              mx-auto mt-12 grid max-w-5xl grid-cols-2
+              overflow-hidden rounded-2xl
+              border border-[#741C29]/10
               bg-[#741C29]/10
               sm:grid-cols-3
             "
           >
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
-                Producers
+               Wineries
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
@@ -398,21 +406,6 @@ export default function PiedmontPage() {
       ===================================================== */}
       <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
-          {/* CENTER SECTION HEADING */}
-          <div className="mb-12 text-center">
-            <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
-              Our Selection
-            </p>
-
-            <h2 className="mt-1 font-philosopher text-3xl text-[#741C29] sm:text-4xl lg:text-5xl">
-              Wines from Piedmont
-            </h2>
-
-            <p className="mx-auto mt-4 max-w-xl font-old-standard text-sm leading-6 text-[#6D625B]">
-              A curated selection from Piedmont producers and vineyards.
-            </p>
-          </div>
-
           {/* =================================================
               PRODUCERS
           ================================================= */}
@@ -421,27 +414,19 @@ export default function PiedmontPage() {
               <section
                 key={producer.name}
                 className="
-                  overflow-hidden
-                  rounded-2xl
-                  border
-                  border-[#741C29]/10
-                  bg-white
-                  shadow-sm
-                  transition-all
-                  duration-300
+                  overflow-hidden rounded-2xl
+                  border border-[#741C29]/10
+                  bg-white shadow-sm
+                  transition-all duration-300
                   hover:shadow-lg
                 "
               >
                 {/* PRODUCER HEADER */}
                 <div
                   className="
-                    border-b
-                    border-[#741C29]/10
+                    border-b border-[#741C29]/10
                     bg-[#F4F2EC]/50
-                    px-6
-                    py-7
-                    text-center
-                    sm:px-8
+                    px-6 py-7 text-center sm:px-8
                   "
                 >
                   <p className="font-great-vibes text-2xl text-[#B89B6A]">
@@ -482,14 +467,10 @@ export default function PiedmontPage() {
                     <div
                       key={`${wine.name}-${index}`}
                       className="
-                        group
-                        grid
-                        grid-cols-[1fr_180px_180px]
-                        border-b
-                        border-[#741C29]/8
+                        group grid grid-cols-[1fr_180px_180px]
+                        border-b border-[#741C29]/8
                         last:border-0
-                        transition-colors
-                        duration-300
+                        transition-colors duration-300
                         hover:bg-[#F4F2EC]/60
                       "
                     >
@@ -497,19 +478,10 @@ export default function PiedmontPage() {
                       <div className="flex items-center gap-4 px-8 py-5">
                         <span
                           className="
-                            flex
-                            h-9
-                            w-9
-                            shrink-0
-                            items-center
-                            justify-center
-                            rounded-full
-                            bg-[#741C29]/5
-                            font-old-standard
-                            text-xs
-                            text-[#741C29]
-                            transition-all
-                            duration-300
+                            flex h-9 w-9 shrink-0 items-center justify-center
+                            rounded-full bg-[#741C29]/5
+                            font-old-standard text-xs text-[#741C29]
+                            transition-all duration-300
                             group-hover:bg-[#741C29]
                             group-hover:text-white
                           "
@@ -559,17 +531,9 @@ export default function PiedmontPage() {
                       <div className="flex gap-4">
                         <span
                           className="
-                            flex
-                            h-9
-                            w-9
-                            shrink-0
-                            items-center
-                            justify-center
-                            rounded-full
-                            bg-[#741C29]/5
-                            font-old-standard
-                            text-xs
-                            text-[#741C29]
+                            flex h-9 w-9 shrink-0 items-center justify-center
+                            rounded-full bg-[#741C29]/5
+                            font-old-standard text-xs text-[#741C29]
                           "
                         >
                           {String(index + 1).padStart(2, "0")}

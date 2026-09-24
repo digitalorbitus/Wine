@@ -5,156 +5,134 @@ import { ArrowLeft } from "lucide-react";
 
 const producers = [
   {
-    name: "BellaVista - Franciacorta",
+    name: "San Simone",
     wines: [
       {
-        name: "Vittorio Moretti Riserva, DOCG",
-        year: "2016",
+        name: "Pinot Grigio Prestige, DOC",
         alcohol: "12.5%",
-        detail:
-          "62% Chardonnay, 38% Pinot Nero · Only created in exceptional harvest years · Manual harvest, soft pressing, fermentation in small oak barrels, long aging on yeasts with cork stopper.",
+        year: "2024",
       },
       {
-        name: "La Scala, DOCG",
-        year: "2018",
+        name: "Rondover Pinot Grigio, DOC",
         alcohol: "12.5%",
-        detail: "75% Chardonnay, 25% Pinot Nero",
+        year: "2024",
       },
       {
-        name: "Alma Gran Cuvée, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "90% Chardonnay, 10% Pinot Nero · JS 90 pts",
-      },
-      {
-        name: "Satèn Brut, DOCG",
-        year: "2018",
-        alcohol: "12.5%",
-        detail: "100% Chardonnay",
-      },
-      {
-        name: "Brut Rosé, DOCG",
-        year: "2020",
-        alcohol: "12.5%",
-        detail: "65% Chardonnay, 35% Pinot Nero",
-      },
-    ],
-  },
-
-  {
-    name: "Caven - Valtellina",
-    wines: [
-      {
-        name: "Messere - Sforzato di Valtellina, DOCG",
-        year: "2015",
-        alcohol: "15.5%",
-        detail:
-          "100% Chiavennasca (Nebbiolo) · Grapes dried on mats for 3 months · 15 months small oak barrels, then in large oak barrels",
-      },
-      {
-        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
-        year: "2017",
-        alcohol: "13.5%",
-      },
-      {
-        name: "Al Carmine - Valtellina Superiore Inferno Riserva, DOCG",
-        year: "2015",
-        alcohol: "13%",
-      },
-      {
-        name: "La Priora - Valtellina Superiore Sassella Riserva, DOCG",
-        year: "2016",
-        alcohol: "13%",
-        detail:
-          "100% Chiavennasca (Nebbiolo) · 18 months small oak barrels, then large oak barrels · 8 months in bottle",
-      },
-      {
-        name: "La Martellina Inferno Valtellina Superiore, DOCG",
-        year: "2020",
-        alcohol: "13.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
-      },
-      {
-        name: "La Martellina Inferno Valtellina Superiore, DOCG",
-        year: "2019",
-        alcohol: "13.5%",
-      },
-      {
-        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
-        year: "2020",
-        alcohol: "13.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · 12 months oak barrels",
-      },
-      {
-        name: "Le Coppelle Sassella Valtellina Superiore, DOCG",
-        year: "2019",
-        alcohol: "13.5%",
-      },
-    ],
-  },
-
-  {
-    name: "Contadi Castaldi - Franciacorta",
-    wines: [
-      {
-        name: "Brut, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "80% Chardonnay, 10% Pinot Nero, 10% Pinot Bianco",
-      },
-      {
-        name: "Rosé Brut, DOCG",
-        year: "N/V",
-        alcohol: "12.5%",
-        detail: "65% Chardonnay, 35% Pinot Nero · WE 90 pts",
-      },
-    ],
-  },
-
-  {
-    name: "Nera - Valtellina",
-    wines: [
-      {
-        name: "Rosso di Valtellina Satiro, DOC",
-        year: "2021",
-        alcohol: "12.5%",
-        detail:
-          "Chiavennasca (Nebbiolo), Pignola, and Rossola · Aged 6 months in medium oak barrels and steel tanks",
-      },
-    ],
-  },
-
-  {
-    name: "Torti",
-    wines: [
-      {
-        name: "Pinot Noir, IGP",
-        year: "2023",
-        alcohol: "13%",
-      },
-      {
-        name: "Barbera, DOC",
-        year: "2019",
-        alcohol: "13%",
-      },
-      {
-        name: "Crotina, IGP",
-        year: "2023",
-        alcohol: "13%",
-      },
-      {
-        name: "Blanc de Noir, DOC",
-        year: "2023",
-        alcohol: "12%",
-        detail: "100% Pinot Nero vinified Bianco",
-      },
-      {
-        name: "Rosé Brut 'Casaleggio'",
-        year: "N/V",
+        name: "Millesimato Prosecco Brut, DOC",
         alcohol: "11.5%",
-        detail: "Pinot Nero & Chardonnay",
+        year: "2024",
+      },
+      {
+        name: "Nexus, DOC",
+        alcohol: "13.5%",
+        year: "2022",
+        detail:
+          "100% Cabernet Sauvignon · Riserva · 16 months in oak barrels",
+      },
+      {
+        name: "Evante Riserva Merlot, DOC",
+        alcohol: "13.5%",
+        year: "2022",
+        detail: "100% Merlot · 18 months in oak",
+      },
+    ],
+  },
+
+  {
+    name: "Schiopetto",
+    wines: [
+      {
+        name: "Friulano 'Mario Schiopetto', Collio DOC",
+        alcohol: "13.5%",
+        year: "2021",
+        detail: "95% Friulano, 5% Riesling",
+      },
+      {
+        name: "Amrità, Friuli DOC",
+        alcohol: "13.5%",
+        year: "2021",
+        detail: "Chardonnay & Friulano",
+      },
+      {
+        name: "Friulano, Collio DOC",
+        alcohol: "13%",
+        year: "2020",
+        detail: "Gambero Rosso Tre Bicchieri",
+      },
+      {
+        name: "Pinot Grigio, Collio DOC",
+        alcohol: "13.5%",
+        year: "2021",
+        detail: "Linea del Pompiere (Firefighter Line)",
+      },
+    ],
+  },
+
+  {
+    name: "Visintini",
+    subtitle: "Colli Orientali, Certified Organic Winery",
+    wines: [
+      {
+        name: "Cinzia Bianco, IGP",
+        alcohol: "13%",
+        year: "N/V",
+        detail: "95% Friulano, 5% Pinot Bianco",
+      },
+      {
+        name: "Pinot Grigio, DOP",
+        alcohol: "13.5%",
+        year: "2023",
+      },
+      {
+        name: "Pinot Bianco, DOP",
+        alcohol: "14.5%",
+        year: "2022",
+      },
+      {
+        name: "Traminer Aromatico, DOP",
+        alcohol: "14.5%",
+        year: "2022",
+      },
+      {
+        name: "Cabernet, DOP",
+        alcohol: "12.5%",
+        year: "2019",
+        detail: "70% Cabernet Franc, 30% Cabernet Sauvignon",
+      },
+      {
+        name: "Schioppettino, DOP",
+        alcohol: "13.5%",
+        year: "2022",
+        detail: "100% Schioppettino · 8 months in oak",
+      },
+    ],
+  },
+
+  {
+    name: "Volpe Pasini",
+    wines: [
+      {
+        name: "Sauvignon 'Zuc di Volpe', DOC",
+        alcohol: "13%",
+        year: "2021",
+        detail: "Gambero Rosso Tre Bicchieri",
+      },
+      {
+        name: "Pinot Grigio 'GriVò', DOC",
+        alcohol: "12.5%",
+        year: "2023",
+        detail: "Gambero Rosso Due Bicchieri",
+      },
+      {
+        name: "Chardonnay, IGT",
+        alcohol: "12.5%",
+        year: "2023",
+      },
+      {
+        name: "Cabernet, IGT",
+        alcohol: "12.5%",
+        year: "2022",
+        detail: "85% Cabernet Sauvignon, 15% Cabernet Franc",
       },
     ],
   },
@@ -165,7 +143,7 @@ const totalWines = producers.reduce(
   0
 );
 
-export default function LombardyPage() {
+export default function FriuliVeneziaGiuliaPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
       {/* =====================================================
@@ -207,7 +185,7 @@ export default function LombardyPage() {
             </div>
 
             <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
-              Lombardy
+              Friuli-Venezia Giulia
             </h1>
           </div>
 
@@ -223,14 +201,14 @@ export default function LombardyPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
-              From the lakes to the Alpine valleys
+              Where the Alps meet the Adriatic
             </p>
 
             <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
-              Discover our selection of wines from Lombardy, featuring
-              Franciacorta sparkling wines and the distinctive reds of
-              Valtellina, alongside Pinot Noir, Barbera and other regional
-              selections.
+              Discover our selection of wines from Friuli-Venezia Giulia,
+              featuring expressive Pinot Grigio, Friulano, Sauvignon,
+              Chardonnay and distinctive regional reds from some of the
+              region&apos;s renowned producers.
             </p>
 
             <div className="mx-auto mt-7 flex items-center justify-center gap-3">
@@ -254,6 +232,7 @@ export default function LombardyPage() {
               sm:grid-cols-3
             "
           >
+            {/* PRODUCERS */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                Wineries
@@ -264,6 +243,7 @@ export default function LombardyPage() {
               </p>
             </div>
 
+            {/* WINES */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Wines
@@ -274,13 +254,14 @@ export default function LombardyPage() {
               </p>
             </div>
 
+            {/* REGION */}
             <div className="col-span-2 bg-white p-6 text-center sm:col-span-1">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Region
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
-                Lombardy
+                Friuli-Venezia Giulia
               </p>
             </div>
           </div>
@@ -292,9 +273,6 @@ export default function LombardyPage() {
       ===================================================== */}
       <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
-          {/* =================================================
-              PRODUCERS
-          ================================================= */}
           <div className="space-y-10">
             {producers.map((producer) => (
               <section
@@ -307,13 +285,14 @@ export default function LombardyPage() {
                   hover:shadow-lg
                 "
               >
-                {/* PRODUCER HEADER */}
+                {/* =================================================
+                    PRODUCER HEADER
+                ================================================= */}
                 <div
                   className="
                     border-b border-[#741C29]/10
                     bg-[#F4F2EC]/50
-                    px-6 py-7 text-center
-                    sm:px-8
+                    px-6 py-7 text-center sm:px-8
                   "
                 >
                   <p className="font-great-vibes text-2xl text-[#B89B6A]">
@@ -323,6 +302,12 @@ export default function LombardyPage() {
                   <h3 className="mt-1 font-philosopher text-2xl text-[#741C29] sm:text-3xl">
                     {producer.name}
                   </h3>
+
+                  {producer.subtitle && (
+                    <p className="mt-2 font-old-standard text-sm italic text-[#6D625B]">
+                      {producer.subtitle}
+                    </p>
+                  )}
 
                   <p className="mt-2 font-old-standard text-sm text-[#6D625B]">
                     {producer.wines.length}{" "}
@@ -376,7 +361,7 @@ export default function LombardyPage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
-                        <div>
+                        <div className="min-w-0">
                           <p className="font-philosopher text-lg text-[#741C29]">
                             {wine.name}
                           </p>
@@ -415,6 +400,7 @@ export default function LombardyPage() {
                       key={`${wine.name}-${wine.year}-${index}`}
                       className="p-5 sm:p-6"
                     >
+                      {/* WINE */}
                       <div className="flex gap-4">
                         <span
                           className="
@@ -441,6 +427,7 @@ export default function LombardyPage() {
 
                       {/* DETAILS */}
                       <div className="mt-5 grid grid-cols-2 gap-3">
+                        {/* YEAR */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Year
@@ -451,6 +438,7 @@ export default function LombardyPage() {
                           </p>
                         </div>
 
+                        {/* ALCOHOL */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Alcohol
@@ -473,7 +461,7 @@ export default function LombardyPage() {
           ===================================================== */}
           <div className="mt-14 border-t border-[#741C29]/10 pt-8 text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A]">
-              Lombardy, Italy
+              Friuli-Venezia Giulia, Italy
             </p>
 
             <p className="mt-2 font-old-standard text-sm text-[#6D625B]">

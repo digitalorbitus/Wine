@@ -320,8 +320,7 @@ const producers = [
         name: "Chianti Classico 'Belcanto', DOCG",
         year: "2022",
         alcohol: "14%",
-        detail:
-          "92 JS · 90% Sangiovese, 10% other indigenous grapes",
+        detail: "92 JS · 90% Sangiovese, 10% other indigenous grapes",
       },
       {
         name: "Vermentino 'Ben', DOC",
@@ -363,15 +362,13 @@ const producers = [
         name: "Hebo, IGT",
         year: "2020",
         alcohol: "14%",
-        detail:
-          "50% Cabernet Sauvignon, 40% Merlot, 10% Sangiovese",
+        detail: "50% Cabernet Sauvignon, 40% Merlot, 10% Sangiovese",
       },
       {
         name: "Zingari, IGT",
         year: "2022",
         alcohol: "13.5%",
-        detail:
-          "25% Merlot, 25% Sangiovese, 25% Syrah, 25% Petit Verdot",
+        detail: "25% Merlot, 25% Sangiovese, 25% Syrah, 25% Petit Verdot",
       },
     ],
   },
@@ -512,7 +509,8 @@ const producers = [
         name: "Ripa delle More, IGT",
         year: "2023",
         alcohol: "14%",
-        detail: "Greve in Chianti · Sangiovese, Cabernet Sauvignon, Merlot",
+        detail:
+          "Greve in Chianti · Sangiovese, Cabernet Sauvignon, Merlot",
       },
       {
         name: "Le Bolle Chianti Classico Gran Selezione, DOCG",
@@ -548,8 +546,7 @@ const producers = [
         name: "Ripa delle Mandorle, IGT",
         year: "2023",
         alcohol: "13%",
-        detail:
-          '75% Sangiovese, 25% Cabernet Sauvignon · "Super Tuscan"',
+        detail: '75% Sangiovese, 25% Cabernet Sauvignon · "Super Tuscan"',
       },
       {
         name: "Floreale Toscana Rosato, IGT",
@@ -590,57 +587,71 @@ export default function TuscanyPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
       {/* =====================================================
-          HERO
+          TOP
       ===================================================== */}
-      <section className="px-6 pb-14 pt-20 sm:px-10 lg:px-16 lg:pb-20 lg:pt-28">
-        <div className="mx-auto max-w-7xl">
-          {/* BACK */}
-          <Link
-            href="/regions/italy"
-            className="
-              mb-12
-              inline-flex
-              items-center
-              gap-2
-              font-old-standard
-              text-sm
-              text-[#6D625B]
-              transition-colors
-              hover:text-[#741C29]
-            "
-          >
-            <ArrowLeft size={16} />
-            Back to Italy
-          </Link>
+      <section className="px-6 pt-3 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-5 md:grid-cols-[1fr_auto_1fr]">
+          {/* LEFT - BACK */}
+          <div className="flex justify-start">
+            <Link
+              href="/shop"
+              className="
+                group inline-flex items-center gap-2 rounded-full
+                border border-[#741C29]/15 bg-white px-4 py-2.5
+                font-old-standard text-sm uppercase tracking-[0.12em]
+                text-[#741C29] transition-all duration-300
+                hover:border-[#741C29] hover:bg-[#741C29] hover:text-white
+              "
+            >
+              <ArrowLeft
+                size={16}
+                strokeWidth={1.6}
+                className="transition-transform duration-300 group-hover:-translate-x-1"
+              />
+              Back
+            </Link>
+          </div>
 
-          {/* CENTER HEADING */}
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-5 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-[#D4AF37]" />
+          {/* CENTER */}
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
 
-              <span className="font-old-standard text-sm uppercase tracking-[0.3em]">
+              <span className="font-old-standard text-xs uppercase tracking-[0.3em] text-[#741C29]">
                 Italy
               </span>
 
-              <span className="h-px w-10 bg-[#D4AF37]" />
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
             </div>
 
+            <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
+              Tuscany
+            </h1>
+          </div>
+
+          {/* RIGHT SPACER */}
+          <div className="hidden md:block" />
+        </div>
+      </section>
+
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+      <section className="px-6 pb-12 pt-8 sm:px-10 lg:px-16 lg:pb-16 lg:pt-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
               From the hills of central Italy
             </p>
 
-            <h1 className="mt-3 font-philosopher text-5xl leading-tight sm:text-6xl lg:text-7xl">
-              Tuscany
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
               Discover our selection of wines from Tuscany, featuring
               celebrated Brunello di Montalcino, Chianti Classico, Vino Nobile
               di Montepulciano, Super Tuscans and distinctive wines from
               Maremma and across the region.
             </p>
 
-            <div className="mx-auto mt-8 flex items-center justify-center gap-3">
+            <div className="mx-auto mt-7 flex items-center justify-center gap-3">
               <span className="h-px w-16 bg-[#D4AF37]/60" />
 
               <span className="h-1.5 w-1.5 rotate-45 bg-[#D4AF37]" />
@@ -667,9 +678,10 @@ export default function TuscanyPage() {
               sm:grid-cols-3
             "
           >
+            {/* PRODUCERS */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
-                Producers
+                Wineries
               </p>
 
               <p className="mt-2 font-philosopher text-2xl">
@@ -677,6 +689,7 @@ export default function TuscanyPage() {
               </p>
             </div>
 
+            {/* WINES */}
             <div className="bg-white p-6 text-center">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Wines
@@ -687,6 +700,7 @@ export default function TuscanyPage() {
               </p>
             </div>
 
+            {/* REGION */}
             <div className="col-span-2 bg-white p-6 text-center sm:col-span-1">
               <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Region
@@ -706,7 +720,7 @@ export default function TuscanyPage() {
       <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           {/* CENTER SECTION HEADING */}
-          <div className="mb-12 text-center">
+          {/* <div className="mb-12 text-center">
             <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
               Our Selection
             </p>
@@ -716,10 +730,10 @@ export default function TuscanyPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl font-old-standard text-sm leading-6 text-[#6D625B]">
-              A curated selection from Tuscany producers, estates and
+              A curated selection from distinguished Tuscan producers and
               vineyards.
             </p>
-          </div>
+          </div> */}
 
           {/* =================================================
               PRODUCERS
@@ -825,7 +839,7 @@ export default function TuscanyPage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
-                        <div>
+                        <div className="min-w-0">
                           <p className="font-philosopher text-lg text-[#741C29]">
                             {wine.name}
                           </p>
@@ -864,6 +878,7 @@ export default function TuscanyPage() {
                       key={`${wine.name}-${wine.year}-${index}`}
                       className="p-5 sm:p-6"
                     >
+                      {/* WINE */}
                       <div className="flex gap-4">
                         <span
                           className="
@@ -896,8 +911,9 @@ export default function TuscanyPage() {
                         </div>
                       </div>
 
-                      {/* DETAILS */}
+                      {/* BASIC DETAILS */}
                       <div className="mt-5 grid grid-cols-2 gap-3">
+                        {/* YEAR */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Year
@@ -908,6 +924,7 @@ export default function TuscanyPage() {
                           </p>
                         </div>
 
+                        {/* ALCOHOL */}
                         <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
                           <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Alcohol

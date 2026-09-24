@@ -48,88 +48,120 @@ const totalWines = producers.reduce(
 export default function EmiliaRomagnaPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
-      {/* =========================================================
-          HERO
-      ========================================================= */}
-      <section className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          {/* Back */}
-          <Link
-            href="/regions/italy"
-            className="mb-10 inline-flex items-center gap-2 font-old-standard text-sm text-[#6D625B] transition-colors hover:text-[#741C29]"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Italy
-          </Link>
-
-          {/* Region Label */}
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-px w-12 bg-[#D4AF37] sm:w-20" />
-
-            <span className="font-old-standard text-xs uppercase tracking-[0.35em] text-[#B89B6A] sm:text-sm">
-              Italy
-            </span>
-
-            <div className="h-px w-12 bg-[#D4AF37] sm:w-20" />
+      {/* =====================================================
+          TOP
+      ===================================================== */}
+      <section className="px-6 pt-3 sm:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-5 md:grid-cols-[1fr_auto_1fr]">
+          {/* LEFT */}
+          <div className="flex justify-start">
+            <Link
+              href="/shop"
+              className="
+                group inline-flex items-center gap-2 rounded-full
+                border border-[#741C29]/15 bg-white px-4 py-2.5
+                font-old-standard text-sm uppercase tracking-[0.12em]
+                text-[#741C29] transition-all duration-300
+                hover:border-[#741C29] hover:bg-[#741C29] hover:text-white
+              "
+            >
+              <ArrowLeft
+                size={16}
+                strokeWidth={1.6}
+                className="transition-transform duration-300 group-hover:-translate-x-1"
+              />
+              Back
+            </Link>
           </div>
 
-          {/* Decorative */}
-          <p className="mt-8 text-center font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl md:text-5xl">
-            From the heart of Northern Italy
-          </p>
+          {/* CENTER */}
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
 
-          {/* Heading */}
-          <h1 className="mt-3 text-center font-philosopher text-5xl leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-            Emilia-Romagna
-          </h1>
+              <span className="font-old-standard text-xs uppercase tracking-[0.3em] text-[#741C29]">
+                Italy
+              </span>
 
-          {/* Description */}
-          <p className="mx-auto mt-6 max-w-3xl text-center font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg sm:leading-8">
-            Discover our selection of wines from Emilia-Romagna, featuring
-            expressive Lambrusco and sparkling rosé wines from one of Italy&apos;s
-            most distinctive wine regions.
-          </p>
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
+            </div>
 
-          {/* Divider */}
-          <div className="mx-auto mt-10 h-px w-24 bg-[#D4AF37]" />
+            <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
+              Emilia-Romagna
+            </h1>
+          </div>
+
+          {/* RIGHT SPACER */}
+          <div className="hidden md:block" />
         </div>
       </section>
 
-      {/* =========================================================
-          STATS
-      ========================================================= */}
-      <section className="px-4 pb-10 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 overflow-hidden rounded-2xl border border-[#741C29]/10 bg-white shadow-sm sm:grid-cols-3">
-            {/* Producers */}
-            <div className="border-b border-[#741C29]/10 px-6 py-7 text-center sm:border-b-0 sm:border-r">
-              <p className="font-old-standard text-xs uppercase tracking-[0.25em] text-[#B89B6A]">
-                Producers
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+      <section className="px-6 pb-12 pt-8 sm:px-10 lg:px-16 lg:pb-16 lg:pt-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
+              From the heart of Northern Italy
+            </p>
+
+            <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
+              Discover our selection of wines from Emilia-Romagna, featuring
+              expressive Lambrusco and sparkling rosé wines from one of
+              Italy&apos;s most distinctive wine regions.
+            </p>
+
+            <div className="mx-auto mt-7 flex items-center justify-center gap-3">
+              <span className="h-px w-16 bg-[#D4AF37]/60" />
+
+              <span className="h-1.5 w-1.5 rotate-45 bg-[#D4AF37]" />
+
+              <span className="h-px w-16 bg-[#D4AF37]/60" />
+            </div>
+          </div>
+
+          {/* =================================================
+              STATS
+          ================================================= */}
+          <div
+            className="
+              mx-auto mt-12 grid max-w-5xl grid-cols-2
+              overflow-hidden rounded-2xl
+              border border-[#741C29]/10
+              bg-[#741C29]/10
+              sm:grid-cols-3
+            "
+          >
+            {/* PRODUCERS */}
+            <div className="bg-white p-6 text-center">
+              <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
+                Wineries
               </p>
 
-              <p className="mt-2 font-philosopher text-3xl text-[#741C29]">
+              <p className="mt-2 font-philosopher text-2xl">
                 {producers.length}
               </p>
             </div>
 
-            {/* Wines */}
-            <div className="border-b border-[#741C29]/10 px-6 py-7 text-center sm:border-b-0 sm:border-r">
-              <p className="font-old-standard text-xs uppercase tracking-[0.25em] text-[#B89B6A]">
+            {/* WINES */}
+            <div className="bg-white p-6 text-center">
+              <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Wines
               </p>
 
-              <p className="mt-2 font-philosopher text-3xl text-[#741C29]">
+              <p className="mt-2 font-philosopher text-2xl">
                 {totalWines}
               </p>
             </div>
 
-            {/* Region */}
-            <div className="px-6 py-7 text-center">
-              <p className="font-old-standard text-xs uppercase tracking-[0.25em] text-[#B89B6A]">
+            {/* REGION */}
+            <div className="col-span-2 bg-white p-6 text-center sm:col-span-1">
+              <p className="font-old-standard text-xs uppercase tracking-[0.18em] text-[#6D625B]">
                 Region
               </p>
 
-              <p className="mt-2 font-philosopher text-2xl text-[#741C29]">
+              <p className="mt-2 font-philosopher text-2xl">
                 Emilia-Romagna
               </p>
             </div>
@@ -137,128 +169,162 @@ export default function EmiliaRomagnaPage() {
         </div>
       </section>
 
-      {/* =========================================================
+      {/* =====================================================
           WINE SELECTION
-      ========================================================= */}
-      <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      ===================================================== */}
+      <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
-          {/* Section Heading */}
-          <div className="mb-10 text-center sm:mb-14">
-            <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
-              Our Selection
-            </p>
-
-            <h2 className="mt-2 font-philosopher text-4xl sm:text-5xl md:text-6xl">
-              Wines from Emilia-Romagna
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
-              A focused selection of sparkling and frizzante wines from Cantina
-              Settecani, showcasing the character and versatility of Lambrusco.
-            </p>
-          </div>
-
-          {/* =====================================================
-              PRODUCERS
-          ===================================================== */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             {producers.map((producer) => (
-              <div
+              <section
                 key={producer.name}
-                className="overflow-hidden rounded-2xl border border-[#741C29]/10 bg-white shadow-sm"
+                className="
+                  overflow-hidden rounded-2xl
+                  border border-[#741C29]/10
+                  bg-white shadow-sm
+                  transition-all duration-300
+                  hover:shadow-lg
+                "
               >
-                {/* Producer Header */}
-                <div className="border-b border-[#741C29]/10 bg-[#F4F2EC] px-5 py-7 text-center sm:px-8">
-                  <p className="font-old-standard text-xs uppercase tracking-[0.3em] text-[#B89B6A]">
+                {/* =================================================
+                    PRODUCER HEADER
+                ================================================= */}
+                <div
+                  className="
+                    border-b border-[#741C29]/10
+                    bg-[#F4F2EC]/50
+                    px-6 py-7 text-center sm:px-8
+                  "
+                >
+                  <p className="font-great-vibes text-2xl text-[#B89B6A]">
                     Producer
                   </p>
 
-                  <h3 className="mt-2 font-philosopher text-3xl sm:text-4xl">
+                  <h3 className="mt-1 font-philosopher text-2xl text-[#741C29] sm:text-3xl">
                     {producer.name}
                   </h3>
+
+                  <p className="mt-2 font-old-standard text-sm text-[#6D625B]">
+                    {producer.wines.length}{" "}
+                    {producer.wines.length === 1 ? "Wine" : "Wines"}
+                  </p>
                 </div>
 
                 {/* =================================================
-                    DESKTOP TABLE
+                    DESKTOP
                 ================================================= */}
                 <div className="hidden lg:block">
-                  {/* Table Header */}
+                  {/* TABLE HEADER */}
                   <div className="grid grid-cols-[1fr_180px_180px] bg-[#741C29] text-white">
-                    <div className="px-6 py-4 font-old-standard text-sm uppercase tracking-[0.18em]">
+                    <div className="px-8 py-4 text-left font-old-standard text-xs font-semibold uppercase tracking-[0.18em]">
                       Wine
                     </div>
 
-                    <div className="px-6 py-4 text-center font-old-standard text-sm uppercase tracking-[0.18em]">
+                    <div className="px-6 py-4 text-center font-old-standard text-xs font-semibold uppercase tracking-[0.18em]">
                       Year
                     </div>
 
-                    <div className="px-6 py-4 text-center font-old-standard text-sm uppercase tracking-[0.18em]">
+                    <div className="px-6 py-4 text-center font-old-standard text-xs font-semibold uppercase tracking-[0.18em]">
                       Alcohol
                     </div>
                   </div>
 
-                  {/* Table Rows */}
+                  {/* TABLE ROWS */}
                   {producer.wines.map((wine, index) => (
                     <div
                       key={`${wine.name}-${wine.year}-${index}`}
-                      className={`grid grid-cols-[1fr_180px_180px] ${
-                        index !== producer.wines.length - 1
-                          ? "border-b border-[#741C29]/10"
-                          : ""
-                      }`}
+                      className="
+                        group grid grid-cols-[1fr_180px_180px]
+                        border-b border-[#741C29]/8
+                        last:border-0
+                        transition-colors duration-300
+                        hover:bg-[#F4F2EC]/60
+                      "
                     >
-                      {/* Wine */}
-                      <div className="px-6 py-5">
-                        <p className="font-old-standard text-base font-medium text-[#741C29]">
-                          {wine.name}
-                        </p>
+                      {/* WINE */}
+                      <div className="flex items-center gap-4 px-8 py-5">
+                        <span
+                          className="
+                            flex h-9 w-9 shrink-0 items-center justify-center
+                            rounded-full bg-[#741C29]/5
+                            font-old-standard text-xs text-[#741C29]
+                            transition-all duration-300
+                            group-hover:bg-[#741C29]
+                            group-hover:text-white
+                          "
+                        >
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
 
-                        {wine.detail && (
-                          <p className="mt-1 font-old-standard text-sm leading-6 text-[#B89B6A]">
-                            {wine.detail}
+                        <div className="min-w-0">
+                          <p className="font-philosopher text-lg text-[#741C29]">
+                            {wine.name}
                           </p>
-                        )}
+
+                          {wine.detail && (
+                            <p className="mt-1 max-w-3xl font-old-standard text-xs leading-5 text-[#B89B6A]">
+                              {wine.detail}
+                            </p>
+                          )}
+                        </div>
                       </div>
 
-                      {/* Year */}
-                      <div className="flex items-center justify-center px-6 py-5 font-old-standard text-[#6D625B]">
-                        {wine.year}
+                      {/* YEAR */}
+                      <div className="flex items-center justify-center px-6 py-5">
+                        <span className="font-old-standard text-base text-[#6D625B]">
+                          {wine.year}
+                        </span>
                       </div>
 
-                      {/* Alcohol */}
-                      <div className="flex items-center justify-center px-6 py-5 font-old-standard text-[#6D625B]">
-                        {wine.alcohol}
+                      {/* ALCOHOL */}
+                      <div className="flex items-center justify-center px-6 py-5">
+                        <span className="font-old-standard text-base text-[#6D625B]">
+                          {wine.alcohol}
+                        </span>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* =================================================
-                    MOBILE / TABLET CARDS
+                    MOBILE / TABLET
                 ================================================= */}
                 <div className="divide-y divide-[#741C29]/10 lg:hidden">
                   {producer.wines.map((wine, index) => (
-                    <div
+                    <article
                       key={`${wine.name}-${wine.year}-${index}`}
                       className="p-5 sm:p-6"
                     >
-                      {/* Wine Name */}
-                      <div>
-                        <p className="font-old-standard text-base font-medium leading-6 text-[#741C29] sm:text-lg">
-                          {wine.name}
-                        </p>
+                      {/* WINE */}
+                      <div className="flex gap-4">
+                        <span
+                          className="
+                            flex h-9 w-9 shrink-0 items-center justify-center
+                            rounded-full bg-[#741C29]/5
+                            font-old-standard text-xs text-[#741C29]
+                          "
+                        >
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
 
-                        {wine.detail && (
-                          <p className="mt-1.5 font-old-standard text-sm leading-6 text-[#B89B6A]">
-                            {wine.detail}
-                          </p>
-                        )}
+                        <div className="min-w-0 flex-1">
+                          <h4 className="font-philosopher text-xl leading-tight text-[#741C29]">
+                            {wine.name}
+                          </h4>
+
+                          {wine.detail && (
+                            <p className="mt-1 font-old-standard text-xs leading-5 text-[#B89B6A]">
+                              {wine.detail}
+                            </p>
+                          )}
+                        </div>
                       </div>
 
-                      {/* Year + Alcohol */}
+                      {/* DETAILS */}
                       <div className="mt-5 grid grid-cols-2 gap-3">
-                        <div className="rounded-xl bg-[#F4F2EC] px-4 py-3 text-center">
-                          <p className="font-old-standard text-[10px] uppercase tracking-[0.2em] text-[#B89B6A]">
+                        {/* YEAR */}
+                        <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
+                          <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Year
                           </p>
 
@@ -267,8 +333,9 @@ export default function EmiliaRomagnaPage() {
                           </p>
                         </div>
 
-                        <div className="rounded-xl bg-[#F4F2EC] px-4 py-3 text-center">
-                          <p className="font-old-standard text-[10px] uppercase tracking-[0.2em] text-[#B89B6A]">
+                        {/* ALCOHOL */}
+                        <div className="rounded-xl bg-[#F4F2EC] p-4 text-center">
+                          <p className="font-old-standard text-[10px] uppercase tracking-[0.15em] text-[#6D625B]">
                             Alcohol
                           </p>
 
@@ -277,28 +344,25 @@ export default function EmiliaRomagnaPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </article>
                   ))}
                 </div>
-              </div>
+              </section>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* =========================================================
-          FOOTER
-      ========================================================= */}
-      <section className="border-t border-[#741C29]/10 px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <p className="font-great-vibes text-3xl text-[#B89B6A]">
-            Emilia-Romagna, Italy
-          </p>
+          {/* =====================================================
+              FOOTER INFO
+          ===================================================== */}
+          <div className="mt-14 border-t border-[#741C29]/10 pt-8 text-center">
+            <p className="font-great-vibes text-3xl text-[#B89B6A]">
+              Emilia-Romagna, Italy
+            </p>
 
-          <p className="mt-3 font-old-standard text-sm text-[#6D625B]">
-            {producers.length} Producer{producers.length !== 1 ? "s" : ""} ·{" "}
-            {totalWines} Wines
-          </p>
+            <p className="mt-2 font-old-standard text-sm text-[#6D625B]">
+              {totalWines} wines from {producers.length} producer
+            </p>
+          </div>
         </div>
       </section>
     </main>

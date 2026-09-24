@@ -6495,13 +6495,10 @@
 
 
 
-
-
-
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, ArrowLeft, MapPin } from "lucide-react";
 
 const regions = [
   { name: "Piedmont", slug: "piedmont" },
@@ -6525,94 +6522,111 @@ const regions = [
 export default function ItalyRegionsPage() {
   return (
     <main className="min-h-screen bg-[#F4F2EC] text-[#741C29]">
-
       {/* =====================================================
-          HERO / PAGE HEADER
+          TOP BAR + HEADING
       ===================================================== */}
-      <section className="px-6 pb-14 pt-24 sm:px-10 lg:px-16 lg:pb-20 lg:pt-32">
-        <div className="mx-auto max-w-4xl text-center">
-
-          {/* COUNTRY */}
-          <div className="mb-5 flex items-center justify-center gap-2">
-
-            <span className="h-px w-10 bg-[#D4AF37]/60" />
-
-            <span className="font-old-standard text-sm uppercase tracking-[0.3em] text-[#741C29]">
-              Italy
-            </span>
-
-            <span className="h-px w-10 bg-[#D4AF37]/60" />
-
+      <section className="px-6 pt-6 sm:px-10 lg:px-16 lg:pt-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-5 md:grid-cols-[1fr_auto_1fr]">
+          {/* BACK BUTTON */}
+          <div className="flex justify-start">
+            <Link
+              href="/shop"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-[#741C29]/15
+                bg-white
+                px-4
+                py-2.5
+                font-old-standard
+                text-sm
+                uppercase
+                tracking-[0.12em]
+                text-[#741C29]
+                transition-all
+                duration-300
+                hover:border-[#741C29]
+                hover:bg-[#741C29]
+                hover:text-white
+              "
+            >
+              <ArrowLeft
+                size={16}
+                strokeWidth={1.6}
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:-translate-x-1
+                "
+              />
+              Back 
+            </Link>
           </div>
 
+          {/* MAIN HEADING */}
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
 
-          {/* DECORATIVE SCRIPT */}
+              <span className="font-old-standard text-xs uppercase tracking-[0.3em] text-[#741C29]">
+                Italy
+              </span>
+
+              <span className="h-px w-8 bg-[#D4AF37]/60" />
+            </div>
+
+            <h1 className="mt-2 whitespace-nowrap font-philosopher text-3xl leading-tight tracking-tight text-[#741C29] sm:text-4xl lg:text-5xl">
+              Italian Wine Regions
+            </h1>
+          </div>
+
+          {/* EMPTY RIGHT SIDE - KEEPS HEADING CENTERED */}
+          <div className="hidden md:block" />
+        </div>
+      </section>
+
+      {/* =====================================================
+          HERO DESCRIPTION
+      ===================================================== */}
+      <section className="px-6 pb-12 pt-8 sm:px-10 lg:px-16 lg:pb-16 lg:pt-10">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="font-great-vibes text-3xl text-[#B89B6A] sm:text-4xl">
             From the heart of Italy
           </p>
 
-
-          {/* MAIN HEADING */}
-          <h1 className="mt-3 font-philosopher text-4xl leading-tight tracking-tight text-[#741C29] sm:text-5xl lg:text-6xl">
-            Italian Wine Regions
-          </h1>
-
-
-          {/* DESCRIPTION */}
-          <p className="mx-auto mt-6 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl font-old-standard text-base leading-7 text-[#6D625B] sm:text-lg">
             Explore the distinctive wine regions of Italy, from the northern
             vineyards of Piedmont and Veneto to the sun-soaked landscapes of
             Puglia and Sicily.
           </p>
 
-
-          {/* GOLD DIVIDER */}
-          <div className="mx-auto mt-9 flex items-center justify-center gap-3">
-
+          <div className="mx-auto mt-7 flex items-center justify-center gap-3">
             <span className="h-px w-16 bg-[#D4AF37]/60" />
 
             <span className="h-1.5 w-1.5 rotate-45 bg-[#D4AF37]" />
 
             <span className="h-px w-16 bg-[#D4AF37]/60" />
-
           </div>
-
         </div>
       </section>
-
 
       {/* =====================================================
           REGIONS SECTION
       ===================================================== */}
       <section className="px-6 pb-24 sm:px-10 lg:px-16 lg:pb-32">
         <div className="mx-auto max-w-7xl">
-
-
           {/* SECTION HEADING */}
-          <div className="mb-10 text-center">
-
-            <p className="font-great-vibes text-3xl text-[#B89B6A]">
-              Discover
-            </p>
-
-            <h2 className="mt-1 font-philosopher text-3xl text-[#741C29] sm:text-4xl">
-              Regions of Italy
-            </h2>
-
-            <p className="mt-3 font-old-standard text-sm text-[#6D625B]">
-              {regions.length} unique wine regions
-            </p>
-
-          </div>
-
+   
 
           {/* =================================================
               4 COLUMN GRID
           ================================================= */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
             {regions.map((region, index) => (
-
               <Link
                 key={region.slug}
                 href={`/regions/italy/${region.slug}`}
@@ -6633,10 +6647,7 @@ export default function ItalyRegionsPage() {
                   hover:shadow-[0_20px_50px_rgba(116,28,41,0.12)]
                 "
               >
-
-                {/* =================================================
-                    BACKGROUND DECORATION
-                ================================================= */}
+                {/* BACKGROUND DECORATION */}
                 <div
                   className="
                     pointer-events-none
@@ -6671,28 +6682,24 @@ export default function ItalyRegionsPage() {
                   "
                 />
 
-
                 {/* NUMBER */}
-                <span className="
-                  absolute
-                  right-5
-                  top-5
-                  font-old-standard
-                  text-xs
-                  tracking-[0.2em]
-                  text-[#741C29]/25
-                ">
+                <span
+                  className="
+                    absolute
+                    right-5
+                    top-5
+                    font-old-standard
+                    text-xs
+                    tracking-[0.2em]
+                    text-[#741C29]/25
+                  "
+                >
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-
                 {/* CARD CONTENT */}
                 <div className="relative flex h-full flex-col justify-between">
-
-
-                  {/* TOP */}
                   <div>
-
                     {/* ICON */}
                     <div
                       className="
@@ -6711,12 +6718,8 @@ export default function ItalyRegionsPage() {
                         group-hover:text-white
                       "
                     >
-                      <MapPin
-                        size={18}
-                        strokeWidth={1.5}
-                      />
+                      <MapPin size={18} strokeWidth={1.5} />
                     </div>
-
 
                     {/* REGION NAME */}
                     <h3
@@ -6733,15 +6736,10 @@ export default function ItalyRegionsPage() {
                     >
                       {region.name}
                     </h3>
-
                   </div>
-
 
                   {/* BOTTOM */}
                   <div className="mt-10 flex items-center justify-between">
-
-
-                    {/* EXPLORE */}
                     <span
                       className="
                         font-old-standard
@@ -6758,8 +6756,6 @@ export default function ItalyRegionsPage() {
                       Explore Region
                     </span>
 
-
-                    {/* ARROW */}
                     <span
                       className="
                         flex
@@ -6788,17 +6784,11 @@ export default function ItalyRegionsPage() {
                         "
                       />
                     </span>
-
                   </div>
-
                 </div>
-
               </Link>
-
             ))}
-
           </div>
-
 
           {/* =================================================
               BOTTOM INFO
@@ -6819,7 +6809,6 @@ export default function ItalyRegionsPage() {
               sm:text-left
             "
           >
-
             <p className="font-old-standard text-sm text-[#6D625B]">
               Personally selected from across Italy
             </p>
@@ -6827,13 +6816,9 @@ export default function ItalyRegionsPage() {
             <p className="font-old-standard text-sm text-[#741C29]">
               {regions.length} unique regions
             </p>
-
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }
-

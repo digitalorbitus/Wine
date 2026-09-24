@@ -56,7 +56,7 @@ const navbarCountries = [
   {
     id: "06",
     name: "PORTUGAL",
-    link: "/portugal",
+    link: "/Portugal",
     flag: "https://flagcdn.com/w40/pt.png",
   },
   {
@@ -93,70 +93,70 @@ const loopCountries = [...navbarCountries, ...navbarCountries];
 const famousPlaces = [
   {
     name: "Italy",
-    count: 353,
+    // count: ,
     image:
       "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=85",
     route: "/italy",
   },
   {
     name: "France",
-    count: 97,
+    // count: 97,
     image:
       "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=85",
     route: "/france",
   },
   {
     name: "Argentina",
-    count: 14,
+    // count: 14,
     image:
       "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1200&q=85",
     route: "/Argentina",
   },
   {
     name: "California",
-    count: 13,
+    // count: 13,
     image:
       "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=85",
     route: "/california",
   },
   {
     name: "Ohio",
-    count: 12,
+    // count: 12,
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85",
     route: "/Ohio",
   },
   {
     name: "Spain",
-    count: 21,
+    // count: 21,
     image:
       "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1200&q=85",
     route: "/spain",
   },
   {
     name: "Portugal",
-    count: 8,
+    // count: 8,
     image:
       "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=85",
-    route: "/places/portugal",
+    route: "/Portugal",
   },
   {
     name: "Oregon",
-    count: 4,
+    // count: 4,
     image:
       "https://cdn.bfldr.com/UTM69Z3S/at/4ng7jq2wc332t4r4hjjrk8w/dan-meyers-EYnLjmjCViM-unsplash-LOWRES.jpg?auto=webp&enable=upscale&fit=cover&format=pjpg&height=640&quality=60&width=960",
     route: "/Oregon",
   },
   {
     name: "Germany",
-    count: 1,
+    // count: 1,
     image:
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=85",
     route: "/Germany",
   },
   {
     name: "New Zealand",
-    count: 11,
+    // count: 11,
     image:
       "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1600&q=85",
     route: "/New-Zealand",
