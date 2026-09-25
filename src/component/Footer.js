@@ -51,7 +51,7 @@ export default function NewsletterSection() {
 
             {/* Address & Contact Info */}
             <div className="text-xs sm:text-lg text-white space-y-1.5 leading-relaxed font-old-standard">
-              <p>Wines,LLC 7607 Shoreway Commerce Rd, Cleveland, Ohio 44103</p>
+              <p>7607 Shoreway Commerce Rd, Cleveland, Ohio 44103</p>
            <p>
   Call us{" "}
   <a href="tel:4408123776" className="hover:underline">

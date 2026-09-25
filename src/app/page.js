@@ -1632,181 +1632,211 @@ This more direct approach helps us reduce unnecessary costs and pass the value o
 
 
 <section className="min-h-screen bg-[#EAE3DA] text-[#2C2421] px-4 py-8 md:px-12 md:py-16 font-sans antialiased selection:bg-[#5A2D23] selection:text-white">
-      {/* Top Floating Metallic Navigation Bar */}
-      
-      {/* Hero Header Section */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 mb-16 items-end">
-        <div className="md:col-span-7 space-y-3">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#741C29] font-bold block">
-            Boutique Wine Selection
-          </span>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal leading-[1.05] text-[#1C1514] tracking-tight">
-            What <span className="font-semibold">Wines</span><br />
-            <span class="italic font-light">LLC</span><br />
-            Offers
-          </h1>
-        </div>
 
-        {/* Top Right Floating Detail Box */}
-        <div className="md:col-span-5 bg-[#DFD6CB]/80 backdrop-blur-md p-6 rounded-2xl border border-[#C2B7A8] shadow-sm space-y-4">
-          <p className="text-xs leading-relaxed text-[#544640] font-normal">
-            From carefully selected wines to tailored wholesale solutions, we help hospitality businesses create exceptional wine programs with confidence and consistency.
-          </p>
-          <div className="pt-4 border-t border-[#C2B7A8]/60 flex items-center justify-between">
-            <div>
-              <span className="text-4xl font-serif font-bold text-[#1C1514] leading-none">26</span>
-              <span className="text-[10px] tracking-widest uppercase text-[#741C29] block mt-1">Years in Hospitality</span>
-            </div>
-            <div className="w-8 h-8 rounded-full border border-[7a0218]/40 flex items-center justify-center text-[#8C6B5D]">
-              <Wine className="w-4 h-4" />
-            </div>
-          </div>
-        </div>
-      </div>
+  {/* Hero Header Section */}
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 mb-16 items-end">
+    <div className="md:col-span-7 space-y-3">
+      <span className="text-xs uppercase tracking-[0.25em] text-[#741C29] font-bold block">
+        Boutique Wine Selection
+      </span>
 
-      {/* Main 4 Cards Section */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        {/* Card 01: Rich Mahogany Wood Texture */}
-        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#4A241C] via-[#331711] to-[#1F0C08] text-[#F3EEEA] shadow-2xl border border-[#6E3A2E]/50 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
-          <div className="flex justify-between items-start z-10">
-            <span className="text-3xl font-serif text-amber-200/90 font-light">01</span>
-            <div className="flex items-center space-x-2 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-500/20">
-              <Wine className="w-3.5 h-3.5 text-amber-300" />
-              <span className="text-[10px] tracking-widest uppercase text-amber-200/80">Wine Family's</span>
-            </div>
-          </div>
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal leading-[1.05] text-[#1C1514] tracking-tight">
+        What <span className="font-semibold">Wines</span><br />
+        <span className="italic font-light">LLC</span><br />
+        Offers
+      </h1>
+    </div>
 
-          <div className="z-10 space-y-2">
-            <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-100">
-            Direct Winery Sourcing
-            </h3>
-            <p className="text-xs text-amber-100/70 leading-relaxed max-w-sm">
-Wines sourced directly from wineries and brought to our Ohio warehouse, helping us offer quality and competitive pricing.
-            </p>
-            <div className="pt-3">
-              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-300 transition-colors space-x-2">
-                <span>Explore Selection</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
+    {/* Top Right Floating Detail Box */}
+    <div className="md:col-span-5 bg-[#DFD6CB]/80 backdrop-blur-md p-6 rounded-2xl border border-[#C2B7A8] shadow-sm space-y-4">
+      <p className="text-xs leading-relaxed text-[#544640] font-normal">
+        From carefully selected wines to tailored wholesale solutions, we help hospitality businesses create exceptional wine programs with confidence and consistency.
+      </p>
 
-          {/* Background Watermark */}
-          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
-            01
-          </span>
-        </div>
-
-        {/* Card 02: Dark Marble / Slate Surface */}
-        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#212429] via-[#16181C] to-[#0B0C0E] text-[#E0E2E5] shadow-2xl border border-[#3A3E47]/60 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
-          <div className="flex justify-between items-start z-10">
-            <span className="text-3xl font-serif text-gray-300/90 font-light">02</span>
-            <div className="flex items-center space-x-2 bg-gray-800/40 px-3 py-1 rounded-full border border-gray-500/20">
-              <Compass className="w-3.5 h-3.5 text-gray-300" />
-              <span className="text-[10px] tracking-widest uppercase text-gray-300/80">Wine Family's</span>
-            </div>
-          </div>
-
-          <div className="z-10 space-y-2">
-            <h3 className="text-2xl font-serif font-medium tracking-wide text-gray-100">
-              Everyday to High-End
-            </h3>
-            <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-From reliable everyday wines to occasional high-end selections, our portfolio covers a range of quality and price points.
-            </p>
-            <div className="pt-3">
-              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-gray-200 group-hover:text-white transition-colors space-x-2">
-                <span>Book a Consultation</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
-          {/* Background Watermark */}
-          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
-            02
-          </span>
-        </div>
-
-        {/* Card 03: Carved Dark Wood / Leather Finish */}
-        <div className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#382119] via-[#24130E] to-[#120805] text-[#EADBD3] shadow-2xl border border-[#523328]/60 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
-          <div className="flex justify-between items-start z-10">
-            <span className="text-3xl font-serif text-amber-300/80 font-light">03</span>
-            <div className="flex items-center space-x-2 bg-amber-950/30 px-3 py-1 rounded-full border border-amber-600/20">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-200/80" />
-              <span className="text-[10px] tracking-widest uppercase text-amber-200/70">Wine Family's</span>
-            </div>
-          </div>
-
-          <div className="z-10 space-y-2">
-            <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-50">
-             Quality & Value
-            </h3>
-            <p className="text-xs text-amber-100/60 leading-relaxed max-w-sm">
-             A thoughtfully built portfolio focused on strong wines, dependable value, and selections that make sense for the market.
-            </p>
-            <div className="pt-3">
-              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-100 transition-colors space-x-2">
-                <span>View Cases</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
-          {/* Background Watermark */}
-          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
-            03
-          </span>
-        </div>
-
-        {/* Card 04: Frosted Glassmorphism Overlay */}
-        <div className="group relative overflow-hidden rounded-3xl p-8 bg-white/40 backdrop-blur-xl text-[#1C1514] shadow-2xl border border-white/70 flex flex-col justify-between h-80 transition-transform duration-300 hover:-translate-y-1">
-          <div className="flex justify-between items-start z-10">
-            <span className="text-3xl font-serif text-[#4A3A33] font-light">04</span>
-            <div className="flex items-center space-x-2 bg-white/60 px-3 py-1 rounded-full border border-black/10">
-              <Globe className="w-3.5 h-3.5 text-[#5A4A42]" />
-              <span className="text-[10px] tracking-widest uppercase text-[#5A4A42]">Wine Family's</span>
-            </div>
-          </div>
-
-          <div className="z-10 space-y-2">
-            <h3 className="text-2xl font-serif font-medium tracking-wide text-[#1C1514]">
-              Ohio Wholesale
-            </h3>
-            <p className="text-xs text-[#5A4A42] leading-relaxed max-w-sm">
-Local warehousing and wholesale distribution for Ohio retailers, restaurants, and trade partners.
-            </p>
-            <div className="pt-3">
-              <a href="#" className="inline-flex items-center text-xs tracking-widest uppercase font-bold text-[#1C1514] group-hover:text-black transition-colors space-x-2">
-                <span>Partner With Us</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-
-          {/* Background Watermark */}
-          <span className="absolute right-4 -bottom-6 text-9xl font-serif text-black/[0.05] select-none pointer-events-none font-bold">
-            04
-          </span>
-        </div>
-
-      </div>
-
-      {/* Footer Meta Details */}
-      {/* <footer className="max-w-6xl mx-auto mt-16 pt-6 border-t border-[#C2B7A8]/60 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-[#8C6B5D] gap-4">
-        <div className="flex space-x-6">
-          <span>Contact</span>
-          <span>/</span>
-          <span>Consultation</span>
-          <span>/</span>
-          <span>Membership</span>
-        </div>
+      <div className="pt-4 border-t border-[#C2B7A8]/60 flex items-center justify-between">
         <div>
-          Est. 2026 — Wine Collective
+          <span className="text-4xl font-serif font-bold text-[#1C1514] leading-none">
+            26
+          </span>
+
+          <span className="text-[10px] tracking-widest uppercase text-[#741C29] block mt-1">
+            Years in Hospitality
+          </span>
         </div>
-      </footer> */}
-    </section>
+
+        <div className="w-8 h-8 rounded-full border border-[#7a0218]/40 flex items-center justify-center text-[#8C6B5D]">
+          <Wine className="w-4 h-4" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Main 4 Cards Section */}
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    {/* CARD 01 */}
+    <a
+      href="/shop"
+      className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#4A241C] via-[#331711] to-[#1F0C08] text-[#F3EEEA] shadow-2xl border border-[#6E3A2E]/50 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(74,36,28,0.3)] cursor-pointer"
+    >
+      <div className="flex justify-between items-start z-10">
+        <span className="text-3xl font-serif text-amber-200/90 font-light">
+          01
+        </span>
+
+        <div className="flex items-center space-x-2 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-500/20">
+          <Wine className="w-3.5 h-3.5 text-amber-300" />
+          <span className="text-[10px] tracking-widest uppercase text-amber-200/80">
+            Wine Family's
+          </span>
+        </div>
+      </div>
+
+      <div className="z-10 space-y-2">
+        <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-100">
+          Direct Winery Sourcing
+        </h3>
+
+        <p className="text-xs text-amber-100/70 leading-relaxed max-w-sm">
+          Wines sourced directly from wineries and brought to our Ohio warehouse,
+          helping us offer quality and competitive pricing.
+        </p>
+
+        <div className="pt-3 inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-300 transition-colors space-x-2">
+          <span>Explore Selection</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
+      </div>
+
+      <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+        01
+      </span>
+    </a>
+
+
+    {/* CARD 02 */}
+    <a
+      href="/shop"
+      className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#212429] via-[#16181C] to-[#0B0C0E] text-[#E0E2E5] shadow-2xl border border-[#3A3E47]/60 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)] cursor-pointer"
+    >
+      <div className="flex justify-between items-start z-10">
+        <span className="text-3xl font-serif text-gray-300/90 font-light">
+          02
+        </span>
+
+        <div className="flex items-center space-x-2 bg-gray-800/40 px-3 py-1 rounded-full border border-gray-500/20">
+          <Compass className="w-3.5 h-3.5 text-gray-300" />
+          <span className="text-[10px] tracking-widest uppercase text-gray-300/80">
+            Wine Family's
+          </span>
+        </div>
+      </div>
+
+      <div className="z-10 space-y-2">
+        <h3 className="text-2xl font-serif font-medium tracking-wide text-gray-100">
+          Everyday to High-End
+        </h3>
+
+        <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
+          From reliable everyday wines to occasional high-end selections,
+          our portfolio covers a range of quality and price points.
+        </p>
+
+        <div className="pt-3 inline-flex items-center text-xs tracking-widest uppercase font-medium text-gray-200 group-hover:text-white transition-colors space-x-2">
+          <span>Book a Consultation</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
+      </div>
+
+      <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+        02
+      </span>
+    </a>
+
+
+    {/* CARD 03 */}
+    <a
+      href="/shop"
+      className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#382119] via-[#24130E] to-[#120805] text-[#EADBD3] shadow-2xl border border-[#523328]/60 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(56,33,25,0.3)] cursor-pointer"
+    >
+      <div className="flex justify-between items-start z-10">
+        <span className="text-3xl font-serif text-amber-300/80 font-light">
+          03
+        </span>
+
+        <div className="flex items-center space-x-2 bg-amber-950/30 px-3 py-1 rounded-full border border-amber-600/20">
+          <ShieldCheck className="w-3.5 h-3.5 text-amber-200/80" />
+          <span className="text-[10px] tracking-widest uppercase text-amber-200/70">
+            Wine Family's
+          </span>
+        </div>
+      </div>
+
+      <div className="z-10 space-y-2">
+        <h3 className="text-2xl font-serif font-medium tracking-wide text-amber-50">
+          Quality & Value
+        </h3>
+
+        <p className="text-xs text-amber-100/60 leading-relaxed max-w-sm">
+          A thoughtfully built portfolio focused on strong wines, dependable
+          value, and selections that make sense for the market.
+        </p>
+
+        <div className="pt-3 inline-flex items-center text-xs tracking-widest uppercase font-medium text-amber-200 group-hover:text-amber-100 transition-colors space-x-2">
+          <span>View Cases</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
+      </div>
+
+      <span className="absolute right-4 -bottom-6 text-9xl font-serif text-white/[0.04] select-none pointer-events-none font-bold">
+        03
+      </span>
+    </a>
+
+
+    {/* CARD 04 */}
+    <a
+      href="/shop"
+      className="group relative overflow-hidden rounded-3xl p-8 bg-white/40 backdrop-blur-xl text-[#1C1514] shadow-2xl border border-white/70 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(28,21,20,0.2)] cursor-pointer"
+    >
+      <div className="flex justify-between items-start z-10">
+        <span className="text-3xl font-serif text-[#4A3A33] font-light">
+          04
+        </span>
+
+        <div className="flex items-center space-x-2 bg-white/60 px-3 py-1 rounded-full border border-black/10">
+          <Globe className="w-3.5 h-3.5 text-[#5A4A42]" />
+          <span className="text-[10px] tracking-widest uppercase text-[#5A4A42]">
+            Wine Family's
+          </span>
+        </div>
+      </div>
+
+      <div className="z-10 space-y-2">
+        <h3 className="text-2xl font-serif font-medium tracking-wide text-[#1C1514]">
+          Ohio Wholesale
+        </h3>
+
+        <p className="text-xs text-[#5A4A42] leading-relaxed max-w-sm">
+          Local warehousing and wholesale distribution for Ohio retailers,
+          restaurants, and trade partners.
+        </p>
+
+        <div className="pt-3 inline-flex items-center text-xs tracking-widest uppercase font-bold text-[#1C1514] group-hover:text-black transition-colors space-x-2">
+          <span>Partner With Us</span>
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
+      </div>
+
+      <span className="absolute right-4 -bottom-6 text-9xl font-serif text-black/[0.05] select-none pointer-events-none font-bold">
+        04
+      </span>
+    </a>
+
+  </div>
+</section>
+
+
 
 
 
