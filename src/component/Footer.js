@@ -24,7 +24,7 @@ export default function NewsletterSection() {
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-80">
               <Image
-                src="/winesfromitalylogo.png"
+                src="/white logo.png"
                 alt="Best Wine Since 1903"
                 fill
                 className="object-contain"

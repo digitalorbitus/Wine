@@ -1477,7 +1477,7 @@ export default function Navbar() {
               "
             >
               <Image
-                src="/Logo_CD1-removebg-preview.png"
+                src="/horizontalwine_logo-removebg-preview.png"
                 alt="Ciao Daniel Logo"
                 width={220}
                 height={80}
