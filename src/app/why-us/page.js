@@ -127,33 +127,33 @@ const PartnershipIcon = () => (
 const reasons = [
   {
     icon: TrophyIcon,
-    title: "26 Years of Industry Experience",
-    description: "With 26 years in the wine business, we bring extensive experience and knowledge to every customer relationship.",
+    title: "26 Years of Wine Experienc",
+    description: "With 26 years in the wine business, we bring experience, industry knowledge, and established relationships to every wine we source and every customer we serve.",
   },
   {
     icon: HandPickedIcon,
-    title: "Handpicked Selections",
-    description: "Our portfolio is carefully selected with an emphasis on quality, regional character, and distinctive producers.",
+    title: "Direct From The Wineries",
+    description: "We work directly with wineries and import their wines into our Ohio warehouse, creating a more direct path from producer to market.",
   },
   {
     icon: GlobeIcon,
-    title: "European Wine Expertise",
-    description: "Our portfolio places a strong emphasis on European wines, particularly regional producers from Italy and France.",
+    title: "Quality Without The Extra Layers",
+    description: "Direct sourcing helps us offer a strong quality-to-price ratio, giving our partners access to exceptional wines at competitive wholesale prices.",
   },
   {
     icon: GuidanceIcon,
-    title: "Personal Guidance",
-    description: "Have a question about a producer, region, grape, or wine style? Our team is available to provide direct guidance.",
+    title: "Wines From Around The World",
+    description: "Explore our portfolio by country and region, featuring wines sourced from producers across established and emerging wine markets.",
   },
   {
     icon: CaseIcon,
-    title: "Curated Cases",
-    description: "Our curated mixed cases provide businesses with an opportunity to explore multiple wines and regional styles.",
+    title: "Everyday To Exceptional",
+    description: "From dependable everyday wines to distinctive high-end selections, our portfolio offers quality and value across a range of occasions and price points.",
   },
   {
     icon: BusinessIcon,
-    title: "Business-Focused Service",
-    description: "We understand that restaurants, retailers, hotels, and bars have different needs. Our goal is to help you find the right fit.",
+    title: "Serving Ohio’s Wine Trade",
+    description: "We warehouse and distribute in Ohio, serving retailers, restaurants, bars, and other trade partners with thoughtfully selected wines.",
   },
   {
     icon: PartnershipIcon,

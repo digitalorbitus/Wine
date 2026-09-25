@@ -318,12 +318,12 @@ export default function ShopPage() {
               className="
                 mb-2
                 text-xl
-                font-great-vibes
+               font-philosopher
 
                 md:text-4xl
               "
             >
-              Explore The World
+              DISCOVER THE ORIGINS
             </p>
 
             <h2
@@ -335,7 +335,7 @@ export default function ShopPage() {
                 md:text-5xl
               "
             >
-              Famous Places
+              Explore Our Wine Regions
             </h2>
 
             <p
@@ -349,7 +349,7 @@ export default function ShopPage() {
                 sm:text-base
               "
             >
-              Discover famous places around the world.
+             Browse our selection by country and discover wines from the regions and wineries behind them.
             </p>
 
           </div>

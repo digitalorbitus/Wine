@@ -1035,555 +1035,316 @@ export default function AboutUs() {
       {/* ================= HERO & MAIN ABOUT SECTION ================= */}
 
 
-<section className="relative bg-[#F4F2EC] py-16 xs:py-20 sm:py-24 lg:py-32 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden">
 
-  {/* Decorative Background */}
-  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+<section className="relative overflow-hidden bg-[#FAF9F6] px-4 py-8 xs:px-5 sm:px-8 sm:py-12 md:px-10 lg:px-14 lg:py-14 xl:px-16">
+      {/* BACKGROUND DECORATIVE GLOWS */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -right-32 -top-40 h-[300px] w-[300px] rounded-full bg-[#741C29]/[0.04] blur-[90px] sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
+        <div className="absolute -bottom-32 -left-32 h-[300px] w-[300px] rounded-full bg-[#B08A55]/[0.05] blur-[90px] sm:h-[400px] sm:w-[400px] lg:h-[500px] lg:w-[500px]" />
+      </div>
 
-    <div className="absolute -right-32 -top-32 h-[350px] w-[350px] sm:h-[550px] sm:w-[550px] rounded-full bg-[#741C29]/[0.04] blur-[100px] animate-glowFloat" />
-
-    <div className="absolute -left-32 -bottom-32 h-[350px] w-[350px] sm:h-[550px] sm:w-[550px] rounded-full bg-[#B08A55]/[0.07] blur-[100px] animate-glowFloatReverse" />
-
-  </div>
-
-
-  <div className="relative z-10 mx-auto max-w-[1400px]">
-
-    {/* Section Number */}
-    <div className="flex items-center gap-4 mb-6 animate-fadeUp">
-
-      <span className="h-px w-10 sm:w-16 bg-[#741C29] origin-left animate-lineGrow" />
-
-   
-
-    </div>
-
-
-    {/* Main Layout */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
-
-
-      {/* ================= LEFT CONTENT ================= */}
-      <div className="lg:col-span-6">
-
-        <h2 className="font-philosopher text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] font-normal text-[#241B16] leading-[0.95] animate-fadeUp delay-100">
-
-          26 Years
-
-          <span className="block text-[#741C29] mt-2 animate-fadeUp delay-200">
-            of Experience
+      <div className="relative z-10 mx-auto max-w-[1440px]">
+        {/* TOP LABEL WITH OPTIMIZED MARGIN */}
+        <div className="mb-4 flex items-center gap-2.5 sm:mb-6 lg:mb-8">
+          <span className="h-px w-6 bg-[#741C29] sm:w-10" />
+          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#741C29] sm:text-xs">
+            About Wines LLC
           </span>
-
-        </h2>
-
-
-        <div className="mt-8 sm:mt-10 max-w-2xl">
-
-          <p className="font-philosopher text-lg xs:text-xl sm:text-2xl text-[#241B16] leading-relaxed animate-fadeUp delay-300">
-
-            For over 26 years,{" "}
-
-            <strong className="text-[#741C29] font-semibold">
-              CIAO DANIEL
-            </strong>{" "}
-
-            has been dedicated to discovering and providing quality wines
-            for businesses and wine professionals.
-
-          </p>
-
-
-          <div className="mt-6 space-y-5 text-sm xs:text-base sm:text-lg leading-relaxed text-[#5C5046]">
-
-            <p className="animate-fadeUp delay-400">
-             Wholesale Wine Distributor in Ohio  Wines, 
-             LLC is a leading wholesale wine distributor in Ohio, 
-             serving wine retailers, restaurants, hospitality businesses, 
-             and other industry professionals since 2000. 
-             We offer a complete wine portfolio featuring
-              carefully selected wines from renowned 
-              wine regions around the world.  
-             
-            </p>
-
-            <p className="animate-fadeUp delay-500">
-             We import directly from wineries in Italy, France,
-               and Argentina, providing exceptional wines 
-               with a strong price-to-quality ratio. Our 
-               portfolio also includes wines from California, Ohio, Oregon,
-                New Zealand, Spain, Portugal, and Germany.  
-                From premium wines to quality everyday selections,
-                 we choose wines that represent the unique grape varieties
-                  and appellations of their regions. Our trained team provides 
-                  the knowledge and support businesses need to build the right wine selection.
-            </p>
-
-          </div>
-
         </div>
 
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-10 xl:gap-14">
+          
+          {/* LEFT IMAGE CONTAINER */}
+          <div className="lg:col-span-5">
+            <div className="relative">
+              {/* Decorative 26 Watermark */}
+              <span className="pointer-events-none absolute -left-3 -top-6 z-0 font-philosopher text-[90px] font-bold text-[#741C29]/[0.04] sm:text-[130px] lg:-left-5 lg:-top-8 lg:text-[150px]">
+                26
+              </span>
 
-        {/* Small Details */}
-        <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-6 sm:gap-10 animate-fadeUp delay-600">
+              {/* Gold Accent Frame */}
+              <div className="absolute -bottom-2.5 -right-2.5 h-full w-full border border-[#B08A55]/50 sm:-bottom-3 sm:-right-3" />
 
-          <div className="hover-lift">
+              {/* Image Frame */}
+              <div className="group relative z-10 overflow-hidden rounded-sm bg-[#1F1714] shadow-lg">
+                <img
+                  src="/wm3.png"
+                  alt="Wines LLC - Ohio Wholesale Wine"
+                  className="h-[360px] w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 xs:h-[400px] sm:h-[450px] lg:h-[500px] xl:h-[540px]"
+                />
 
-            <div className="font-philosopher text-2xl sm:text-3xl text-[#741C29]">
-              26+
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1F1714]/90 via-[#1F1714]/20 to-transparent" />
+
+                {/* Text inside Image */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-7">
+                  <div className="mb-1.5 flex items-center gap-2">
+                    <span className="h-px w-5 bg-[#D4AF37]" />
+                    <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#D4AF37] sm:text-[10px]">
+                      Ohio-Based Wholesale Wine
+                    </span>
+                  </div>
+                  <h3 className="font-philosopher text-2xl font-normal leading-tight text-white sm:text-3xl md:text-4xl">
+                    Quality Wines.
+                    <span className="mt-0.5 block text-[#E7D6B3]">
+                      Trusted Relationships.
+                    </span>
+                  </h3>
+                </div>
+              </div>
+
+              {/* Floating Experience Card */}
+              <div className="absolute -bottom-4 left-4 z-20 rounded-sm bg-white px-4 py-3 shadow-md border border-[#CEC3B5]/40 sm:-bottom-5 sm:left-5 sm:px-5 sm:py-3.5 lg:-right-5 lg:left-auto">
+                <div className="flex items-center gap-3">
+                  <span className="font-philosopher text-2xl font-bold leading-none text-[#741C29] sm:text-3xl">
+                    26+
+                  </span>
+                  <div className="text-[8px] font-bold uppercase leading-tight tracking-wider text-[#5C5046] sm:text-[9px]">
+                    Years Of <br /> Experience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT TEXT CONTENT */}
+          <div className="lg:col-span-7">
+            <h2 className="font-philosopher text-2xl font-normal leading-tight tracking-tight text-[#241B16] sm:text-3xl md:text-[2.5rem] lg:text-[2.85rem]">
+              A Trusted Ohio Wine Partner <br />
+              <span className="text-[#741C29]">for Over 26 Years</span>
+            </h2>
+
+<p className="mt-3.5 font-philosopher text-base leading-[1.8] text-[#332A24] sm:mt-4 sm:text-lg lg:text-[1.2rem]">
+  For more than 26 years,{" "}
+  <strong className="font-semibold text-[#741C29]">
+    Wines LLC
+  </strong>{" "}
+  has been serving businesses across Ohio with
+
+  <span className="mt-2 block">
+    quality wines, dependable service, and a commitment to delivering
+    exceptional value.
+  </span>
+
+  <span className="mt-2 block">
+    With{" "}
+    <strong className="font-semibold text-[#741C29]">
+      100+ satisfied customers
+    </strong>
+    , we've built lasting relationships with hospitality <span className="mt-2 block"> businesses
+    throughout the state.</span>
+  </span>
+</p>
+            {/* Editorial Content Grid */}
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-6">
+              <div className="border-l-2 border-[#741C29] pl-3">
+                <p className="text-xs leading-relaxed text-[#5C5046] sm:text-sm">
+                  As an Ohio-based wholesale wine company, we work directly with wineries and importers to bring carefully selected wines at competitive wholesale prices.
+                </p>
+              </div>
+ 
+              <div className=" border-l-2 border-[#B08A55] pl-3">
+                <p className="text-xs leading-relaxed text-[#5C5046] sm:text-sm">
+                  By maintaining direct relationships with wineries, we offer a strong price-to-quality ratio without compromising on product quality.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[#B08A55] pl-3">
+                <p className="text-xs leading-relaxed text-[#5C5046] sm:text-sm">
+                  Our portfolio fits every business need—from high-quality everyday wines for glass programs to premium high-end selections.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[#741C29] pl-3">
+                <p className="text-xs leading-relaxed text-[#5C5046] sm:text-sm">
+                  Our goal is simple:{" "}
+                  <strong className="font-semibold text-[#741C29]">
+                    quality wines, competitive pricing, and reliable service you can count on.
+                  </strong>
+                </p>
+              </div>
             </div>
 
-            <p className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#756960]">
-              Years Experience
-            </p>
-
-          </div>
-
-
-          <div className="h-10 w-px bg-[#C9C0B5] animate-lineGrowVertical" />
-
-
-          <div className="hover-lift">
-
-            <div className="font-philosopher text-2xl sm:text-3xl text-[#741C29]">
-              Global
+            {/* Stats Divider */}
+            <div className="mt-6 grid grid-cols-3 divide-x divide-[#CEC3B5] border-y border-[#CEC3B5] py-3">
+              <div className="flex flex-col items-center text-center sm:flex-row sm:text-left sm:gap-2.5">
+                <span className="font-philosopher text-2xl font-bold text-[#741C29] sm:text-3xl">26+</span>
+                <span className="text-[8px] font-semibold uppercase tracking-wider text-[#756960]">Years<br />Experience</span>
+              </div>
+              <div className="flex flex-col items-center text-center pl-2 sm:flex-row sm:text-left sm:gap-2.5 sm:pl-3">
+                <span className="font-philosopher text-2xl font-bold text-[#741C29] sm:text-3xl">100+</span>
+                <span className="text-[8px] font-semibold uppercase tracking-wider text-[#756960]">Satisfied<br />Customers</span>
+              </div>
+              <div className="flex flex-col items-center text-center pl-2 sm:flex-row sm:text-left sm:gap-2.5 sm:pl-3">
+                <span className="font-philosopher text-xl font-bold text-[#741C29] sm:text-2xl">Ohio</span>
+                <span className="text-[8px] font-semibold uppercase tracking-wider text-[#756960]">Wholesale<br />Wine</span>
+              </div>
             </div>
 
-            <p className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#756960]">
-              Wine Selection
-            </p>
-
+            {/* Bottom Tagline */}
+            <div className="mt-4 flex items-center gap-2.5">
+              <span className="h-px w-8 bg-[#B08A55]" />
+              <p className="font-philosopher text-xs font-semibold text-[#741C29] sm:text-sm">
+                Quality Wines. Competitive Pricing. Built on Relationships.
+              </p>
+            </div>
           </div>
 
         </div>
-
       </div>
+    </section>
 
-
-
-      {/* ================= RIGHT IMAGE ================= */}
-      <div className="lg:col-span-6 animate-imageReveal">
-
-        <div className="relative mx-auto w-full max-w-[600px]">
-
-          {/* Animated Frame */}
-          <div className="absolute -right-3 -bottom-3 sm:-right-5 sm:-bottom-5 h-full w-full " />
-
-
-          {/* Image */}
-          <div className="relative overflow-hidden  group">
-
-            <img
-              src="/to our wine world.png"
-              alt="Our Wine World"
-              className="w-full h-[420px] xs:h-[480px] sm:h-[560px] lg:h-[620px] object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-105"
-            />
-
-            {/* Moving Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#241B16]/75 via-transparent to-transparent pointer-events-none" />
-
-            {/* Shine Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1400ms] ease-in-out pointer-events-none" />
-
-
-            {/* 26 Badge */}
-<div
-  className="
-    absolute
-    right-0
-    bottom-[-8px]
-    xs:right-0
-    xs:bottom-[-10px]
-    sm:right-0
-    sm:bottom-[-12px]
-    md:right-1
-    md:bottom-[-14px]
-    lg:right-2
-    lg:bottom-[-16px]
-    xl:right-3
-    xl:bottom-[-18px]
-    2xl:right-4
-    2xl:bottom-[-20px]
-    z-20
-    animate-badgeReveal
-  "
->
-  <Image
-    src="/26 YEARS.png"
-    alt="26 Years of Wine Excellence"
-    width={300}
-    height={120}
-    priority
-    quality={100}
-    unoptimized
-    className="
-      block
-      w-[95px]
-      xs:w-[115px]
-      sm:w-[145px]
-      md:w-[175px]
-      lg:w-[210px]
-      xl:w-[250px]
-      2xl:w-[300px]
-      h-auto
-      object-contain
-      object-right
-      animate-numberFloat
-    "
-  />
-</div>
-
-          </div>
-
-
-       
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 
       {/* ================= OUR APPROACH SECTION ================= */}
-<section className=" py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 border-y border-[#C8BBAA]">
-  <div className="mx-auto max-w-[1400px]">
+<section className="relative overflow-hidden bg-[#181310] py-10 sm:py-14 px-4 xs:px-6 sm:px-8 md:px-12 border-y border-[#382D26] text-[#E8E2D9]">
+      {/* Background Subtle Glows */}
+      <div className="absolute top-1/2 -left-20 w-64 h-64 bg-[#741C29]/15 rounded-full blur-[90px] pointer-events-none" />
+      <div className="absolute top-1/2 -right-20 w-64 h-64 bg-[#A98552]/10 rounded-full blur-[90px] pointer-events-none" />
 
-    <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 xl:gap-20 items-start">
+      <div className="relative mx-auto max-w-[1200px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-center">
 
-      {/* LEFT — IMAGE */}
-      <div className="relative lg:sticky lg:top-24">
-        <div className="relative overflow-hidden ">
+          {/* LEFT — COMPACT IMAGE (NO CUTTING) */}
+          <div className="relative">
+            <div className="relative rounded-xl overflow-hidden border border-[#382D26] bg-[#221A15] p-3 shadow-lg group">
+              {/* Image with object-contain to prevent cropping */}
+              <img
+                src="/wm2.png"
+                alt="Curated selection of wines"
+                className="w-full h-[280px] sm:h-[350px] lg:h-[420px] object-contain transition-transform duration-500 group-hover:scale-102"
+              />
 
-          {/* <img
-            src="/about.png"
-            alt="Curated selection of wines representing quality, character, and regional identity"
-            className="w-full h-[420px] sm:h-[520px] lg:h-[650px] object-cover"
-          /> */}
-
-          <img
-  src="/about.png"
-  alt="Curated selection of wines representing quality, character, and regional identity"
-  className="w-full h-[420px] sm:h-[520px] lg:h-[650px] object-contain bg-[#F5F1E8]"
-/>
-
-          {/* Subtle overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#241B16]/30 via-transparent to-transparent" />
-
-          {/* Image Caption */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-            <p className="text-white text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold">
-              Curated With Purpose
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      {/* RIGHT — CONTENT */}
-      <div>
-
-        {/* Section Label */}
-        <div>
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#7B1E2B]">
-            Our Approach
-          </p>
-
-          <h2 className="mt-3 font-philosopher text-3xl xs:text-4xl sm:text-5xl lg:text-[52px] font-bold leading-[1.1] text-[#241B16]">
-            We Believe in the Right Wine,
-            <br className="hidden sm:block" />
-            Not Just More Wine.
-          </h2>
-
-          <div className="mt-6 h-px w-20 bg-[#A98552]" />
-        </div>
-
-
-        {/* CARDS */}
-        <div className="mt-10 sm:mt-12 space-y-6">
-
-          {/* Card 1 */}
-          <div className="group bg-[#F5F1E8] p-6 sm:p-8 lg:p-9 border border-[#CFC5B7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-
-            <div className="flex items-start gap-5">
-
-              <div className="shrink-0 h-11 w-11 sm:h-12 sm:w-12 flex items-center justify-center bg-[#741C29] text-white font-philosopher text-lg sm:text-xl font-bold">
-                01
+              {/* Floating Compact Badge */}
+              <div className="absolute bottom-4 left-4 right-4 p-2.5 rounded-lg bg-[#181310]/85 backdrop-blur-md border border-[#382D26] flex items-center justify-between text-xs">
+                <div>
+                  <p className="uppercase tracking-widest text-[#A98552] font-semibold text-[10px]">Selection</p>
+                  <p className="font-medium text-white text-xs">Direct-to-Market Portfolio</p>
+                </div>
+                <div className="h-2 w-2 rounded-full bg-[#741C29] animate-pulse" />
               </div>
-
-              <div>
-                <h3 className="font-philosopher text-xl sm:text-2xl font-bold text-[#241B16]">
-                  Thoughtful Selection
-                </h3>
-
-                <p className="mt-4 text-sm sm:text-base leading-[1.8] text-[#6D625B]">
-                  Every business has different customers, menus, price points,
-                  and expectations. That&apos;s why we take a thoughtful approach
-                  to our portfolio. We look for wines with distinctive
-                  character, quality, and regional identity—and help our
-                  customers identify selections that make sense for their
-                  business.
-                </p>
-              </div>
-
             </div>
           </div>
 
-
-          {/* Card 2 */}
-          <div className="group bg-[#F5F1E8] p-6 sm:p-8 lg:p-9 border border-[#CFC5B7] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-
-            <div className="flex items-start gap-5">
-
-              <div className="shrink-0 h-11 w-11 sm:h-12 sm:w-12 flex items-center justify-center bg-[#A98552] text-white font-philosopher text-lg sm:text-xl font-bold">
-                02
+          {/* RIGHT — CONTENT */}
+          <div>
+            {/* Header Section */}
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#741C29]/20 border border-[#741C29]/40 text-[#E29D9B] text-[11px] font-semibold uppercase tracking-[0.2em]">
+                <span>Our Approach</span>
               </div>
 
-              <div>
-                <h3 className="font-philosopher text-xl sm:text-2xl font-bold text-[#241B16]">
-                  Direct &amp; Personal Guidance
-                </h3>
+              <h2 className="mt-3 font-philosopher text-2xl xs:text-3xl sm:text-4xl lg:text-[40px] font-bold leading-[1.15] text-white tracking-tight">
+                Quality Wines. Better Value. <br className="hidden sm:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#A98552] to-[#E29D9B]">
+                  Direct From the Winery.
+                </span>
+              </h2>
 
-                <p className="mt-4 text-sm sm:text-base leading-[1.8] text-[#6D625B]">
-                  With thousands of wines available in the market, finding the
-                  right selections can be overwhelming. Our team is available
-                  to provide personal guidance, answer questions, discuss
-                  producers and regions, and help businesses explore options
-                  within our portfolio.
-                </p>
+              <p className="mt-2.5 text-xs sm:text-sm text-[#B5A89E] leading-relaxed max-w-xl">
+                Streamlining wholesale distribution to bring authentic winery selections straight to Ohio with unmatched transparency.
+              </p>
+            </div>
+
+            {/* COMPACT CARDS */}
+            <div className="mt-6 space-y-4">
+
+              {/* Card 01 */}
+              <div className="group relative rounded-lg bg-[#221A15]/70 backdrop-blur-sm p-4 sm:p-5 border border-[#382D26] transition-all duration-300 hover:border-[#741C29] hover:bg-[#2A201A]">
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 h-9 w-9 rounded-md bg-gradient-to-br from-[#741C29] to-[#4A121A] text-white font-philosopher text-sm font-bold flex items-center justify-center shadow-md border border-[#9A2D3E]/30">
+                    01
+                  </div>
+                  <div>
+                    <h3 className="font-philosopher text-lg sm:text-xl font-bold text-white transition-colors group-hover:text-[#E29D9B]">
+                      From Winery to Ohio
+                    </h3>
+                    <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#B5A89E]">
+                      We source directly from wineries and bring their wines into our Ohio warehouse, creating a more direct path from producer to market with dependable quality and competitive pricing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 02 */}
+              <div className="group relative rounded-lg bg-[#221A15]/70 backdrop-blur-sm p-4 sm:p-5 border border-[#382D26] transition-all duration-300 hover:border-[#A98552] hover:bg-[#2A201A]">
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 h-9 w-9 rounded-md bg-gradient-to-br from-[#A98552] to-[#785C35] text-white font-philosopher text-sm font-bold flex items-center justify-center shadow-md border border-[#C59B63]/30">
+                    02
+                  </div>
+                  <div>
+                    <h3 className="font-philosopher text-lg sm:text-xl font-bold text-white transition-colors group-hover:text-[#D4AF37]">
+                      Exceptional Quality, Fair Pricing
+                    </h3>
+                    <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#B5A89E]">
+                      Working directly with wineries allows us to focus on quality, value, and selection. With fewer intermediaries, we provide wines that consistently overdeliver at their price point.
+                    </p>
+                  </div>
+                </div>
               </div>
 
             </div>
           </div>
 
         </div>
-
       </div>
-    </div>
-  </div>
-</section>
+    </section>
       {/* ================= OUR PORTFOLIO REGIONS ================= */}
   
 
-<section className="relative bg-[#F4F2EC] py-20 sm:py-28 lg:py-36 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden">
 
-  {/* Background Decoration */}
-  <div className="absolute inset-0 pointer-events-none">
-
-    <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-[#741C29]/[0.035] blur-[120px] animate-portfolioGlow" />
-
-    <div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#B08A55]/[0.06] blur-[120px] animate-portfolioGlowReverse" />
-
-  </div>
-
-
-  <div className="relative z-10 mx-auto max-w-[1400px]">
-
-
-    {/* ================= HEADER ================= */}
-
-    <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 sm:mb-16 lg:mb-20">
-
-      <div className="max-w-3xl">
-
-        {/* Small Label */}
-        <div className="flex items-center gap-4 mb-5 animate-portfolioFadeUp">
-
-          <span className="h-px w-10 sm:w-14 bg-[#741C29] origin-left animate-portfolioLine" />
-
-          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#741C29]">
-            Curated Selections
-          </p>
-
-        </div>
-
-
-        {/* Heading */}
-        <h2 className="font-philosopher text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-normal leading-[0.95] text-[#241B16] animate-portfolioFadeUp portfolio-delay-1">
-
-          Our Portfolio
-
-          <span className="block text-[#741C29] mt-2">
-            Regions
-          </span>
-
-        </h2>
-
-
-        <p className="mt-6 max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed text-[#6B5D52] animate-portfolioFadeUp portfolio-delay-2">
-
-          A carefully selected collection of wines from renowned
-          wine-producing regions, bringing authentic character and
-          craftsmanship to every bottle.
-
-        </p>
-
-      </div>
-
-
-      {/* Portfolio Button */}
-      <Link
-        href="/portfolio"
-        className="group inline-flex items-center justify-between gap-8 w-fit min-w-[220px] border border-[#741C29] px-6 py-4 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#741C29] hover:bg-[#741C29] hover:text-white transition-all duration-500 animate-portfolioFadeUp portfolio-delay-3"
-      >
-
-        <span>
-          Explore Portfolio
-        </span>
-
-        <span className="text-lg transition-transform duration-500 group-hover:translate-x-2">
-          →
-        </span>
-
-      </Link>
-
-    </div>
-
-
-
-    {/* ================= REGION GRID ================= */}
-
-    <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-px bg-[#CFC5B7] border border-[#CFC5B7]">
-
-      {portfolioRegions.map((region, index) => (
-
-        <Link
-          href={region.link}
-          key={region.name}
-          className={`portfolio-card group relative min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] bg-[#F4F2EC] p-6 sm:p-8 lg:p-9 overflow-hidden transition-all duration-700 hover:bg-[#241B16] animate-portfolioCard portfolio-card-delay-${Math.min(index + 1, 7)}`}
-        >
-
-          {/* Large Background Number */}
-          <div className="absolute -right-2 -top-8 font-philosopher text-[9rem] sm:text-[10rem] lg:text-[11rem] font-normal leading-none text-[#741C29]/[0.045] group-hover:text-white/[0.035] transition-all duration-700 select-none group-hover:scale-110 group-hover:-translate-x-2">
-
-            {String(index + 1).padStart(2, "0")}
-
-          </div>
-
-
-          {/* Top Number */}
-          <div className="relative z-10 flex items-center justify-between">
-
-            <span className="font-philosopher text-sm sm:text-base text-[#741C29] group-hover:text-[#C7A66A] transition-colors duration-500">
-
-              {String(index + 1).padStart(2, "0")}
-
-            </span>
-
-
-            <span className="h-px w-8 bg-[#C7A66A]/50 group-hover:w-14 transition-all duration-700" />
-
-          </div>
-
-
-          {/* Content */}
-          <div className="relative z-10 mt-20 sm:mt-24 transition-transform duration-700 group-hover:translate-y-[-6px]">
-
-            <h3 className="font-philosopher text-2xl sm:text-3xl lg:text-[2rem] font-normal text-[#241B16] group-hover:text-white transition-colors duration-500">
-
-              {region.name}
-
-            </h3>
-
-
-            <p className="mt-3 text-[9px] sm:text-[10px] uppercase tracking-[0.22em] font-medium text-[#A98552] group-hover:text-[#D8C6A9] transition-colors duration-500">
-
-              {region.detail}
-
-            </p>
-
-          </div>
-
-
-          {/* Bottom Arrow */}
-          <div className="absolute left-6 bottom-6 sm:left-8 sm:bottom-8">
-
-            <span className="flex h-9 w-9 items-center justify-center border border-[#CFC5B7] text-sm text-[#741C29] transition-all duration-500 group-hover:border-[#C7A66A] group-hover:text-[#C7A66A] group-hover:translate-x-2 group-hover:rotate-[-5deg]">
-
-              →
-
-            </span>
-
-          </div>
-
-
-          {/* Hover Bottom Line */}
-          <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#741C29] group-hover:w-full transition-all duration-700" />
-
-
-          {/* Hover Light Sweep */}
-          <div className="absolute inset-y-0 -left-full w-1/2 bg-gradient-to-r from-transparent via-white/[0.04] to-transparent skew-x-[-20deg] group-hover:left-[130%] transition-all duration-[1200ms] pointer-events-none" />
-
-        </Link>
-
-      ))}
-
-    </div>
-
-
-
-    {/* ================= BOTTOM STATEMENT ================= */}
-
-    <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-5 animate-portfolioFadeUp portfolio-delay-4">
-
-      <p className="font-philosopher text-base sm:text-lg italic text-[#5C5046]">
-        From the world's finest vineyards to your portfolio.
-      </p>
-
-
-      <div className="flex items-center gap-3">
-
-        <span className="h-px w-10 bg-[#741C29]" />
-
-        <span className="text-[9px] uppercase tracking-[0.25em] text-[#806F63]">
-          Quality • Origin • Character
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 
 
       {/* ================= BUILT ON RELATIONSHIPS ================= */}
-      <section className="bg-[#241B16] text-[#F5F1E8] py-16 sm:py-24 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 relative">
-        <div className="mx-auto max-w-[1000px] text-center">
-          
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#C7A66A]">
-            Core Value
-          </p>
-          
-          <h2 className="mt-4 font-philosopher text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Built on Relationships
-          </h2>
+<section className="relative bg-white px-4 py-16 text-[#241B16] sm:px-8 sm:py-24 md:px-12 lg:px-16">
+  <div className="mx-auto max-w-[1000px] text-center">
 
-          <p className="mt-6 sm:mt-8 text-sm xs:text-base sm:text-lg lg:text-xl leading-relaxed text-[#D7CDC4] max-w-3xl mx-auto">
-            After 26 years in the industry, we understand that successful wine businesses are built on relationships. We value our relationships with producers, restaurants, retailers, hospitality professionals, and other business customers.
-          </p>
+    {/* Label */}
+    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#741C29] sm:text-sm">
+      Core Value
+    </p>
 
-          <p className="mt-4 text-base xs:text-lg sm:text-xl font-philosopher text-[#C7A66A] italic">
-            Our goal is to build long-term partnerships—not simply complete transactions.
-          </p>
+    {/* Heading */}
+    <h2 className="mt-4 font-philosopher text-3xl font-bold leading-tight tracking-tight text-[#241B16] xs:text-4xl sm:text-5xl md:text-6xl">
+      Built on Relationships
+    </h2>
 
-          <div className="mt-10 sm:mt-12 flex justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center border-2 border-[#C7A66A] px-8 py-4 text-xs xs:text-sm font-semibold uppercase tracking-[0.15em] text-[#C7A66A] hover:bg-[#C7A66A] hover:text-[#241B16] transition-all duration-300"
-            >
-              Start a Partnership
-            </Link>
-          </div>
+    {/* Divider */}
+    <div className="mx-auto mt-5 flex items-center justify-center gap-3 sm:mt-6">
+      <span className="h-px w-10 bg-[#C7A66A] sm:w-16" />
+      <span className="h-1.5 w-1.5 rotate-45 bg-[#C7A66A]" />
+      <span className="h-px w-10 bg-[#C7A66A] sm:w-16" />
+    </div>
 
-        </div>
-      </section>
+    {/* Main Text */}
+    <p className="mx-auto mt-7 max-w-3xl text-sm leading-[1.9] text-[#5C5046] xs:text-base sm:mt-8 sm:text-lg sm:leading-[2] lg:text-xl">
+      After 26 years in the industry, we understand that successful wine
+      businesses are built on relationships. We value our relationships with
+      producers, restaurants, retailers, hospitality professionals, and other
+      business customers.
+    </p>
+
+    {/* Highlight Statement */}
+    <p className="mx-auto mt-6 max-w-2xl font-philosopher text-base font-medium italic leading-relaxed text-[#741C29] xs:text-lg sm:mt-7 sm:text-xl">
+      Our goal is to build long-term partnerships—not simply complete
+      transactions.
+    </p>
+
+    {/* CTA */}
+    <div className="mt-9 flex justify-center sm:mt-12">
+      <Link
+        href="/contact"
+        className="inline-flex items-center justify-center border-2 border-[#741C29] px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#741C29] transition-all duration-300 hover:bg-[#741C29] hover:text-white sm:px-8 sm:py-4 sm:text-sm"
+      >
+        Start a Partnership
+      </Link>
+    </div>
+
+  </div>
+</section>
 
     </main>
   );
