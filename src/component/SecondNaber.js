@@ -1245,7 +1245,7 @@ export default function Navbar() {
 
     {
       label: "Portfolio",
-      href: "/shop",
+      href: "/Portfolio",
       heading: "OUR COUNTRY WINES",
 
       countries: [
@@ -1333,11 +1333,11 @@ export default function Navbar() {
     // -------------------------------------------------------
     // PORTFOLIO
     // -------------------------------------------------------
-    if (itemPath === "/shop") {
+    if (itemPath === "/Portfolio") {
       // /shop
       if (
-        currentPath === "/shop" ||
-        currentPath.startsWith("/shop/")
+        currentPath === "/Portfolio" ||
+        currentPath.startsWith("/Portfolio/")
       ) {
         return true;
       }
@@ -1654,7 +1654,7 @@ export default function Navbar() {
                           {/* Dropdown Heading */}
                           <li>
                             <Link
-                              href="/shop"
+                              href="/Portfolio"
                               className="
                                 block
                                 border-b
@@ -2200,7 +2200,7 @@ export default function Navbar() {
                             {/* Heading */}
                             {item.heading && (
                               <Link
-                                href="/shop"
+                                href="/Portfolio"
                                 onClick={
                                   closeMobileMenu
                                 }

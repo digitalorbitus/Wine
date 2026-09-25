@@ -884,7 +884,7 @@ export default function HeroSlider() {
 
           {/* EXPLORE PORTFOLIO */}
           <Link
-            href="/shop"
+            href="/Portfolio"
             className="
               inline-flex
               items-center
@@ -1131,7 +1131,7 @@ export default function HeroSlider() {
     {/* EXPLORE OUR PORTFOLIO */}
 
     <Link
-      href="/shop"
+      href="/Portfolio"
       className="
         inline-flex
         w-full
@@ -1676,7 +1676,7 @@ This more direct approach helps us reduce unnecessary costs and pass the value o
 
     {/* CARD 01 */}
     <a
-      href="/shop"
+      href="/Portfolio"
       className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#4A241C] via-[#331711] to-[#1F0C08] text-[#F3EEEA] shadow-2xl border border-[#6E3A2E]/50 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(74,36,28,0.3)] cursor-pointer"
     >
       <div className="flex justify-between items-start z-10">
@@ -1716,7 +1716,7 @@ This more direct approach helps us reduce unnecessary costs and pass the value o
 
     {/* CARD 02 */}
     <a
-      href="/shop"
+      href="/Portfolio"
       className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#212429] via-[#16181C] to-[#0B0C0E] text-[#E0E2E5] shadow-2xl border border-[#3A3E47]/60 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)] cursor-pointer"
     >
       <div className="flex justify-between items-start z-10">
@@ -1756,7 +1756,7 @@ This more direct approach helps us reduce unnecessary costs and pass the value o
 
     {/* CARD 03 */}
     <a
-      href="/shop"
+      href="/Portfolio"
       className="group relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-[#382119] via-[#24130E] to-[#120805] text-[#EADBD3] shadow-2xl border border-[#523328]/60 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(56,33,25,0.3)] cursor-pointer"
     >
       <div className="flex justify-between items-start z-10">
@@ -1796,7 +1796,7 @@ This more direct approach helps us reduce unnecessary costs and pass the value o
 
     {/* CARD 04 */}
     <a
-      href="/shop"
+      href="/Portfolio"
       className="group relative overflow-hidden rounded-3xl p-8 bg-white/40 backdrop-blur-xl text-[#1C1514] shadow-2xl border border-white/70 flex flex-col justify-between h-80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(28,21,20,0.2)] cursor-pointer"
     >
       <div className="flex justify-between items-start z-10">

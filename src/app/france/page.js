@@ -1963,7 +1963,7 @@ export default function FranceRegionsPage() {
           {/* BACK TO REGIONS */}
           <div className="flex justify-start">
             <Link
-              href="/shop"
+              href="/Portfolio"
               className="
                 group
                 inline-flex
