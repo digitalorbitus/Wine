@@ -127,7 +127,7 @@ const PartnershipIcon = () => (
 const reasons = [
   {
     icon: TrophyIcon,
-    title: "26 Years of Wine Experienc",
+    title: "26 Years of Wine Experience",
     description: "With 26 years in the wine business, we bring experience, industry knowledge, and established relationships to every wine we source and every customer we serve.",
   },
   {
