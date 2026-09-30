@@ -50,6 +50,9 @@ const greatVibes = Great_Vibes({
 export const metadata = {
  title: "Wines LLC",
   description:"Wines LLC — Ohio-based wholesale wine distributor offering personally selected wines from around the world to restaurants, retailers, hotels, bars, and hospitality businesses.",
+    icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
