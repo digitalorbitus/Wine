@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa';
+import Link from "next/link";
 
 
 export default function NewsletterSection() {
@@ -96,9 +97,17 @@ export default function NewsletterSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 text-xs sm:text-sm text-stone-400">
           
           {/* Copyright Text */}
-          <div className="text-center sm:text-left">
-            Copyright © 2017, DesignThemes
-          </div>
+     <div className="text-center sm:text-left">
+  Copyright © 2026{" "}
+  <Link
+    href="https://digitalorbit.us"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    Digital Orbit
+  </Link>
+</div>
 
           {/* Social Icons */}
           <div className="flex items-center space-x-4">
