@@ -291,7 +291,7 @@ export default function WhyChooseUs() {
           <div className="relative z-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
-                href="/portfolio"
+                href="/Portfolio"
                 className="block text-center bg-gradient-to-r from-[#C5A059] to-[#997334] text-[#120D0B] font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg hover:brightness-110 transition-all"
               >
                 Browse Selections

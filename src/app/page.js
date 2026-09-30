@@ -768,24 +768,36 @@ export default function HeroSlider() {
             m-0
           "
         >
-          <span className="
-            inline-block
-            w-fit
-            text-white
-            bg-[#741C29]
-            text-xl
-            md:text-2xl
-
-            px-4
-            py-2
-            rounded-full
-            border
-            border-[#741C29]
-            shadow-sm
-          ">
-            26+ Years of Experience | 100+ Satisfied Clients
-          </span>
-
+<span
+  className="
+    inline-block
+    w-fit
+    max-w-full
+    text-center
+    text-white
+    bg-[#741C29]
+    text-sm
+    sm:text-base
+    md:text-lg
+    lg:text-xl
+    xl:text-2xl
+    px-3
+    py-1.5
+    sm:px-4
+    sm:py-2
+    md:px-5
+    md:py-2.5
+    lg:px-6
+    lg:py-3
+    rounded-full
+    border
+    border-[#741C29]
+    shadow-sm
+    leading-tight
+  "
+>
+  26+ Years of Experience | 100+ Satisfied Clients
+</span>
           <span className="block mt-3">
             From{" "}
             <span className="text-[#741C29] font-semibold">
